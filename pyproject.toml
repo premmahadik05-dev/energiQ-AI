@@ -1,0 +1,21 @@
+[project]
+name = "energiq-ai"
+version = "1.0.0"
+description = "EnergiQ AI - energy forecasting, anomaly detection and optimisation platform"
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 140
+target-version = "py311"
+extend-exclude = ["frontend", "artifacts", "backend/migrations/versions"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "W"]
+ignore = ["E501", "B905"]
+
+[tool.ruff.lint.flake8-bugbear]
+# FastAPI dependency injection uses Depends()/Query()/File() in argument defaults by design.
+extend-immutable-calls = ["ml_engine.features.builder.FeatureConfig", "fastapi.Depends", "fastapi.Query", "fastapi.File", "fastapi.Form", "fastapi.Header", "fastapi.Path"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["backend", "ml_engine"]

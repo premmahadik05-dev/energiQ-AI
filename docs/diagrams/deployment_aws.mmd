@@ -1,0 +1,22 @@
+flowchart TB
+  internet((Internet)) --> alb[Application Load Balancer<br/>HTTPS if certificate supplied]
+  subgraph vpc[VPC - 2 availability zones]
+    subgraph pub[Public subnets]
+      alb
+      web[ECS Fargate: web x2<br/>nginx static UI]
+      api[ECS Fargate: api x1<br/>FastAPI]
+    end
+    subgraph priv[Private subnets - no internet route]
+      rds[(RDS PostgreSQL 16<br/>encrypted, backups)]
+      efs[(EFS<br/>uploads, models)]
+    end
+  end
+  alb -- "/*" --> web
+  alb -- "/api/*, /health/*" --> api
+  api --> rds
+  api --> efs
+  sm[Secrets Manager] -.-> api
+  cw[CloudWatch logs and alarms] -.-> api
+  cw -.-> alb
+  note[Configuration only - not deployed]
+  style note fill:#fff3cd,stroke:#b58900

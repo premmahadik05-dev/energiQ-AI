@@ -1,0 +1,41 @@
+{
+ "dataset": {
+  "id": 1,
+  "name": "UCI household sample (2009, hourly)",
+  "original_filename": "uci_hourly_2009_sample.csv",
+  "status": "processing",
+  "error": null,
+  "quality_score": null,
+  "hours": 0,
+  "valid_hours": 0,
+  "start_ts": null,
+  "end_ts": null,
+  "created_at": "2026-11-03T00:19:08.499513",
+  "config": {
+   "value_column": "power_kw",
+   "unit": "kW",
+   "timestamp_column": "timestamp",
+   "date_column": null,
+   "time_column": null,
+   "delimiter": ",",
+   "dayfirst": false,
+   "timestamp_format": "%Y-%m-%d %H:%M:%S",
+   "extra_columns": {},
+   "min_valid_fraction": 0.75,
+   "timezone_convention": "logger_clock"
+  }
+ },
+ "job": {
+  "id": 1,
+  "kind": "ingest",
+  "status": "queued",
+  "progress": 0.0,
+  "message": "",
+  "dataset_id": 1,
+  "result": null,
+  "error": null,
+  "created_at": "2026-11-03T00:19:08.502890",
+  "started_at": null,
+  "finished_at": null
+ }
+}

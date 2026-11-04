@@ -1,0 +1,36 @@
+{
+ "dataset_id": 1,
+ "resolution": "daily",
+ "points": [
+  {
+   "ts": "2009-12-27",
+   "mean_kw": 1.5246,
+   "kwh": 36.591,
+   "valid_hours": 24
+  },
+  {
+   "ts": "2009-12-28",
+   "mean_kw": 1.4542,
+   "kwh": 34.902,
+   "valid_hours": 24
+  },
+  {
+   "ts": "2009-12-29",
+   "mean_kw": 1.4222,
+   "kwh": 34.133,
+   "valid_hours": 24
+  },
+  {
+   "ts": "2009-12-30",
+   "mean_kw": 1.7022,
+   "kwh": 40.852,
+   "valid_hours": 24
+  },
+  {
+   "ts": "2009-12-31",
+   "mean_kw": 1.536,
+   "kwh": 36.865,
+   "valid_hours": 24
+  }
+ ]
+}

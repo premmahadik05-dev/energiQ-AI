@@ -1,0 +1,164 @@
+{
+ "recommendations": [
+  {
+   "id": "review_anomalies",
+   "category": "anomalies",
+   "priority": "high",
+   "title": "Review recent high-severity anomalies",
+   "explanation": "1 high-severity anomaly event(s) in the last 30 days. Most severe: unusually low use around Sun 2009-12-13 01:00: 0.36 kW vs typical 1.12 kW for this hour of the week, 2.9x the edge of the usual range for this hour (the 99.5th-percentile deviation of the last 26 weeks). Event spans 3 h.",
+   "evidence": {
+    "high_severity_events_30d": 1,
+    "total_events_30d": 19,
+    "top_event_start": "2009-12-12 23:00:00"
+   },
+   "scenario": null,
+   "caveats": [
+    "An anomaly is an unusual reading, not a confirmed fault; unusual-but-legitimate use (guests, holidays) is flagged too."
+   ]
+  },
+  {
+   "id": "reduce_baseload",
+   "category": "standby / always-on load",
+   "priority": "medium",
+   "title": "Check always-on devices",
+   "explanation": "Your lowest sustained demand is about 0.30 kW (the 5th percentile of hourly use), about 24% of all energy. Fridges and routers account for part of it; old appliances, standby electronics and heating elements are common extras.",
+   "evidence": {
+    "baseload_kw": 0.30479000359773634,
+    "baseload_share_pct": 23.993687630581793,
+    "average_rate_per_kwh": 0.20530604703029262
+   },
+   "scenario": {
+    "assumption": "always-on load is reduced by 10%",
+    "kwh_saved_per_30d": 21.944880259037017,
+    "saving_per_30d": 4.505416618535994,
+    "currency": "EUR"
+   },
+   "caveats": [
+    "Figures are scenario estimates under the stated assumption, not forecasts of savings.",
+    "The tariff in use is the built-in DEMO tariff; replace it with your real rates before relying on any cost figure.",
+    "The 'baseload' is a statistical floor of the whole-house reading, not a measurement of individual devices."
+   ]
+  },
+  {
+   "id": "forecast_peak",
+   "category": "peak demand",
+   "priority": "medium",
+   "title": "High demand expected in the next 24 hours",
+   "explanation": "The forecast peaks at 2.68 kW around Fri 20:00, higher than 92% of the hours in your last 90 days and inside the most expensive tariff period. Staggering heavy appliances around that time lowers the peak.",
+   "evidence": {
+    "forecast_peak_kw": 2.6835925579071045,
+    "forecast_peak_time": "2010-01-01 20:00:00",
+    "history_p90_kw": 2.5733100175857553,
+    "in_dearest_tariff_period": true
+   },
+   "scenario": null,
+   "caveats": [
+    "This is a model forecast with its own error; see the model page for the measured accuracy at this horizon."
+   ]
+  },
+  {
+   "id": "shift_peak_load",
+   "category": "load shifting",
+   "priority": "low",
+   "title": "Move flexible use out of the most expensive hours",
+   "explanation": "18% of your energy in the last 90 days was used in the most expensive tariff hours (17:00-21:00), which are only 12% of the hours. Running dishwashers, washing machines or EV charging outside those hours is the simplest saving.",
+   "evidence": {
+    "dearest_rate_per_kwh": 0.3,
+    "cheapest_rate_per_kwh": 0.12,
+    "peak_energy_share_pct": 17.673248695217776,
+    "peak_time_share_pct": 11.851851851851853,
+    "concentration": 1.4911803586589998,
+    "peak_hours": [
+     17,
+     18,
+     19,
+     20
+    ],
+    "peak_kwh_in_window": 484.92420053482056
+   },
+   "scenario": {
+    "assumption": "10% of the dearest-period energy is moved to the cheapest hours",
+    "kwh_moved_per_30d": 16.16414001782735,
+    "saving_per_30d": 2.909545203208923,
+    "currency": "EUR"
+   },
+   "caveats": [
+    "Figures are scenario estimates under the stated assumption, not forecasts of savings.",
+    "The tariff in use is the built-in DEMO tariff; replace it with your real rates before relying on any cost figure.",
+    "Only flexible loads (laundry, dishwasher, EV charging, water heating) can usually be moved."
+   ]
+  }
+ ],
+ "window": {
+  "start": "2009-10-03 00:00:00",
+  "end": "2009-12-31 23:00:00",
+  "valid_hours": 2160,
+  "days_covered": 90.0
+ },
+ "baseline_cost": {
+  "energy_kwh": 2743.83170235157,
+  "energy_cost": 563.3252405261993,
+  "total_cost": 563.3252405261993,
+  "currency": "EUR",
+  "is_demo_tariff": true
+ },
+ "tariff": {
+  "name": "DEMO tariff (not a real utility price)",
+  "currency": "EUR",
+  "weekday_rates": [
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.3,
+   0.3,
+   0.3,
+   0.3,
+   0.2,
+   0.2,
+   0.12
+  ],
+  "weekend_rates": [
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.12,
+   0.12
+  ],
+  "daily_fixed_charge": 0.0,
+  "is_demo": true,
+  "note": "Illustrative numbers only. Replace with your own rates before using any cost figure."
+ }
+}

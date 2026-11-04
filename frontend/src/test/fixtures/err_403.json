@@ -1,0 +1,6 @@
+{
+ "status": 403,
+ "body": {
+  "detail": "Your role does not allow this action"
+ }
+}

@@ -1,0 +1,6 @@
+{
+ "status": 422,
+ "body": {
+  "detail": "Password must be 10-128 characters"
+ }
+}

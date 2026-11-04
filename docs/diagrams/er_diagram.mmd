@@ -1,0 +1,157 @@
+erDiagram
+    anomalies {
+        INTEGER id PK
+        INTEGER run_id FK
+        INTEGER owner_id FK
+        INTEGER dataset_id FK
+        DATETIME start_ts
+        DATETIME end_ts
+        INTEGER hours
+        JSON types
+        VARCHAR severity
+        INTEGER severity_level
+        DATETIME peak_ts
+        FLOAT peak_value_kw
+        FLOAT expected_kw
+        FLOAT peak_excess_ratio
+        TEXT explanation
+        BOOLEAN acknowledged
+        DATETIME acknowledged_at
+    }
+    anomaly_runs {
+        INTEGER id PK
+        INTEGER owner_id FK
+        INTEGER dataset_id FK
+        VARCHAR sensitivity
+        JSON config
+        JSON summary
+        DATETIME created_at
+    }
+    audit_events {
+        INTEGER id PK
+        INTEGER user_id
+        VARCHAR action
+        VARCHAR resource_type
+        VARCHAR resource_id
+        VARCHAR ip
+        JSON detail
+        DATETIME ts
+    }
+    datasets {
+        INTEGER id PK
+        INTEGER owner_id FK
+        VARCHAR name
+        VARCHAR original_filename
+        VARCHAR sha256
+        VARCHAR status
+        TEXT error
+        JSON config
+        JSON report
+        FLOAT quality_score
+        INTEGER hours
+        INTEGER valid_hours
+        DATETIME start_ts
+        DATETIME end_ts
+        DATETIME created_at
+        DATETIME updated_at
+    }
+    forecasts {
+        INTEGER id PK
+        INTEGER owner_id FK
+        INTEGER dataset_id FK
+        VARCHAR model_id FK
+        DATETIME origin
+        JSON points
+        BOOLEAN origin_value_missing
+        DATETIME created_at
+    }
+    jobs {
+        INTEGER id PK
+        INTEGER owner_id FK
+        INTEGER dataset_id FK
+        VARCHAR kind
+        VARCHAR status
+        FLOAT progress
+        VARCHAR message
+        JSON params
+        JSON result
+        TEXT error
+        DATETIME created_at
+        DATETIME started_at
+        DATETIME finished_at
+    }
+    model_versions {
+        VARCHAR id PK
+        INTEGER owner_id FK
+        INTEGER dataset_id FK
+        VARCHAR family
+        BOOLEAN is_active
+        JSON horizon_model_ids
+        INTEGER train_rows
+        DATETIME train_end
+        VARCHAR data_hash
+        JSON evaluation
+        JSON explanation
+        DATETIME created_at
+    }
+    notifications {
+        INTEGER id PK
+        INTEGER owner_id FK
+        VARCHAR kind
+        VARCHAR message
+        VARCHAR link
+        BOOLEAN is_read
+        DATETIME created_at
+    }
+    readings {
+        INTEGER dataset_id PK,FK
+        DATETIME ts PK
+        FLOAT value_kw
+        FLOAT valid_fraction
+    }
+    recommendation_snapshots {
+        INTEGER id PK
+        INTEGER owner_id FK
+        INTEGER dataset_id FK
+        VARCHAR tariff_name
+        JSON payload
+        DATETIME created_at
+    }
+    tariffs {
+        INTEGER id PK
+        INTEGER owner_id FK
+        VARCHAR name
+        VARCHAR currency
+        JSON weekday_rates
+        JSON weekend_rates
+        FLOAT daily_fixed_charge
+        DATETIME created_at
+    }
+    users {
+        INTEGER id PK
+        VARCHAR email UK
+        VARCHAR full_name
+        VARCHAR password_hash
+        VARCHAR role
+        BOOLEAN is_active
+        DATETIME created_at
+        DATETIME last_login_at
+    }
+    anomaly_runs ||--o{ anomalies : "run_id"
+    users ||--o{ anomalies : "owner_id"
+    datasets ||--o{ anomalies : "dataset_id"
+    users ||--o{ anomaly_runs : "owner_id"
+    datasets ||--o{ anomaly_runs : "dataset_id"
+    users ||--o{ datasets : "owner_id"
+    users ||--o{ forecasts : "owner_id"
+    datasets ||--o{ forecasts : "dataset_id"
+    model_versions ||--o{ forecasts : "model_id"
+    users ||--o{ jobs : "owner_id"
+    datasets ||--o{ jobs : "dataset_id"
+    users ||--o{ model_versions : "owner_id"
+    datasets ||--o{ model_versions : "dataset_id"
+    users ||--o{ notifications : "owner_id"
+    datasets ||--o{ readings : "dataset_id"
+    users ||--o{ recommendation_snapshots : "owner_id"
+    datasets ||--o{ recommendation_snapshots : "dataset_id"
+    users ||--o{ tariffs : "owner_id"

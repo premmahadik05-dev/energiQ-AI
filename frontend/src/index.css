@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens. Light is the default; dark applies for the OS preference unless the viewer
+   chose light, and always when the viewer chose dark (data-theme on <html>). */
+:root {
+  color-scheme: light;
+  --page: #f6f6f3;
+  --surface: #fcfcfb;
+  --sunken: #f0efeb;
+  --ink: #141413;
+  --ink-2: #4a4944;
+  --muted: #66655f;
+  --line: #e1e0d9;
+  --line-strong: #c3c2b7;
+  --accent: #256abf;
+  --accent-ink: #ffffff;
+  --accent-soft: #e6effa;
+  --good-text: #006300;
+  --good-soft: #e5f3e5;
+  --warn-text: #7d5200;
+  --warn-soft: #fcf1d6;
+  --bad-text: #b02a2a;
+  --bad-soft: #fae6e6;
+  /* chart tokens: categorical slots 1-8 in fixed order, validated palette */
+  --s1: #2a78d6;
+  --s2: #eb6834;
+  --s3: #1baf7a;
+  --s4: #eda100;
+  --s5: #e87ba4;
+  --s6: #008300;
+  --s7: #6250d6;
+  --s8: #e34948;
+  --band: rgba(235, 104, 52, 0.16);
+  --grid: #e8e7e1;
+  --axis: #c3c2b7;
+  --axis-text: #5f5e58;
+  --sev-high: #d03b3b;
+  --sev-medium: #ec835a;
+  --sev-low: #fab219;
+  --seq-1: #cde2fb;
+  --seq-4: #3987e5;
+  --seq-7: #0d366b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --page: #0d0d0d;
+    --surface: #1a1a19;
+    --sunken: #141413;
+    --ink: #f0efec;
+    --ink-2: #c3c2b7;
+    --muted: #9d9c94;
+    --line: #2c2c2a;
+    --line-strong: #43433f;
+    --accent: #6da7ec;
+    --accent-ink: #0b0b0b;
+    --accent-soft: #16263b;
+    --good-text: #4cc24c;
+    --good-soft: #10260f;
+    --warn-text: #fab219;
+    --warn-soft: #2e2306;
+    --bad-text: #f08a8a;
+    --bad-soft: #2e1111;
+    --s1: #3987e5;
+    --s2: #d95926;
+    --s3: #199e70;
+    --s4: #c98500;
+    --s5: #d55181;
+    --s6: #008300;
+    --s7: #9085e9;
+    --s8: #e66767;
+    --band: rgba(217, 89, 38, 0.22);
+    --grid: #262624;
+    --axis: #383835;
+    --axis-text: #a8a79f;
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --page: #0d0d0d;
+  --surface: #1a1a19;
+  --sunken: #141413;
+  --ink: #f0efec;
+  --ink-2: #c3c2b7;
+  --muted: #9d9c94;
+  --line: #2c2c2a;
+  --line-strong: #43433f;
+  --accent: #6da7ec;
+  --accent-ink: #0b0b0b;
+  --accent-soft: #16263b;
+  --good-text: #4cc24c;
+  --good-soft: #10260f;
+  --warn-text: #fab219;
+  --warn-soft: #2e2306;
+  --bad-text: #f08a8a;
+  --bad-soft: #2e1111;
+  --s1: #3987e5;
+  --s2: #d95926;
+  --s3: #199e70;
+  --s4: #c98500;
+  --s5: #d55181;
+  --s6: #008300;
+  --s7: #9085e9;
+  --s8: #e66767;
+  --band: rgba(217, 89, 38, 0.22);
+  --grid: #262624;
+  --axis: #383835;
+  --axis-text: #a8a79f;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-page text-ink font-sans antialiased;
+    font-size: 15px;
+    line-height: 1.5;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+  h1,
+  h2,
+  h3 {
+    @apply text-ink font-semibold;
+    letter-spacing: -0.012em;
+  }
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  table {
+    font-variant-numeric: tabular-nums;
+  }
+  ::selection {
+    background: var(--accent-soft);
+  }
+}
+
+@layer components {
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+  .card {
+    @apply bg-surface border border-line rounded-lg;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded border px-3 min-h-[36px] text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-primary {
+    @apply btn bg-accent text-accent-ink border-transparent hover:brightness-110;
+  }
+  .btn-secondary {
+    @apply btn bg-surface text-ink border-line-strong hover:bg-sunken;
+  }
+  .btn-danger {
+    @apply btn bg-surface text-bad border-line-strong hover:bg-bad-soft;
+  }
+  .btn-ghost {
+    @apply btn border-transparent text-ink-2 hover:bg-sunken;
+  }
+  .input {
+    @apply w-full rounded border border-line-strong bg-surface px-3 min-h-[36px] text-sm text-ink placeholder:text-muted disabled:opacity-60;
+  }
+  .label {
+    @apply block text-sm font-medium text-ink mb-1;
+  }
+  .hint {
+    @apply text-xs text-muted mt-1;
+  }
+  .th {
+    @apply px-3 py-2 text-left text-xs font-semibold text-ink-2 bg-sunken border-b border-line whitespace-nowrap;
+  }
+  .td {
+    @apply px-3 py-2 text-sm border-b border-line align-top;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Recharts: keep the active-dot / cursor crisp and make the SVG text inherit tokens */
+.recharts-wrapper {
+  font-family: inherit;
+}
+.recharts-cartesian-grid line {
+  stroke: var(--grid);
+}
+.recharts-text {
+  fill: var(--axis-text);
+  font-size: 11.5px;
+}
+.recharts-tooltip-cursor {
+  stroke: var(--muted);
+}
+.recharts-wrapper:focus,
+.recharts-surface:focus {
+  outline: none;
+}

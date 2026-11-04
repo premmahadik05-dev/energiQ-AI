@@ -1,0 +1,61 @@
+{
+ "run": {
+  "id": 1,
+  "created_at": "2026-11-03T00:19:44.826150",
+  "sensitivity": "medium",
+  "config": {
+   "baseline_weeks": 8,
+   "min_baseline_weeks": 4,
+   "scale_weeks": 26,
+   "min_scale_days": 56,
+   "alert_quantile": 0.995,
+   "min_abs_dev_kw": 0.5,
+   "scale_floor_kw": 0.05,
+   "flat_min_hours": 4,
+   "fit_frac": 0.6,
+   "if_quantile": 0.995,
+   "if_needs_z": 2.5,
+   "if_trees": 150,
+   "merge_gap_hours": 1,
+   "seed": 42
+  }
+ },
+ "summary": {
+  "hours_total": 8760,
+  "hours_valid": 8687,
+  "hours_flagged": 140,
+  "flagged_pct_of_valid": 1.6116035455278002,
+  "hours_with_baseline": 6742,
+  "hours_flagged_by": {
+   "deviation": 128,
+   "flat_run": 0,
+   "isolation_forest_only_with_z": 12,
+   "isolation_forest_any": 49
+  },
+  "events": 102,
+  "events_by_severity": {
+   "low": 73,
+   "medium": 24,
+   "high": 5
+  },
+  "events_by_type": {
+   "spike": 59,
+   "drop": 33,
+   "flat_run": 0,
+   "unusual_pattern": 11
+  },
+  "isolation_forest": {
+   "fit_end": "2009-08-08 13:00:00",
+   "fit_rows": 5212,
+   "score_threshold": 0.6728352420838668,
+   "note": "hours up to fit_end are in-sample for Isolation Forest"
+  }
+ },
+ "by_severity": {
+  "high": 5,
+  "low": 73,
+  "medium": 24
+ },
+ "unacknowledged": 102,
+ "note": "Unsupervised detection. No ground-truth anomaly labels exist, so no accuracy figure is claimed; the alert rate is set by the sensitivity."
+}

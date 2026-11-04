@@ -1,0 +1,16 @@
+# Conda environment for development on Windows/macOS/Linux (Python 3.11, CPU only).
+# Everything else comes from the pinned requirements files, which are the single source of truth:
+#   requirements.txt            API + ML engine runtime (also used by the Docker image)
+#   requirements-dev.txt        tests, lint, security tools (includes requirements.txt)
+#   requirements-research.txt   matplotlib + PyTorch for the research scripts (includes requirements.txt)
+# Create:  conda env create -f environment.yml && conda activate energiq
+name: energiq
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - nodejs=22
+  - pip:
+      - -r requirements-dev.txt
+      - -r requirements-research.txt

@@ -1,0 +1,411 @@
+[
+ {
+  "id": "bundle_2_1_20261103T001920526790",
+  "dataset_id": 1,
+  "family": "xgboost",
+  "is_active": true,
+  "train_rows": 8686,
+  "train_end": "2009-12-31T23:00:00",
+  "created_at": "2026-11-03T00:19:20.529054",
+  "evaluation": {
+   "protocol": "Chronological split by target time: models are fitted on rows whose target is before the hold-out start and scored once on the hold-out; the deployed models are then refitted on all data.",
+   "holdout_start": "2009-10-20 00:00:00",
+   "holdout_end": "2009-12-31 23:00:00",
+   "horizons": {
+    "1": {
+     "metrics": {
+      "xgboost": {
+       "n": 1752,
+       "mae": 0.389478685674534,
+       "rmse": 0.5633664924437709,
+       "mape_pct": 39.38142466427252,
+       "mape_excluded": 0,
+       "smape_pct": 32.010541386330544,
+       "r2": 0.6379846017374129
+      },
+      "naive": {
+       "n": 1752,
+       "mae": 0.48366055806001573,
+       "rmse": 0.710688914432393,
+       "mape_pct": 45.15557106750719,
+       "mape_excluded": 0,
+       "smape_pct": 37.869392540567134,
+       "r2": 0.42389174191478607
+      },
+      "seasonal_naive_24": {
+       "n": 1752,
+       "mae": 0.7170487452451497,
+       "rmse": 1.0200460201650259,
+       "mape_pct": 78.87040027307003,
+       "mape_excluded": 0,
+       "smape_pct": 53.96503092162678,
+       "r2": -0.18681916174610058
+      },
+      "seasonal_naive_168": {
+       "n": 1752,
+       "mae": 0.6239665542563347,
+       "rmse": 0.9216894466645136,
+       "mape_pct": 62.754367424787716,
+       "mape_excluded": 0,
+       "smape_pct": 47.389239591502495,
+       "r2": 0.03102126143811712
+      }
+     },
+     "rows_scored": 1752,
+     "best_baseline": "naive",
+     "mae_improvement_vs_best_baseline_pct": 19.472721274451132,
+     "residual_q10_kw": -0.6956266283988952,
+     "residual_q90_kw": 0.5685245275497438
+    },
+    "6": {
+     "metrics": {
+      "xgboost": {
+       "n": 1752,
+       "mae": 0.5117091223614537,
+       "rmse": 0.7227959821938656,
+       "mape_pct": 55.95573065639723,
+       "mape_excluded": 0,
+       "smape_pct": 42.05277500691657,
+       "r2": 0.4040957570660061
+      },
+      "naive": {
+       "n": 1752,
+       "mae": 1.1379782545750272,
+       "rmse": 1.411802161630031,
+       "mape_pct": 162.01894019297967,
+       "mape_excluded": 0,
+       "smape_pct": 88.61839847915644,
+       "r2": -1.2734881932001114
+      },
+      "seasonal_naive_24": {
+       "n": 1752,
+       "mae": 0.7170487452451497,
+       "rmse": 1.0200460201650259,
+       "mape_pct": 78.87040027307003,
+       "mape_excluded": 0,
+       "smape_pct": 53.96503092162678,
+       "r2": -0.18681916174610058
+      },
+      "seasonal_naive_168": {
+       "n": 1752,
+       "mae": 0.6239665542563347,
+       "rmse": 0.9216894466645136,
+       "mape_pct": 62.754367424787716,
+       "mape_excluded": 0,
+       "smape_pct": 47.389239591502495,
+       "r2": 0.03102126143811712
+      }
+     },
+     "rows_scored": 1752,
+     "best_baseline": "seasonal_naive_168",
+     "mae_improvement_vs_best_baseline_pct": 17.99093735539613,
+     "residual_q10_kw": -0.9698269367218016,
+     "residual_q90_kw": 0.6995518118143084
+    },
+    "24": {
+     "metrics": {
+      "xgboost": {
+       "n": 1752,
+       "mae": 0.5171055028631807,
+       "rmse": 0.7397698524549398,
+       "mape_pct": 53.43654488503311,
+       "mape_excluded": 0,
+       "smape_pct": 42.15732656191932,
+       "r2": 0.37577914307433224
+      },
+      "naive": {
+       "n": 1752,
+       "mae": 0.7170487452451497,
+       "rmse": 1.0200460201650259,
+       "mape_pct": 78.87040027307003,
+       "mape_excluded": 0,
+       "smape_pct": 53.96503092162678,
+       "r2": -0.18681916174610058
+      },
+      "seasonal_naive_24": {
+       "n": 1752,
+       "mae": 0.7170487452451497,
+       "rmse": 1.0200460201650259,
+       "mape_pct": 78.87040027307003,
+       "mape_excluded": 0,
+       "smape_pct": 53.96503092162678,
+       "r2": -0.18681916174610058
+      },
+      "seasonal_naive_168": {
+       "n": 1752,
+       "mae": 0.6239665542563347,
+       "rmse": 0.9216894466645136,
+       "mape_pct": 62.754367424787716,
+       "mape_excluded": 0,
+       "smape_pct": 47.389239591502495,
+       "r2": 0.03102126143811712
+      }
+     },
+     "rows_scored": 1752,
+     "best_baseline": "seasonal_naive_168",
+     "mae_improvement_vs_best_baseline_pct": 17.126086432711894,
+     "residual_q10_kw": -1.0470005333423613,
+     "residual_q90_kw": 0.657693558931351
+    }
+   },
+   "xgboost_params": {
+    "n_estimators": 300,
+    "max_depth": 4,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 5
+   },
+   "seed": 42,
+   "caveat": null
+  },
+  "explanation": {
+   "1": {
+    "top_features": [
+     {
+      "feature": "lag_0",
+      "label": "usage in the latest hour",
+      "group": "Recent consumption",
+      "mean_abs_shap_kw": 0.43471479415893555,
+      "share_pct": 41.51743698120117
+     },
+     {
+      "feature": "seasonal_168",
+      "label": "usage at the same time last week",
+      "group": "Same time yesterday / last week",
+      "mean_abs_shap_kw": 0.09213823080062866,
+      "share_pct": 8.799661636352539
+     },
+     {
+      "feature": "hour",
+      "label": "hour of day (number)",
+      "group": "Time of day",
+      "mean_abs_shap_kw": 0.05489981919527054,
+      "share_pct": 5.2432074546813965
+     },
+     {
+      "feature": "hour_sin",
+      "label": "hour of day (sine)",
+      "group": "Time of day",
+      "mean_abs_shap_kw": 0.047549862414598465,
+      "share_pct": 4.541249752044678
+     },
+     {
+      "feature": "hour_cos",
+      "label": "hour of day (cosine)",
+      "group": "Time of day",
+      "mean_abs_shap_kw": 0.04751808941364288,
+      "share_pct": 4.538215160369873
+     },
+     {
+      "feature": "lag_47",
+      "label": "usage 47 h earlier",
+      "group": "Recent consumption",
+      "mean_abs_shap_kw": 0.0446302592754364,
+      "share_pct": 4.262413024902344
+     },
+     {
+      "feature": "roll_std_168",
+      "label": "variability over the last 7 days",
+      "group": "Recent averages and variability",
+      "mean_abs_shap_kw": 0.03667151927947998,
+      "share_pct": 3.5023133754730225
+     },
+     {
+      "feature": "lag_11",
+      "label": "usage 11 h earlier",
+      "group": "Recent consumption",
+      "mean_abs_shap_kw": 0.03363095596432686,
+      "share_pct": 3.2119243144989014
+     },
+     {
+      "feature": "lag_1",
+      "label": "usage 1 h earlier",
+      "group": "Recent consumption",
+      "mean_abs_shap_kw": 0.0330338217318058,
+      "share_pct": 3.154895067214966
+     },
+     {
+      "feature": "roll_std_24",
+      "label": "variability over the last 24 h",
+      "group": "Recent averages and variability",
+      "mean_abs_shap_kw": 0.029409870505332947,
+      "share_pct": 2.8087897300720215
+     }
+    ],
+    "group_share_pct": {
+     "Recent consumption": 60.40281677246094,
+     "Time of day": 14.322671890258789,
+     "Same time yesterday / last week": 9.96536922454834,
+     "Recent averages and variability": 8.58587646484375,
+     "Day of week": 4.224809646606445,
+     "Season": 2.4984617233276367
+    }
+   },
+   "6": {
+    "top_features": [
+     {
+      "feature": "seasonal_168",
+      "label": "usage at the same time last week",
+      "group": "Same time yesterday / last week",
+      "mean_abs_shap_kw": 0.20000773668289185,
+      "share_pct": 20.870746612548828
+     },
+     {
+      "feature": "hour",
+      "label": "hour of day (number)",
+      "group": "Time of day",
+      "mean_abs_shap_kw": 0.18044009804725647,
+      "share_pct": 18.828868865966797
+     },
+     {
+      "feature": "seasonal_24",
+      "label": "usage at the same time yesterday",
+      "group": "Same time yesterday / last week",
+      "mean_abs_shap_kw": 0.07526520639657974,
+      "share_pct": 7.853900909423828
+     },
+     {
+      "feature": "roll_std_168",
+      "label": "variability over the last 7 days",
+      "group": "Recent averages and variability",
+      "mean_abs_shap_kw": 0.06475798040628433,
+      "share_pct": 6.75747537612915
+     },
+     {
+      "feature": "roll_mean_168",
+      "label": "average of the last 7 days",
+      "group": "Recent averages and variability",
+      "mean_abs_shap_kw": 0.04642375186085701,
+      "share_pct": 4.844304084777832
+     },
+     {
+      "feature": "roll_std_24",
+      "label": "variability over the last 24 h",
+      "group": "Recent averages and variability",
+      "mean_abs_shap_kw": 0.04421539232134819,
+      "share_pct": 4.61386251449585
+     },
+     {
+      "feature": "lag_5",
+      "label": "usage 5 h earlier",
+      "group": "Recent consumption",
+      "mean_abs_shap_kw": 0.04373840615153313,
+      "share_pct": 4.564089298248291
+     },
+     {
+      "feature": "dow",
+      "label": "day of week (number)",
+      "group": "Day of week",
+      "mean_abs_shap_kw": 0.04166661947965622,
+      "share_pct": 4.347898483276367
+     },
+     {
+      "feature": "dow_sin",
+      "label": "day of week (sine)",
+      "group": "Day of week",
+      "mean_abs_shap_kw": 0.02687874808907509,
+      "share_pct": 2.8047890663146973
+     },
+     {
+      "feature": "lag_0",
+      "label": "usage in the latest hour",
+      "group": "Recent consumption",
+      "mean_abs_shap_kw": 0.02587144263088703,
+      "share_pct": 2.6996772289276123
+     }
+    ],
+    "group_share_pct": {
+     "Same time yesterday / last week": 28.724647521972656,
+     "Time of day": 22.500059127807617,
+     "Recent averages and variability": 18.405729293823242,
+     "Recent consumption": 16.835758209228516,
+     "Day of week": 8.925658226013184,
+     "Season": 4.608150005340576
+    }
+   },
+   "24": {
+    "top_features": [
+     {
+      "feature": "seasonal_168",
+      "label": "usage at the same time last week",
+      "group": "Same time yesterday / last week",
+      "mean_abs_shap_kw": 0.20552125573158264,
+      "share_pct": 20.823894500732422
+     },
+     {
+      "feature": "hour",
+      "label": "hour of day (number)",
+      "group": "Time of day",
+      "mean_abs_shap_kw": 0.1923266351222992,
+      "share_pct": 19.486984252929688
+     },
+     {
+      "feature": "roll_std_168",
+      "label": "variability over the last 7 days",
+      "group": "Recent averages and variability",
+      "mean_abs_shap_kw": 0.07649208605289459,
+      "share_pct": 7.750356674194336
+     },
+     {
+      "feature": "lag_11",
+      "label": "usage 11 h earlier",
+      "group": "Recent consumption",
+      "mean_abs_shap_kw": 0.052309680730104446,
+      "share_pct": 5.3001389503479
+     },
+     {
+      "feature": "lag_23",
+      "label": "usage 23 h earlier",
+      "group": "Recent consumption",
+      "mean_abs_shap_kw": 0.04751918837428093,
+      "share_pct": 4.814754962921143
+     },
+     {
+      "feature": "dow",
+      "label": "day of week (number)",
+      "group": "Day of week",
+      "mean_abs_shap_kw": 0.045726191252470016,
+      "share_pct": 4.633084297180176
+     },
+     {
+      "feature": "roll_mean_168",
+      "label": "average of the last 7 days",
+      "group": "Recent averages and variability",
+      "mean_abs_shap_kw": 0.04408904165029526,
+      "share_pct": 4.467204570770264
+     },
+     {
+      "feature": "lag_0",
+      "label": "usage in the latest hour",
+      "group": "Recent consumption",
+      "mean_abs_shap_kw": 0.0402376689016819,
+      "share_pct": 4.076974868774414
+     },
+     {
+      "feature": "lag_47",
+      "label": "usage 47 h earlier",
+      "group": "Recent consumption",
+      "mean_abs_shap_kw": 0.03227347508072853,
+      "share_pct": 3.270024061203003
+     },
+     {
+      "feature": "dow_sin",
+      "label": "day of week (sine)",
+      "group": "Day of week",
+      "mean_abs_shap_kw": 0.030119556933641434,
+      "share_pct": 3.051784038543701
+     }
+    ],
+    "group_share_pct": {
+     "Same time yesterday / last week": 23.43728256225586,
+     "Recent consumption": 22.861793518066406,
+     "Time of day": 21.54922103881836,
+     "Recent averages and variability": 16.999011993408203,
+     "Day of week": 9.646907806396484,
+     "Season": 5.505785942077637
+    }
+   }
+  }
+ }
+]

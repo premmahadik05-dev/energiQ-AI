@@ -1,0 +1,35 @@
+flowchart TB
+  user([User])
+  p1[1. Authenticate<br/>register, login, roles]
+  p2[2. Ingest and validate data<br/>parse, hourly aggregate, quality score]
+  p3[3. Train forecast models<br/>CV, XGBoost per horizon]
+  p4[4. Forecast and explain<br/>predict, TreeSHAP]
+  p5[5. Detect anomalies]
+  p6[6. Optimise cost<br/>tariff, recommendations, scheduler]
+  p7[7. Monitor<br/>drift, realised error, metrics]
+  d1[(D1 Users and audit)]
+  d2[(D2 Datasets and readings)]
+  d3[(D3 Models and forecasts)]
+  d4[(D4 Anomalies)]
+  d5[(D5 Tariffs and recommendations)]
+  d6[(D6 Uploaded files and model files)]
+  user -->|credentials| p1 --> d1
+  user -->|CSV| p2
+  p2 --> d2
+  p2 --> d6
+  d2 --> p3 --> d3
+  p3 --> d6
+  d3 --> p4
+  d2 --> p4
+  p4 -->|forecast, explanation| user
+  d2 --> p5 --> d4
+  p5 -->|events| user
+  user -->|tariff| p6
+  p6 --> d5
+  d2 --> p6
+  d3 --> p6
+  d4 --> p6
+  p6 -->|cost, advice, schedule| user
+  d2 --> p7
+  d3 --> p7
+  p7 -->|drift, error status| user

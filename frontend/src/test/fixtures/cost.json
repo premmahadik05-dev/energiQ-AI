@@ -1,0 +1,95 @@
+{
+ "total": {
+  "valid_hours": 8687,
+  "energy_kwh": 9370.666803225875,
+  "energy_cost": 1887.1746764853597,
+  "fixed_cost": 0.0,
+  "total_cost": 1887.1746764853597,
+  "currency": "EUR",
+  "is_demo_tariff": true,
+  "avg_cost_per_kwh": 0.2013917169518497
+ },
+ "monthly": [
+  {
+   "month": "2009-01",
+   "valid_hours": 744,
+   "energy_kwh": 1049.22,
+   "total_cost": 213.87
+  },
+  {
+   "month": "2009-02",
+   "valid_hours": 670,
+   "energy_kwh": 836.44,
+   "total_cost": 168.9
+  },
+  {
+   "month": "2009-03",
+   "valid_hours": 744,
+   "energy_kwh": 912.77,
+   "total_cost": 183.72
+  }
+ ],
+ "tariff": {
+  "name": "DEMO tariff (not a real utility price)",
+  "currency": "EUR",
+  "weekday_rates": [
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.3,
+   0.3,
+   0.3,
+   0.3,
+   0.2,
+   0.2,
+   0.12
+  ],
+  "weekend_rates": [
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.12,
+   0.12
+  ],
+  "daily_fixed_charge": 0.0,
+  "is_demo": true,
+  "note": "Illustrative numbers only. Replace with your own rates before using any cost figure."
+ },
+ "range": [
+  "2009-01-01 00:00:00",
+  "2009-12-31 23:00:00"
+ ]
+}

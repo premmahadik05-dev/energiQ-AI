@@ -1,0 +1,33 @@
+flowchart LR
+  viewer([Viewer])
+  analyst([Analyst])
+  admin([Administrator])
+  subgraph EnergiQ AI
+    uc1(View dashboard, forecasts, anomalies)
+    uc2(Download CSV and HTML report)
+    uc3(Upload or append dataset)
+    uc4(Load bundled sample)
+    uc5(Train and activate model)
+    uc6(Create forecast)
+    uc7(Run anomaly detection, acknowledge)
+    uc8(Manage tariffs, get recommendations)
+    uc9(Explain a forecast)
+    uc10(Manage users and read audit log)
+    uc11(Register and sign in)
+  end
+  viewer --> uc11
+  viewer --> uc1
+  viewer --> uc2
+  viewer --> uc9
+  analyst --> uc11
+  analyst --> uc1
+  analyst --> uc2
+  analyst --> uc3
+  analyst --> uc4
+  analyst --> uc5
+  analyst --> uc6
+  analyst --> uc7
+  analyst --> uc8
+  analyst --> uc9
+  admin --> uc10
+  admin --> uc1

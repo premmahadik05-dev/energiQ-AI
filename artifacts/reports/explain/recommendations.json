@@ -1,0 +1,147 @@
+{
+  "recommendations": [
+    {
+      "id": "review_anomalies",
+      "category": "anomalies",
+      "priority": "high",
+      "title": "Review recent high-severity anomalies",
+      "explanation": "4 high-severity anomaly event(s) in the last 30 days. Most severe: unusually high use around Sun 2010-10-31 05:00: 2.91 kW vs typical 0.36 kW for this hour of the week, 3.1x the edge of the usual range for this hour (the 99.5th-percentile deviation of the last 26 weeks). Event spans 2 h.",
+      "evidence": {
+        "high_severity_events_30d": 4,
+        "total_events_30d": 11,
+        "top_event_start": "2010-10-31 05:00:00"
+      },
+      "scenario": null,
+      "caveats": [
+        "An anomaly is an unusual reading, not a confirmed fault; unusual-but-legitimate use (guests, holidays) is flagged too."
+      ]
+    },
+    {
+      "id": "reduce_baseload",
+      "category": "standby / always-on load",
+      "priority": "medium",
+      "title": "Check always-on devices",
+      "explanation": "Your lowest sustained demand is about 0.30 kW (the 5th percentile of hourly use), about 27% of all energy. Fridges and routers account for part of it; old appliances, standby electronics and heating elements are common extras.",
+      "evidence": {
+        "baseload_kw": 0.29539166621863844,
+        "baseload_share_pct": 26.720172263494884,
+        "average_rate_per_kwh": 0.20181510562703592
+      },
+      "scenario": {
+        "assumption": "always-on load is reduced by 10%",
+        "kwh_saved_per_30d": 21.268199967741968,
+        "saving_per_30d": 4.292244022986767,
+        "currency": "EUR"
+      },
+      "caveats": [
+        "Figures are scenario estimates under the stated assumption, not forecasts of savings.",
+        "The tariff in use is the built-in DEMO tariff; replace it with your real rates before relying on any cost figure.",
+        "The 'baseload' is a statistical floor of the whole-house reading, not a measurement of individual devices."
+      ]
+    },
+    {
+      "id": "shift_peak_load",
+      "category": "load shifting",
+      "priority": "low",
+      "title": "Move flexible use out of the most expensive hours",
+      "explanation": "16% of your energy in the last 86 days was used in the most expensive tariff hours (17:00-21:00), which are only 12% of the hours. Running dishwashers, washing machines or EV charging outside those hours is the simplest saving.",
+      "evidence": {
+        "dearest_rate_per_kwh": 0.3,
+        "cheapest_rate_per_kwh": 0.12,
+        "peak_energy_share_pct": 16.45119315154732,
+        "peak_time_share_pct": 12.258687258687258,
+        "concentration": 1.342002842913624,
+        "peak_hours": [
+          17,
+          18,
+          19,
+          20
+        ],
+        "peak_kwh_in_window": 376.83057874786726
+      },
+      "scenario": {
+        "assumption": "10% of the dearest-period energy is moved to the cheapest hours",
+        "kwh_moved_per_30d": 13.094498875408515,
+        "saving_per_30d": 2.3570097975735327,
+        "currency": "EUR"
+      },
+      "caveats": [
+        "Figures are scenario estimates under the stated assumption, not forecasts of savings.",
+        "The tariff in use is the built-in DEMO tariff; replace it with your real rates before relying on any cost figure.",
+        "Only flexible loads (laundry, dishwasher, EV charging, water heating) can usually be moved."
+      ]
+    }
+  ],
+  "window": {
+    "start": "2010-08-28 22:00:00",
+    "end": "2010-11-26 20:00:00",
+    "valid_hours": 2072,
+    "days_covered": 86.33333333333333
+  },
+  "baseline_cost": {
+    "energy_kwh": 2290.5972550229553,
+    "energy_cost": 462.27712697145625,
+    "total_cost": 462.27712697145625,
+    "currency": "EUR",
+    "is_demo_tariff": true
+  },
+  "tariff": {
+    "name": "DEMO tariff (not a real utility price)",
+    "currency": "EUR",
+    "weekday_rates": [
+      0.12,
+      0.12,
+      0.12,
+      0.12,
+      0.12,
+      0.12,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.3,
+      0.3,
+      0.3,
+      0.3,
+      0.2,
+      0.2,
+      0.12
+    ],
+    "weekend_rates": [
+      0.12,
+      0.12,
+      0.12,
+      0.12,
+      0.12,
+      0.12,
+      0.12,
+      0.12,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.12,
+      0.12
+    ],
+    "daily_fixed_charge": 0.0,
+    "is_demo": true,
+    "note": "Illustrative numbers only. Replace with your own rates before using any cost figure."
+  }
+}

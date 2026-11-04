@@ -1,0 +1,20 @@
+{
+ "id": 1,
+ "kind": "ingest",
+ "status": "succeeded",
+ "progress": 1.0,
+ "message": "done",
+ "dataset_id": 1,
+ "result": {
+  "dataset_id": 1,
+  "hours": 8760,
+  "valid_hours": 8687,
+  "quality_score": 99.17,
+  "suitable_for_forecasting": true,
+  "warnings": []
+ },
+ "error": null,
+ "created_at": "2026-11-03T00:19:08.502890",
+ "started_at": "2026-11-03T00:19:08.505278",
+ "finished_at": "2026-11-03T00:19:08.642589"
+}

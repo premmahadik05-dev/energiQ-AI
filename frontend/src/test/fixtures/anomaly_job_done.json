@@ -1,0 +1,18 @@
+{
+ "id": 3,
+ "kind": "anomaly",
+ "status": "succeeded",
+ "progress": 1.0,
+ "message": "done",
+ "dataset_id": 1,
+ "result": {
+  "run_id": 1,
+  "events": 102,
+  "high_severity": 5,
+  "flagged_pct": 1.6116035455278002
+ },
+ "error": null,
+ "created_at": "2026-11-03T00:19:44.322215",
+ "started_at": "2026-11-03T00:19:44.324830",
+ "finished_at": "2026-11-03T00:19:44.843916"
+}

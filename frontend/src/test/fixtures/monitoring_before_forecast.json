@@ -1,0 +1,26 @@
+{
+ "model_id": "bundle_2_1_20261103T001920526790",
+ "trained_through": "2009-12-31 23:00:00",
+ "data_through": "2009-12-31 23:00:00",
+ "drift": {
+  "psi": 0.13307220649742457,
+  "ks_statistic": 0.16217839875676304,
+  "ks_pvalue": 8.456807215770734e-15,
+  "reference_hours": 8687,
+  "recent_hours": 672,
+  "recent_days": 28,
+  "new_data_since_training": false,
+  "mean_ratio_recent_to_reference": 1.2721112027459085,
+  "status": "moderate shift"
+ },
+ "realized_performance": {
+  "forecasts_checked": 0,
+  "points_scored": 0,
+  "realized_mae_kw": null,
+  "holdout_mae_kw_mean_over_1_6_24h": 0.4727644369663895,
+  "ratio_realized_to_holdout": null,
+  "status": "no realised data yet",
+  "note": "Realised error mixes all 24 horizons while the hold-out figure averages 1, 6 and 24 h, so treat the ratio as a rough alarm, not a precise score."
+ },
+ "retrain_recommended": false
+}

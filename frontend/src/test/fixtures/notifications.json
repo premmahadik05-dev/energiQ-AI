@@ -1,0 +1,18 @@
+[
+ {
+  "id": 2,
+  "kind": "anomaly",
+  "message": "102 anomaly events found in 'UCI household sample (2009, hourly)' (5 high severity)",
+  "link": "/anomalies?dataset=1",
+  "is_read": false,
+  "created_at": "2026-11-03T00:19:44.841428"
+ },
+ {
+  "id": 1,
+  "kind": "model",
+  "message": "Forecast model trained on 'UCI household sample (2009, hourly)'",
+  "link": "/models/bundle_2_1_20261103T001920526790",
+  "is_read": false,
+  "created_at": "2026-11-03T00:19:20.531474"
+ }
+]

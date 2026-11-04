@@ -1,0 +1,6 @@
+# Needed only to re-run the research scripts (EDA figures, LSTM benchmark, evaluation plots); not used by the API image.
+-r requirements.txt
+matplotlib==3.11.2
+psutil==7.2.2
+# CPU-only PyTorch is enough: pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch==2.15.0

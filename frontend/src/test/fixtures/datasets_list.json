@@ -1,0 +1,28 @@
+[
+ {
+  "id": 1,
+  "name": "UCI household sample (2009, hourly)",
+  "original_filename": "uci_hourly_2009_sample.csv",
+  "status": "ready",
+  "error": null,
+  "quality_score": 99.17,
+  "hours": 8760,
+  "valid_hours": 8687,
+  "start_ts": "2009-01-01T00:00:00",
+  "end_ts": "2009-12-31T23:00:00",
+  "created_at": "2026-11-03T00:19:08.499513",
+  "config": {
+   "value_column": "power_kw",
+   "unit": "kW",
+   "timestamp_column": "timestamp",
+   "date_column": null,
+   "time_column": null,
+   "delimiter": ",",
+   "dayfirst": false,
+   "timestamp_format": "%Y-%m-%d %H:%M:%S",
+   "extra_columns": {},
+   "min_valid_fraction": 0.75,
+   "timezone_convention": "logger_clock"
+  }
+ }
+]

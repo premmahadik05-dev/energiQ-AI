@@ -1,0 +1,20 @@
+{
+ "id": 87,
+ "run_id": 1,
+ "dataset_id": 1,
+ "start_ts": "2009-12-12T23:00:00",
+ "end_ts": "2009-12-13T01:00:00",
+ "hours": 3,
+ "types": [
+  "drop"
+ ],
+ "severity": "high",
+ "severity_level": 3,
+ "peak_ts": "2009-12-13T01:00:00",
+ "peak_value_kw": 0.36239999532699585,
+ "expected_kw": 1.1194000244140625,
+ "peak_excess_ratio": 2.9425764704099366,
+ "explanation": "unusually low use around Sun 2009-12-13 01:00: 0.36 kW vs typical 1.12 kW for this hour of the week, 2.9x the edge of the usual range for this hour (the 99.5th-percentile deviation of the last 26 weeks). Event spans 3 h.",
+ "acknowledged": true,
+ "acknowledged_at": "2026-11-03T00:19:45.385591"
+}

@@ -1,0 +1,182 @@
+{
+  "1": {
+    "origin": "2010-01-04 18:00:00",
+    "prediction_kw": 2.573517322540283,
+    "base_value_kw": 1.1005241870880127,
+    "drivers": [
+      {
+        "feature": "lag_0",
+        "label": "usage in the latest hour",
+        "value": 1.6523666729529698,
+        "contribution_kw": 0.5415146946907043,
+        "direction": "raises"
+      },
+      {
+        "feature": "seasonal_168",
+        "label": "usage at the same time last week",
+        "value": 3.15726668437322,
+        "contribution_kw": 0.17259055376052856,
+        "direction": "raises"
+      },
+      {
+        "feature": "hour_sin",
+        "label": "hour of day (sine)",
+        "value": -0.9659258262890684,
+        "contribution_kw": 0.1591743528842926,
+        "direction": "raises"
+      },
+      {
+        "feature": "hour",
+        "label": "hour of day (number)",
+        "value": 19.0,
+        "contribution_kw": 0.13086627423763275,
+        "direction": "raises"
+      },
+      {
+        "feature": "lag_23",
+        "label": "usage 23 h earlier",
+        "value": 2.6398333251476287,
+        "contribution_kw": 0.09995567053556442,
+        "direction": "raises"
+      },
+      {
+        "feature": "hour_cos",
+        "label": "hour of day (cosine)",
+        "value": 0.2588190451025203,
+        "contribution_kw": 0.08379733562469482,
+        "direction": "raises"
+      }
+    ],
+    "grouped_kw": {
+      "Recent consumption": 0.8682218715548515,
+      "Time of day": 0.3738379627466202,
+      "Same time yesterday / last week": 0.17098766716662794,
+      "Recent averages and variability": 0.053751470521092415,
+      "Season": 0.04835280403494835,
+      "Day of week": -0.04215767339337617
+    },
+    "additivity_error_kw": 9.5367431640625e-07,
+    "narrative": "The model forecasts 2.57 kW for 1 h ahead (average-case baseline 1.10 kW). Pushing it up: usage in the latest hour (+0.54 kW); usage at the same time last week (+0.17 kW).",
+    "actual_kw": 2.4832999845345816
+  },
+  "6": {
+    "origin": "2010-01-04 18:00:00",
+    "prediction_kw": 0.5627181529998779,
+    "base_value_kw": 1.1004639863967896,
+    "drivers": [
+      {
+        "feature": "hour",
+        "label": "hour of day (number)",
+        "value": 0.0,
+        "contribution_kw": -0.30694228410720825,
+        "direction": "lowers"
+      },
+      {
+        "feature": "seasonal_168",
+        "label": "usage at the same time last week",
+        "value": 0.3343333373467127,
+        "contribution_kw": -0.1400691717863083,
+        "direction": "lowers"
+      },
+      {
+        "feature": "dow",
+        "label": "day of week (number)",
+        "value": 1.0,
+        "contribution_kw": -0.07190815359354019,
+        "direction": "lowers"
+      },
+      {
+        "feature": "month_cos",
+        "label": "season (cosine)",
+        "value": 1.0,
+        "contribution_kw": 0.0688076987862587,
+        "direction": "raises"
+      },
+      {
+        "feature": "lag_47",
+        "label": "usage 47 h earlier",
+        "value": 2.067066675424576,
+        "contribution_kw": -0.06311500072479248,
+        "direction": "lowers"
+      },
+      {
+        "feature": "month",
+        "label": "month (number)",
+        "value": 1.0,
+        "contribution_kw": 0.05137169733643532,
+        "direction": "raises"
+      }
+    ],
+    "grouped_kw": {
+      "Time of day": -0.35585617925971746,
+      "Same time yesterday / last week": -0.18648185208439827,
+      "Season": 0.12104062212165445,
+      "Recent consumption": -0.09582039312226698,
+      "Day of week": -0.06306764716282487,
+      "Recent averages and variability": 0.04243931267410517
+    },
+    "additivity_error_kw": 2.980232238769531e-07,
+    "narrative": "The model forecasts 0.56 kW for 6 h ahead (average-case baseline 1.10 kW). Pushing it up: season (cosine) (+0.07 kW); month (number) (+0.05 kW). Pulling it down: hour of day (number) (-0.31 kW); usage at the same time last week (-0.14 kW).",
+    "actual_kw": 0.3830333342154821
+  },
+  "24": {
+    "origin": "2010-01-04 18:00:00",
+    "prediction_kw": 2.093961238861084,
+    "base_value_kw": 1.0993114709854126,
+    "drivers": [
+      {
+        "feature": "seasonal_168",
+        "label": "usage at the same time last week",
+        "value": 2.5058333317438763,
+        "contribution_kw": 0.3425891399383545,
+        "direction": "raises"
+      },
+      {
+        "feature": "month_cos",
+        "label": "season (cosine)",
+        "value": 1.0,
+        "contribution_kw": 0.16073326766490936,
+        "direction": "raises"
+      },
+      {
+        "feature": "hour",
+        "label": "hour of day (number)",
+        "value": 18.0,
+        "contribution_kw": 0.12003262341022491,
+        "direction": "raises"
+      },
+      {
+        "feature": "lag_47",
+        "label": "usage 47 h earlier",
+        "value": 2.067066675424576,
+        "contribution_kw": 0.09511496871709824,
+        "direction": "raises"
+      },
+      {
+        "feature": "lag_0",
+        "label": "usage in the latest hour",
+        "value": 1.6523666729529698,
+        "contribution_kw": 0.09083575010299683,
+        "direction": "raises"
+      },
+      {
+        "feature": "lag_23",
+        "label": "usage 23 h earlier",
+        "value": 2.6398333251476287,
+        "contribution_kw": 0.08262374252080917,
+        "direction": "raises"
+      }
+    ],
+    "grouped_kw": {
+      "Same time yesterday / last week": 0.3476033774204552,
+      "Recent consumption": 0.30196996142331045,
+      "Season": 0.22519357688724995,
+      "Time of day": 0.10748839582083747,
+      "Recent averages and variability": 0.0798632437363267,
+      "Day of week": -0.06746944482438266
+    },
+    "additivity_error_kw": 7.152557373046875e-07,
+    "narrative": "The model forecasts 2.09 kW for 24 h ahead (average-case baseline 1.10 kW). Pushing it up: usage at the same time last week (+0.34 kW); season (cosine) (+0.16 kW).",
+    "actual_kw": 2.6085666735967
+  }
+}

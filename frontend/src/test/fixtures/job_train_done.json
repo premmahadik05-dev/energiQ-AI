@@ -1,0 +1,21 @@
+{
+ "id": 2,
+ "kind": "train",
+ "status": "succeeded",
+ "progress": 1.0,
+ "message": "done",
+ "dataset_id": 1,
+ "result": {
+  "model_id": "bundle_2_1_20261103T001920526790",
+  "active": true,
+  "holdout_mae_kw": {
+   "1": 0.389478685674534,
+   "6": 0.5117091223614537,
+   "24": 0.5171055028631807
+  }
+ },
+ "error": null,
+ "created_at": "2026-11-03T00:19:09.087884",
+ "started_at": "2026-11-03T00:19:09.090283",
+ "finished_at": "2026-11-03T00:19:20.533492"
+}

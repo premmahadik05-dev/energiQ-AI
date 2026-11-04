@@ -1,0 +1,12 @@
+{
+ "best_start": "2010-01-01 03:00:00",
+ "best_end": "2010-01-01 06:00:00",
+ "cost": 0.72,
+ "cost_if_started_first_hour": 0.72,
+ "cost_at_worst_start": 1.7999999999999998,
+ "worst_start": "2010-01-01 17:00:00",
+ "saving_vs_first_hour": 0.0,
+ "currency": "EUR",
+ "is_demo_tariff": true,
+ "energy_kwh": 6.0
+}

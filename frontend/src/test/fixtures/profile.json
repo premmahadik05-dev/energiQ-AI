@@ -1,0 +1,274 @@
+{
+ "hourly_profile": [
+  {
+   "hour": 0,
+   "mean_kw": 0.572
+  },
+  {
+   "hour": 1,
+   "mean_kw": 0.4879
+  },
+  {
+   "hour": 2,
+   "mean_kw": 0.4497
+  },
+  {
+   "hour": 3,
+   "mean_kw": 0.4339
+  },
+  {
+   "hour": 4,
+   "mean_kw": 0.4461
+  },
+  {
+   "hour": 5,
+   "mean_kw": 0.4572
+  },
+  {
+   "hour": 6,
+   "mean_kw": 0.8018
+  },
+  {
+   "hour": 7,
+   "mean_kw": 1.5615
+  },
+  {
+   "hour": 8,
+   "mean_kw": 1.486
+  },
+  {
+   "hour": 9,
+   "mean_kw": 1.3731
+  },
+  {
+   "hour": 10,
+   "mean_kw": 1.2721
+  },
+  {
+   "hour": 11,
+   "mean_kw": 1.2681
+  },
+  {
+   "hour": 12,
+   "mean_kw": 1.2074
+  },
+  {
+   "hour": 13,
+   "mean_kw": 1.1158
+  },
+  {
+   "hour": 14,
+   "mean_kw": 1.0124
+  },
+  {
+   "hour": 15,
+   "mean_kw": 0.9151
+  },
+  {
+   "hour": 16,
+   "mean_kw": 0.9618
+  },
+  {
+   "hour": 17,
+   "mean_kw": 1.125
+  },
+  {
+   "hour": 18,
+   "mean_kw": 1.3471
+  },
+  {
+   "hour": 19,
+   "mean_kw": 1.717
+  },
+  {
+   "hour": 20,
+   "mean_kw": 1.899
+  },
+  {
+   "hour": 21,
+   "mean_kw": 1.8336
+  },
+  {
+   "hour": 22,
+   "mean_kw": 1.3313
+  },
+  {
+   "hour": 23,
+   "mean_kw": 0.8087
+  }
+ ],
+ "weekday_vs_weekend": [
+  {
+   "hour": 0,
+   "weekday_kw": 0.4796,
+   "weekend_kw": 0.8076
+  },
+  {
+   "hour": 1,
+   "weekday_kw": 0.4179,
+   "weekend_kw": 0.6663
+  },
+  {
+   "hour": 2,
+   "weekday_kw": 0.4166,
+   "weekend_kw": 0.5341
+  },
+  {
+   "hour": 3,
+   "weekday_kw": 0.4157,
+   "weekend_kw": 0.4804
+  },
+  {
+   "hour": 4,
+   "weekday_kw": 0.4436,
+   "weekend_kw": 0.4523
+  },
+  {
+   "hour": 5,
+   "weekday_kw": 0.446,
+   "weekend_kw": 0.4855
+  },
+  {
+   "hour": 6,
+   "weekday_kw": 0.9081,
+   "weekend_kw": 0.5319
+  },
+  {
+   "hour": 7,
+   "weekday_kw": 1.7622,
+   "weekend_kw": 1.0517
+  },
+  {
+   "hour": 8,
+   "weekday_kw": 1.581,
+   "weekend_kw": 1.2439
+  },
+  {
+   "hour": 9,
+   "weekday_kw": 1.398,
+   "weekend_kw": 1.3097
+  },
+  {
+   "hour": 10,
+   "weekday_kw": 1.2402,
+   "weekend_kw": 1.3532
+  },
+  {
+   "hour": 11,
+   "weekday_kw": 1.1549,
+   "weekend_kw": 1.5567
+  },
+  {
+   "hour": 12,
+   "weekday_kw": 1.045,
+   "weekend_kw": 1.6211
+  },
+  {
+   "hour": 13,
+   "weekday_kw": 0.9507,
+   "weekend_kw": 1.5368
+  },
+  {
+   "hour": 14,
+   "weekday_kw": 0.8597,
+   "weekend_kw": 1.4016
+  },
+  {
+   "hour": 15,
+   "weekday_kw": 0.7948,
+   "weekend_kw": 1.2216
+  },
+  {
+   "hour": 16,
+   "weekday_kw": 0.8015,
+   "weekend_kw": 1.3744
+  },
+  {
+   "hour": 17,
+   "weekday_kw": 0.9127,
+   "weekend_kw": 1.666
+  },
+  {
+   "hour": 18,
+   "weekday_kw": 1.1546,
+   "weekend_kw": 1.8376
+  },
+  {
+   "hour": 19,
+   "weekday_kw": 1.6077,
+   "weekend_kw": 1.9958
+  },
+  {
+   "hour": 20,
+   "weekday_kw": 1.8548,
+   "weekend_kw": 2.0122
+  },
+  {
+   "hour": 21,
+   "weekday_kw": 1.8052,
+   "weekend_kw": 1.9063
+  },
+  {
+   "hour": 22,
+   "weekday_kw": 1.2718,
+   "weekend_kw": 1.4835
+  },
+  {
+   "hour": 23,
+   "weekday_kw": 0.7151,
+   "weekend_kw": 1.0482
+  }
+ ],
+ "monthly_mean_kw": [
+  {
+   "month": "2009-01",
+   "mean_kw": 1.4102
+  },
+  {
+   "month": "2009-02",
+   "mean_kw": 1.2484
+  },
+  {
+   "month": "2009-03",
+   "mean_kw": 1.2268
+  },
+  {
+   "month": "2009-04",
+   "mean_kw": 1.1407
+  },
+  {
+   "month": "2009-05",
+   "mean_kw": 1.0128
+  },
+  {
+   "month": "2009-06",
+   "mean_kw": 0.8404
+  },
+  {
+   "month": "2009-07",
+   "mean_kw": 0.6182
+  },
+  {
+   "month": "2009-08",
+   "mean_kw": 0.6644
+  },
+  {
+   "month": "2009-09",
+   "mean_kw": 0.9869
+  },
+  {
+   "month": "2009-10",
+   "mean_kw": 1.1445
+  },
+  {
+   "month": "2009-11",
+   "mean_kw": 1.2748
+  },
+  {
+   "month": "2009-12",
+   "mean_kw": 1.3645
+  }
+ ],
+ "valid_hours": 8687,
+ "min_hours_needed_for_forecasting": 672
+}
