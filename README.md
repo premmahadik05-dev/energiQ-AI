@@ -1,4 +1,4 @@
-# EnergiQ AI
+# EnergiQ AI - Intelligent Energy Forecasting & Smart Society Management
 
 Cloud-Native Intelligent Energy Forecasting, Anomaly Detection & Optimization Platform
 
