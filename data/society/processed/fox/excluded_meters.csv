@@ -1,0 +1,2 @@
+source_id,valid_share,reason,readings,missing_in_source,negative,zero_long_runs,zero_short,stuck_sensor,spike,valid_out
+Fox_lodging_Warren,0.8320793433652531,valid hours 83.2% below the 95% rule,17544,2,0,0,8,2936,0,14598

@@ -1,0 +1,14 @@
+UP031 Use format specifiers instead of percent format
+   --> run_energiq.py:160:16
+    |
+158 |         got = subprocess.run([str(py), "-c", "import sys;print('%d.%d'%sys.version_info[:2])"],
+159 |                              capture_output=True, text=True).stdout.strip()
+160 |         want = "%d.%d" % sys.version_info[:2]
+    |                ^^^^^^^
+161 |         if got != want:
+162 |             say(f"  The existing .venv uses Python {got or '?'}, rebuilding it for {want}.")
+    |
+help: Replace with format specifiers
+
+Found 1 error.
+exit=1

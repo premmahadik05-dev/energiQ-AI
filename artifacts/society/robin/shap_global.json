@@ -1,0 +1,498 @@
+{
+  "society": "robin",
+  "basis": "mean |SHAP| of the CV-selected model on the test rows",
+  "horizons": {
+    "1": {
+      "model": "xgboost",
+      "rows": 1200,
+      "top_features": [
+        {
+          "feature": "lag_0",
+          "label": "usage in the latest hour",
+          "group": "Recent consumption",
+          "mean_abs_shap_kw": 125.26252746582031,
+          "share_pct": 64.56739044189453
+        },
+        {
+          "feature": "lag_23",
+          "label": "usage 23 h earlier",
+          "group": "Recent consumption",
+          "mean_abs_shap_kw": 23.56941795349121,
+          "share_pct": 12.14901065826416
+        },
+        {
+          "feature": "hour_cos",
+          "label": "hour of day (cosine)",
+          "group": "Time of day",
+          "mean_abs_shap_kw": 8.127758979797363,
+          "share_pct": 4.189506530761719
+        },
+        {
+          "feature": "seasonal_168",
+          "label": "usage at the same time last week",
+          "group": "Same time yesterday / last week",
+          "mean_abs_shap_kw": 7.146113395690918,
+          "share_pct": 3.6835107803344727
+        },
+        {
+          "feature": "hour",
+          "label": "hour of day (number)",
+          "group": "Time of day",
+          "mean_abs_shap_kw": 3.5970711708068848,
+          "share_pct": 1.8541338443756104
+        },
+        {
+          "feature": "seasonal_24",
+          "label": "usage at the same time yesterday",
+          "group": "Same time yesterday / last week",
+          "mean_abs_shap_kw": 2.9035091400146484,
+          "share_pct": 1.4966328144073486
+        },
+        {
+          "feature": "lag_5",
+          "label": "usage 5 h earlier",
+          "group": "Recent consumption",
+          "mean_abs_shap_kw": 2.4803314208984375,
+          "share_pct": 1.2785030603408813
+        },
+        {
+          "feature": "lag_11",
+          "label": "usage 11 h earlier",
+          "group": "Recent consumption",
+          "mean_abs_shap_kw": 2.4420793056488037,
+          "share_pct": 1.2587857246398926
+        },
+        {
+          "feature": "hour_sin",
+          "label": "hour of day (sine)",
+          "group": "Time of day",
+          "mean_abs_shap_kw": 2.334209442138672,
+          "share_pct": 1.2031835317611694
+        },
+        {
+          "feature": "roll_mean_24",
+          "label": "average of the last 24 h",
+          "group": "Recent averages and variability",
+          "mean_abs_shap_kw": 2.10567307472229,
+          "share_pct": 1.0853829383850098
+        },
+        {
+          "feature": "roll_mean_168",
+          "label": "average of the last 7 days",
+          "group": "Recent averages and variability",
+          "mean_abs_shap_kw": 1.738740086555481,
+          "share_pct": 0.8962449431419373
+        },
+        {
+          "feature": "lag_2",
+          "label": "usage 2 h earlier",
+          "group": "Recent consumption",
+          "mean_abs_shap_kw": 1.4955625534057617,
+          "share_pct": 0.7708975076675415
+        }
+      ],
+      "group_share_pct": {
+        "Recent consumption": 81.43521118164062,
+        "Time of day": 7.246823787689209,
+        "Same time yesterday / last week": 5.180143356323242,
+        "Recent averages and variability": 3.0206336975097656,
+        "Day of week": 1.9665182828903198,
+        "Season": 1.1506620645523071
+      }
+    },
+    "6": {
+      "model": "xgboost_weather",
+      "rows": 1200,
+      "top_features": [
+        {
+          "feature": "seasonal_24",
+          "label": "usage at the same time yesterday",
+          "group": "Same time yesterday / last week",
+          "mean_abs_shap_kw": 99.99966430664062,
+          "share_pct": 46.4925422668457
+        },
+        {
+          "feature": "seasonal_168",
+          "label": "usage at the same time last week",
+          "group": "Same time yesterday / last week",
+          "mean_abs_shap_kw": 32.22298812866211,
+          "share_pct": 14.98133659362793
+        },
+        {
+          "feature": "roll_mean_24",
+          "label": "average of the last 24 h",
+          "group": "Recent averages and variability",
+          "mean_abs_shap_kw": 8.297657012939453,
+          "share_pct": 3.857804536819458
+        },
+        {
+          "feature": "hour",
+          "label": "hour of day (number)",
+          "group": "Time of day",
+          "mean_abs_shap_kw": 7.16079568862915,
+          "share_pct": 3.329247236251831
+        },
+        {
+          "feature": "hour_sin",
+          "label": "hour of day (sine)",
+          "group": "Time of day",
+          "mean_abs_shap_kw": 6.767164707183838,
+          "share_pct": 3.14623761177063
+        },
+        {
+          "feature": "roll_std_24",
+          "label": "variability over the last 24 h",
+          "group": "Recent averages and variability",
+          "mean_abs_shap_kw": 6.115455150604248,
+          "share_pct": 2.843240261077881
+        },
+        {
+          "feature": "lag_3",
+          "label": "usage 3 h earlier",
+          "group": "Recent consumption",
+          "mean_abs_shap_kw": 5.319724082946777,
+          "share_pct": 2.473283290863037
+        },
+        {
+          "feature": "roll_mean_168",
+          "label": "average of the last 7 days",
+          "group": "Recent averages and variability",
+          "mean_abs_shap_kw": 4.869905471801758,
+          "share_pct": 2.264150381088257
+        },
+        {
+          "feature": "wx_airTemperature",
+          "label": "outdoor temperature now",
+          "group": "Weather at forecast time",
+          "mean_abs_shap_kw": 4.869241714477539,
+          "share_pct": 2.2638418674468994
+        },
+        {
+          "feature": "dow_sin",
+          "label": "day of week (sine)",
+          "group": "Day of week",
+          "mean_abs_shap_kw": 4.097546577453613,
+          "share_pct": 1.905060052871704
+        },
+        {
+          "feature": "wx_dewTemperature",
+          "label": "dew point now",
+          "group": "Weather at forecast time",
+          "mean_abs_shap_kw": 3.8258674144744873,
+          "share_pct": 1.7787489891052246
+        },
+        {
+          "feature": "month_sin",
+          "label": "season (sine)",
+          "group": "Season",
+          "mean_abs_shap_kw": 3.550687313079834,
+          "share_pct": 1.6508102416992188
+        }
+      ],
+      "group_share_pct": {
+        "Same time yesterday / last week": 61.473876953125,
+        "Recent averages and variability": 9.816025733947754,
+        "Recent consumption": 7.822721004486084,
+        "Time of day": 6.881136417388916,
+        "Weather at forecast time": 6.825738430023193,
+        "Day of week": 4.693050861358643,
+        "Season": 2.4874467849731445
+      }
+    },
+    "12": {
+      "model": "xgboost_weather",
+      "rows": 1200,
+      "top_features": [
+        {
+          "feature": "seasonal_24",
+          "label": "usage at the same time yesterday",
+          "group": "Same time yesterday / last week",
+          "mean_abs_shap_kw": 95.2428970336914,
+          "share_pct": 45.570411682128906
+        },
+        {
+          "feature": "seasonal_168",
+          "label": "usage at the same time last week",
+          "group": "Same time yesterday / last week",
+          "mean_abs_shap_kw": 27.999019622802734,
+          "share_pct": 13.39655590057373
+        },
+        {
+          "feature": "lag_11",
+          "label": "usage 11 h earlier",
+          "group": "Recent consumption",
+          "mean_abs_shap_kw": 20.24947166442871,
+          "share_pct": 9.688667297363281
+        },
+        {
+          "feature": "wx_airTemperature",
+          "label": "outdoor temperature now",
+          "group": "Weather at forecast time",
+          "mean_abs_shap_kw": 9.1948881149292,
+          "share_pct": 4.3994340896606445
+        },
+        {
+          "feature": "roll_std_24",
+          "label": "variability over the last 24 h",
+          "group": "Recent averages and variability",
+          "mean_abs_shap_kw": 6.791491985321045,
+          "share_pct": 3.2494924068450928
+        },
+        {
+          "feature": "dow_sin",
+          "label": "day of week (sine)",
+          "group": "Day of week",
+          "mean_abs_shap_kw": 4.353568077087402,
+          "share_pct": 2.083030939102173
+        },
+        {
+          "feature": "hour_sin",
+          "label": "hour of day (sine)",
+          "group": "Time of day",
+          "mean_abs_shap_kw": 4.331364154815674,
+          "share_pct": 2.0724070072174072
+        },
+        {
+          "feature": "hour",
+          "label": "hour of day (number)",
+          "group": "Time of day",
+          "mean_abs_shap_kw": 4.223506450653076,
+          "share_pct": 2.020800828933716
+        },
+        {
+          "feature": "wx_dewTemperature",
+          "label": "dew point now",
+          "group": "Weather at forecast time",
+          "mean_abs_shap_kw": 3.972728729248047,
+          "share_pct": 1.9008125066757202
+        },
+        {
+          "feature": "dow",
+          "label": "day of week (number)",
+          "group": "Day of week",
+          "mean_abs_shap_kw": 3.822810173034668,
+          "share_pct": 1.8290815353393555
+        },
+        {
+          "feature": "lag_0",
+          "label": "usage in the latest hour",
+          "group": "Recent consumption",
+          "mean_abs_shap_kw": 3.7537169456481934,
+          "share_pct": 1.7960230112075806
+        },
+        {
+          "feature": "roll_mean_168",
+          "label": "average of the last 7 days",
+          "group": "Recent averages and variability",
+          "mean_abs_shap_kw": 3.3165462017059326,
+          "share_pct": 1.586851954460144
+        }
+      ],
+      "group_share_pct": {
+        "Same time yesterday / last week": 58.96696853637695,
+        "Recent consumption": 13.400383949279785,
+        "Weather at forecast time": 8.436075210571289,
+        "Recent averages and variability": 6.709690093994141,
+        "Day of week": 5.040358543395996,
+        "Time of day": 4.655548572540283,
+        "Season": 2.7909774780273438
+      }
+    },
+    "24": {
+      "model": "xgboost",
+      "rows": 1200,
+      "top_features": [
+        {
+          "feature": "lag_0",
+          "label": "usage in the latest hour",
+          "group": "Recent consumption",
+          "mean_abs_shap_kw": 93.3981704711914,
+          "share_pct": 45.262855529785156
+        },
+        {
+          "feature": "seasonal_168",
+          "label": "usage at the same time last week",
+          "group": "Same time yesterday / last week",
+          "mean_abs_shap_kw": 31.560754776000977,
+          "share_pct": 15.295051574707031
+        },
+        {
+          "feature": "seasonal_24",
+          "label": "usage at the same time yesterday",
+          "group": "Same time yesterday / last week",
+          "mean_abs_shap_kw": 16.099611282348633,
+          "share_pct": 7.802234172821045
+        },
+        {
+          "feature": "lag_47",
+          "label": "usage 47 h earlier",
+          "group": "Recent consumption",
+          "mean_abs_shap_kw": 8.518646240234375,
+          "share_pct": 4.1283278465271
+        },
+        {
+          "feature": "roll_std_24",
+          "label": "variability over the last 24 h",
+          "group": "Recent averages and variability",
+          "mean_abs_shap_kw": 6.756121635437012,
+          "share_pct": 3.2741687297821045
+        },
+        {
+          "feature": "dow_sin",
+          "label": "day of week (sine)",
+          "group": "Day of week",
+          "mean_abs_shap_kw": 5.859428405761719,
+          "share_pct": 2.839611053466797
+        },
+        {
+          "feature": "roll_mean_168",
+          "label": "average of the last 7 days",
+          "group": "Recent averages and variability",
+          "mean_abs_shap_kw": 4.656928539276123,
+          "share_pct": 2.256852388381958
+        },
+        {
+          "feature": "month_sin",
+          "label": "season (sine)",
+          "group": "Season",
+          "mean_abs_shap_kw": 4.169478416442871,
+          "share_pct": 2.020622968673706
+        },
+        {
+          "feature": "month_cos",
+          "label": "season (cosine)",
+          "group": "Season",
+          "mean_abs_shap_kw": 4.1507086753845215,
+          "share_pct": 2.0115268230438232
+        },
+        {
+          "feature": "dow",
+          "label": "day of week (number)",
+          "group": "Day of week",
+          "mean_abs_shap_kw": 4.005605697631836,
+          "share_pct": 1.941206693649292
+        },
+        {
+          "feature": "hour",
+          "label": "hour of day (number)",
+          "group": "Time of day",
+          "mean_abs_shap_kw": 3.794894218444824,
+          "share_pct": 1.8390910625457764
+        },
+        {
+          "feature": "month",
+          "label": "month (number)",
+          "group": "Season",
+          "mean_abs_shap_kw": 3.691321611404419,
+          "share_pct": 1.7888975143432617
+        }
+      ],
+      "group_share_pct": {
+        "Recent consumption": 52.92635726928711,
+        "Same time yesterday / last week": 23.097286224365234,
+        "Recent averages and variability": 8.595512390136719,
+        "Day of week": 6.258711338043213,
+        "Season": 5.821047306060791,
+        "Time of day": 3.3010854721069336
+      }
+    },
+    "168": {
+      "model": "random_forest",
+      "rows": 1200,
+      "top_features": [
+        {
+          "feature": "seasonal_168",
+          "label": "usage at the same time last week",
+          "group": "Same time yesterday / last week",
+          "mean_abs_shap_kw": 71.5591024664456,
+          "share_pct": 36.14666211670801
+        },
+        {
+          "feature": "lag_0",
+          "label": "usage in the latest hour",
+          "group": "Recent consumption",
+          "mean_abs_shap_kw": 56.15294384342679,
+          "share_pct": 28.364546479863733
+        },
+        {
+          "feature": "lag_1",
+          "label": "usage 1 h earlier",
+          "group": "Recent consumption",
+          "mean_abs_shap_kw": 15.830342577591036,
+          "share_pct": 7.996383753027557
+        },
+        {
+          "feature": "month_cos",
+          "label": "season (cosine)",
+          "group": "Season",
+          "mean_abs_shap_kw": 9.714484250098348,
+          "share_pct": 4.90707915168501
+        },
+        {
+          "feature": "month_sin",
+          "label": "season (sine)",
+          "group": "Season",
+          "mean_abs_shap_kw": 7.864067447289594,
+          "share_pct": 3.972377783992892
+        },
+        {
+          "feature": "month",
+          "label": "month (number)",
+          "group": "Season",
+          "mean_abs_shap_kw": 6.600505050160592,
+          "share_pct": 3.3341142862943816
+        },
+        {
+          "feature": "lag_23",
+          "label": "usage 23 h earlier",
+          "group": "Recent consumption",
+          "mean_abs_shap_kw": 4.50370366206071,
+          "share_pct": 2.2749566293487797
+        },
+        {
+          "feature": "seasonal_336",
+          "label": "usage at the same time two weeks ago",
+          "group": "Same time yesterday / last week",
+          "mean_abs_shap_kw": 4.041929801295996,
+          "share_pct": 2.0417007171855905
+        },
+        {
+          "feature": "roll_mean_168",
+          "label": "average of the last 7 days",
+          "group": "Recent averages and variability",
+          "mean_abs_shap_kw": 3.893772666967549,
+          "share_pct": 1.9668620776531665
+        },
+        {
+          "feature": "lag_47",
+          "label": "usage 47 h earlier",
+          "group": "Recent consumption",
+          "mean_abs_shap_kw": 3.4165492441943677,
+          "share_pct": 1.725802125493346
+        },
+        {
+          "feature": "roll_std_168",
+          "label": "variability over the last 7 days",
+          "group": "Recent averages and variability",
+          "mean_abs_shap_kw": 2.931492454436897,
+          "share_pct": 1.480785303279851
+        },
+        {
+          "feature": "roll_std_24",
+          "label": "variability over the last 24 h",
+          "group": "Recent averages and variability",
+          "mean_abs_shap_kw": 2.514573769540951,
+          "share_pct": 1.270187094056328
+        }
+      ],
+      "group_share_pct": {
+        "Recent consumption": 41.905662143624475,
+        "Same time yesterday / last week": 38.1883628338936,
+        "Season": 12.213571221972284,
+        "Recent averages and variability": 5.370242879325987,
+        "Time of day": 2.071264143025517,
+        "Day of week": 0.2508967781581559
+      }
+    }
+  }
+}

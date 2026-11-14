@@ -1,0 +1,58 @@
+# Local production-like stack: PostgreSQL + API + web UI.
+#   cp .env.example .env   (then fill in the secrets)   ->   docker compose up --build
+# The UI is served on http://localhost:8080 and proxies /api to the backend.
+name: energiq
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: energiq
+      POSTGRES_USER: energiq
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U energiq -d energiq"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  backend:
+    build:
+      context: .
+      dockerfile: docker/backend.Dockerfile
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      ENERGIQ_ENV: prod
+      ENERGIQ_DATABASE_URL: postgresql+psycopg://energiq:${POSTGRES_PASSWORD}@db:5432/energiq
+      ENERGIQ_SECRET_KEY: ${ENERGIQ_SECRET_KEY:?set ENERGIQ_SECRET_KEY in .env (at least 32 random characters)}
+      ENERGIQ_CORS_ORIGINS: '["http://localhost:8080"]'
+      ENERGIQ_ADMIN_EMAIL: ${ENERGIQ_ADMIN_EMAIL:-}
+      ENERGIQ_ADMIN_PASSWORD: ${ENERGIQ_ADMIN_PASSWORD:-}
+      ENERGIQ_ALLOW_REGISTRATION: ${ENERGIQ_ALLOW_REGISTRATION:-true}
+      ENERGIQ_TRUST_PROXY: "true"
+      ENERGIQ_MAX_UPLOAD_MB: ${ENERGIQ_MAX_UPLOAD_MB:-200}
+    volumes:
+      - appdata:/data
+    expose:
+      - "8000"
+
+  web:
+    build:
+      context: .
+      dockerfile: docker/frontend.Dockerfile
+    restart: unless-stopped
+    depends_on:
+      backend:
+        condition: service_started
+    ports:
+      - "8080:8080"
+
+volumes:
+  pgdata:
+  appdata:

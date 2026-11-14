@@ -1,0 +1,20 @@
+[
+ {
+  "id": 1,
+  "email": "admin@example.com",
+  "full_name": "Administrator",
+  "role": "admin",
+  "is_active": true,
+  "created_at": "2026-11-03T00:18:56.086493",
+  "last_login_at": "2026-11-03T00:19:56.191283"
+ },
+ {
+  "id": 2,
+  "email": "ana@example.com",
+  "full_name": "Ana Analyst",
+  "role": "analyst",
+  "is_active": true,
+  "created_at": "2026-11-03T00:19:08.273998",
+  "last_login_at": "2026-11-03T00:19:08.482041"
+ }
+]

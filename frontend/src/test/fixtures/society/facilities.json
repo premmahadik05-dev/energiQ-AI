@@ -1,0 +1,34 @@
+{
+ "available": false,
+ "categories": [
+  {
+   "category": "lift",
+   "label": "Lifts",
+   "measured": false,
+   "meters": [],
+   "status": "not measured in this dataset"
+  },
+  {
+   "category": "pump",
+   "label": "Water pumps",
+   "measured": false,
+   "meters": [],
+   "status": "not measured in this dataset"
+  },
+  {
+   "category": "streetlight",
+   "label": "Street / compound lighting",
+   "measured": false,
+   "meters": [],
+   "status": "not measured in this dataset"
+  },
+  {
+   "category": "clubhouse",
+   "label": "Clubhouse and amenities",
+   "measured": false,
+   "meters": [],
+   "status": "not measured in this dataset"
+  }
+ ],
+ "message": "This dataset has whole-building electricity meters only. Lifts, pumps, street lighting and the clubhouse are not metered separately, so no facility figures are shown. They appear here when an admin uploads facility meters."
+}

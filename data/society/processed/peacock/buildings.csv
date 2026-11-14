@@ -1,0 +1,12 @@
+code,source_id,sub_use,floor_area_sqm,year_built,floors,valid_share
+PEA-B01,Peacock_lodging_Chloe,Dormitory,4120.4,,,0.9977
+PEA-B02,Peacock_lodging_Francesca,Dormitory,3338.6,,,0.9991
+PEA-B03,Peacock_lodging_Jamaal,Dormitory,25900.9,,,0.9994
+PEA-B04,Peacock_lodging_James,Dormitory,7702.7,,,0.9958
+PEA-B05,Peacock_lodging_Lou,Dormitory,11895.7,,,0.9996
+PEA-B06,Peacock_lodging_Mathew,Dormitory,8669.1,,,0.9972
+PEA-B07,Peacock_lodging_Matthew,Dormitory,8686.4,,,0.9994
+PEA-B08,Peacock_lodging_Nova,Dormitory,4507.6,,,0.9986
+PEA-B09,Peacock_lodging_Sergio,Dormitory,10498.0,,,0.9994
+PEA-B10,Peacock_lodging_Terrie,Dormitory,4367.1,,,0.9977
+PEA-B11,Peacock_lodging_Wes,Dormitory,9828.3,,,0.9994

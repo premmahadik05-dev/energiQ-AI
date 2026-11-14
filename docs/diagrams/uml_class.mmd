@@ -1,0 +1,61 @@
+classDiagram
+  class Settings {
+    +env
+    +database_url
+    +secret_key
+    +validate_for_runtime()
+  }
+  class Database {
+    +session()
+    +create_all()
+  }
+  class JobRunner {
+    +create()
+    +submit()
+    +recover()
+  }
+  class Metrics {
+    +observe()
+    +prometheus()
+  }
+  class RateLimiter {
+    +hit(key, limit, window)
+  }
+  class User
+  class Dataset
+  class Reading
+  class ModelVersion
+  class Forecast
+  class Anomaly
+  class Tariff
+  class FeatureConfig {
+    +lags
+    +seasonal_offsets
+    +roll_windows
+  }
+  class AnomalyConfig {
+    +baseline_weeks
+    +alert_quantile
+    +flat_min_hours
+  }
+  class LSTMForecaster {
+    +fit()
+    +predict()
+  }
+  class Tariff_ml {
+    +weekday_rates
+    +weekend_rates
+    +rates_for()
+  }
+  Settings --> Database
+  Settings --> JobRunner
+  Database --> JobRunner
+  User "1" --> "*" Dataset : owns
+  Dataset "1" --> "*" Reading
+  Dataset "1" --> "*" ModelVersion
+  ModelVersion "1" --> "*" Forecast
+  Dataset "1" --> "*" Anomaly
+  User "1" --> "*" Tariff
+  ModelVersion ..> FeatureConfig : uses
+  Anomaly ..> AnomalyConfig : detected with
+  Tariff ..> Tariff_ml : evaluated by

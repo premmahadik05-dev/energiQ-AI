@@ -1,0 +1,15 @@
+PASS empty submit shows field errors 
+PASS negative rate rejected 
+PASS preview appears for valid rates 
+PASS saved tariff listed and in use 
+PASS cost figure uses rupees Estimated cost |  | ₹2,31,26,989 |  | Home bill
+PASS duplicate name rejected by server 
+PASS window with equal start/end rejected 
+PASS peak tariff stored with 5 to 9 range Time of day | In use | 	INR	5 to 9	5	0.00	 | Delete
+PASS deleted, list updated 
+PASS selection fell back to demo 
+PASS cancel keeps tariff 
+PASS tariff persists after reload 
+PASS no unexpected console errors (the deliberate 409 is excluded) 
+13 / 13
+exit=0

@@ -1,0 +1,27 @@
+flowchart LR
+  user([User - browser])
+  subgraph web[Web tier]
+    spa[React SPA<br/>served by nginx]
+  end
+  subgraph app[Application tier - one container]
+    api[FastAPI<br/>auth, upload, REST]
+    jobs[Job runner<br/>thread pool]
+    ml[ml_engine<br/>features, XGBoost, anomaly,<br/>SHAP, tariff]
+    mon[Monitoring<br/>metrics, drift]
+  end
+  subgraph data[Data tier]
+    db[(PostgreSQL<br/>SQLite in dev)]
+    files[(File store<br/>uploads, models)]
+    rep[(Benchmark reports<br/>read-only)]
+  end
+  user -->|HTTPS| spa
+  spa -->|REST + JWT| api
+  api --> jobs
+  jobs --> ml
+  api --> ml
+  api --> db
+  jobs --> db
+  ml --> files
+  api --> rep
+  api --> mon
+  mon -.->|/metrics| prom[Prometheus / CloudWatch]

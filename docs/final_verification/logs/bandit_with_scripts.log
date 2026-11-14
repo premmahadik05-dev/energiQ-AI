@@ -1,0 +1,13 @@
+$ bandit -r backend ml_engine scripts run_energiq.py -q
+     18 >> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+      8 >> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+      8 >> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
+      2 >> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+      1 Total lines of code: 10978
+      1 Medium: 1
+      1 Medium: 0
+      1 Low: 37
+      1 Low: 0
+      1 High: 36
+      1 High: 0
+      1 >> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'dev-only-insecure-secret-change-me-0123456789abcdef'

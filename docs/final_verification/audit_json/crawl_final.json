@@ -1,0 +1,1271 @@
+[
+ {
+  "viewport": "desktop",
+  "route": "/",
+  "title": "Society overview \u00b7 EnergiQ AI",
+  "h1": [
+   "Society overview"
+  ],
+  "overflowX": 0,
+  "buttons": 9,
+  "links": 19,
+  "inputs": 4,
+  "charts": 1,
+  "tables": 0,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 2986,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/overview?tariff_id=demo net::ERR_ABORTED",
+   "GET /api/v1/societies/3/consumption?resolution=hourly&start=2017-12-25T23%3A00%3A00&end=2017-12-31T23%3A00%3A00 net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "desktop",
+  "route": "/consumption",
+  "title": "Consumption \u00b7 EnergiQ AI",
+  "h1": [
+   "Consumption"
+  ],
+  "overflowX": 0,
+  "buttons": 13,
+  "links": 15,
+  "inputs": 10,
+  "charts": 1,
+  "tables": 0,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 1826,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/consumption?resolution=daily&start=2017-10-03T00%3A00%3A00&end=2017-12-31T23%3A00%3A00 net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "desktop",
+  "route": "/forecasting",
+  "title": "Forecasting \u00b7 EnergiQ AI",
+  "h1": [
+   "Forecasting"
+  ],
+  "overflowX": 0,
+  "buttons": 16,
+  "links": 15,
+  "inputs": 14,
+  "charts": 6,
+  "tables": 2,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 7244,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/models net::ERR_ABORTED",
+   "GET /api/v1/societies/3/backtest?horizon=24&start=2017-12-18T00%3A00%3A00&end=2017-12-31T23%3A00%3A00&limit=1000 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/error-analysis?horizon=24 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/forecast?horizons=1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C2 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/explain/global net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "desktop",
+  "route": "/compare",
+  "title": "Compare communities \u00b7 EnergiQ AI",
+  "h1": [
+   "Compare communities"
+  ],
+  "overflowX": 0,
+  "buttons": 11,
+  "links": 15,
+  "inputs": 0,
+  "charts": 4,
+  "tables": 1,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 3072,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/compare net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "desktop",
+  "route": "/buildings",
+  "title": "Buildings \u00b7 EnergiQ AI",
+  "h1": [
+   "Buildings"
+  ],
+  "overflowX": 0,
+  "buttons": 23,
+  "links": 15,
+  "inputs": 8,
+  "charts": 3,
+  "tables": 1,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 2958,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/buildings?start=2017-01-01T00%3A00%3A00&end=2017-12-31T23%3A00%3A00 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/buildings-monthly net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "desktop",
+  "route": "/facilities",
+  "title": "Common facilities \u00b7 EnergiQ AI",
+  "h1": [
+   "Facilities"
+  ],
+  "overflowX": 0,
+  "buttons": 4,
+  "links": 16,
+  "inputs": 1,
+  "charts": 0,
+  "tables": 0,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 1857,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/facilities?start=2017-10-03T00%3A00%3A00&end=2017-12-31T23%3A00%3A00&resolution=daily net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "desktop",
+  "route": "/cost",
+  "title": "Cost and peaks \u00b7 EnergiQ AI",
+  "h1": [
+   "Cost and peak demand"
+  ],
+  "overflowX": 0,
+  "buttons": 18,
+  "links": 15,
+  "inputs": 10,
+  "charts": 2,
+  "tables": 2,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 2997,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "POST /api/v1/societies/3/cost net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "desktop",
+  "route": "/alerts",
+  "title": "Alerts \u00b7 EnergiQ AI",
+  "h1": [
+   "Alerts"
+  ],
+  "overflowX": 0,
+  "buttons": 41,
+  "links": 15,
+  "inputs": 13,
+  "charts": 1,
+  "tables": 1,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 3477,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/buildings net::ERR_ABORTED",
+   "GET /api/v1/societies/3/anomalies?min_severity=2&scope=society&sort=time&limit=15&offset=0 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/anomalies?scope=society&min_severity=2&sort=time&limit=500 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/consumption?resolution=daily net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "desktop",
+  "route": "/recommendations",
+  "title": "Recommendations \u00b7 EnergiQ AI",
+  "h1": [
+   "Recommendations"
+  ],
+  "overflowX": 0,
+  "buttons": 4,
+  "links": 15,
+  "inputs": 2,
+  "charts": 0,
+  "tables": 0,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 6216,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "POST /api/v1/societies/3/recommendations net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "desktop",
+  "route": "/reports",
+  "title": "Reports \u00b7 EnergiQ AI",
+  "h1": [
+   "Reports"
+  ],
+  "overflowX": 0,
+  "buttons": 5,
+  "links": 15,
+  "inputs": 5,
+  "charts": 0,
+  "tables": 1,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 1390,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/reports net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "desktop",
+  "route": "/data-sources",
+  "title": "Data sources \u00b7 EnergiQ AI",
+  "h1": [
+   "Data sources"
+  ],
+  "overflowX": 0,
+  "buttons": 4,
+  "links": 16,
+  "inputs": 1,
+  "charts": 0,
+  "tables": 0,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 3699,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3 net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "desktop",
+  "route": "/notifications",
+  "title": "Notifications \u00b7 EnergiQ AI",
+  "h1": [
+   "Notifications"
+  ],
+  "overflowX": 0,
+  "buttons": 5,
+  "links": 15,
+  "inputs": 2,
+  "charts": 0,
+  "tables": 0,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 396,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=false&limit=100 net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "desktop",
+  "route": "/jobs",
+  "title": "Jobs \u00b7 EnergiQ AI",
+  "h1": [
+   "Jobs"
+  ],
+  "overflowX": 0,
+  "buttons": 4,
+  "links": 15,
+  "inputs": 0,
+  "charts": 0,
+  "tables": 1,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 520,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/jobs?limit=50 net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "desktop",
+  "route": "/society-admin",
+  "title": "Society admin \u00b7 EnergiQ AI",
+  "h1": [
+   "Society administration"
+  ],
+  "overflowX": 0,
+  "buttons": 36,
+  "links": 15,
+  "inputs": 7,
+  "charts": 0,
+  "tables": 2,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 4183,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "desktop",
+  "route": "/admin",
+  "title": "Admin \u00b7 EnergiQ AI",
+  "h1": [
+   "Administration"
+  ],
+  "overflowX": 0,
+  "buttons": 7,
+  "links": 15,
+  "inputs": 1,
+  "charts": 0,
+  "tables": 1,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 546,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/admin/users net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "desktop",
+  "route": "/does-not-exist",
+  "title": "Page not found \u00b7 EnergiQ AI",
+  "h1": [
+   "Page not found"
+  ],
+  "overflowX": 0,
+  "buttons": 4,
+  "links": 16,
+  "inputs": 0,
+  "charts": 0,
+  "tables": 0,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 354,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "tablet",
+  "route": "/",
+  "title": "Society overview \u00b7 EnergiQ AI",
+  "h1": [
+   "Society overview"
+  ],
+  "overflowX": 0,
+  "buttons": 9,
+  "links": 19,
+  "inputs": 4,
+  "charts": 1,
+  "tables": 0,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 2771,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/overview?tariff_id=demo net::ERR_ABORTED",
+   "GET /api/v1/societies/3/consumption?resolution=hourly&start=2017-12-25T23%3A00%3A00&end=2017-12-31T23%3A00%3A00 net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "tablet",
+  "route": "/consumption",
+  "title": "Consumption \u00b7 EnergiQ AI",
+  "h1": [
+   "Consumption"
+  ],
+  "overflowX": 0,
+  "buttons": 13,
+  "links": 15,
+  "inputs": 10,
+  "charts": 1,
+  "tables": 0,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 1611,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/consumption?resolution=daily&start=2017-10-03T00%3A00%3A00&end=2017-12-31T23%3A00%3A00 net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "tablet",
+  "route": "/forecasting",
+  "title": "Forecasting \u00b7 EnergiQ AI",
+  "h1": [
+   "Forecasting"
+  ],
+  "overflowX": 0,
+  "buttons": 16,
+  "links": 15,
+  "inputs": 14,
+  "charts": 6,
+  "tables": 2,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 7094,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/models net::ERR_ABORTED",
+   "GET /api/v1/societies/3/backtest?horizon=24&start=2017-12-18T00%3A00%3A00&end=2017-12-31T23%3A00%3A00&limit=1000 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/error-analysis?horizon=24 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/forecast?horizons=1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C2 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/explain/global net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "tablet",
+  "route": "/compare",
+  "title": "Compare communities \u00b7 EnergiQ AI",
+  "h1": [
+   "Compare communities"
+  ],
+  "overflowX": 0,
+  "buttons": 11,
+  "links": 15,
+  "inputs": 0,
+  "charts": 4,
+  "tables": 1,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 2857,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/compare net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "tablet",
+  "route": "/buildings",
+  "title": "Buildings \u00b7 EnergiQ AI",
+  "h1": [
+   "Buildings"
+  ],
+  "overflowX": 0,
+  "buttons": 23,
+  "links": 15,
+  "inputs": 8,
+  "charts": 3,
+  "tables": 1,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 2743,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/buildings?start=2017-01-01T00%3A00%3A00&end=2017-12-31T23%3A00%3A00 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/buildings-monthly net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "tablet",
+  "route": "/facilities",
+  "title": "Common facilities \u00b7 EnergiQ AI",
+  "h1": [
+   "Facilities"
+  ],
+  "overflowX": 0,
+  "buttons": 4,
+  "links": 16,
+  "inputs": 1,
+  "charts": 0,
+  "tables": 0,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 1642,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/facilities?start=2017-10-03T00%3A00%3A00&end=2017-12-31T23%3A00%3A00&resolution=daily net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "tablet",
+  "route": "/cost",
+  "title": "Cost and peaks \u00b7 EnergiQ AI",
+  "h1": [
+   "Cost and peak demand"
+  ],
+  "overflowX": 0,
+  "buttons": 18,
+  "links": 15,
+  "inputs": 10,
+  "charts": 2,
+  "tables": 2,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 2782,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "POST /api/v1/societies/3/cost net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "tablet",
+  "route": "/alerts",
+  "title": "Alerts \u00b7 EnergiQ AI",
+  "h1": [
+   "Alerts"
+  ],
+  "overflowX": 0,
+  "buttons": 41,
+  "links": 15,
+  "inputs": 13,
+  "charts": 1,
+  "tables": 1,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 3262,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/buildings net::ERR_ABORTED",
+   "GET /api/v1/societies/3/anomalies?min_severity=2&scope=society&sort=time&limit=15&offset=0 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/anomalies?scope=society&min_severity=2&sort=time&limit=500 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/consumption?resolution=daily net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "tablet",
+  "route": "/recommendations",
+  "title": "Recommendations \u00b7 EnergiQ AI",
+  "h1": [
+   "Recommendations"
+  ],
+  "overflowX": 0,
+  "buttons": 4,
+  "links": 15,
+  "inputs": 2,
+  "charts": 0,
+  "tables": 0,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 6001,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "POST /api/v1/societies/3/recommendations net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "tablet",
+  "route": "/reports",
+  "title": "Reports \u00b7 EnergiQ AI",
+  "h1": [
+   "Reports"
+  ],
+  "overflowX": 0,
+  "buttons": 5,
+  "links": 15,
+  "inputs": 5,
+  "charts": 0,
+  "tables": 1,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 1175,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/reports net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "tablet",
+  "route": "/data-sources",
+  "title": "Data sources \u00b7 EnergiQ AI",
+  "h1": [
+   "Data sources"
+  ],
+  "overflowX": 0,
+  "buttons": 4,
+  "links": 16,
+  "inputs": 1,
+  "charts": 0,
+  "tables": 0,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 3484,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3 net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "tablet",
+  "route": "/notifications",
+  "title": "Notifications \u00b7 EnergiQ AI",
+  "h1": [
+   "Notifications"
+  ],
+  "overflowX": 0,
+  "buttons": 5,
+  "links": 15,
+  "inputs": 2,
+  "charts": 0,
+  "tables": 0,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 181,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=false&limit=100 net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "tablet",
+  "route": "/jobs",
+  "title": "Jobs \u00b7 EnergiQ AI",
+  "h1": [
+   "Jobs"
+  ],
+  "overflowX": 0,
+  "buttons": 4,
+  "links": 15,
+  "inputs": 0,
+  "charts": 0,
+  "tables": 1,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 305,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/jobs?limit=50 net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "tablet",
+  "route": "/society-admin",
+  "title": "Society admin \u00b7 EnergiQ AI",
+  "h1": [
+   "Society administration"
+  ],
+  "overflowX": 0,
+  "buttons": 36,
+  "links": 15,
+  "inputs": 7,
+  "charts": 0,
+  "tables": 2,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 3968,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "tablet",
+  "route": "/admin",
+  "title": "Admin \u00b7 EnergiQ AI",
+  "h1": [
+   "Administration"
+  ],
+  "overflowX": 0,
+  "buttons": 7,
+  "links": 15,
+  "inputs": 1,
+  "charts": 0,
+  "tables": 1,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 331,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/admin/users net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "tablet",
+  "route": "/does-not-exist",
+  "title": "Page not found \u00b7 EnergiQ AI",
+  "h1": [
+   "Page not found"
+  ],
+  "overflowX": 0,
+  "buttons": 4,
+  "links": 16,
+  "inputs": 0,
+  "charts": 0,
+  "tables": 0,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 139,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "mobile",
+  "route": "/",
+  "title": "Society overview \u00b7 EnergiQ AI",
+  "h1": [
+   "Society overview"
+  ],
+  "overflowX": 0,
+  "buttons": 9,
+  "links": 19,
+  "inputs": 4,
+  "charts": 1,
+  "tables": 0,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 2701,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/overview?tariff_id=demo net::ERR_ABORTED",
+   "GET /api/v1/societies/3/consumption?resolution=hourly&start=2017-12-25T23%3A00%3A00&end=2017-12-31T23%3A00%3A00 net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "mobile",
+  "route": "/consumption",
+  "title": "Consumption \u00b7 EnergiQ AI",
+  "h1": [
+   "Consumption"
+  ],
+  "overflowX": 0,
+  "buttons": 13,
+  "links": 15,
+  "inputs": 10,
+  "charts": 1,
+  "tables": 0,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 1582,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/consumption?resolution=daily&start=2017-10-03T00%3A00%3A00&end=2017-12-31T23%3A00%3A00 net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "mobile",
+  "route": "/forecasting",
+  "title": "Forecasting \u00b7 EnergiQ AI",
+  "h1": [
+   "Forecasting"
+  ],
+  "overflowX": 0,
+  "buttons": 16,
+  "links": 15,
+  "inputs": 14,
+  "charts": 6,
+  "tables": 2,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 6936,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/models net::ERR_ABORTED",
+   "GET /api/v1/societies/3/backtest?horizon=24&start=2017-12-18T00%3A00%3A00&end=2017-12-31T23%3A00%3A00&limit=1000 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/error-analysis?horizon=24 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/forecast?horizons=1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C2 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/explain/global net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "mobile",
+  "route": "/compare",
+  "title": "Compare communities \u00b7 EnergiQ AI",
+  "h1": [
+   "Compare communities"
+  ],
+  "overflowX": 0,
+  "buttons": 11,
+  "links": 15,
+  "inputs": 0,
+  "charts": 4,
+  "tables": 1,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 2857,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/compare net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "mobile",
+  "route": "/buildings",
+  "title": "Buildings \u00b7 EnergiQ AI",
+  "h1": [
+   "Buildings"
+  ],
+  "overflowX": 0,
+  "buttons": 23,
+  "links": 15,
+  "inputs": 8,
+  "charts": 3,
+  "tables": 1,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 2594,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/buildings?start=2017-01-01T00%3A00%3A00&end=2017-12-31T23%3A00%3A00 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/buildings-monthly net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "mobile",
+  "route": "/facilities",
+  "title": "Common facilities \u00b7 EnergiQ AI",
+  "h1": [
+   "Facilities"
+  ],
+  "overflowX": 0,
+  "buttons": 4,
+  "links": 16,
+  "inputs": 1,
+  "charts": 0,
+  "tables": 0,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 1613,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/facilities?start=2017-10-03T00%3A00%3A00&end=2017-12-31T23%3A00%3A00&resolution=daily net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "mobile",
+  "route": "/cost",
+  "title": "Cost and peaks \u00b7 EnergiQ AI",
+  "h1": [
+   "Cost and peak demand"
+  ],
+  "overflowX": 0,
+  "buttons": 18,
+  "links": 15,
+  "inputs": 10,
+  "charts": 2,
+  "tables": 2,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 2753,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "POST /api/v1/societies/3/cost net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "mobile",
+  "route": "/alerts",
+  "title": "Alerts \u00b7 EnergiQ AI",
+  "h1": [
+   "Alerts"
+  ],
+  "overflowX": 0,
+  "buttons": 41,
+  "links": 15,
+  "inputs": 13,
+  "charts": 1,
+  "tables": 1,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 3215,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/buildings net::ERR_ABORTED",
+   "GET /api/v1/societies/3/anomalies?min_severity=2&scope=society&sort=time&limit=15&offset=0 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/anomalies?scope=society&min_severity=2&sort=time&limit=500 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/consumption?resolution=daily net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "mobile",
+  "route": "/recommendations",
+  "title": "Recommendations \u00b7 EnergiQ AI",
+  "h1": [
+   "Recommendations"
+  ],
+  "overflowX": 0,
+  "buttons": 4,
+  "links": 15,
+  "inputs": 2,
+  "charts": 0,
+  "tables": 0,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 5972,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "POST /api/v1/societies/3/recommendations net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "mobile",
+  "route": "/reports",
+  "title": "Reports \u00b7 EnergiQ AI",
+  "h1": [
+   "Reports"
+  ],
+  "overflowX": 0,
+  "buttons": 5,
+  "links": 15,
+  "inputs": 5,
+  "charts": 0,
+  "tables": 1,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 1146,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3/reports net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "mobile",
+  "route": "/data-sources",
+  "title": "Data sources \u00b7 EnergiQ AI",
+  "h1": [
+   "Data sources"
+  ],
+  "overflowX": 0,
+  "buttons": 4,
+  "links": 16,
+  "inputs": 1,
+  "charts": 0,
+  "tables": 0,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 3455,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/societies/3 net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "mobile",
+  "route": "/notifications",
+  "title": "Notifications \u00b7 EnergiQ AI",
+  "h1": [
+   "Notifications"
+  ],
+  "overflowX": 0,
+  "buttons": 5,
+  "links": 15,
+  "inputs": 2,
+  "charts": 0,
+  "tables": 0,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 181,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=false&limit=100 net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "mobile",
+  "route": "/jobs",
+  "title": "Jobs \u00b7 EnergiQ AI",
+  "h1": [
+   "Jobs"
+  ],
+  "overflowX": 0,
+  "buttons": 4,
+  "links": 15,
+  "inputs": 0,
+  "charts": 0,
+  "tables": 1,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 305,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/jobs?limit=50 net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "mobile",
+  "route": "/society-admin",
+  "title": "Society admin \u00b7 EnergiQ AI",
+  "h1": [
+   "Society administration"
+  ],
+  "overflowX": 0,
+  "buttons": 36,
+  "links": 15,
+  "inputs": 7,
+  "charts": 0,
+  "tables": 2,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 3939,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "mobile",
+  "route": "/admin",
+  "title": "Admin \u00b7 EnergiQ AI",
+  "h1": [
+   "Administration"
+  ],
+  "overflowX": 0,
+  "buttons": 7,
+  "links": 15,
+  "inputs": 1,
+  "charts": 0,
+  "tables": 1,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 331,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED",
+   "GET /api/v1/admin/users net::ERR_ABORTED"
+  ]
+ },
+ {
+  "viewport": "mobile",
+  "route": "/does-not-exist",
+  "title": "Page not found \u00b7 EnergiQ AI",
+  "h1": [
+   "Page not found"
+  ],
+  "overflowX": 0,
+  "buttons": 4,
+  "links": 16,
+  "inputs": 0,
+  "charts": 0,
+  "tables": 0,
+  "brokenImgs": 0,
+  "images": 0,
+  "emptyStates": [],
+  "bodyText": 139,
+  "console": [],
+  "pageerror": [],
+  "http": [],
+  "failed": [
+   "GET /api/v1/auth/me net::ERR_ABORTED",
+   "GET /api/v1/notifications?unread_only=true&limit=10 net::ERR_ABORTED"
+  ]
+ }
+]

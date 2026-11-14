@@ -1,0 +1,31 @@
+--- a database that cannot be prepared must stop the start with a plain message and start nothing ---
+$ bash run_project.sh --no-browser
+================================================================
+  EnergiQ AI - local launcher
+================================================================
+
+[EnergiQ] Checking your computer ...
+  Python 3.11: OK
+  Node.js 22.23: OK
+  Python packages: already installed.
+  Frontend packages: already installed.
+
+[EnergiQ] Preparing the database ...
+
+[EnergiQ] STOPPED: The database could not be prepared.
+  Reason: sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+
+  Common causes: the folder is read-only, the disk is full, or a sync tool (OneDrive) or an antivirus has
+  locked data/energiq.db. Close other programs that use the project folder and try again.
+  Full details: <extract>/.energiq-run/database.log
+  Logs for troubleshooting are in the .energiq-run folder (launcher.log and the others).
+exit=1
+servers running afterwards: 0
+state.json afterwards: removed
+--- last lines of .energiq-run/launcher.log ---
+  Reason: sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+
+  Common causes: the folder is read-only, the disk is full, or a sync tool (OneDrive) or an antivirus has
+  locked data/energiq.db. Close other programs that use the project folder and try again.
+  Full details: <extract>/.energiq-run/database.log
+  Logs for troubleshooting are in the .energiq-run folder (launcher.log and the others).

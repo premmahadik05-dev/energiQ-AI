@@ -1,0 +1,120 @@
+{
+ "society": {
+  "id": 1,
+  "key": "fox",
+  "name": "BDG2 site Fox residential community",
+  "description": "11 real residential-use buildings of Building Data Genome Project 2 (BDG2) site 'Fox', summed per hour. A research-based representative community, not a registered housing society.",
+  "timezone": "US/Mountain",
+  "start": "2016-01-01 00:00:00",
+  "end": "2017-12-31 23:00:00",
+  "hours": 17544,
+  "valid_hours": 17486,
+  "buildings": 11,
+  "floor_area_sqm": 127473.7,
+  "has_model": true,
+  "forecast_ready": true,
+  "source_name": "Building Data Genome Project 2 (BDG2)",
+  "license": "Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0), as stated in the LICENSE file of the repository",
+  "status": "ready"
+ },
+ "as_of": "2017-12-31 23:00:00",
+ "as_of_note": "Latest valid hour in the dataset. The data are a historical research record, not a live feed.",
+ "latest": {
+  "ts": "2017-12-31 23:00:00",
+  "demand_kw": 1076.56,
+  "energy_kwh": 1076.56
+ },
+ "windows": {
+  "last_24h": {
+   "hours": 24,
+   "energy_kwh": 25625.65,
+   "avg_kw": 1067.7354166666667,
+   "peak_kw": 1112.37,
+   "valid_hours": 24,
+   "change_vs_previous_pct": -0.09329587463030586
+  },
+  "last_7d": {
+   "hours": 168,
+   "energy_kwh": 177885.19,
+   "avg_kw": 1078.0920606060606,
+   "peak_kw": 1172.73,
+   "valid_hours": 165,
+   "change_vs_previous_pct": null
+  },
+  "last_30d": {
+   "hours": 720,
+   "energy_kwh": 862843.94,
+   "avg_kw": 1203.4085634588562,
+   "peak_kw": 1802.4,
+   "valid_hours": 717,
+   "change_vs_previous_pct": null
+  }
+ },
+ "totals": {
+  "energy_kwh": 26464352.43,
+  "avg_kw": 1513.4594778680087,
+  "peak_kw": 2283.16,
+  "peak_ts": "2016-09-11 21:00:00",
+  "load_factor": 0.6628792891729045,
+  "valid_hours": 17486,
+  "hours": 17544
+ },
+ "tariff": {
+  "name": "DEMO tariff (not a real utility price)",
+  "currency": "EUR",
+  "is_demo": true
+ },
+ "cost_last_24h": {
+  "valid_hours": 24,
+  "energy_kwh": 25625.65,
+  "energy_cost": 4263.317999999999,
+  "fixed_cost": 0.0,
+  "total_cost": 4263.317999999999,
+  "currency": "EUR",
+  "is_demo_tariff": true,
+  "avg_cost_per_kwh": 0.1663691652699541
+ },
+ "cost_last_30d": {
+  "valid_hours": 717,
+  "energy_kwh": 862843.94,
+  "energy_cost": 160360.795,
+  "fixed_cost": 0.0,
+  "total_cost": 160360.795,
+  "currency": "EUR",
+  "is_demo_tariff": true,
+  "avg_cost_per_kwh": 0.185851447250125
+ },
+ "forecast": {
+  "origin": "2017-12-31 23:00:00",
+  "trained_through": "2017-12-31 23:00:00",
+  "next_24h_energy_kwh": 25523.66090713522,
+  "next_24h_energy_range_kwh": [
+   23895.23816944749,
+   27031.4319011314
+  ],
+  "peak_kw": 1117.5538712581824,
+  "peak_range_kw": [
+   1042.708619533342,
+   1182.4829613808051
+  ],
+  "peak_time": "2018-01-01 21:00:00",
+  "range_note": "Per-hour empirical 80% ranges; the summed range adds the hourly ranges, so it is wider than a range for the total would be.",
+  "next_24h_energy_cost": 4944.203326887346,
+  "currency": "EUR",
+  "note": "Forecast for the 24 hours after the last hour of the dataset, made with models refitted on all data."
+ },
+ "anomalies": {
+  "society": {
+   "low": 127,
+   "medium": 23,
+   "high": 19
+  },
+  "building": {
+   "low": 1663,
+   "medium": 335,
+   "high": 202
+  },
+  "open": 2369,
+  "total": 2369
+ }
+}

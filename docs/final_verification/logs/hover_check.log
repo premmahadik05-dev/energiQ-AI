@@ -1,0 +1,19 @@
+PASS  / chart#0 | title: Hourly society demand for the last seven days up to 2017-12- | tooltip: 2017-12-29 08:00  Measured demand 1,072 kW | tick labels: 14 | axis titles: 2
+PASS  /consumption chart#0 | title: Daily energy in kWh from 2017-10-03 to 2017-12-31: 90 points | tooltip: 2017-11-01 00:00  Energy (kWh) 38,440 kWh | tick labels: 14 | axis titles: 1
+PASS  /forecasting chart#0 | title: Measured demand against predictions made 24 hours ahead, fro | tooltip: 2017-12-22 12:00  Measured 1,047 kW  Predicted (Random forest) 1,041 k | tick labels: 14 | axis titles: 1
+PASS  /forecasting chart#1 | title: How large are the errors? | tooltip: -111  Hours with this error 45 hours | tick labels: 18 | axis titles: 2
+PASS  /forecasting chart#2 | title: Which hours of the day are hardest? | tooltip: 06  Random forest 23.1 kW  Naive (last value) baseline 25.7 kW | tick labels: 17 | axis titles: 2
+PASS  /forecasting chart#3 | title: Test mean absolute error (kW, lower is better) | tooltip: Naive (last value)  Test MAE 48.5 kW | tick labels: 13 | axis titles: 1
+PASS  /forecasting chart#4 | title: Hourly demand for three days before 2017-12-31 23:00 and a 2 | tooltip: 2017-12-30 06:00  Measured 1,091 kW | tick labels: 9 | axis titles: 2
+PASS  /forecasting chart#5 | title: Global: average impact on a prediction (Random forest, 1200  | tooltip: usage 2 h earlier  Mean |SHAP| 6.9 kW | tick labels: 16 | axis titles: 1
+PASS  /compare chart#0 | title: Energy use per floor area | tooltip: Bull  Energy per m² per year 98.5 kWh/m²/yr | tick labels: 13 | axis titles: 1
+PASS  /compare chart#1 | title: Load factor | tooltip: Hog  Load factor 0.60 ratio | tick labels: 12 | axis titles: 1
+PASS  /compare chart#2 | title: Peak demand per floor area | tooltip: Eagle  Peak demand per m² 18.8 W/m² | tick labels: 11 | axis titles: 1
+PASS  /compare chart#3 | title: 24-hour forecast error | tooltip: Peacock  24 h forecast error 4.1 % | tick labels: 13 | axis titles: 1
+PASS  /buildings chart#0 | title: Last year | tooltip: FOX-B09  Energy 729,464 kWh | tick labels: 16 | axis titles: 1
+PASS  /buildings chart#1 | title: Daily energy in kWh of building FOX-B01 from 2017-01-01 to 2 | tooltip: 2017-04-28 00:00  Daily energy (kWh) 5,393 kWh | tick labels: 11 | axis titles: 1
+PASS  /buildings chart#2 | title: Monthly energy of FOX-B01 | tooltip: 2016-08  Monthly energy 155,565 kWh | tick labels: 17 | axis titles: 1
+PASS  /cost chart#0 | title: Estimated electricity cost per day in EUR from 2017-10-03 to | tooltip: 2017-11-01 00:00  Daily cost (EUR) 7,601 EUR | tick labels: 12 | axis titles: 1
+PASS  /cost chart#1 | title: Estimated monthly cost | tooltip: 2017-10  Estimated cost 211,000 EUR | tick labels: 9 | axis titles: 1
+PASS  /alerts chart#0 | title: Daily peak demand with 42 marked alerts on the whole society | tooltip: 2016-08-21 19:00  Daily peak demand (kW) 2,143 kW | tick labels: 10 | axis titles: 1
+18 of 18 charts: title, tick labels and a hover tooltip found; console messages: 0 []

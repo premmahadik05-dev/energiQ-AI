@@ -1,0 +1,542 @@
+{
+  "unmetered_share_of_active_energy": 0.512,
+  "dst_check": [
+    {
+      "transition": "March 2007",
+      "date": "2007-03-25",
+      "weekdays_used": {
+        "pre2": 10,
+        "pre": 10,
+        "post": 10,
+        "post2": 10
+      },
+      "across_change_pre_to_post": {
+        "shift_minutes": 10,
+        "corr_best": 0.8943,
+        "corr_at_zero": 0.888
+      },
+      "control_before_pre2_to_pre": {
+        "shift_minutes": 0,
+        "corr_best": 0.8737,
+        "corr_at_zero": 0.8737
+      },
+      "control_after_post_to_post2": {
+        "shift_minutes": 10,
+        "corr_best": 0.8462,
+        "corr_at_zero": 0.8217
+      }
+    },
+    {
+      "transition": "October 2007",
+      "date": "2007-10-28",
+      "weekdays_used": {
+        "pre2": 10,
+        "pre": 10,
+        "post": 10,
+        "post2": 10
+      },
+      "across_change_pre_to_post": {
+        "shift_minutes": 10,
+        "corr_best": 0.5951,
+        "corr_at_zero": 0.5933
+      },
+      "control_before_pre2_to_pre": {
+        "shift_minutes": 0,
+        "corr_best": 0.9403,
+        "corr_at_zero": 0.9403
+      },
+      "control_after_post_to_post2": {
+        "shift_minutes": 10,
+        "corr_best": 0.7593,
+        "corr_at_zero": 0.7507
+      }
+    },
+    {
+      "transition": "March 2008",
+      "date": "2008-03-30",
+      "weekdays_used": {
+        "pre2": 10,
+        "pre": 10,
+        "post": 10,
+        "post2": 10
+      },
+      "across_change_pre_to_post": {
+        "shift_minutes": 10,
+        "corr_best": 0.8479,
+        "corr_at_zero": 0.8391
+      },
+      "control_before_pre2_to_pre": {
+        "shift_minutes": -20,
+        "corr_best": 0.7666,
+        "corr_at_zero": 0.7485
+      },
+      "control_after_post_to_post2": {
+        "shift_minutes": 10,
+        "corr_best": 0.8995,
+        "corr_at_zero": 0.88
+      }
+    },
+    {
+      "transition": "October 2008",
+      "date": "2008-10-26",
+      "weekdays_used": {
+        "pre2": 10,
+        "pre": 10,
+        "post": 10,
+        "post2": 10
+      },
+      "across_change_pre_to_post": {
+        "shift_minutes": 0,
+        "corr_best": 0.6943,
+        "corr_at_zero": 0.6943
+      },
+      "control_before_pre2_to_pre": {
+        "shift_minutes": -10,
+        "corr_best": 0.9134,
+        "corr_at_zero": 0.8917
+      },
+      "control_after_post_to_post2": {
+        "shift_minutes": 0,
+        "corr_best": 0.6948,
+        "corr_at_zero": 0.6948
+      }
+    },
+    {
+      "transition": "March 2009",
+      "date": "2009-03-29",
+      "weekdays_used": {
+        "pre2": 10,
+        "pre": 10,
+        "post": 10,
+        "post2": 10
+      },
+      "across_change_pre_to_post": {
+        "shift_minutes": 10,
+        "corr_best": 0.9306,
+        "corr_at_zero": 0.9235
+      },
+      "control_before_pre2_to_pre": {
+        "shift_minutes": 0,
+        "corr_best": 0.8601,
+        "corr_at_zero": 0.8601
+      },
+      "control_after_post_to_post2": {
+        "shift_minutes": 0,
+        "corr_best": 0.8261,
+        "corr_at_zero": 0.8261
+      }
+    },
+    {
+      "transition": "October 2009",
+      "date": "2009-10-25",
+      "weekdays_used": {
+        "pre2": 10,
+        "pre": 10,
+        "post": 10,
+        "post2": 10
+      },
+      "across_change_pre_to_post": {
+        "shift_minutes": 0,
+        "corr_best": 0.7747,
+        "corr_at_zero": 0.7747
+      },
+      "control_before_pre2_to_pre": {
+        "shift_minutes": 0,
+        "corr_best": 0.9214,
+        "corr_at_zero": 0.9214
+      },
+      "control_after_post_to_post2": {
+        "shift_minutes": -10,
+        "corr_best": 0.8875,
+        "corr_at_zero": 0.8867
+      }
+    },
+    {
+      "transition": "March 2010",
+      "date": "2010-03-28",
+      "weekdays_used": {
+        "pre2": 10,
+        "pre": 10,
+        "post": 10,
+        "post2": 10
+      },
+      "across_change_pre_to_post": {
+        "shift_minutes": 10,
+        "corr_best": 0.928,
+        "corr_at_zero": 0.9053
+      },
+      "control_before_pre2_to_pre": {
+        "shift_minutes": -10,
+        "corr_best": 0.8897,
+        "corr_at_zero": 0.8887
+      },
+      "control_after_post_to_post2": {
+        "shift_minutes": -10,
+        "corr_best": 0.8611,
+        "corr_at_zero": 0.8606
+      }
+    },
+    {
+      "transition": "October 2010",
+      "date": "2010-10-31",
+      "weekdays_used": {
+        "pre2": 10,
+        "pre": 10,
+        "post": 10,
+        "post2": 9
+      },
+      "across_change_pre_to_post": {
+        "shift_minutes": 0,
+        "corr_best": 0.8525,
+        "corr_at_zero": 0.8525
+      },
+      "control_before_pre2_to_pre": {
+        "shift_minutes": 0,
+        "corr_best": 0.8661,
+        "corr_at_zero": 0.8661
+      },
+      "control_after_post_to_post2": {
+        "shift_minutes": -10,
+        "corr_best": 0.8552,
+        "corr_at_zero": 0.8456
+      }
+    }
+  ],
+  "flat_runs": {
+    "runs_of_identical_readings_ge_30_min": 1,
+    "runs_ge_60_min": 1,
+    "longest": [
+      {
+        "start": "2008-10-06 10:09:00",
+        "minutes": 401,
+        "value_kw": 0.36000001430511475
+      },
+      {
+        "start": "2007-06-21 01:08:00",
+        "minutes": 29,
+        "value_kw": 0.1080000028014183
+      },
+      {
+        "start": "2008-08-21 23:33:00",
+        "minutes": 28,
+        "value_kw": 0.0820000022649765
+      },
+      {
+        "start": "2008-08-28 17:19:00",
+        "minutes": 28,
+        "value_kw": 0.07999999821186066
+      },
+      {
+        "start": "2008-08-15 05:19:00",
+        "minutes": 27,
+        "value_kw": 0.0820000022649765
+      }
+    ]
+  },
+  "hourly_series": {
+    "hours_with_value": 34151,
+    "mean_kw": 1.0916,
+    "median_kw": 0.8027,
+    "std_kw": 0.8976,
+    "p5_kw": 0.2314,
+    "p95_kw": 2.8656,
+    "p99_kw": 3.9267,
+    "max_kw": 6.5605,
+    "weekday_mean_kw": 1.0355,
+    "weekend_mean_kw": 1.2341,
+    "weekday_peak_hour": 21,
+    "weekend_peak_hour": 19,
+    "weekday_peak_hour_mean_kw": 1.8561,
+    "weekend_peak_hour_mean_kw": 2.0476,
+    "overnight_3am_mean_kw_weekday": 0.4116,
+    "top10_hours": [
+      {
+        "hour": "2008-11-23 18:00:00",
+        "kw": 6.561
+      },
+      {
+        "hour": "2009-01-16 20:00:00",
+        "kw": 6.52
+      },
+      {
+        "hour": "2008-02-02 19:00:00",
+        "kw": 6.496
+      },
+      {
+        "hour": "2007-12-23 19:00:00",
+        "kw": 6.488
+      },
+      {
+        "hour": "2007-02-22 21:00:00",
+        "kw": 6.364
+      },
+      {
+        "hour": "2007-12-28 17:00:00",
+        "kw": 6.334
+      },
+      {
+        "hour": "2008-11-23 20:00:00",
+        "kw": 6.311
+      },
+      {
+        "hour": "2007-01-21 20:00:00",
+        "kw": 6.077
+      },
+      {
+        "hour": "2008-01-26 19:00:00",
+        "kw": 6.014
+      },
+      {
+        "hour": "2008-11-30 20:00:00",
+        "kw": 5.93
+      }
+    ]
+  },
+  "acf_hourly": {
+    "lag_1": 0.7134,
+    "lag_2": 0.4651,
+    "lag_3": 0.2861,
+    "lag_6": 0.0159,
+    "lag_12": 0.2388,
+    "lag_24": 0.4365,
+    "lag_48": 0.402,
+    "lag_72": 0.4128,
+    "lag_96": 0.4042,
+    "lag_120": 0.3695,
+    "lag_144": 0.3977,
+    "lag_168": 0.4607
+  },
+  "daily_energy": {
+    "valid_days": 1417,
+    "by_year_all_valid_days": {
+      "2006": {
+        "mean_kwh_per_day": 45.123,
+        "valid_days": 15
+      },
+      "2007": {
+        "mean_kwh_per_day": 26.843,
+        "valid_days": 361
+      },
+      "2008": {
+        "mean_kwh_per_day": 25.732,
+        "valid_days": 366
+      },
+      "2009": {
+        "mean_kwh_per_day": 25.901,
+        "valid_days": 361
+      },
+      "2010": {
+        "mean_kwh_per_day": 25.436,
+        "valid_days": 314
+      }
+    },
+    "jan1_to_nov25_same_window_each_year": {
+      "2007": {
+        "mean_kwh_per_day": 25.577,
+        "valid_days": 325
+      },
+      "2008": {
+        "mean_kwh_per_day": 25.128,
+        "valid_days": 330
+      },
+      "2009": {
+        "mean_kwh_per_day": 25.224,
+        "valid_days": 325
+      },
+      "2010": {
+        "mean_kwh_per_day": 25.436,
+        "valid_days": 314
+      }
+    },
+    "lowest_10_days": [
+      {
+        "date": "2008-08-25",
+        "kwh": 4.17
+      },
+      {
+        "date": "2008-08-23",
+        "kwh": 4.24
+      },
+      {
+        "date": "2008-08-24",
+        "kwh": 4.25
+      },
+      {
+        "date": "2008-08-26",
+        "kwh": 4.29
+      },
+      {
+        "date": "2008-08-27",
+        "kwh": 4.3
+      },
+      {
+        "date": "2008-08-21",
+        "kwh": 4.35
+      },
+      {
+        "date": "2008-08-22",
+        "kwh": 4.45
+      },
+      {
+        "date": "2008-08-29",
+        "kwh": 4.46
+      },
+      {
+        "date": "2008-08-28",
+        "kwh": 4.47
+      },
+      {
+        "date": "2008-08-20",
+        "kwh": 4.47
+      }
+    ],
+    "highest_5_days": [
+      {
+        "date": "2006-12-23",
+        "kwh": 79.56
+      },
+      {
+        "date": "2007-02-03",
+        "kwh": 67.16
+      },
+      {
+        "date": "2006-12-26",
+        "kwh": 65.57
+      },
+      {
+        "date": "2007-02-18",
+        "kwh": 63.83
+      },
+      {
+        "date": "2007-02-04",
+        "kwh": 59.93
+      }
+    ]
+  },
+  "monthly_mean_kwh_per_day": {
+    "2006": {
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null,
+      "11": null,
+      "12": 45.12
+    },
+    "2007": {
+      "1": 37.11,
+      "2": 33.63,
+      "3": 31.65,
+      "4": 21.44,
+      "5": 23.66,
+      "6": 19.84,
+      "7": 15.99,
+      "8": 18.34,
+      "9": 23.26,
+      "10": 26.49,
+      "11": 31.07,
+      "12": 39.04
+    },
+    "2008": {
+      "1": 35.04,
+      "2": 28.35,
+      "3": 29.89,
+      "4": 26.78,
+      "5": 24.58,
+      "6": 23.86,
+      "7": 19.07,
+      "8": 6.64,
+      "9": 23.7,
+      "10": 27.28,
+      "11": 33.29,
+      "12": 30.61
+    },
+    "2009": {
+      "1": 33.84,
+      "2": 29.93,
+      "3": 29.44,
+      "4": 27.38,
+      "5": 24.31,
+      "6": 20.22,
+      "7": 14.84,
+      "8": 15.82,
+      "9": 23.68,
+      "10": 27.47,
+      "11": 30.59,
+      "12": 32.75
+    },
+    "2010": {
+      "1": 34.22,
+      "2": 33.02,
+      "3": 27.07,
+      "4": 24.66,
+      "5": 26.29,
+      "6": 23.27,
+      "7": 17.31,
+      "8": 14.02,
+      "9": 22.91,
+      "10": 27.92,
+      "11": 28.74,
+      "12": null
+    }
+  },
+  "proposed_split": {
+    "train": {
+      "from": "2006-12-16 00:00",
+      "to": "2009-06-30 23:00",
+      "hours_in_split": 22255,
+      "valid_hours": 22127,
+      "valid_pct": 99.42,
+      "excluded_hours": 128,
+      "mean_kw": 1.1186,
+      "median_kw": 0.8161,
+      "p95_kw": 3.0016,
+      "max_kw": 6.5605,
+      "valid_days": 920,
+      "mean_kwh_per_day": 26.854
+    },
+    "validation": {
+      "from": "2009-07-01 00:00",
+      "to": "2009-12-31 23:00",
+      "hours_in_split": 4416,
+      "valid_hours": 4401,
+      "valid_pct": 99.66,
+      "excluded_hours": 15,
+      "mean_kw": 1.0087,
+      "median_kw": 0.658,
+      "p95_kw": 2.6567,
+      "max_kw": 5.1152,
+      "valid_days": 183,
+      "mean_kwh_per_day": 24.204
+    },
+    "test": {
+      "from": "2010-01-01 00:00",
+      "to": "2010-11-26 23:00",
+      "hours_in_split": 7918,
+      "valid_hours": 7623,
+      "valid_pct": 96.27,
+      "excluded_hours": 295,
+      "mean_kw": 1.0611,
+      "median_kw": 0.8323,
+      "p95_kw": 2.5738,
+      "max_kw": 5.6268,
+      "valid_days": 314,
+      "mean_kwh_per_day": 25.436
+    }
+  },
+  "figures": {
+    "fig01": "fig01_daily_overview.png",
+    "fig02": "fig02_daily_profile.png",
+    "fig03": "fig03_weekly_heatmap.png",
+    "fig04": "fig04_monthly_seasonality.png",
+    "fig05": "fig05_autocorrelation.png",
+    "fig06": "fig06_distribution.png",
+    "fig07": "fig07_submeter_mix.png",
+    "fig08": "fig08_clock_check.png"
+  }
+}

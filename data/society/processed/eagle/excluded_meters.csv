@@ -1,0 +1,3 @@
+source_id,valid_share,reason,readings,missing_in_source,negative,zero_long_runs,zero_short,stuck_sensor,spike,valid_out
+Eagle_lodging_Garland,0.0,valid hours 0.0% below the 95% rule,17544,17544,0,0,0,0,0,0
+Eagle_lodging_Blake,0.6886114911080712,valid hours 68.9% below the 95% rule,17544,0,0,5339,67,57,0,12081

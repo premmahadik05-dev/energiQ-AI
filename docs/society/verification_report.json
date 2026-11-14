@@ -1,0 +1,3349 @@
+{
+ "meta": {
+  "generated_at_utc": "2026-11-08 13:12:42",
+  "mode": "full",
+  "python": "3.11.15",
+  "pandas": "3.1.0",
+  "numpy": "2.4.6",
+  "platform": "Linux-6.18.44-fc-v310-x86_64-with-glibc2.39",
+  "script": "scripts/verify_society_raw_data.py",
+  "script_sha256": "4381ff1bd8cc840df08f1f618d7fcea6cb0766c64fe44b16ca6ce49d60d27c41",
+  "inputs": {
+   "data/metadata/metadata.csv": {
+    "sha256": "992d0b29f24f96ad4332bc4dbb534b7bdd7dd2689aad093f94e93068ecddca02",
+    "bytes": 272024,
+    "url": "https://media.githubusercontent.com/media/buds-lab/building-data-genome-project-2/master/data/metadata/metadata.csv"
+   },
+   "data/weather/weather.csv": {
+    "sha256": "a8189f1c6acdf3b9933a9e6354b8e7c1278cd56a7075929623a17565d44f04bd",
+    "bytes": 19457782,
+    "url": "https://media.githubusercontent.com/media/buds-lab/building-data-genome-project-2/master/data/weather/weather.csv"
+   },
+   "data/meters/raw/electricity.csv": {
+    "sha256": "039d909d8981e2d69eaeb366144e6ab7e84fa5e7e216aee42bddd95384a66418",
+    "bytes": 174239039,
+    "url": "https://media.githubusercontent.com/media/buds-lab/building-data-genome-project-2/master/data/meters/raw/electricity.csv"
+   },
+   "LICENSE": {
+    "sha256": "1df42bd84afc40e676a0cbf3d34e30e5151e3f0d995a68b406178dad3b0e23dc",
+    "bytes": 21227,
+    "url": "https://raw.githubusercontent.com/buds-lab/building-data-genome-project-2/master/LICENSE"
+   },
+   "README.md": {
+    "sha256": "7f2a1539a17c3183fbfe69b06deea1d976ec9a4c92d34c4ad8d23e5b24fe8ca3",
+    "bytes": 6359,
+    "url": "https://raw.githubusercontent.com/buds-lab/building-data-genome-project-2/master/README.md"
+   }
+  },
+  "api_comparison": "run against http://127.0.0.1:38345",
+  "subset_cross_check": "run",
+  "raw_period": [
+   "2016-01-01 00:00:00",
+   "2017-12-31 23:00:00"
+  ],
+  "raw_hours": 17544,
+  "raw_meters_in_file": 1578,
+  "source": {
+   "key": "bdg2",
+   "name": "Building Data Genome Project 2 (BDG2)",
+   "publisher": "Building and Urban Data Science (BUDS) Lab, National University of Singapore, with the ASHRAE Great Energy Predictor III organisers",
+   "official_url": "https://github.com/buds-lab/building-data-genome-project-2",
+   "paper": "Miller, C., Kathirgamanathan, A., Picchetti, B. et al. The Building Data Genome Project 2, energy meter data from the ASHRAE Great Energy Predictor III competition. Sci Data 7, 368 (2020).",
+   "paper_doi": "10.1038/s41597-020-00712-x",
+   "license": "Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0), as stated in the LICENSE file of the repository",
+   "period": "2016-01-01 00:00 to 2017-12-31 23:00 (17,544 hourly values per meter)",
+   "frequency": "hourly",
+   "energy_unit": "kWh per hour (whole-building electricity meters); the numeric value equals the average demand in kW over that hour",
+   "timestamp_convention": "Local clock time of the site as published, no daylight-saving gap or repeat (exactly 17,544 hourly rows); the site time zone is in the metadata",
+   "note": "BDG2 is described by its authors as non-residential data in general; this project uses only the buildings whose metadata primary use is 'Lodging/residential' (student residence halls and similar), excluding hotels."
+  }
+ },
+ "spec": {
+  "selection": {
+   "primary_use": "Lodging/residential",
+   "exclude_sub_uses": [
+    "Hotel"
+   ],
+   "min_meter_valid_share": 0.95,
+   "min_buildings": 8,
+   "min_society_valid_share": 0.94
+  },
+  "cleaning": {
+   "zero_is_invalid": true,
+   "long_zero_hours": 24,
+   "stuck_min_hours": 48,
+   "spike_factor": 4.0,
+   "spike_quantile": 0.995,
+   "spike_min_positive_readings": 100,
+   "negative_is_invalid": true
+  },
+  "storage_decimals": 3
+ },
+ "funnel": {
+  "labelled_residential": 168,
+  "hotels_excluded": 3,
+  "no_meter": 19,
+  "candidates": 146,
+  "sub_use_all_labelled": {
+   "Dormitory": 93,
+   "Residence Hall": 44,
+   "Other - Lodging/Residential": 10,
+   "Housing": 10,
+   "Lodging/residential": 4,
+   "Hotel": 3,
+   "Residence Hall/Dormitory": 3,
+   "Multifamily Housing": 1
+  }
+ },
+ "sites": [
+  {
+   "site": "Bear",
+   "labelled": 4,
+   "hotels_excluded": 0,
+   "no_meter": 0,
+   "candidates": 4,
+   "meters_valid": 3,
+   "society_valid_share": null,
+   "qualifies": false,
+   "reason": "only 3 meters pass the validity rule (need 8)",
+   "candidate_valid_share": {
+    "min": 0.6857045143638851,
+    "median": 0.9976630186958504,
+    "max": 0.9977770177838577
+   },
+   "candidate_removed": {
+    "negative": 0,
+    "zero_long_runs": 0,
+    "zero_short": 0,
+    "stuck_sensor": 0,
+    "spike": 0
+   }
+  },
+  {
+   "site": "Bobcat",
+   "labelled": 3,
+   "hotels_excluded": 0,
+   "no_meter": 0,
+   "candidates": 3,
+   "meters_valid": 0,
+   "society_valid_share": null,
+   "qualifies": false,
+   "reason": "only 0 meters pass the validity rule (need 8)",
+   "candidate_valid_share": {
+    "min": 0.9398084815321477,
+    "median": 0.9404924760601915,
+    "max": 0.9405494756041952
+   },
+   "candidate_removed": {
+    "negative": 0,
+    "zero_long_runs": 0,
+    "zero_short": 0,
+    "stuck_sensor": 0,
+    "spike": 0
+   }
+  },
+  {
+   "site": "Bull",
+   "labelled": 19,
+   "hotels_excluded": 0,
+   "no_meter": 0,
+   "candidates": 19,
+   "meters_valid": 16,
+   "society_valid_share": 0.9611263109895121,
+   "qualifies": true,
+   "reason": "accepted",
+   "candidate_valid_share": {
+    "min": 0.8909598723210215,
+    "median": 0.9812471500227998,
+    "max": 0.9829001367989056
+   },
+   "candidate_removed": {
+    "negative": 0,
+    "zero_long_runs": 4075,
+    "zero_short": 5809,
+    "stuck_sensor": 0,
+    "spike": 73
+   }
+  },
+  {
+   "site": "Cockatoo",
+   "labelled": 29,
+   "hotels_excluded": 1,
+   "no_meter": 1,
+   "candidates": 27,
+   "meters_valid": 0,
+   "society_valid_share": null,
+   "qualifies": false,
+   "reason": "only 0 meters pass the validity rule (need 8)",
+   "candidate_valid_share": {
+    "min": 0.8165754673962609,
+    "median": 0.918718650250798,
+    "max": 0.9187756497948016
+   },
+   "candidate_removed": {
+    "negative": 0,
+    "zero_long_runs": 594,
+    "zero_short": 44,
+    "stuck_sensor": 0,
+    "spike": 0
+   }
+  },
+  {
+   "site": "Eagle",
+   "labelled": 10,
+   "hotels_excluded": 0,
+   "no_meter": 0,
+   "candidates": 10,
+   "meters_valid": 8,
+   "society_valid_share": 0.9521203830369357,
+   "qualifies": true,
+   "reason": "accepted",
+   "candidate_valid_share": {
+    "min": 0.0,
+    "median": 0.9855506155950753,
+    "max": 0.9923050615595075
+   },
+   "candidate_removed": {
+    "negative": 0,
+    "zero_long_runs": 6711,
+    "zero_short": 673,
+    "stuck_sensor": 553,
+    "spike": 0
+   }
+  },
+  {
+   "site": "Fox",
+   "labelled": 12,
+   "hotels_excluded": 0,
+   "no_meter": 0,
+   "candidates": 12,
+   "meters_valid": 11,
+   "society_valid_share": 0.9966940264477884,
+   "qualifies": true,
+   "reason": "accepted",
+   "candidate_valid_share": {
+    "min": 0.8320793433652531,
+    "median": 0.99968650250798,
+    "max": 0.9999430004559964
+   },
+   "candidate_removed": {
+    "negative": 0,
+    "zero_long_runs": 0,
+    "zero_short": 70,
+    "stuck_sensor": 2936,
+    "spike": 0
+   }
+  },
+  {
+   "site": "Hog",
+   "labelled": 11,
+   "hotels_excluded": 0,
+   "no_meter": 0,
+   "candidates": 11,
+   "meters_valid": 10,
+   "society_valid_share": 0.9718992248062015,
+   "qualifies": true,
+   "reason": "accepted",
+   "candidate_valid_share": {
+    "min": 0.7327861377108983,
+    "median": 0.9999430004559964,
+    "max": 1.0
+   },
+   "candidate_removed": {
+    "negative": 0,
+    "zero_long_runs": 2484,
+    "zero_short": 11,
+    "stuck_sensor": 2390,
+    "spike": 0
+   }
+  },
+  {
+   "site": "Lamb",
+   "labelled": 2,
+   "hotels_excluded": 1,
+   "no_meter": 0,
+   "candidates": 1,
+   "meters_valid": 0,
+   "society_valid_share": null,
+   "qualifies": false,
+   "reason": "only 0 meters pass the validity rule (need 8)",
+   "candidate_valid_share": {
+    "min": 0.6094391244870041,
+    "median": 0.6094391244870041,
+    "max": 0.6094391244870041
+   },
+   "candidate_removed": {
+    "negative": 0,
+    "zero_long_runs": 0,
+    "zero_short": 47,
+    "stuck_sensor": 6805,
+    "spike": 0
+   }
+  },
+  {
+   "site": "Mouse",
+   "labelled": 1,
+   "hotels_excluded": 1,
+   "no_meter": 0,
+   "candidates": 0,
+   "meters_valid": null,
+   "society_valid_share": null,
+   "qualifies": false,
+   "reason": "no residential meters",
+   "candidate_valid_share": null,
+   "candidate_removed": null
+  },
+  {
+   "site": "Panther",
+   "labelled": 44,
+   "hotels_excluded": 0,
+   "no_meter": 17,
+   "candidates": 27,
+   "meters_valid": 0,
+   "society_valid_share": null,
+   "qualifies": false,
+   "reason": "only 0 meters pass the validity rule (need 8)",
+   "candidate_valid_share": {
+    "min": 0.8068285453716371,
+    "median": 0.8068855449156407,
+    "max": 0.8237004103967168
+   },
+   "candidate_removed": {
+    "negative": 0,
+    "zero_long_runs": 87847,
+    "zero_short": 2864,
+    "stuck_sensor": 0,
+    "spike": 1
+   }
+  },
+  {
+   "site": "Peacock",
+   "labelled": 12,
+   "hotels_excluded": 0,
+   "no_meter": 1,
+   "candidates": 11,
+   "meters_valid": 11,
+   "society_valid_share": 0.9913930688554492,
+   "qualifies": true,
+   "reason": "accepted",
+   "candidate_valid_share": {
+    "min": 0.9958390332877337,
+    "median": 0.9990880072959416,
+    "max": 0.9996010031919744
+   },
+   "candidate_removed": {
+    "negative": 0,
+    "zero_long_runs": 0,
+    "zero_short": 34,
+    "stuck_sensor": 0,
+    "spike": 0
+   }
+  },
+  {
+   "site": "Rat",
+   "labelled": 11,
+   "hotels_excluded": 0,
+   "no_meter": 0,
+   "candidates": 11,
+   "meters_valid": 9,
+   "society_valid_share": 0.9473324213406292,
+   "qualifies": true,
+   "reason": "accepted",
+   "candidate_valid_share": {
+    "min": 0.5954172366621067,
+    "median": 0.9909940720474236,
+    "max": 0.9982900136798906
+   },
+   "candidate_removed": {
+    "negative": 0,
+    "zero_long_runs": 10059,
+    "zero_short": 1462,
+    "stuck_sensor": 2194,
+    "spike": 0
+   }
+  },
+  {
+   "site": "Robin",
+   "labelled": 10,
+   "hotels_excluded": 0,
+   "no_meter": 0,
+   "candidates": 10,
+   "meters_valid": 8,
+   "society_valid_share": 0.988030095759234,
+   "qualifies": true,
+   "reason": "accepted",
+   "candidate_valid_share": {
+    "min": 0.8868559051527588,
+    "median": 0.9931600547195623,
+    "max": 1.0
+   },
+   "candidate_removed": {
+    "negative": 0,
+    "zero_long_runs": 0,
+    "zero_short": 68,
+    "stuck_sensor": 4489,
+    "spike": 0
+   }
+  }
+ ],
+ "societies": {
+  "bull": {
+   "site": "Bull",
+   "candidates": 19,
+   "buildings": 16,
+   "sub_use_mix": {
+    "Dormitory": 16
+   },
+   "meters": [
+    {
+     "code": "BUL-B01",
+     "source_id": "Bull_lodging_Abby",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 31,
+     "negative": 0,
+     "zero_long_runs": 25,
+     "zero_short": 275,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17213,
+     "valid_share": 0.9811331509347925,
+     "spike_limit": 90.0,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "BUL-B02",
+     "source_id": "Bull_lodging_Allen",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 24,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 276,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17244,
+     "valid_share": 0.9829001367989056,
+     "spike_limit": 101.76,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 9.999999999976694e-05,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "BUL-B03",
+     "source_id": "Bull_lodging_Caren",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 26,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 282,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17236,
+     "valid_share": 0.9824441404468764,
+     "spike_limit": 900.0,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "BUL-B04",
+     "source_id": "Bull_lodging_Carie",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 28,
+     "negative": 0,
+     "zero_long_runs": 25,
+     "zero_short": 276,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17215,
+     "valid_share": 0.9812471500227998,
+     "spike_limit": 304.0,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "BUL-B05",
+     "source_id": "Bull_lodging_Charlotte",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 25,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 277,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17242,
+     "valid_share": 0.9827861377108983,
+     "spike_limit": 102.72,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 9.999999999976694e-05,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "BUL-B06",
+     "source_id": "Bull_lodging_Dave",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 27,
+     "negative": 0,
+     "zero_long_runs": 25,
+     "zero_short": 274,
+     "stuck_sensor": 0,
+     "spike": 1,
+     "valid_out": 17217,
+     "valid_share": 0.9813611491108071,
+     "spike_limit": 1824.0,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "BUL-B07",
+     "source_id": "Bull_lodging_Elena",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 31,
+     "negative": 0,
+     "zero_long_runs": 25,
+     "zero_short": 277,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17211,
+     "valid_share": 0.9810191518467852,
+     "spike_limit": 50.0,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "BUL-B08",
+     "source_id": "Bull_lodging_Graciela",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 35,
+     "negative": 0,
+     "zero_long_runs": 121,
+     "zero_short": 309,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17079,
+     "valid_share": 0.9734952120383037,
+     "spike_limit": 80.0,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "BUL-B09",
+     "source_id": "Bull_lodging_Hugo",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 15,
+     "negative": 0,
+     "zero_long_runs": 25,
+     "zero_short": 275,
+     "stuck_sensor": 0,
+     "spike": 11,
+     "valid_out": 17218,
+     "valid_share": 0.9814181486548108,
+     "spike_limit": 444.0,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "BUL-B10",
+     "source_id": "Bull_lodging_Jeremiah",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 29,
+     "negative": 0,
+     "zero_long_runs": 25,
+     "zero_short": 277,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17213,
+     "valid_share": 0.9811331509347925,
+     "spike_limit": 388.0,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "BUL-B11",
+     "source_id": "Bull_lodging_Leonard",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 29,
+     "negative": 0,
+     "zero_long_runs": 25,
+     "zero_short": 275,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17215,
+     "valid_share": 0.9812471500227998,
+     "spike_limit": 204.0,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "BUL-B12",
+     "source_id": "Bull_lodging_Lettie",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 32,
+     "negative": 0,
+     "zero_long_runs": 25,
+     "zero_short": 274,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17213,
+     "valid_share": 0.9811331509347925,
+     "spike_limit": 208.0,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "BUL-B13",
+     "source_id": "Bull_lodging_Melissa",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 28,
+     "negative": 0,
+     "zero_long_runs": 25,
+     "zero_short": 273,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17218,
+     "valid_share": 0.9814181486548108,
+     "spike_limit": 1408.0,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "BUL-B14",
+     "source_id": "Bull_lodging_Perry",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 27,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 273,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17244,
+     "valid_share": 0.9829001367989056,
+     "spike_limit": 324.0,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "BUL-B15",
+     "source_id": "Bull_lodging_Travis",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 24,
+     "negative": 0,
+     "zero_long_runs": 25,
+     "zero_short": 457,
+     "stuck_sensor": 0,
+     "spike": 17,
+     "valid_out": 17021,
+     "valid_share": 0.9701892384860921,
+     "spike_limit": 4476.0,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "BUL-B16",
+     "source_id": "Bull_lodging_Xavier",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 22,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 278,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17244,
+     "valid_share": 0.9829001367989056,
+     "spike_limit": 94.08,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    }
+   ],
+   "layers": {
+    "meters": 16,
+    "meter_hours": 280704,
+    "raw_readings_present": 280271,
+    "raw_readings_missing": 433,
+    "removed_by_rule": {
+     "negative": 0,
+     "zero_long_runs": 371,
+     "zero_short": 4628,
+     "stuck_sensor": 0,
+     "spike": 29
+    },
+    "cleaned_readings_valid": 275243,
+    "raw_naive_sum_hours": 17490,
+    "community_valid_hours": 16862,
+    "raw_naive_sum_kwh": 33075918.109799996,
+    "community_demand_kwh": 32549761.9098,
+    "hours_in_naive_not_in_community": 628,
+    "kwh_in_those_hours": 526156.2000000001,
+    "raw_naive_peak_kw": 13791.34,
+    "community_peak_kw": 4841.96
+   },
+   "excluded_meters": [
+    {
+     "source_id": "Bull_lodging_Anibal",
+     "valid_share": 0.8909598723210215,
+     "missing_in_source": 55,
+     "negative": 0,
+     "zero_long_runs": 1585,
+     "zero_short": 273,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 15631
+    },
+    {
+     "source_id": "Bull_lodging_Danielle",
+     "valid_share": 0.9064637482900136,
+     "missing_in_source": 34,
+     "negative": 0,
+     "zero_long_runs": 1061,
+     "zero_short": 518,
+     "stuck_sensor": 0,
+     "spike": 28,
+     "valid_out": 15903
+    },
+    {
+     "source_id": "Bull_lodging_Terence",
+     "valid_share": 0.9139306885544916,
+     "missing_in_source": 46,
+     "negative": 0,
+     "zero_long_runs": 1058,
+     "zero_short": 390,
+     "stuck_sensor": 0,
+     "spike": 16,
+     "valid_out": 16034
+    }
+   ],
+   "missing": {
+    "hours": 17544,
+    "missing_hours": 682,
+    "valid_hours": 16862,
+    "gaps": 40,
+    "longest_gap_hours": 115,
+    "longest_gap_start": "2016-05-26 15:00:00",
+    "missing_per_meter": {
+     "Bull_lodging_Abby": 331,
+     "Bull_lodging_Allen": 300,
+     "Bull_lodging_Caren": 308,
+     "Bull_lodging_Carie": 329,
+     "Bull_lodging_Charlotte": 302,
+     "Bull_lodging_Dave": 327,
+     "Bull_lodging_Elena": 333,
+     "Bull_lodging_Graciela": 465,
+     "Bull_lodging_Hugo": 326,
+     "Bull_lodging_Jeremiah": 331,
+     "Bull_lodging_Leonard": 329,
+     "Bull_lodging_Lettie": 331,
+     "Bull_lodging_Melissa": 326,
+     "Bull_lodging_Perry": 300,
+     "Bull_lodging_Travis": 523,
+     "Bull_lodging_Xavier": 300
+    },
+    "hours_blocked_only_by_meter": {
+     "Bull_lodging_Abby": 1,
+     "Bull_lodging_Allen": 1,
+     "Bull_lodging_Caren": 12,
+     "Bull_lodging_Carie": 0,
+     "Bull_lodging_Charlotte": 0,
+     "Bull_lodging_Dave": 0,
+     "Bull_lodging_Elena": 2,
+     "Bull_lodging_Graciela": 132,
+     "Bull_lodging_Hugo": 0,
+     "Bull_lodging_Jeremiah": 0,
+     "Bull_lodging_Leonard": 0,
+     "Bull_lodging_Lettie": 1,
+     "Bull_lodging_Melissa": 1,
+     "Bull_lodging_Perry": 1,
+     "Bull_lodging_Travis": 195,
+     "Bull_lodging_Xavier": 0
+    }
+   },
+   "cleaning_thresholds_by_meter": {
+    "Bull_lodging_Abby": 90.0,
+    "Bull_lodging_Allen": 101.76,
+    "Bull_lodging_Caren": 900.0,
+    "Bull_lodging_Carie": 304.0,
+    "Bull_lodging_Charlotte": 102.72,
+    "Bull_lodging_Dave": 1824.0,
+    "Bull_lodging_Elena": 50.0,
+    "Bull_lodging_Graciela": 80.0,
+    "Bull_lodging_Hugo": 444.0,
+    "Bull_lodging_Jeremiah": 388.0,
+    "Bull_lodging_Leonard": 204.0,
+    "Bull_lodging_Lettie": 208.0,
+    "Bull_lodging_Melissa": 1408.0,
+    "Bull_lodging_Perry": 324.0,
+    "Bull_lodging_Travis": 4476.0,
+    "Bull_lodging_Xavier": 94.08
+   }
+  },
+  "eagle": {
+   "site": "Eagle",
+   "candidates": 10,
+   "buildings": 8,
+   "sub_use_mix": {
+    "Housing": 8
+   },
+   "meters": [
+    {
+     "code": "EAG-B01",
+     "source_id": "Eagle_lodging_Andy",
+     "sub_use": "Housing",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 24,
+     "zero_short": 49,
+     "stuck_sensor": 62,
+     "spike": 0,
+     "valid_out": 17409,
+     "valid_share": 0.9923050615595075,
+     "spike_limit": 375.3613600000003,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0005000000000023874,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "EAG-B02",
+     "source_id": "Eagle_lodging_Casey",
+     "sub_use": "Housing",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 125,
+     "zero_short": 67,
+     "stuck_sensor": 62,
+     "spike": 0,
+     "valid_out": 17290,
+     "valid_share": 0.9855221158230734,
+     "spike_limit": 483.1195459999999,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0005000000000023874,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "EAG-B03",
+     "source_id": "Eagle_lodging_Dawn",
+     "sub_use": "Housing",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 125,
+     "zero_short": 66,
+     "stuck_sensor": 62,
+     "spike": 0,
+     "valid_out": 17291,
+     "valid_share": 0.9855791153670771,
+     "spike_limit": 460.25019200000025,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0005000000000023874,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "EAG-B04",
+     "source_id": "Eagle_lodging_Edgardo",
+     "sub_use": "Housing",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 113,
+     "zero_short": 66,
+     "stuck_sensor": 62,
+     "spike": 0,
+     "valid_out": 17303,
+     "valid_share": 0.9862631098951209,
+     "spike_limit": 346.06160000000006,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "EAG-B05",
+     "source_id": "Eagle_lodging_Stephanie",
+     "sub_use": "Housing",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 101,
+     "zero_short": 108,
+     "stuck_sensor": 62,
+     "spike": 0,
+     "valid_out": 17273,
+     "valid_share": 0.9845531235750113,
+     "spike_limit": 488.0,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "EAG-B06",
+     "source_id": "Eagle_lodging_Terri",
+     "sub_use": "Housing",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 658,
+     "zero_short": 118,
+     "stuck_sensor": 62,
+     "spike": 0,
+     "valid_out": 16706,
+     "valid_share": 0.952234382124943,
+     "spike_limit": 970.203508000001,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.00050000000004502,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "EAG-B07",
+     "source_id": "Eagle_lodging_Tressa",
+     "sub_use": "Housing",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 113,
+     "zero_short": 66,
+     "stuck_sensor": 62,
+     "spike": 0,
+     "valid_out": 17303,
+     "valid_share": 0.9862631098951209,
+     "spike_limit": 436.0,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "EAG-B08",
+     "source_id": "Eagle_lodging_Trina",
+     "sub_use": "Housing",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 113,
+     "zero_short": 66,
+     "stuck_sensor": 62,
+     "spike": 0,
+     "valid_out": 17303,
+     "valid_share": 0.9862631098951209,
+     "spike_limit": 330.67600000000004,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    }
+   ],
+   "layers": {
+    "meters": 8,
+    "meter_hours": 140352,
+    "raw_readings_present": 140352,
+    "raw_readings_missing": 0,
+    "removed_by_rule": {
+     "negative": 0,
+     "zero_long_runs": 1372,
+     "zero_short": 606,
+     "stuck_sensor": 496,
+     "spike": 0
+    },
+    "cleaned_readings_valid": 137878,
+    "raw_naive_sum_hours": 17544,
+    "community_valid_hours": 16704,
+    "raw_naive_sum_kwh": 9613447.4497,
+    "community_demand_kwh": 9289115.9842,
+    "hours_in_naive_not_in_community": 840,
+    "kwh_in_those_hours": 324331.4655,
+    "raw_naive_peak_kw": 907.6845999999998,
+    "community_peak_kw": 907.6845999999998
+   },
+   "excluded_meters": [
+    {
+     "source_id": "Eagle_lodging_Blake",
+     "valid_share": 0.6886114911080712,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 5339,
+     "zero_short": 67,
+     "stuck_sensor": 57,
+     "spike": 0,
+     "valid_out": 12081
+    },
+    {
+     "source_id": "Eagle_lodging_Garland",
+     "valid_share": 0.0,
+     "missing_in_source": 17544,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 0
+    }
+   ],
+   "missing": {
+    "hours": 17544,
+    "missing_hours": 840,
+    "valid_hours": 16704,
+    "gaps": 56,
+    "longest_gap_hours": 533,
+    "longest_gap_start": "2016-09-28 08:00:00",
+    "missing_per_meter": {
+     "Eagle_lodging_Andy": 135,
+     "Eagle_lodging_Casey": 254,
+     "Eagle_lodging_Dawn": 253,
+     "Eagle_lodging_Edgardo": 241,
+     "Eagle_lodging_Stephanie": 271,
+     "Eagle_lodging_Terri": 838,
+     "Eagle_lodging_Tressa": 241,
+     "Eagle_lodging_Trina": 241
+    },
+    "hours_blocked_only_by_meter": {
+     "Eagle_lodging_Andy": 0,
+     "Eagle_lodging_Casey": 1,
+     "Eagle_lodging_Dawn": 0,
+     "Eagle_lodging_Edgardo": 0,
+     "Eagle_lodging_Stephanie": 1,
+     "Eagle_lodging_Terri": 567,
+     "Eagle_lodging_Tressa": 0,
+     "Eagle_lodging_Trina": 0
+    }
+   },
+   "cleaning_thresholds_by_meter": {
+    "Eagle_lodging_Andy": 375.3613600000003,
+    "Eagle_lodging_Casey": 483.1195459999999,
+    "Eagle_lodging_Dawn": 460.25019200000025,
+    "Eagle_lodging_Edgardo": 346.06160000000006,
+    "Eagle_lodging_Stephanie": 488.0,
+    "Eagle_lodging_Terri": 970.203508000001,
+    "Eagle_lodging_Tressa": 436.0,
+    "Eagle_lodging_Trina": 330.67600000000004
+   }
+  },
+  "fox": {
+   "site": "Fox",
+   "candidates": 12,
+   "buildings": 11,
+   "sub_use_mix": {
+    "Dormitory": 11
+   },
+   "meters": [
+    {
+     "code": "FOX-B01",
+     "source_id": "Fox_lodging_Alana",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 3,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 1,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17540,
+     "valid_share": 0.9997720018239854,
+     "spike_limit": 1211.6826000000003,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "FOX-B02",
+     "source_id": "Fox_lodging_Angla",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 2,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 17,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17525,
+     "valid_share": 0.9989170086639307,
+     "spike_limit": 835.1752,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "FOX-B03",
+     "source_id": "Fox_lodging_Frances",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 2,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 13,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17529,
+     "valid_share": 0.9991450068399452,
+     "spike_limit": 571.5408000000002,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "FOX-B04",
+     "source_id": "Fox_lodging_Helen",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 1,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17543,
+     "valid_share": 0.9999430004559964,
+     "spike_limit": 2333.930800000002,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "FOX-B05",
+     "source_id": "Fox_lodging_Isabell",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 3,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 1,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17540,
+     "valid_share": 0.9997720018239854,
+     "spike_limit": 157.12,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "FOX-B06",
+     "source_id": "Fox_lodging_Jina",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 2,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 5,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17537,
+     "valid_share": 0.9996010031919744,
+     "spike_limit": 767.5328,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "FOX-B07",
+     "source_id": "Fox_lodging_Morris",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 1,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 17,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17526,
+     "valid_share": 0.9989740082079344,
+     "spike_limit": 131.08,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "FOX-B08",
+     "source_id": "Fox_lodging_Stephan",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 16,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 4,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17524,
+     "valid_share": 0.998860009119927,
+     "spike_limit": 174.35079999999988,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "FOX-B09",
+     "source_id": "Fox_lodging_Stephen",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 1,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 2,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17541,
+     "valid_share": 0.999829001367989,
+     "spike_limit": 489.44,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "FOX-B10",
+     "source_id": "Fox_lodging_Wallace",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 3,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 1,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17540,
+     "valid_share": 0.9997720018239854,
+     "spike_limit": 1926.3342000000002,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "FOX-B11",
+     "source_id": "Fox_lodging_Winifred",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 3,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 1,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17540,
+     "valid_share": 0.9997720018239854,
+     "spike_limit": 469.76880000000006,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    }
+   ],
+   "layers": {
+    "meters": 11,
+    "meter_hours": 192984,
+    "raw_readings_present": 192947,
+    "raw_readings_missing": 37,
+    "removed_by_rule": {
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 62,
+     "stuck_sensor": 0,
+     "spike": 0
+    },
+    "cleaned_readings_valid": 192885,
+    "raw_naive_sum_hours": 17528,
+    "community_valid_hours": 17486,
+    "raw_naive_sum_kwh": 26518310.0,
+    "community_demand_kwh": 26464352.43,
+    "hours_in_naive_not_in_community": 42,
+    "kwh_in_those_hours": 53957.57,
+    "raw_naive_peak_kw": 2283.16,
+    "community_peak_kw": 2283.16
+   },
+   "excluded_meters": [
+    {
+     "source_id": "Fox_lodging_Warren",
+     "valid_share": 0.8320793433652531,
+     "missing_in_source": 2,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 8,
+     "stuck_sensor": 2936,
+     "spike": 0,
+     "valid_out": 14598
+    }
+   ],
+   "missing": {
+    "hours": 17544,
+    "missing_hours": 58,
+    "valid_hours": 17486,
+    "gaps": 17,
+    "longest_gap_hours": 13,
+    "longest_gap_start": "2017-11-07 14:00:00",
+    "missing_per_meter": {
+     "Fox_lodging_Alana": 4,
+     "Fox_lodging_Angla": 19,
+     "Fox_lodging_Frances": 15,
+     "Fox_lodging_Helen": 1,
+     "Fox_lodging_Isabell": 4,
+     "Fox_lodging_Jina": 7,
+     "Fox_lodging_Morris": 18,
+     "Fox_lodging_Stephan": 20,
+     "Fox_lodging_Stephen": 3,
+     "Fox_lodging_Wallace": 4,
+     "Fox_lodging_Winifred": 4
+    },
+    "hours_blocked_only_by_meter": {
+     "Fox_lodging_Alana": 0,
+     "Fox_lodging_Angla": 5,
+     "Fox_lodging_Frances": 2,
+     "Fox_lodging_Helen": 0,
+     "Fox_lodging_Isabell": 0,
+     "Fox_lodging_Jina": 4,
+     "Fox_lodging_Morris": 15,
+     "Fox_lodging_Stephan": 15,
+     "Fox_lodging_Stephen": 0,
+     "Fox_lodging_Wallace": 0,
+     "Fox_lodging_Winifred": 0
+    }
+   },
+   "cleaning_thresholds_by_meter": {
+    "Fox_lodging_Alana": 1211.6826000000003,
+    "Fox_lodging_Angla": 835.1752,
+    "Fox_lodging_Frances": 571.5408000000002,
+    "Fox_lodging_Helen": 2333.930800000002,
+    "Fox_lodging_Isabell": 157.12,
+    "Fox_lodging_Jina": 767.5328,
+    "Fox_lodging_Morris": 131.08,
+    "Fox_lodging_Stephan": 174.35079999999988,
+    "Fox_lodging_Stephen": 489.44,
+    "Fox_lodging_Wallace": 1926.3342000000002,
+    "Fox_lodging_Winifred": 469.76880000000006
+   }
+  },
+  "hog": {
+   "site": "Hog",
+   "candidates": 11,
+   "buildings": 10,
+   "sub_use_mix": {
+    "Dormitory": 10
+   },
+   "meters": [
+    {
+     "code": "HOG-B01",
+     "source_id": "Hog_lodging_Brian",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 1,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17543,
+     "valid_share": 0.9999430004559964,
+     "spike_limit": 692.0,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "HOG-B02",
+     "source_id": "Hog_lodging_Celeste",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 2,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17542,
+     "valid_share": 0.9998860009119928,
+     "spike_limit": 616.6752199999988,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0005000000000023874,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "HOG-B03",
+     "source_id": "Hog_lodging_Francisco",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17544,
+     "valid_share": 1.0,
+     "spike_limit": 1167.09124,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0005000000000023874,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "HOG-B04",
+     "source_id": "Hog_lodging_Hal",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17544,
+     "valid_share": 1.0,
+     "spike_limit": 1231.3058600000002,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 1.7053025658242404e-13,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "HOG-B05",
+     "source_id": "Hog_lodging_Mauricio",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 1,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 1,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17542,
+     "valid_share": 0.9998860009119928,
+     "spike_limit": 1524.0,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "HOG-B06",
+     "source_id": "Hog_lodging_Nikki",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17544,
+     "valid_share": 1.0,
+     "spike_limit": 458.39707999999985,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0004999999999988347,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "HOG-B07",
+     "source_id": "Hog_lodging_Ora",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17544,
+     "valid_share": 1.0,
+     "spike_limit": 1558.3305999999998,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 5.684341886080802e-14,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "HOG-B08",
+     "source_id": "Hog_lodging_Retha",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 295,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 8,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17241,
+     "valid_share": 0.9827291381668947,
+     "spike_limit": 2306.3639999999996,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 3.410605131648481e-13,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "HOG-B09",
+     "source_id": "Hog_lodging_Shanti",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 186,
+     "spike": 0,
+     "valid_out": 17358,
+     "valid_share": 0.9893980848153214,
+     "spike_limit": 1977.5891,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0005000000000165983,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "HOG-B10",
+     "source_id": "Hog_lodging_Shonda",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 1,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17543,
+     "valid_share": 0.9999430004559964,
+     "spike_limit": 645.1600000000035,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    }
+   ],
+   "layers": {
+    "meters": 10,
+    "meter_hours": 175440,
+    "raw_readings_present": 175142,
+    "raw_readings_missing": 298,
+    "removed_by_rule": {
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 11,
+     "stuck_sensor": 186,
+     "spike": 0
+    },
+    "cleaned_readings_valid": 174945,
+    "raw_naive_sum_hours": 17246,
+    "community_valid_hours": 17051,
+    "raw_naive_sum_kwh": 30151566.9296,
+    "community_demand_kwh": 29804910.648599997,
+    "hours_in_naive_not_in_community": 195,
+    "kwh_in_those_hours": 346656.28099999996,
+    "raw_naive_peak_kw": 2917.1630000000005,
+    "community_peak_kw": 2917.1630000000005
+   },
+   "excluded_meters": [
+    {
+     "source_id": "Hog_lodging_Edgar",
+     "valid_share": 0.7327861377108983,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 2484,
+     "zero_short": 0,
+     "stuck_sensor": 2204,
+     "spike": 0,
+     "valid_out": 12856
+    }
+   ],
+   "missing": {
+    "hours": 17544,
+    "missing_hours": 493,
+    "valid_hours": 17051,
+    "gaps": 11,
+    "longest_gap_hours": 196,
+    "longest_gap_start": "2016-06-12 07:00:00",
+    "missing_per_meter": {
+     "Hog_lodging_Brian": 1,
+     "Hog_lodging_Celeste": 2,
+     "Hog_lodging_Francisco": 0,
+     "Hog_lodging_Hal": 0,
+     "Hog_lodging_Mauricio": 2,
+     "Hog_lodging_Nikki": 0,
+     "Hog_lodging_Ora": 0,
+     "Hog_lodging_Retha": 303,
+     "Hog_lodging_Shanti": 186,
+     "Hog_lodging_Shonda": 1
+    },
+    "hours_blocked_only_by_meter": {
+     "Hog_lodging_Brian": 0,
+     "Hog_lodging_Celeste": 2,
+     "Hog_lodging_Francisco": 0,
+     "Hog_lodging_Hal": 0,
+     "Hog_lodging_Mauricio": 1,
+     "Hog_lodging_Nikki": 0,
+     "Hog_lodging_Ora": 0,
+     "Hog_lodging_Retha": 303,
+     "Hog_lodging_Shanti": 186,
+     "Hog_lodging_Shonda": 0
+    }
+   },
+   "cleaning_thresholds_by_meter": {
+    "Hog_lodging_Brian": 692.0,
+    "Hog_lodging_Celeste": 616.6752199999988,
+    "Hog_lodging_Francisco": 1167.09124,
+    "Hog_lodging_Hal": 1231.3058600000002,
+    "Hog_lodging_Mauricio": 1524.0,
+    "Hog_lodging_Nikki": 458.39707999999985,
+    "Hog_lodging_Ora": 1558.3305999999998,
+    "Hog_lodging_Retha": 2306.3639999999996,
+    "Hog_lodging_Shanti": 1977.5891,
+    "Hog_lodging_Shonda": 645.1600000000035
+   }
+  },
+  "peacock": {
+   "site": "Peacock",
+   "candidates": 11,
+   "buildings": 11,
+   "sub_use_mix": {
+    "Dormitory": 11
+   },
+   "meters": [
+    {
+     "code": "PEA-B01",
+     "source_id": "Peacock_lodging_Chloe",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 39,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 2,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17503,
+     "valid_share": 0.9976630186958504,
+     "spike_limit": 247.89933600000012,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.00030000000000995897,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "PEA-B02",
+     "source_id": "Peacock_lodging_Francesca",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 9,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 7,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17528,
+     "valid_share": 0.9990880072959416,
+     "spike_limit": 246.6668,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.00030000000000285354,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "PEA-B03",
+     "source_id": "Peacock_lodging_Jamaal",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 11,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17533,
+     "valid_share": 0.9993730050159598,
+     "spike_limit": 1297.3348,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0003000000000383807,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "PEA-B04",
+     "source_id": "Peacock_lodging_James",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 73,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17471,
+     "valid_share": 0.9958390332877337,
+     "spike_limit": 388.37342000000035,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.00030000000000995897,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "PEA-B05",
+     "source_id": "Peacock_lodging_Lou",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 5,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 2,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17537,
+     "valid_share": 0.9996010031919744,
+     "spike_limit": 651.4668,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.00030000000000995897,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "PEA-B06",
+     "source_id": "Peacock_lodging_Mathew",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 39,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 10,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17495,
+     "valid_share": 0.9972070223438213,
+     "spike_limit": 355.5332,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.00030000000000995897,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "PEA-B07",
+     "source_id": "Peacock_lodging_Matthew",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 10,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17534,
+     "valid_share": 0.9994300045599636,
+     "spike_limit": 335.4223779999999,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.00030000000000995897,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "PEA-B08",
+     "source_id": "Peacock_lodging_Nova",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 13,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 11,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17520,
+     "valid_share": 0.9986320109439124,
+     "spike_limit": 165.3332,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.00030000000000285354,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "PEA-B09",
+     "source_id": "Peacock_lodging_Sergio",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 10,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17534,
+     "valid_share": 0.9994300045599636,
+     "spike_limit": 603.1016219999993,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0005000000000165983,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "PEA-B10",
+     "source_id": "Peacock_lodging_Terrie",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 39,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 2,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17503,
+     "valid_share": 0.9976630186958504,
+     "spike_limit": 264.5986640000002,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.00030000000000995897,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "PEA-B11",
+     "source_id": "Peacock_lodging_Wes",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 11,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17533,
+     "valid_share": 0.9993730050159598,
+     "spike_limit": 984.355912,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0003000000000383807,
+     "count_mismatches_vs_application_report": {}
+    }
+   ],
+   "layers": {
+    "meters": 11,
+    "meter_hours": 192984,
+    "raw_readings_present": 192725,
+    "raw_readings_missing": 259,
+    "removed_by_rule": {
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 34,
+     "stuck_sensor": 0,
+     "spike": 0
+    },
+    "cleaned_readings_valid": 192691,
+    "raw_naive_sum_hours": 17425,
+    "community_valid_hours": 17393,
+    "raw_naive_sum_kwh": 15623365.595,
+    "community_demand_kwh": 15596896.740400001,
+    "hours_in_naive_not_in_community": 32,
+    "kwh_in_those_hours": 26468.8546,
+    "raw_naive_peak_kw": 1338.578,
+    "community_peak_kw": 1338.578
+   },
+   "excluded_meters": [],
+   "missing": {
+    "hours": 17544,
+    "missing_hours": 151,
+    "valid_hours": 17393,
+    "gaps": 26,
+    "longest_gap_hours": 58,
+    "longest_gap_start": "2016-08-02 15:00:00",
+    "missing_per_meter": {
+     "Peacock_lodging_Chloe": 41,
+     "Peacock_lodging_Francesca": 16,
+     "Peacock_lodging_Jamaal": 11,
+     "Peacock_lodging_James": 73,
+     "Peacock_lodging_Lou": 7,
+     "Peacock_lodging_Mathew": 49,
+     "Peacock_lodging_Matthew": 10,
+     "Peacock_lodging_Nova": 24,
+     "Peacock_lodging_Sergio": 10,
+     "Peacock_lodging_Terrie": 41,
+     "Peacock_lodging_Wes": 11
+    },
+    "hours_blocked_only_by_meter": {
+     "Peacock_lodging_Chloe": 0,
+     "Peacock_lodging_Francesca": 7,
+     "Peacock_lodging_Jamaal": 0,
+     "Peacock_lodging_James": 71,
+     "Peacock_lodging_Lou": 3,
+     "Peacock_lodging_Mathew": 11,
+     "Peacock_lodging_Matthew": 1,
+     "Peacock_lodging_Nova": 13,
+     "Peacock_lodging_Sergio": 0,
+     "Peacock_lodging_Terrie": 1,
+     "Peacock_lodging_Wes": 0
+    }
+   },
+   "cleaning_thresholds_by_meter": {
+    "Peacock_lodging_Chloe": 247.89933600000012,
+    "Peacock_lodging_Francesca": 246.6668,
+    "Peacock_lodging_Jamaal": 1297.3348,
+    "Peacock_lodging_James": 388.37342000000035,
+    "Peacock_lodging_Lou": 651.4668,
+    "Peacock_lodging_Mathew": 355.5332,
+    "Peacock_lodging_Matthew": 335.4223779999999,
+    "Peacock_lodging_Nova": 165.3332,
+    "Peacock_lodging_Sergio": 603.1016219999993,
+    "Peacock_lodging_Terrie": 264.5986640000002,
+    "Peacock_lodging_Wes": 984.355912
+   }
+  },
+  "rat": {
+   "site": "Rat",
+   "candidates": 11,
+   "buildings": 9,
+   "sub_use_mix": {
+    "Other - Lodging/Residential": 9
+   },
+   "meters": [
+    {
+     "code": "RAT-B01",
+     "source_id": "Rat_lodging_Ardell",
+     "sub_use": "Other - Lodging/Residential",
+     "readings": 17544,
+     "missing_in_source": 76,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17468,
+     "valid_share": 0.9956680346557227,
+     "spike_limit": 135.2798000000001,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "RAT-B02",
+     "source_id": "Rat_lodging_Ben",
+     "sub_use": "Other - Lodging/Residential",
+     "readings": 17544,
+     "missing_in_source": 201,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17343,
+     "valid_share": 0.9885430916552668,
+     "spike_limit": 2411.1340000000005,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "RAT-B03",
+     "source_id": "Rat_lodging_Christine",
+     "sub_use": "Other - Lodging/Residential",
+     "readings": 17544,
+     "missing_in_source": 52,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17492,
+     "valid_share": 0.9970360237118103,
+     "spike_limit": 512.7343999999994,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "RAT-B04",
+     "source_id": "Rat_lodging_Dwight",
+     "sub_use": "Other - Lodging/Residential",
+     "readings": 17544,
+     "missing_in_source": 29,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 5,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17510,
+     "valid_share": 0.998062015503876,
+     "spike_limit": 295.68,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "RAT-B05",
+     "source_id": "Rat_lodging_Jeannette",
+     "sub_use": "Other - Lodging/Residential",
+     "readings": 17544,
+     "missing_in_source": 28,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 2,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17514,
+     "valid_share": 0.9982900136798906,
+     "spike_limit": 52.48,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "RAT-B06",
+     "source_id": "Rat_lodging_Lorenzo",
+     "sub_use": "Other - Lodging/Residential",
+     "readings": 17544,
+     "missing_in_source": 76,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 100,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17368,
+     "valid_share": 0.989968080255358,
+     "spike_limit": 32.0,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "RAT-B07",
+     "source_id": "Rat_lodging_Marguerite",
+     "sub_use": "Other - Lodging/Residential",
+     "readings": 17544,
+     "missing_in_source": 158,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17386,
+     "valid_share": 0.9909940720474236,
+     "spike_limit": 226.12600000000006,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "RAT-B08",
+     "source_id": "Rat_lodging_Marion",
+     "sub_use": "Other - Lodging/Residential",
+     "readings": 17544,
+     "missing_in_source": 108,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17436,
+     "valid_share": 0.993844049247606,
+     "spike_limit": 331.04300000000035,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "RAT-B09",
+     "source_id": "Rat_lodging_Ted",
+     "sub_use": "Other - Lodging/Residential",
+     "readings": 17544,
+     "missing_in_source": 52,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 364,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17128,
+     "valid_share": 0.9762881896944824,
+     "spike_limit": 33.76,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0,
+     "count_mismatches_vs_application_report": {}
+    }
+   ],
+   "layers": {
+    "meters": 9,
+    "meter_hours": 157896,
+    "raw_readings_present": 157116,
+    "raw_readings_missing": 780,
+    "removed_by_rule": {
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 471,
+     "stuck_sensor": 0,
+     "spike": 0
+    },
+    "cleaned_readings_valid": 156645,
+    "raw_naive_sum_hours": 17085,
+    "community_valid_hours": 16620,
+    "raw_naive_sum_kwh": 8529169.32,
+    "community_demand_kwh": 8328445.710000001,
+    "hours_in_naive_not_in_community": 465,
+    "kwh_in_those_hours": 200723.61,
+    "raw_naive_peak_kw": 938.3799999999999,
+    "community_peak_kw": 938.3799999999999
+   },
+   "excluded_meters": [
+    {
+     "source_id": "Rat_lodging_Lakisha",
+     "valid_share": 0.6399908800729595,
+     "missing_in_source": 100,
+     "negative": 0,
+     "zero_long_runs": 3187,
+     "zero_short": 835,
+     "stuck_sensor": 2194,
+     "spike": 0,
+     "valid_out": 11228
+    },
+    {
+     "source_id": "Rat_lodging_Lucille",
+     "valid_share": 0.5954172366621067,
+     "missing_in_source": 70,
+     "negative": 0,
+     "zero_long_runs": 6872,
+     "zero_short": 156,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 10446
+    }
+   ],
+   "missing": {
+    "hours": 17544,
+    "missing_hours": 924,
+    "valid_hours": 16620,
+    "gaps": 443,
+    "longest_gap_hours": 96,
+    "longest_gap_start": "2017-08-28 00:00:00",
+    "missing_per_meter": {
+     "Rat_lodging_Ardell": 76,
+     "Rat_lodging_Ben": 201,
+     "Rat_lodging_Christine": 52,
+     "Rat_lodging_Dwight": 34,
+     "Rat_lodging_Jeannette": 30,
+     "Rat_lodging_Lorenzo": 176,
+     "Rat_lodging_Marguerite": 158,
+     "Rat_lodging_Marion": 108,
+     "Rat_lodging_Ted": 416
+    },
+    "hours_blocked_only_by_meter": {
+     "Rat_lodging_Ardell": 0,
+     "Rat_lodging_Ben": 196,
+     "Rat_lodging_Christine": 0,
+     "Rat_lodging_Dwight": 6,
+     "Rat_lodging_Jeannette": 1,
+     "Rat_lodging_Lorenzo": 99,
+     "Rat_lodging_Marguerite": 101,
+     "Rat_lodging_Marion": 27,
+     "Rat_lodging_Ted": 383
+    }
+   },
+   "cleaning_thresholds_by_meter": {
+    "Rat_lodging_Ardell": 135.2798000000001,
+    "Rat_lodging_Ben": 2411.1340000000005,
+    "Rat_lodging_Christine": 512.7343999999994,
+    "Rat_lodging_Dwight": 295.68,
+    "Rat_lodging_Jeannette": 52.48,
+    "Rat_lodging_Lorenzo": 32.0,
+    "Rat_lodging_Marguerite": 226.12600000000006,
+    "Rat_lodging_Marion": 331.04300000000035,
+    "Rat_lodging_Ted": 33.76
+   }
+  },
+  "robin": {
+   "site": "Robin",
+   "candidates": 10,
+   "buildings": 8,
+   "sub_use_mix": {
+    "Dormitory": 8
+   },
+   "meters": [
+    {
+     "code": "ROB-B01",
+     "source_id": "Robin_lodging_Celia",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 120,
+     "spike": 0,
+     "valid_out": 17424,
+     "valid_share": 0.9931600547195623,
+     "spike_limit": 424.51399999999995,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0004999999999999449,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "ROB-B02",
+     "source_id": "Robin_lodging_Dorthy",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 120,
+     "spike": 0,
+     "valid_out": 17424,
+     "valid_share": 0.9931600547195623,
+     "spike_limit": 231.6,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.000500000000000056,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "ROB-B03",
+     "source_id": "Robin_lodging_Elmer",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 120,
+     "spike": 0,
+     "valid_out": 17424,
+     "valid_share": 0.9931600547195623,
+     "spike_limit": 684.4,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0005000000000023874,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "ROB-B04",
+     "source_id": "Robin_lodging_Janie",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 0,
+     "spike": 0,
+     "valid_out": 17544,
+     "valid_share": 1.0,
+     "spike_limit": 1059.26486,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0005000000000165983,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "ROB-B05",
+     "source_id": "Robin_lodging_Oliva",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 120,
+     "spike": 0,
+     "valid_out": 17424,
+     "valid_share": 0.9931600547195623,
+     "spike_limit": 440.0,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.00030000000000285354,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "ROB-B06",
+     "source_id": "Robin_lodging_Phillip",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 66,
+     "stuck_sensor": 142,
+     "spike": 0,
+     "valid_out": 17336,
+     "valid_share": 0.9881440948472412,
+     "spike_limit": 327.84600000000063,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0005000000000006111,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "ROB-B07",
+     "source_id": "Robin_lodging_Pricilla",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 2,
+     "stuck_sensor": 120,
+     "spike": 0,
+     "valid_out": 17422,
+     "valid_share": 0.9930460556315549,
+     "spike_limit": 576.8,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.0004999999999999449,
+     "count_mismatches_vs_application_report": {}
+    },
+    {
+     "code": "ROB-B08",
+     "source_id": "Robin_lodging_Renea",
+     "sub_use": "Dormitory",
+     "readings": 17544,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 120,
+     "spike": 0,
+     "valid_out": 17424,
+     "valid_share": 0.9931600547195623,
+     "spike_limit": 648.9139999999999,
+     "stored_values_altered": 0,
+     "max_abs_diff_vs_independent": 0.00039999999999906777,
+     "count_mismatches_vs_application_report": {}
+    }
+   ],
+   "layers": {
+    "meters": 8,
+    "meter_hours": 140352,
+    "raw_readings_present": 140352,
+    "raw_readings_missing": 0,
+    "removed_by_rule": {
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 68,
+     "stuck_sensor": 862,
+     "spike": 0
+    },
+    "cleaned_readings_valid": 139422,
+    "raw_naive_sum_hours": 17544,
+    "community_valid_hours": 17334,
+    "raw_naive_sum_kwh": 9487237.9323,
+    "community_demand_kwh": 9440078.881,
+    "hours_in_naive_not_in_community": 210,
+    "kwh_in_those_hours": 47159.0513,
+    "raw_naive_peak_kw": 1165.2379999999998,
+    "community_peak_kw": 1165.2379999999998
+   },
+   "excluded_meters": [
+    {
+     "source_id": "Robin_lodging_Armand",
+     "valid_share": 0.90640674874601,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 1642,
+     "spike": 0,
+     "valid_out": 15902
+    },
+    {
+     "source_id": "Robin_lodging_Donna",
+     "valid_share": 0.8868559051527588,
+     "missing_in_source": 0,
+     "negative": 0,
+     "zero_long_runs": 0,
+     "zero_short": 0,
+     "stuck_sensor": 1985,
+     "spike": 0,
+     "valid_out": 15559
+    }
+   ],
+   "missing": {
+    "hours": 17544,
+    "missing_hours": 210,
+    "valid_hours": 17334,
+    "gaps": 6,
+    "longest_gap_hours": 94,
+    "longest_gap_start": "2017-05-03 02:00:00",
+    "missing_per_meter": {
+     "Robin_lodging_Celia": 120,
+     "Robin_lodging_Dorthy": 120,
+     "Robin_lodging_Elmer": 120,
+     "Robin_lodging_Janie": 0,
+     "Robin_lodging_Oliva": 120,
+     "Robin_lodging_Phillip": 208,
+     "Robin_lodging_Pricilla": 122,
+     "Robin_lodging_Renea": 120
+    },
+    "hours_blocked_only_by_meter": {
+     "Robin_lodging_Celia": 0,
+     "Robin_lodging_Dorthy": 0,
+     "Robin_lodging_Elmer": 0,
+     "Robin_lodging_Janie": 0,
+     "Robin_lodging_Oliva": 0,
+     "Robin_lodging_Phillip": 88,
+     "Robin_lodging_Pricilla": 2,
+     "Robin_lodging_Renea": 0
+    }
+   },
+   "cleaning_thresholds_by_meter": {
+    "Robin_lodging_Celia": 424.51399999999995,
+    "Robin_lodging_Dorthy": 231.6,
+    "Robin_lodging_Elmer": 684.4,
+    "Robin_lodging_Janie": 1059.26486,
+    "Robin_lodging_Oliva": 440.0,
+    "Robin_lodging_Phillip": 327.84600000000063,
+    "Robin_lodging_Pricilla": 576.8,
+    "Robin_lodging_Renea": 648.9139999999999
+   }
+  }
+ },
+ "api": {
+  "bull": {
+   "api_energy_kwh": 32549761.91,
+   "independent_energy_kwh": 32549761.9098,
+   "api_valid_hours": 16862,
+   "independent_valid_hours": 16862,
+   "api_peak_kw": 4841.96,
+   "independent_peak_kw": 4841.96,
+   "months_compared": 24,
+   "buildings_compared": 16
+  },
+  "eagle": {
+   "api_energy_kwh": 9289115.976999998,
+   "independent_energy_kwh": 9289115.9842,
+   "api_valid_hours": 16704,
+   "independent_valid_hours": 16704,
+   "api_peak_kw": 907.685,
+   "independent_peak_kw": 907.6845999999998,
+   "months_compared": 24,
+   "buildings_compared": 8
+  },
+  "fox": {
+   "api_energy_kwh": 26464352.43,
+   "independent_energy_kwh": 26464352.43,
+   "api_valid_hours": 17486,
+   "independent_valid_hours": 17486,
+   "api_peak_kw": 2283.16,
+   "independent_peak_kw": 2283.16,
+   "months_compared": 24,
+   "buildings_compared": 11
+  },
+  "hog": {
+   "api_energy_kwh": 29804910.654,
+   "independent_energy_kwh": 29804910.6486,
+   "api_valid_hours": 17051,
+   "independent_valid_hours": 17051,
+   "api_peak_kw": 2917.163,
+   "independent_peak_kw": 2917.1630000000005,
+   "months_compared": 24,
+   "buildings_compared": 10
+  },
+  "peacock": {
+   "api_energy_kwh": 15596896.757,
+   "independent_energy_kwh": 15596896.740400001,
+   "api_valid_hours": 17393,
+   "independent_valid_hours": 17393,
+   "api_peak_kw": 1338.578,
+   "independent_peak_kw": 1338.578,
+   "months_compared": 24,
+   "buildings_compared": 11
+  },
+  "rat": {
+   "api_energy_kwh": 8328445.710000001,
+   "independent_energy_kwh": 8328445.710000001,
+   "api_valid_hours": 16620,
+   "independent_valid_hours": 16620,
+   "api_peak_kw": 938.38,
+   "independent_peak_kw": 938.3799999999999,
+   "months_compared": 24,
+   "buildings_compared": 9
+  },
+  "robin": {
+   "api_energy_kwh": 9440079.217999998,
+   "independent_energy_kwh": 9440078.881000001,
+   "api_valid_hours": 17334,
+   "independent_valid_hours": 17334,
+   "api_peak_kw": 1165.238,
+   "independent_peak_kw": 1165.2379999999998,
+   "months_compared": 24,
+   "buildings_compared": 8
+  }
+ },
+ "checks": [
+  {
+   "society": "raw",
+   "id": "integrity.sha256.data/metadata/metadata.csv",
+   "description": "SHA-256 of data/metadata/metadata.csv equals the recorded value",
+   "passed": true,
+   "detail": "expected 992d0b29f24f96ad..., found 992d0b29f24f96ad..."
+  },
+  {
+   "society": "raw",
+   "id": "integrity.sha256.data/weather/weather.csv",
+   "description": "SHA-256 of data/weather/weather.csv equals the recorded value",
+   "passed": true,
+   "detail": "expected a8189f1c6acdf3b9..., found a8189f1c6acdf3b9..."
+  },
+  {
+   "society": "raw",
+   "id": "integrity.sha256.data/meters/raw/electricity.csv",
+   "description": "SHA-256 of data/meters/raw/electricity.csv equals the recorded value",
+   "passed": true,
+   "detail": "expected 039d909d8981e2d6..., found 039d909d8981e2d6..."
+  },
+  {
+   "society": "raw",
+   "id": "integrity.sha256.LICENSE",
+   "description": "SHA-256 of LICENSE equals the recorded value",
+   "passed": true,
+   "detail": "expected 1df42bd84afc40e6..., found 1df42bd84afc40e6..."
+  },
+  {
+   "society": "raw",
+   "id": "integrity.sha256.README.md",
+   "description": "SHA-256 of README.md equals the recorded value",
+   "passed": true,
+   "detail": "expected 7f2a1539a17c3183..., found 7f2a1539a17c3183..."
+  },
+  {
+   "society": "raw",
+   "id": "raw.grid",
+   "description": "Raw readings sit on one complete hourly grid (sorted, unique, 1-hour steps)",
+   "passed": true,
+   "detail": "17,544 hours, 2016-01-01 00:00:00 to 2017-12-31 23:00:00"
+  },
+  {
+   "society": "raw",
+   "id": "integrity.subset_equals_full",
+   "description": "The shipped raw subset equals the full official electricity file, value by value, for every column it contains",
+   "passed": true,
+   "detail": "149 columns, 17,544 rows"
+  },
+  {
+   "society": "sites",
+   "id": "sites.accepted_match",
+   "description": "Sites accepted by the independent screening equal the communities in the application's catalogue",
+   "passed": true,
+   "detail": "independent ['bull', 'eagle', 'fox', 'hog', 'peacock', 'rat', 'robin']; application ['bull', 'eagle', 'fox', 'hog', 'peacock', 'rat', 'robin']"
+  },
+  {
+   "society": "bull",
+   "id": "bull.selection.kept_buildings",
+   "description": "Buildings kept by the independent selection equal the application's buildings.csv",
+   "passed": true,
+   "detail": "independent 16, application 16; only independent: []; only application: []"
+  },
+  {
+   "society": "bull",
+   "id": "bull.selection.excluded_meters",
+   "description": "Candidate meters rejected by the 95 % rule equal the application's excluded_meters.csv",
+   "passed": true,
+   "detail": "independent ['Bull_lodging_Anibal', 'Bull_lodging_Danielle', 'Bull_lodging_Terence'], application ['Bull_lodging_Anibal', 'Bull_lodging_Danielle', 'Bull_lodging_Terence']"
+  },
+  {
+   "society": "bull",
+   "id": "bull.selection.building_codes",
+   "description": "Building codes follow the documented rule (site prefix, source ids sorted)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "bull",
+   "id": "bull.buildings.metadata",
+   "description": "Each kept building is of the selected primary use on the site, with floor area and sub-use equal to the BDG2 metadata",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "bull",
+   "id": "bull.grid.complete",
+   "description": "Processed hourly grid equals the raw grid: unique, regular 1-hour steps, no missing timestamp",
+   "passed": true,
+   "detail": "17,544 hours, 2016-01-01 00:00:00 to 2017-12-31 23:00:00"
+  },
+  {
+   "society": "bull",
+   "id": "bull.meters.unaltered",
+   "description": "No stored (cleaned) value differs from the raw reading of the same hour by more than the 3-decimal rounding",
+   "passed": true,
+   "detail": "0 of 275,243 stored meter values differ"
+  },
+  {
+   "society": "bull",
+   "id": "bull.meters.cleaned_equals_independent",
+   "description": "Application's cleaned meters equal the independently cleaned meters (same valid hours, same values)",
+   "passed": true,
+   "detail": "16 meters identical in missing pattern and values"
+  },
+  {
+   "society": "bull",
+   "id": "bull.meters.removal_counts",
+   "description": "Per-rule removal counts (missing, negative, zero, stuck, spike, valid) equal the application's cleaning report",
+   "passed": true,
+   "detail": "no difference"
+  },
+  {
+   "society": "bull",
+   "id": "bull.invalid.none_left",
+   "description": "The processed meters contain no negative, zero, stuck (>= 48 identical) or spike (> 4 x p99.5) reading",
+   "passed": true,
+   "detail": "negative 0, zero 0, stuck 0, spike 0"
+  },
+  {
+   "society": "bull",
+   "id": "bull.aggregate.total_equals_independent",
+   "description": "Application's community demand equals the independent sum of the cleaned meters, hour by hour",
+   "passed": true,
+   "detail": "largest hourly difference 0.00010 kWh (allowed 0.0085 from 3-decimal storage); missing-hour pattern identical: True"
+  },
+  {
+   "society": "bull",
+   "id": "bull.aggregate.no_partial_sums",
+   "description": "The processed community demand is missing in exactly the hours where any kept meter is missing (never a partial sum)",
+   "passed": true,
+   "detail": "16,862 hours with every meter valid"
+  },
+  {
+   "society": "bull",
+   "id": "bull.aggregate.n_valid_meters",
+   "description": "n_valid_meters equals the number of non-missing meters in each hour",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "bull",
+   "id": "bull.aggregate.valid_hours",
+   "description": "Valid community hours and the 94 % rule agree with the application's cleaning report",
+   "passed": true,
+   "detail": "independent 16,862 h (0.9611), application 16,862 h"
+  },
+  {
+   "society": "bull",
+   "id": "bull.spec.rules_match",
+   "description": "Thresholds recorded in the application's cleaning report equal this script's SPEC",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "eagle",
+   "id": "eagle.selection.kept_buildings",
+   "description": "Buildings kept by the independent selection equal the application's buildings.csv",
+   "passed": true,
+   "detail": "independent 8, application 8; only independent: []; only application: []"
+  },
+  {
+   "society": "eagle",
+   "id": "eagle.selection.excluded_meters",
+   "description": "Candidate meters rejected by the 95 % rule equal the application's excluded_meters.csv",
+   "passed": true,
+   "detail": "independent ['Eagle_lodging_Blake', 'Eagle_lodging_Garland'], application ['Eagle_lodging_Blake', 'Eagle_lodging_Garland']"
+  },
+  {
+   "society": "eagle",
+   "id": "eagle.selection.building_codes",
+   "description": "Building codes follow the documented rule (site prefix, source ids sorted)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "eagle",
+   "id": "eagle.buildings.metadata",
+   "description": "Each kept building is of the selected primary use on the site, with floor area and sub-use equal to the BDG2 metadata",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "eagle",
+   "id": "eagle.grid.complete",
+   "description": "Processed hourly grid equals the raw grid: unique, regular 1-hour steps, no missing timestamp",
+   "passed": true,
+   "detail": "17,544 hours, 2016-01-01 00:00:00 to 2017-12-31 23:00:00"
+  },
+  {
+   "society": "eagle",
+   "id": "eagle.meters.unaltered",
+   "description": "No stored (cleaned) value differs from the raw reading of the same hour by more than the 3-decimal rounding",
+   "passed": true,
+   "detail": "0 of 137,878 stored meter values differ"
+  },
+  {
+   "society": "eagle",
+   "id": "eagle.meters.cleaned_equals_independent",
+   "description": "Application's cleaned meters equal the independently cleaned meters (same valid hours, same values)",
+   "passed": true,
+   "detail": "8 meters identical in missing pattern and values"
+  },
+  {
+   "society": "eagle",
+   "id": "eagle.meters.removal_counts",
+   "description": "Per-rule removal counts (missing, negative, zero, stuck, spike, valid) equal the application's cleaning report",
+   "passed": true,
+   "detail": "no difference"
+  },
+  {
+   "society": "eagle",
+   "id": "eagle.invalid.none_left",
+   "description": "The processed meters contain no negative, zero, stuck (>= 48 identical) or spike (> 4 x p99.5) reading",
+   "passed": true,
+   "detail": "negative 0, zero 0, stuck 0, spike 0"
+  },
+  {
+   "society": "eagle",
+   "id": "eagle.aggregate.total_equals_independent",
+   "description": "Application's community demand equals the independent sum of the cleaned meters, hour by hour",
+   "passed": true,
+   "detail": "largest hourly difference 0.00050 kWh (allowed 0.0045 from 3-decimal storage); missing-hour pattern identical: True"
+  },
+  {
+   "society": "eagle",
+   "id": "eagle.aggregate.no_partial_sums",
+   "description": "The processed community demand is missing in exactly the hours where any kept meter is missing (never a partial sum)",
+   "passed": true,
+   "detail": "16,704 hours with every meter valid"
+  },
+  {
+   "society": "eagle",
+   "id": "eagle.aggregate.n_valid_meters",
+   "description": "n_valid_meters equals the number of non-missing meters in each hour",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "eagle",
+   "id": "eagle.aggregate.valid_hours",
+   "description": "Valid community hours and the 94 % rule agree with the application's cleaning report",
+   "passed": true,
+   "detail": "independent 16,704 h (0.9521), application 16,704 h"
+  },
+  {
+   "society": "eagle",
+   "id": "eagle.spec.rules_match",
+   "description": "Thresholds recorded in the application's cleaning report equal this script's SPEC",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "fox",
+   "id": "fox.selection.kept_buildings",
+   "description": "Buildings kept by the independent selection equal the application's buildings.csv",
+   "passed": true,
+   "detail": "independent 11, application 11; only independent: []; only application: []"
+  },
+  {
+   "society": "fox",
+   "id": "fox.selection.excluded_meters",
+   "description": "Candidate meters rejected by the 95 % rule equal the application's excluded_meters.csv",
+   "passed": true,
+   "detail": "independent ['Fox_lodging_Warren'], application ['Fox_lodging_Warren']"
+  },
+  {
+   "society": "fox",
+   "id": "fox.selection.building_codes",
+   "description": "Building codes follow the documented rule (site prefix, source ids sorted)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "fox",
+   "id": "fox.buildings.metadata",
+   "description": "Each kept building is of the selected primary use on the site, with floor area and sub-use equal to the BDG2 metadata",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "fox",
+   "id": "fox.grid.complete",
+   "description": "Processed hourly grid equals the raw grid: unique, regular 1-hour steps, no missing timestamp",
+   "passed": true,
+   "detail": "17,544 hours, 2016-01-01 00:00:00 to 2017-12-31 23:00:00"
+  },
+  {
+   "society": "fox",
+   "id": "fox.meters.unaltered",
+   "description": "No stored (cleaned) value differs from the raw reading of the same hour by more than the 3-decimal rounding",
+   "passed": true,
+   "detail": "0 of 192,885 stored meter values differ"
+  },
+  {
+   "society": "fox",
+   "id": "fox.meters.cleaned_equals_independent",
+   "description": "Application's cleaned meters equal the independently cleaned meters (same valid hours, same values)",
+   "passed": true,
+   "detail": "11 meters identical in missing pattern and values"
+  },
+  {
+   "society": "fox",
+   "id": "fox.meters.removal_counts",
+   "description": "Per-rule removal counts (missing, negative, zero, stuck, spike, valid) equal the application's cleaning report",
+   "passed": true,
+   "detail": "no difference"
+  },
+  {
+   "society": "fox",
+   "id": "fox.invalid.none_left",
+   "description": "The processed meters contain no negative, zero, stuck (>= 48 identical) or spike (> 4 x p99.5) reading",
+   "passed": true,
+   "detail": "negative 0, zero 0, stuck 0, spike 0"
+  },
+  {
+   "society": "fox",
+   "id": "fox.aggregate.total_equals_independent",
+   "description": "Application's community demand equals the independent sum of the cleaned meters, hour by hour",
+   "passed": true,
+   "detail": "largest hourly difference 0.00000 kWh (allowed 0.0060 from 3-decimal storage); missing-hour pattern identical: True"
+  },
+  {
+   "society": "fox",
+   "id": "fox.aggregate.no_partial_sums",
+   "description": "The processed community demand is missing in exactly the hours where any kept meter is missing (never a partial sum)",
+   "passed": true,
+   "detail": "17,486 hours with every meter valid"
+  },
+  {
+   "society": "fox",
+   "id": "fox.aggregate.n_valid_meters",
+   "description": "n_valid_meters equals the number of non-missing meters in each hour",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "fox",
+   "id": "fox.aggregate.valid_hours",
+   "description": "Valid community hours and the 94 % rule agree with the application's cleaning report",
+   "passed": true,
+   "detail": "independent 17,486 h (0.9967), application 17,486 h"
+  },
+  {
+   "society": "fox",
+   "id": "fox.spec.rules_match",
+   "description": "Thresholds recorded in the application's cleaning report equal this script's SPEC",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "hog",
+   "id": "hog.selection.kept_buildings",
+   "description": "Buildings kept by the independent selection equal the application's buildings.csv",
+   "passed": true,
+   "detail": "independent 10, application 10; only independent: []; only application: []"
+  },
+  {
+   "society": "hog",
+   "id": "hog.selection.excluded_meters",
+   "description": "Candidate meters rejected by the 95 % rule equal the application's excluded_meters.csv",
+   "passed": true,
+   "detail": "independent ['Hog_lodging_Edgar'], application ['Hog_lodging_Edgar']"
+  },
+  {
+   "society": "hog",
+   "id": "hog.selection.building_codes",
+   "description": "Building codes follow the documented rule (site prefix, source ids sorted)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "hog",
+   "id": "hog.buildings.metadata",
+   "description": "Each kept building is of the selected primary use on the site, with floor area and sub-use equal to the BDG2 metadata",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "hog",
+   "id": "hog.grid.complete",
+   "description": "Processed hourly grid equals the raw grid: unique, regular 1-hour steps, no missing timestamp",
+   "passed": true,
+   "detail": "17,544 hours, 2016-01-01 00:00:00 to 2017-12-31 23:00:00"
+  },
+  {
+   "society": "hog",
+   "id": "hog.meters.unaltered",
+   "description": "No stored (cleaned) value differs from the raw reading of the same hour by more than the 3-decimal rounding",
+   "passed": true,
+   "detail": "0 of 174,945 stored meter values differ"
+  },
+  {
+   "society": "hog",
+   "id": "hog.meters.cleaned_equals_independent",
+   "description": "Application's cleaned meters equal the independently cleaned meters (same valid hours, same values)",
+   "passed": true,
+   "detail": "10 meters identical in missing pattern and values"
+  },
+  {
+   "society": "hog",
+   "id": "hog.meters.removal_counts",
+   "description": "Per-rule removal counts (missing, negative, zero, stuck, spike, valid) equal the application's cleaning report",
+   "passed": true,
+   "detail": "no difference"
+  },
+  {
+   "society": "hog",
+   "id": "hog.invalid.none_left",
+   "description": "The processed meters contain no negative, zero, stuck (>= 48 identical) or spike (> 4 x p99.5) reading",
+   "passed": true,
+   "detail": "negative 0, zero 0, stuck 0, spike 0"
+  },
+  {
+   "society": "hog",
+   "id": "hog.aggregate.total_equals_independent",
+   "description": "Application's community demand equals the independent sum of the cleaned meters, hour by hour",
+   "passed": true,
+   "detail": "largest hourly difference 0.00050 kWh (allowed 0.0055 from 3-decimal storage); missing-hour pattern identical: True"
+  },
+  {
+   "society": "hog",
+   "id": "hog.aggregate.no_partial_sums",
+   "description": "The processed community demand is missing in exactly the hours where any kept meter is missing (never a partial sum)",
+   "passed": true,
+   "detail": "17,051 hours with every meter valid"
+  },
+  {
+   "society": "hog",
+   "id": "hog.aggregate.n_valid_meters",
+   "description": "n_valid_meters equals the number of non-missing meters in each hour",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "hog",
+   "id": "hog.aggregate.valid_hours",
+   "description": "Valid community hours and the 94 % rule agree with the application's cleaning report",
+   "passed": true,
+   "detail": "independent 17,051 h (0.9719), application 17,051 h"
+  },
+  {
+   "society": "hog",
+   "id": "hog.spec.rules_match",
+   "description": "Thresholds recorded in the application's cleaning report equal this script's SPEC",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "peacock",
+   "id": "peacock.selection.kept_buildings",
+   "description": "Buildings kept by the independent selection equal the application's buildings.csv",
+   "passed": true,
+   "detail": "independent 11, application 11; only independent: []; only application: []"
+  },
+  {
+   "society": "peacock",
+   "id": "peacock.selection.excluded_meters",
+   "description": "Candidate meters rejected by the 95 % rule equal the application's excluded_meters.csv",
+   "passed": true,
+   "detail": "independent [], application []"
+  },
+  {
+   "society": "peacock",
+   "id": "peacock.selection.building_codes",
+   "description": "Building codes follow the documented rule (site prefix, source ids sorted)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "peacock",
+   "id": "peacock.buildings.metadata",
+   "description": "Each kept building is of the selected primary use on the site, with floor area and sub-use equal to the BDG2 metadata",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "peacock",
+   "id": "peacock.grid.complete",
+   "description": "Processed hourly grid equals the raw grid: unique, regular 1-hour steps, no missing timestamp",
+   "passed": true,
+   "detail": "17,544 hours, 2016-01-01 00:00:00 to 2017-12-31 23:00:00"
+  },
+  {
+   "society": "peacock",
+   "id": "peacock.meters.unaltered",
+   "description": "No stored (cleaned) value differs from the raw reading of the same hour by more than the 3-decimal rounding",
+   "passed": true,
+   "detail": "0 of 192,691 stored meter values differ"
+  },
+  {
+   "society": "peacock",
+   "id": "peacock.meters.cleaned_equals_independent",
+   "description": "Application's cleaned meters equal the independently cleaned meters (same valid hours, same values)",
+   "passed": true,
+   "detail": "11 meters identical in missing pattern and values"
+  },
+  {
+   "society": "peacock",
+   "id": "peacock.meters.removal_counts",
+   "description": "Per-rule removal counts (missing, negative, zero, stuck, spike, valid) equal the application's cleaning report",
+   "passed": true,
+   "detail": "no difference"
+  },
+  {
+   "society": "peacock",
+   "id": "peacock.invalid.none_left",
+   "description": "The processed meters contain no negative, zero, stuck (>= 48 identical) or spike (> 4 x p99.5) reading",
+   "passed": true,
+   "detail": "negative 0, zero 0, stuck 0, spike 0"
+  },
+  {
+   "society": "peacock",
+   "id": "peacock.aggregate.total_equals_independent",
+   "description": "Application's community demand equals the independent sum of the cleaned meters, hour by hour",
+   "passed": true,
+   "detail": "largest hourly difference 0.00050 kWh (allowed 0.0060 from 3-decimal storage); missing-hour pattern identical: True"
+  },
+  {
+   "society": "peacock",
+   "id": "peacock.aggregate.no_partial_sums",
+   "description": "The processed community demand is missing in exactly the hours where any kept meter is missing (never a partial sum)",
+   "passed": true,
+   "detail": "17,393 hours with every meter valid"
+  },
+  {
+   "society": "peacock",
+   "id": "peacock.aggregate.n_valid_meters",
+   "description": "n_valid_meters equals the number of non-missing meters in each hour",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "peacock",
+   "id": "peacock.aggregate.valid_hours",
+   "description": "Valid community hours and the 94 % rule agree with the application's cleaning report",
+   "passed": true,
+   "detail": "independent 17,393 h (0.9914), application 17,393 h"
+  },
+  {
+   "society": "peacock",
+   "id": "peacock.spec.rules_match",
+   "description": "Thresholds recorded in the application's cleaning report equal this script's SPEC",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "rat",
+   "id": "rat.selection.kept_buildings",
+   "description": "Buildings kept by the independent selection equal the application's buildings.csv",
+   "passed": true,
+   "detail": "independent 9, application 9; only independent: []; only application: []"
+  },
+  {
+   "society": "rat",
+   "id": "rat.selection.excluded_meters",
+   "description": "Candidate meters rejected by the 95 % rule equal the application's excluded_meters.csv",
+   "passed": true,
+   "detail": "independent ['Rat_lodging_Lakisha', 'Rat_lodging_Lucille'], application ['Rat_lodging_Lakisha', 'Rat_lodging_Lucille']"
+  },
+  {
+   "society": "rat",
+   "id": "rat.selection.building_codes",
+   "description": "Building codes follow the documented rule (site prefix, source ids sorted)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "rat",
+   "id": "rat.buildings.metadata",
+   "description": "Each kept building is of the selected primary use on the site, with floor area and sub-use equal to the BDG2 metadata",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "rat",
+   "id": "rat.grid.complete",
+   "description": "Processed hourly grid equals the raw grid: unique, regular 1-hour steps, no missing timestamp",
+   "passed": true,
+   "detail": "17,544 hours, 2016-01-01 00:00:00 to 2017-12-31 23:00:00"
+  },
+  {
+   "society": "rat",
+   "id": "rat.meters.unaltered",
+   "description": "No stored (cleaned) value differs from the raw reading of the same hour by more than the 3-decimal rounding",
+   "passed": true,
+   "detail": "0 of 156,645 stored meter values differ"
+  },
+  {
+   "society": "rat",
+   "id": "rat.meters.cleaned_equals_independent",
+   "description": "Application's cleaned meters equal the independently cleaned meters (same valid hours, same values)",
+   "passed": true,
+   "detail": "9 meters identical in missing pattern and values"
+  },
+  {
+   "society": "rat",
+   "id": "rat.meters.removal_counts",
+   "description": "Per-rule removal counts (missing, negative, zero, stuck, spike, valid) equal the application's cleaning report",
+   "passed": true,
+   "detail": "no difference"
+  },
+  {
+   "society": "rat",
+   "id": "rat.invalid.none_left",
+   "description": "The processed meters contain no negative, zero, stuck (>= 48 identical) or spike (> 4 x p99.5) reading",
+   "passed": true,
+   "detail": "negative 0, zero 0, stuck 0, spike 0"
+  },
+  {
+   "society": "rat",
+   "id": "rat.aggregate.total_equals_independent",
+   "description": "Application's community demand equals the independent sum of the cleaned meters, hour by hour",
+   "passed": true,
+   "detail": "largest hourly difference 0.00000 kWh (allowed 0.0050 from 3-decimal storage); missing-hour pattern identical: True"
+  },
+  {
+   "society": "rat",
+   "id": "rat.aggregate.no_partial_sums",
+   "description": "The processed community demand is missing in exactly the hours where any kept meter is missing (never a partial sum)",
+   "passed": true,
+   "detail": "16,620 hours with every meter valid"
+  },
+  {
+   "society": "rat",
+   "id": "rat.aggregate.n_valid_meters",
+   "description": "n_valid_meters equals the number of non-missing meters in each hour",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "rat",
+   "id": "rat.aggregate.valid_hours",
+   "description": "Valid community hours and the 94 % rule agree with the application's cleaning report",
+   "passed": true,
+   "detail": "independent 16,620 h (0.9473), application 16,620 h"
+  },
+  {
+   "society": "rat",
+   "id": "rat.spec.rules_match",
+   "description": "Thresholds recorded in the application's cleaning report equal this script's SPEC",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "robin",
+   "id": "robin.selection.kept_buildings",
+   "description": "Buildings kept by the independent selection equal the application's buildings.csv",
+   "passed": true,
+   "detail": "independent 8, application 8; only independent: []; only application: []"
+  },
+  {
+   "society": "robin",
+   "id": "robin.selection.excluded_meters",
+   "description": "Candidate meters rejected by the 95 % rule equal the application's excluded_meters.csv",
+   "passed": true,
+   "detail": "independent ['Robin_lodging_Armand', 'Robin_lodging_Donna'], application ['Robin_lodging_Armand', 'Robin_lodging_Donna']"
+  },
+  {
+   "society": "robin",
+   "id": "robin.selection.building_codes",
+   "description": "Building codes follow the documented rule (site prefix, source ids sorted)",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "robin",
+   "id": "robin.buildings.metadata",
+   "description": "Each kept building is of the selected primary use on the site, with floor area and sub-use equal to the BDG2 metadata",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "robin",
+   "id": "robin.grid.complete",
+   "description": "Processed hourly grid equals the raw grid: unique, regular 1-hour steps, no missing timestamp",
+   "passed": true,
+   "detail": "17,544 hours, 2016-01-01 00:00:00 to 2017-12-31 23:00:00"
+  },
+  {
+   "society": "robin",
+   "id": "robin.meters.unaltered",
+   "description": "No stored (cleaned) value differs from the raw reading of the same hour by more than the 3-decimal rounding",
+   "passed": true,
+   "detail": "0 of 139,422 stored meter values differ"
+  },
+  {
+   "society": "robin",
+   "id": "robin.meters.cleaned_equals_independent",
+   "description": "Application's cleaned meters equal the independently cleaned meters (same valid hours, same values)",
+   "passed": true,
+   "detail": "8 meters identical in missing pattern and values"
+  },
+  {
+   "society": "robin",
+   "id": "robin.meters.removal_counts",
+   "description": "Per-rule removal counts (missing, negative, zero, stuck, spike, valid) equal the application's cleaning report",
+   "passed": true,
+   "detail": "no difference"
+  },
+  {
+   "society": "robin",
+   "id": "robin.invalid.none_left",
+   "description": "The processed meters contain no negative, zero, stuck (>= 48 identical) or spike (> 4 x p99.5) reading",
+   "passed": true,
+   "detail": "negative 0, zero 0, stuck 0, spike 0"
+  },
+  {
+   "society": "robin",
+   "id": "robin.aggregate.total_equals_independent",
+   "description": "Application's community demand equals the independent sum of the cleaned meters, hour by hour",
+   "passed": true,
+   "detail": "largest hourly difference 0.00050 kWh (allowed 0.0045 from 3-decimal storage); missing-hour pattern identical: True"
+  },
+  {
+   "society": "robin",
+   "id": "robin.aggregate.no_partial_sums",
+   "description": "The processed community demand is missing in exactly the hours where any kept meter is missing (never a partial sum)",
+   "passed": true,
+   "detail": "17,334 hours with every meter valid"
+  },
+  {
+   "society": "robin",
+   "id": "robin.aggregate.n_valid_meters",
+   "description": "n_valid_meters equals the number of non-missing meters in each hour",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "robin",
+   "id": "robin.aggregate.valid_hours",
+   "description": "Valid community hours and the 94 % rule agree with the application's cleaning report",
+   "passed": true,
+   "detail": "independent 17,334 h (0.9880), application 17,334 h"
+  },
+  {
+   "society": "robin",
+   "id": "robin.spec.rules_match",
+   "description": "Thresholds recorded in the application's cleaning report equal this script's SPEC",
+   "passed": true,
+   "detail": ""
+  },
+  {
+   "society": "bull",
+   "id": "bull.api.totals",
+   "description": "API overview totals (hours, valid hours, energy, mean, peak, peak hour) equal the independent community demand",
+   "passed": true,
+   "detail": "energy API 32,549,761.910 vs independent 32,549,761.910 kWh (diff +0.0002, allowed 143.33); valid hours 16,862 vs 16,862; peak 4,841.960 vs 4,841.960 kW at 2017-10-03 10:00:00"
+  },
+  {
+   "society": "bull",
+   "id": "bull.api.monthly",
+   "description": "API monthly energy and valid hours equal the independent monthly sums for every calendar month",
+   "passed": true,
+   "detail": "24 months compared; differing months: none"
+  },
+  {
+   "society": "bull",
+   "id": "bull.api.buildings",
+   "description": "API building energy, valid hours and peak equal the independent per-meter figures for every building (admin view)",
+   "passed": true,
+   "detail": "16 buildings compared, largest energy difference 0.0001 kWh; differing: none"
+  },
+  {
+   "society": "eagle",
+   "id": "eagle.api.totals",
+   "description": "API overview totals (hours, valid hours, energy, mean, peak, peak hour) equal the independent community demand",
+   "passed": true,
+   "detail": "energy API 9,289,115.977 vs independent 9,289,115.984 kWh (diff -0.0072, allowed 75.17); valid hours 16,704 vs 16,704; peak 907.685 vs 907.685 kW at 2016-02-15 01:00:00"
+  },
+  {
+   "society": "eagle",
+   "id": "eagle.api.monthly",
+   "description": "API monthly energy and valid hours equal the independent monthly sums for every calendar month",
+   "passed": true,
+   "detail": "24 months compared; differing months: none"
+  },
+  {
+   "society": "eagle",
+   "id": "eagle.api.buildings",
+   "description": "API building energy, valid hours and peak equal the independent per-meter figures for every building (admin view)",
+   "passed": true,
+   "detail": "8 buildings compared, largest energy difference 1.3746 kWh; differing: none"
+  },
+  {
+   "society": "fox",
+   "id": "fox.api.totals",
+   "description": "API overview totals (hours, valid hours, energy, mean, peak, peak hour) equal the independent community demand",
+   "passed": true,
+   "detail": "energy API 26,464,352.430 vs independent 26,464,352.430 kWh (diff +0.0000, allowed 104.92); valid hours 17,486 vs 17,486; peak 2,283.160 vs 2,283.160 kW at 2016-09-11 21:00:00"
+  },
+  {
+   "society": "fox",
+   "id": "fox.api.monthly",
+   "description": "API monthly energy and valid hours equal the independent monthly sums for every calendar month",
+   "passed": true,
+   "detail": "24 months compared; differing months: none"
+  },
+  {
+   "society": "fox",
+   "id": "fox.api.buildings",
+   "description": "API building energy, valid hours and peak equal the independent per-meter figures for every building (admin view)",
+   "passed": true,
+   "detail": "11 buildings compared, largest energy difference 0.0000 kWh; differing: none"
+  },
+  {
+   "society": "hog",
+   "id": "hog.api.totals",
+   "description": "API overview totals (hours, valid hours, energy, mean, peak, peak hour) equal the independent community demand",
+   "passed": true,
+   "detail": "energy API 29,804,910.654 vs independent 29,804,910.649 kWh (diff +0.0054, allowed 93.78); valid hours 17,051 vs 17,051; peak 2,917.163 vs 2,917.163 kW at 2017-08-30 18:00:00"
+  },
+  {
+   "society": "hog",
+   "id": "hog.api.monthly",
+   "description": "API monthly energy and valid hours equal the independent monthly sums for every calendar month",
+   "passed": true,
+   "detail": "24 months compared; differing months: none"
+  },
+  {
+   "society": "hog",
+   "id": "hog.api.buildings",
+   "description": "API building energy, valid hours and peak equal the independent per-meter figures for every building (admin view)",
+   "passed": true,
+   "detail": "10 buildings compared, largest energy difference 0.0020 kWh; differing: none"
+  },
+  {
+   "society": "peacock",
+   "id": "peacock.api.totals",
+   "description": "API overview totals (hours, valid hours, energy, mean, peak, peak hour) equal the independent community demand",
+   "passed": true,
+   "detail": "energy API 15,596,896.757 vs independent 15,596,896.740 kWh (diff +0.0166, allowed 104.36); valid hours 17,393 vs 17,393; peak 1,338.578 vs 1,338.578 kW at 2016-09-10 19:00:00"
+  },
+  {
+   "society": "peacock",
+   "id": "peacock.api.monthly",
+   "description": "API monthly energy and valid hours equal the independent monthly sums for every calendar month",
+   "passed": true,
+   "detail": "24 months compared; differing months: none"
+  },
+  {
+   "society": "peacock",
+   "id": "peacock.api.buildings",
+   "description": "API building energy, valid hours and peak equal the independent per-meter figures for every building (admin view)",
+   "passed": true,
+   "detail": "11 buildings compared, largest energy difference 0.0594 kWh; differing: none"
+  },
+  {
+   "society": "rat",
+   "id": "rat.api.totals",
+   "description": "API overview totals (hours, valid hours, energy, mean, peak, peak hour) equal the independent community demand",
+   "passed": true,
+   "detail": "energy API 8,328,445.710 vs independent 8,328,445.710 kWh (diff +0.0000, allowed 83.10); valid hours 16,620 vs 16,620; peak 938.380 vs 938.380 kW at 2016-07-25 15:00:00"
+  },
+  {
+   "society": "rat",
+   "id": "rat.api.monthly",
+   "description": "API monthly energy and valid hours equal the independent monthly sums for every calendar month",
+   "passed": true,
+   "detail": "24 months compared; differing months: none"
+  },
+  {
+   "society": "rat",
+   "id": "rat.api.buildings",
+   "description": "API building energy, valid hours and peak equal the independent per-meter figures for every building (admin view)",
+   "passed": true,
+   "detail": "9 buildings compared, largest energy difference 0.0000 kWh; differing: none"
+  },
+  {
+   "society": "robin",
+   "id": "robin.api.totals",
+   "description": "API overview totals (hours, valid hours, energy, mean, peak, peak hour) equal the independent community demand",
+   "passed": true,
+   "detail": "energy API 9,440,079.218 vs independent 9,440,078.881 kWh (diff +0.3370, allowed 78.00); valid hours 17,334 vs 17,334; peak 1,165.238 vs 1,165.238 kW at 2016-01-19 19:00:00"
+  },
+  {
+   "society": "robin",
+   "id": "robin.api.monthly",
+   "description": "API monthly energy and valid hours equal the independent monthly sums for every calendar month",
+   "passed": true,
+   "detail": "24 months compared; differing months: none"
+  },
+  {
+   "society": "robin",
+   "id": "robin.api.buildings",
+   "description": "API building energy, valid hours and peak equal the independent per-meter figures for every building (admin view)",
+   "passed": true,
+   "detail": "8 buildings compared, largest energy difference 0.1927 kWh; differing: none"
+  }
+ ],
+ "summary": {
+  "checks": 127,
+  "passed": 127,
+  "failed": 0,
+  "failed_ids": []
+ }
+}

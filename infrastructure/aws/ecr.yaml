@@ -1,0 +1,47 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >-
+  EnergiQ AI container registries (step 1 of 2). NOT deployed by this project - configuration only.
+  Deploy this first, push the two images, then deploy energiq-stack.yaml with their image URIs.
+
+Parameters:
+  ProjectName:
+    Type: String
+    Default: energiq
+    AllowedPattern: "^[a-z][a-z0-9-]{1,20}$"
+
+Resources:
+  BackendRepository:
+    Type: AWS::ECR::Repository
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      RepositoryName: !Sub "${ProjectName}/api"
+      ImageTagMutability: IMMUTABLE
+      ImageScanningConfiguration:
+        ScanOnPush: true
+      EncryptionConfiguration:
+        EncryptionType: AES256
+      LifecyclePolicy:
+        LifecyclePolicyText: |
+          {"rules":[{"rulePriority":1,"description":"Keep the 20 most recent images","selection":{"tagStatus":"any","countType":"imageCountMoreThan","countNumber":20},"action":{"type":"expire"}}]}
+
+  WebRepository:
+    Type: AWS::ECR::Repository
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      RepositoryName: !Sub "${ProjectName}/web"
+      ImageTagMutability: IMMUTABLE
+      ImageScanningConfiguration:
+        ScanOnPush: true
+      EncryptionConfiguration:
+        EncryptionType: AES256
+      LifecyclePolicy:
+        LifecyclePolicyText: |
+          {"rules":[{"rulePriority":1,"description":"Keep the 20 most recent images","selection":{"tagStatus":"any","countType":"imageCountMoreThan","countNumber":20},"action":{"type":"expire"}}]}
+
+Outputs:
+  BackendRepositoryUri:
+    Value: !GetAtt BackendRepository.RepositoryUri
+  WebRepositoryUri:
+    Value: !GetAtt WebRepository.RepositoryUri

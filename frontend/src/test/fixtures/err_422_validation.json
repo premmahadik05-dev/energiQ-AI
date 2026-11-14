@@ -1,0 +1,18 @@
+{
+ "status": 422,
+ "body": {
+  "detail": [
+   {
+    "type": "missing",
+    "loc": [
+     "body",
+     "password"
+    ],
+    "msg": "Field required",
+    "input": {
+     "email": "x"
+    }
+   }
+  ]
+ }
+}

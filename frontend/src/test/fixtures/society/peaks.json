@@ -1,0 +1,899 @@
+{
+ "profile": [
+  {
+   "hour": 0,
+   "mean_kw": 1469.9468131868132,
+   "p05_kw": 1107.0949999999998,
+   "p95_kw": 1721.7849999999999,
+   "weekday_mean_kw": 1495.0982812500001,
+   "weekend_mean_kw": 1410.3285185185186
+  },
+  {
+   "hour": 1,
+   "mean_kw": 1409.302197802198,
+   "p05_kw": 1099.69,
+   "p95_kw": 1603.4450000000002,
+   "weekday_mean_kw": 1423.5346875,
+   "weekend_mean_kw": 1375.5659259259262
+  },
+  {
+   "hour": 2,
+   "mean_kw": 1341.5293406593407,
+   "p05_kw": 1089.0,
+   "p95_kw": 1497.1550000000002,
+   "weekday_mean_kw": 1346.41609375,
+   "weekend_mean_kw": 1329.9459259259258
+  },
+  {
+   "hour": 3,
+   "mean_kw": 1290.7928260869564,
+   "p05_kw": 1086.7849999999999,
+   "p95_kw": 1418.9295,
+   "weekday_mean_kw": 1292.2526153846156,
+   "weekend_mean_kw": 1287.2785185185185
+  },
+  {
+   "hour": 4,
+   "mean_kw": 1256.5860869565217,
+   "p05_kw": 1083.703,
+   "p95_kw": 1377.652,
+   "weekday_mean_kw": 1260.718,
+   "weekend_mean_kw": 1246.638888888889
+  },
+  {
+   "hour": 5,
+   "mean_kw": 1271.0214285714287,
+   "p05_kw": 1101.08,
+   "p95_kw": 1395.7649999999999,
+   "weekday_mean_kw": 1281.5456250000002,
+   "weekend_mean_kw": 1246.075185185185
+  },
+  {
+   "hour": 6,
+   "mean_kw": 1286.102197802198,
+   "p05_kw": 1105.655,
+   "p95_kw": 1411.65,
+   "weekday_mean_kw": 1299.708125,
+   "weekend_mean_kw": 1253.8511111111113
+  },
+  {
+   "hour": 7,
+   "mean_kw": 1294.4878021978022,
+   "p05_kw": 1095.125,
+   "p95_kw": 1440.0349999999999,
+   "weekday_mean_kw": 1318.129375,
+   "weekend_mean_kw": 1238.4485185185185
+  },
+  {
+   "hour": 8,
+   "mean_kw": 1293.2034782608696,
+   "p05_kw": 1066.1065,
+   "p95_kw": 1478.363,
+   "weekday_mean_kw": 1329.4155384615383,
+   "weekend_mean_kw": 1206.0262962962963
+  },
+  {
+   "hour": 9,
+   "mean_kw": 1322.7790217391305,
+   "p05_kw": 1040.095,
+   "p95_kw": 1525.3029999999999,
+   "weekday_mean_kw": 1357.3578461538464,
+   "weekend_mean_kw": 1239.5337037037036
+  },
+  {
+   "hour": 10,
+   "mean_kw": 1351.2229347826087,
+   "p05_kw": 1017.9305,
+   "p95_kw": 1574.766,
+   "weekday_mean_kw": 1378.8175384615386,
+   "weekend_mean_kw": 1284.7914814814812
+  },
+  {
+   "hour": 11,
+   "mean_kw": 1396.9179120879123,
+   "p05_kw": 1002.425,
+   "p95_kw": 1635.41,
+   "weekday_mean_kw": 1426.0140625,
+   "weekend_mean_kw": 1327.9492592592594
+  },
+  {
+   "hour": 12,
+   "mean_kw": 1442.7971739130435,
+   "p05_kw": 1021.8335,
+   "p95_kw": 1686.713,
+   "weekday_mean_kw": 1466.412923076923,
+   "weekend_mean_kw": 1385.9444444444443
+  },
+  {
+   "hour": 13,
+   "mean_kw": 1483.4368478260863,
+   "p05_kw": 1027.923,
+   "p95_kw": 1722.174,
+   "weekday_mean_kw": 1503.924,
+   "weekend_mean_kw": 1434.115925925926
+  },
+  {
+   "hour": 14,
+   "mean_kw": 1513.9682417582417,
+   "p05_kw": 1042.04,
+   "p95_kw": 1769.975,
+   "weekday_mean_kw": 1531.9512499999998,
+   "weekend_mean_kw": 1471.341851851852
+  },
+  {
+   "hour": 15,
+   "mean_kw": 1539.5075824175824,
+   "p05_kw": 1062.415,
+   "p95_kw": 1796.99,
+   "weekday_mean_kw": 1558.98546875,
+   "weekend_mean_kw": 1493.3377777777775
+  },
+  {
+   "hour": 16,
+   "mean_kw": 1567.035054945055,
+   "p05_kw": 1084.705,
+   "p95_kw": 1822.18,
+   "weekday_mean_kw": 1586.8268750000002,
+   "weekend_mean_kw": 1520.121111111111
+  },
+  {
+   "hour": 17,
+   "mean_kw": 1595.351978021978,
+   "p05_kw": 1104.84,
+   "p95_kw": 1856.85,
+   "weekday_mean_kw": 1618.06921875,
+   "weekend_mean_kw": 1541.5037037037036
+  },
+  {
+   "hour": 18,
+   "mean_kw": 1622.4994505494503,
+   "p05_kw": 1129.1,
+   "p95_kw": 1910.0549999999998,
+   "weekday_mean_kw": 1647.06484375,
+   "weekend_mean_kw": 1564.2703703703703
+  },
+  {
+   "hour": 19,
+   "mean_kw": 1619.843736263736,
+   "p05_kw": 1133.45,
+   "p95_kw": 1933.02,
+   "weekday_mean_kw": 1645.0970312499999,
+   "weekend_mean_kw": 1559.9840740740744
+  },
+  {
+   "hour": 20,
+   "mean_kw": 1596.1874725274724,
+   "p05_kw": 1123.09,
+   "p95_kw": 1937.0900000000001,
+   "weekday_mean_kw": 1619.61625,
+   "weekend_mean_kw": 1540.6525925925928
+  },
+  {
+   "hour": 21,
+   "mean_kw": 1591.7915384615385,
+   "p05_kw": 1125.8600000000001,
+   "p95_kw": 1932.175,
+   "weekday_mean_kw": 1617.5089062499999,
+   "weekend_mean_kw": 1530.8318518518518
+  },
+  {
+   "hour": 22,
+   "mean_kw": 1563.5465934065933,
+   "p05_kw": 1116.29,
+   "p95_kw": 1891.935,
+   "weekday_mean_kw": 1584.4957812499997,
+   "weekend_mean_kw": 1513.889259259259
+  },
+  {
+   "hour": 23,
+   "mean_kw": 1521.592527472527,
+   "p05_kw": 1106.455,
+   "p95_kw": 1813.9850000000001,
+   "weekday_mean_kw": 1539.6078125,
+   "weekend_mean_kw": 1478.8896296296298
+  }
+ ],
+ "peak_hour_histogram": [
+  {
+   "hour": 0,
+   "days": 1
+  },
+  {
+   "hour": 1,
+   "days": 1
+  },
+  {
+   "hour": 2,
+   "days": 0
+  },
+  {
+   "hour": 3,
+   "days": 0
+  },
+  {
+   "hour": 4,
+   "days": 0
+  },
+  {
+   "hour": 5,
+   "days": 0
+  },
+  {
+   "hour": 6,
+   "days": 0
+  },
+  {
+   "hour": 7,
+   "days": 0
+  },
+  {
+   "hour": 8,
+   "days": 0
+  },
+  {
+   "hour": 9,
+   "days": 0
+  },
+  {
+   "hour": 10,
+   "days": 0
+  },
+  {
+   "hour": 11,
+   "days": 0
+  },
+  {
+   "hour": 12,
+   "days": 0
+  },
+  {
+   "hour": 13,
+   "days": 1
+  },
+  {
+   "hour": 14,
+   "days": 0
+  },
+  {
+   "hour": 15,
+   "days": 1
+  },
+  {
+   "hour": 16,
+   "days": 2
+  },
+  {
+   "hour": 17,
+   "days": 7
+  },
+  {
+   "hour": 18,
+   "days": 28
+  },
+  {
+   "hour": 19,
+   "days": 21
+  },
+  {
+   "hour": 20,
+   "days": 21
+  },
+  {
+   "hour": 21,
+   "days": 8
+  },
+  {
+   "hour": 22,
+   "days": 0
+  },
+  {
+   "hour": 23,
+   "days": 0
+  }
+ ],
+ "top_hours": [
+  {
+   "ts": "2017-10-16 20:00:00",
+   "kw": 2001.9
+  },
+  {
+   "ts": "2017-10-04 21:00:00",
+   "kw": 1998.4
+  },
+  {
+   "ts": "2017-10-05 19:00:00",
+   "kw": 1977.07
+  },
+  {
+   "ts": "2017-10-02 19:00:00",
+   "kw": 1972.91
+  },
+  {
+   "ts": "2017-10-04 20:00:00",
+   "kw": 1971.83
+  },
+  {
+   "ts": "2017-10-02 20:00:00",
+   "kw": 1964.02
+  },
+  {
+   "ts": "2017-10-16 18:00:00",
+   "kw": 1961.73
+  },
+  {
+   "ts": "2017-10-05 21:00:00",
+   "kw": 1960.42
+  },
+  {
+   "ts": "2017-10-16 19:00:00",
+   "kw": 1955.99
+  },
+  {
+   "ts": "2017-10-04 19:00:00",
+   "kw": 1953.94
+  }
+ ],
+ "overall": {
+  "mean_kw": 1443.0911866727522,
+  "peak_kw": 2001.9,
+  "load_factor": 0.7208607755995565,
+  "p95_kw": 1848.055,
+  "p99_kw": 1925.7489999999996,
+  "peak_to_average": 1.387230424860164,
+  "days": 91
+ },
+ "monthly": [
+  {
+   "month": "2017-10",
+   "mean_kw": 1600.1956720430107,
+   "peak_kw": 2001.9,
+   "load_factor": 0.7993384644802491
+  },
+  {
+   "month": "2017-11",
+   "mean_kw": 1518.3533711048158,
+   "peak_kw": 1908.87,
+   "load_factor": 0.7954199977498813
+  },
+  {
+   "month": "2017-12",
+   "mean_kw": 1213.6433603238866,
+   "peak_kw": 1802.4,
+   "load_factor": 0.6733485132733502
+  }
+ ],
+ "load_duration": [
+  {
+   "percent_of_time": 0.0,
+   "kw": 2001.9
+  },
+  {
+   "percent_of_time": 1.0,
+   "kw": 1925.7489999999996
+  },
+  {
+   "percent_of_time": 2.0,
+   "kw": 1898.3919999999998
+  },
+  {
+   "percent_of_time": 3.0,
+   "kw": 1876.4699999999991
+  },
+  {
+   "percent_of_time": 4.0,
+   "kw": 1860.068
+  },
+  {
+   "percent_of_time": 5.0,
+   "kw": 1848.055
+  },
+  {
+   "percent_of_time": 6.0,
+   "kw": 1835.144
+  },
+  {
+   "percent_of_time": 7.0,
+   "kw": 1824.057
+  },
+  {
+   "percent_of_time": 8.0,
+   "kw": 1814.862
+  },
+  {
+   "percent_of_time": 9.0,
+   "kw": 1801.295
+  },
+  {
+   "percent_of_time": 10.0,
+   "kw": 1791.84
+  },
+  {
+   "percent_of_time": 11.0,
+   "kw": 1779.3290000000002
+  },
+  {
+   "percent_of_time": 12.0,
+   "kw": 1768.6019999999999
+  },
+  {
+   "percent_of_time": 13.0,
+   "kw": 1758.206
+  },
+  {
+   "percent_of_time": 14.0,
+   "kw": 1749.908
+  },
+  {
+   "percent_of_time": 15.0,
+   "kw": 1740.2
+  },
+  {
+   "percent_of_time": 16.0,
+   "kw": 1732.1100000000001
+  },
+  {
+   "percent_of_time": 17.0,
+   "kw": 1725.682
+  },
+  {
+   "percent_of_time": 18.0,
+   "kw": 1715.752
+  },
+  {
+   "percent_of_time": 19.0,
+   "kw": 1708.048
+  },
+  {
+   "percent_of_time": 20.0,
+   "kw": 1701.93
+  },
+  {
+   "percent_of_time": 21.0,
+   "kw": 1694.217
+  },
+  {
+   "percent_of_time": 22.0,
+   "kw": 1686.41
+  },
+  {
+   "percent_of_time": 23.0,
+   "kw": 1679.2469999999998
+  },
+  {
+   "percent_of_time": 24.0,
+   "kw": 1671.768
+  },
+  {
+   "percent_of_time": 25.0,
+   "kw": 1660.625
+  },
+  {
+   "percent_of_time": 26.0,
+   "kw": 1655.882
+  },
+  {
+   "percent_of_time": 27.0,
+   "kw": 1644.879
+  },
+  {
+   "percent_of_time": 28.0,
+   "kw": 1636.208
+  },
+  {
+   "percent_of_time": 29.0,
+   "kw": 1629.062
+  },
+  {
+   "percent_of_time": 30.0,
+   "kw": 1619.46
+  },
+  {
+   "percent_of_time": 31.0,
+   "kw": 1611.585
+  },
+  {
+   "percent_of_time": 32.0,
+   "kw": 1603.346
+  },
+  {
+   "percent_of_time": 33.0,
+   "kw": 1593.951
+  },
+  {
+   "percent_of_time": 34.0,
+   "kw": 1585.1319999999998
+  },
+  {
+   "percent_of_time": 35.0,
+   "kw": 1577.69
+  },
+  {
+   "percent_of_time": 36.0,
+   "kw": 1568.298
+  },
+  {
+   "percent_of_time": 37.0,
+   "kw": 1555.8700000000001
+  },
+  {
+   "percent_of_time": 38.0,
+   "kw": 1546.17
+  },
+  {
+   "percent_of_time": 39.0,
+   "kw": 1536.5839999999998
+  },
+  {
+   "percent_of_time": 40.0,
+   "kw": 1528.22
+  },
+  {
+   "percent_of_time": 41.0,
+   "kw": 1516.917
+  },
+  {
+   "percent_of_time": 42.0,
+   "kw": 1506.116
+  },
+  {
+   "percent_of_time": 43.0,
+   "kw": 1497.1
+  },
+  {
+   "percent_of_time": 44.0,
+   "kw": 1485.858
+  },
+  {
+   "percent_of_time": 45.0,
+   "kw": 1477.1100000000001
+  },
+  {
+   "percent_of_time": 46.0,
+   "kw": 1468.0339999999999
+  },
+  {
+   "percent_of_time": 47.0,
+   "kw": 1459.717
+  },
+  {
+   "percent_of_time": 48.0,
+   "kw": 1451.242
+  },
+  {
+   "percent_of_time": 49.0,
+   "kw": 1441.3500000000001
+  },
+  {
+   "percent_of_time": 50.0,
+   "kw": 1434.31
+  },
+  {
+   "percent_of_time": 51.0,
+   "kw": 1426.091
+  },
+  {
+   "percent_of_time": 52.0,
+   "kw": 1414.7900000000002
+  },
+  {
+   "percent_of_time": 53.0,
+   "kw": 1408.4289999999999
+  },
+  {
+   "percent_of_time": 54.0,
+   "kw": 1399.696
+  },
+  {
+   "percent_of_time": 55.0,
+   "kw": 1390.6899999999998
+  },
+  {
+   "percent_of_time": 56.0,
+   "kw": 1380.77
+  },
+  {
+   "percent_of_time": 57.0,
+   "kw": 1374.745
+  },
+  {
+   "percent_of_time": 58.0,
+   "kw": 1368.508
+  },
+  {
+   "percent_of_time": 59.0,
+   "kw": 1363.675
+  },
+  {
+   "percent_of_time": 60.0,
+   "kw": 1359.32
+  },
+  {
+   "percent_of_time": 61.0,
+   "kw": 1352.619
+  },
+  {
+   "percent_of_time": 62.0,
+   "kw": 1347.558
+  },
+  {
+   "percent_of_time": 63.0,
+   "kw": 1340.6399999999999
+  },
+  {
+   "percent_of_time": 64.0,
+   "kw": 1333.192
+  },
+  {
+   "percent_of_time": 65.0,
+   "kw": 1326.56
+  },
+  {
+   "percent_of_time": 66.0,
+   "kw": 1318.264
+  },
+  {
+   "percent_of_time": 67.0,
+   "kw": 1310.012
+  },
+  {
+   "percent_of_time": 68.0,
+   "kw": 1302.7979999999998
+  },
+  {
+   "percent_of_time": 69.0,
+   "kw": 1293.857
+  },
+  {
+   "percent_of_time": 70.0,
+   "kw": 1286.74
+  },
+  {
+   "percent_of_time": 71.0,
+   "kw": 1277.149
+  },
+  {
+   "percent_of_time": 72.0,
+   "kw": 1265.95
+  },
+  {
+   "percent_of_time": 73.0,
+   "kw": 1254.217
+  },
+  {
+   "percent_of_time": 74.0,
+   "kw": 1238.758
+  },
+  {
+   "percent_of_time": 75.0,
+   "kw": 1218.62
+  },
+  {
+   "percent_of_time": 76.0,
+   "kw": 1205.964
+  },
+  {
+   "percent_of_time": 77.0,
+   "kw": 1190.513
+  },
+  {
+   "percent_of_time": 78.0,
+   "kw": 1179.536
+  },
+  {
+   "percent_of_time": 79.0,
+   "kw": 1165.827
+  },
+  {
+   "percent_of_time": 80.0,
+   "kw": 1154.2599999999998
+  },
+  {
+   "percent_of_time": 81.0,
+   "kw": 1143.133
+  },
+  {
+   "percent_of_time": 82.0,
+   "kw": 1138.828
+  },
+  {
+   "percent_of_time": 83.0,
+   "kw": 1131.527
+  },
+  {
+   "percent_of_time": 84.0,
+   "kw": 1126.9160000000002
+  },
+  {
+   "percent_of_time": 85.0,
+   "kw": 1120.95
+  },
+  {
+   "percent_of_time": 86.0,
+   "kw": 1116.3339999999998
+  },
+  {
+   "percent_of_time": 87.0,
+   "kw": 1112.0629999999999
+  },
+  {
+   "percent_of_time": 88.0,
+   "kw": 1108.0839999999998
+  },
+  {
+   "percent_of_time": 89.0,
+   "kw": 1104.6049999999998
+  },
+  {
+   "percent_of_time": 90.0,
+   "kw": 1099.01
+  },
+  {
+   "percent_of_time": 91.0,
+   "kw": 1095.567
+  },
+  {
+   "percent_of_time": 92.0,
+   "kw": 1091.69
+  },
+  {
+   "percent_of_time": 93.0,
+   "kw": 1085.6899999999998
+  },
+  {
+   "percent_of_time": 94.0,
+   "kw": 1077.2380000000003
+  },
+  {
+   "percent_of_time": 95.0,
+   "kw": 1068.455
+  },
+  {
+   "percent_of_time": 96.0,
+   "kw": 1059.624
+  },
+  {
+   "percent_of_time": 97.0,
+   "kw": 1046.895
+  },
+  {
+   "percent_of_time": 98.0,
+   "kw": 1032.028
+  },
+  {
+   "percent_of_time": 99.0,
+   "kw": 1009.493
+  },
+  {
+   "percent_of_time": 100.0,
+   "kw": 291.08
+  }
+ ],
+ "distribution": [
+  {
+   "from_kw": 291.08,
+   "to_kw": 376.621,
+   "hours": 1
+  },
+  {
+   "from_kw": 376.621,
+   "to_kw": 462.16200000000003,
+   "hours": 0
+  },
+  {
+   "from_kw": 462.16200000000003,
+   "to_kw": 547.703,
+   "hours": 0
+  },
+  {
+   "from_kw": 547.703,
+   "to_kw": 633.244,
+   "hours": 0
+  },
+  {
+   "from_kw": 633.244,
+   "to_kw": 718.7850000000001,
+   "hours": 1
+  },
+  {
+   "from_kw": 718.7850000000001,
+   "to_kw": 804.326,
+   "hours": 0
+  },
+  {
+   "from_kw": 804.326,
+   "to_kw": 889.867,
+   "hours": 2
+  },
+  {
+   "from_kw": 889.867,
+   "to_kw": 975.4080000000001,
+   "hours": 2
+  },
+  {
+   "from_kw": 975.4080000000001,
+   "to_kw": 1060.949,
+   "hours": 85
+  },
+  {
+   "from_kw": 1060.949,
+   "to_kw": 1146.49,
+   "hours": 335
+  },
+  {
+   "from_kw": 1146.49,
+   "to_kw": 1232.0310000000002,
+   "hours": 136
+  },
+  {
+   "from_kw": 1232.0310000000002,
+   "to_kw": 1317.5720000000001,
+   "hours": 182
+  },
+  {
+   "from_kw": 1317.5720000000001,
+   "to_kw": 1403.113,
+   "hours": 272
+  },
+  {
+   "from_kw": 1403.113,
+   "to_kw": 1488.654,
+   "hours": 218
+  },
+  {
+   "from_kw": 1488.654,
+   "to_kw": 1574.1950000000002,
+   "hours": 181
+  },
+  {
+   "from_kw": 1574.1950000000002,
+   "to_kw": 1659.736,
+   "hours": 226
+  },
+  {
+   "from_kw": 1659.736,
+   "to_kw": 1745.277,
+   "hours": 231
+  },
+  {
+   "from_kw": 1745.277,
+   "to_kw": 1830.8180000000002,
+   "hours": 179
+  },
+  {
+   "from_kw": 1830.8180000000002,
+   "to_kw": 1916.3590000000002,
+   "hours": 112
+  },
+  {
+   "from_kw": 1916.3590000000002,
+   "to_kw": 2001.9,
+   "hours": 28
+  }
+ ],
+ "note": "Peak demand here is the highest hourly average kW; an instantaneous peak inside an hour can be higher.",
+ "forecast_evaluation": {
+  "days": 174,
+  "model": {
+   "peak_mae_kw": 45.28881034482758,
+   "peak_mape_pct": 2.6922624352304534,
+   "peak_bias_kw": -0.06937356321839422,
+   "peak_hour_exact_pct": 27.011494252873565,
+   "peak_hour_within_1h_pct": 62.643678160919535,
+   "peak_hour_within_2h_pct": 89.08045977011494
+  },
+  "baseline": {
+   "peak_mae_kw": 57.59885057471265,
+   "peak_mape_pct": 3.3425173422365915,
+   "peak_bias_kw": 1.8582758620689677,
+   "peak_hour_exact_pct": 30.45977011494253,
+   "peak_hour_within_1h_pct": 60.3448275862069,
+   "peak_hour_within_2h_pct": 83.9080459770115
+  },
+  "horizon_h": 24,
+  "basis": "daily peak = highest hourly demand (kW) of the day; forecasts issued 24 h ahead; held-out test days only",
+  "mean_actual_peak_kw": 1692.7066091954023,
+  "mae_improvement_vs_baseline_pct": 21.37202410648362,
+  "model_name": "random_forest",
+  "baseline_name": "naive"
+ }
+}

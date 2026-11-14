@@ -1,0 +1,24 @@
+{
+ "counts": {
+  "users": 2,
+  "datasets": 1,
+  "models": 1,
+  "jobs": 3
+ },
+ "jobs_by_status": {
+  "succeeded": 3
+ },
+ "http": {
+  "uptime_seconds": 60.1,
+  "requests_total": 40,
+  "responses_5xx": 0,
+  "responses_4xx": 0,
+  "latency_seconds": {
+   "p50": 0.009284310000111873,
+   "p95": 0.3111905050000132,
+   "max": 0.7144650499999443,
+   "window": 40
+  }
+ },
+ "environment": "dev"
+}

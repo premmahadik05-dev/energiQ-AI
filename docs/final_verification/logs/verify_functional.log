@@ -1,0 +1,12 @@
+PASS F04 consumption: resolution, metric and range controls each send a different request | 6 calls, 6 distinct (90 days, year, all data, weekly, monthly, hourly; the three metrics are computed from the same response)
+PASS F04b consumption: table view shows rows | 717
+PASS F05b forecast: with the default origin the last hour of data is forecast and shown | Origin  2017-12-31 23:00  Data up to this hour were used
+PASS F05c forecast: a retrospective origin is sent to the API and its result shown next to what happened | /api/v1/societies/3/forecast?origin=2017-12-01T12%3A00%3A00&horizons=1%2C2%2C3%2C4%2C5%2C6
+PASS F05d forecast: an origin outside the data range shows 'Choose a time between ...' and sends no request | Choose a time between 2016-01-01 00:00 and 2017-12-31 23:00.
+PASS F08a alerts: severity, scope and status filters change the match count | he filters  42 | e filters  169 | filters  2,200 | the filters  0
+PASS F08d alerts: clicking an event time opens a detail card with an explanation and a Close button | 2017-12-22 20:00 -> Unusually low demand - whole society Close  unusually low use around Fri 2017-12-22 20:00: 291.08 kW vs typical 1426.30 kW for this hour of the week, 2.0x the edge of the usual range for this hour (th
+PASS F08e alerts: Close hides the detail card | 
+PASS B1 reports: every report type can be created and appears in the list (an empty list shows one placeholder row) | 12 rows after creating 6 types: ['monthly', 'consumption', 'forecast', 'anomalies', 'cost', 'buildings']
+PASS B2 reports: every listed report downloads a valid file (PDF header or CSV with columns) | 12/12 ['fox_buildings_20160101_20171231.csv:877', 'fox_cost_20160101_20171231.csv:32762', 'fox_anomalies_20160101_20171231.csv:788897', 'fox_forecast_20160101_20171231_h24.csv:359433', 'fox_consumption_20160101_20171231_daily.csv:40797', 'f
+PASS no console errors or warnings during these flows | 
+11 / 11

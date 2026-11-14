@@ -1,0 +1,27 @@
+
+ RUN  v3.2.7 /home/claude/pro/EnergiQ-AI/frontend
+
+ ✓ src/pages/pages.test.tsx (21 tests) 3830ms
+   ✓ sign-in and registration > signs in with the captured login response, stores the token in sessionStorage only and opens the society overview  384ms
+   ✓ sign-in and registration > registration shows the 409 "already registered" message from the server  305ms
+   ✓ sign-in and registration > registration refuses a confirmation that differs from the password, before any request  316ms
+   ✓ sign-in and registration > a new account lands on the overview with a one-time confirmation that can be dismissed  305ms
+   ✓ sign-in and registration > remember my e-mail keeps only the address (never the token) and pre-fills it next time; unticking forgets it  393ms
+ ✓ src/pages/society/society.test.tsx (26 tests) 2467ms
+   ✓ society overview > shows the latest demand, windows and forecast KPIs from the API, and says what the data are  346ms
+ ✓ src/pages/newfeatures.test.tsx (16 tests) 2026ms
+ ✓ src/auth/auth.test.tsx (18 tests) 508ms
+ ✓ src/components/components.test.tsx (8 tests) 619ms
+ ✓ src/hooks/useJob.test.tsx (5 tests) 25ms
+ ✓ src/lib/tariff.test.ts (14 tests) 19ms
+ ✓ src/lib/lib.test.ts (14 tests) 18ms
+ ✓ src/api/client.test.ts (16 tests) 17ms
+ ✓ src/api/polling.test.ts (6 tests) 16ms
+ ✓ src/lib/validation.test.ts (4 tests) 3ms
+
+ Test Files  11 passed (11)
+      Tests  148 passed (148)
+   Start at  18:43:34
+   Duration  16.52s (transform 694ms, setup 986ms, collect 1.26s, tests 9.55s, environment 2.77s, prepare 655ms)
+
+exit=0

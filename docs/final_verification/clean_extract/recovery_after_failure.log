@@ -1,0 +1,7 @@
+--- after the failure, with the database back, the next start works ---
+  Database: ready (data/energiq.db, 21 tables, 1 user account(s))
+  Backend: ready (answers, database up)
+  Web app: ready (serves the EnergiQ page and reaches the backend)
+  EnergiQ AI is running:  http://127.0.0.1:5173
+  The EnergiQ window shut the servers down and closed.
+[EnergiQ] Stopped. Your data is kept in data/energiq.db.

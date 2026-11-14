@@ -1,0 +1,30 @@
+$ python check_running.py <extract>   (health through the proxy, API, forecasts, 13 pages in Chromium, no password in the logs)
+state: phase=running web app :5173 backend :8000; admin_login.txt has a generated password: True
+health through the web app's proxy: {'status': 'ok', 'database': 'up', 'environment': 'dev'}
+societies: 7 ['bull', 'eagle', 'fox', 'hog', 'peacock', 'rat', 'robin']
+  bull: forecast points 24 ok
+  eagle: forecast points 24 ok
+  fox: forecast points 24 ok
+  hog: forecast points 24 ok
+  peacock: forecast points 24 ok
+  rat: forecast points 24 ok
+  robin: forecast points 24 ok
+live forecasts ok: 7 of 7
+old shared password refused: 401
+log files containing the password: none
+PASS / ['Society overview'] Society overview · EnergiQ AI
+PASS /compare ['Compare communities'] Compare communities · EnergiQ AI
+PASS /consumption ['Consumption'] Consumption · EnergiQ AI
+PASS /forecasting ['Forecasting'] Forecasting · EnergiQ AI
+PASS /buildings ['Buildings'] Buildings · EnergiQ AI
+PASS /cost ['Cost and peak demand'] Cost and peaks · EnergiQ AI
+PASS /alerts ['Alerts'] Alerts · EnergiQ AI
+PASS /recommendations ['Recommendations'] Recommendations · EnergiQ AI
+PASS /reports ['Reports'] Reports · EnergiQ AI
+PASS /data-sources ['Data sources'] Data sources · EnergiQ AI
+PASS /society-admin ['Society administration'] Society admin · EnergiQ AI
+PASS /admin ['Administration'] Admin · EnergiQ AI
+PASS /jobs ['Jobs'] Jobs · EnergiQ AI
+pages failed: 0 | console/HTTP problems: none
+RESULT: PASS
+exit=0

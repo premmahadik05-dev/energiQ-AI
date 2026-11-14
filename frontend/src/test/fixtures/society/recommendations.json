@@ -1,0 +1,208 @@
+{
+ "recommendations": [
+  {
+   "id": "review_anomalies",
+   "category": "anomalies",
+   "priority": "high",
+   "title": "Review recent high-severity anomalies",
+   "explanation": "2 high-severity event(s) in the last 30 days. Most severe: unusually low use around Sun 2017-12-17 04:00: 846.03 kW vs typical 1264.16 kW for this hour of the week, 2.4x the edge of the usual range for this hour (the 99.5th-percentile deviation of the last 26 weeks). Event spans 2 h. Largest contributor: FOX-B04, 160 kWh below its own expected load over the event (25% of the summed building deviations).",
+   "evidence": {
+    "high_severity_events_30d": 2,
+    "total_events_30d": 26,
+    "top_event_start": "2017-12-17 03:00:00"
+   },
+   "scenario": null,
+   "caveats": [
+    "An anomaly is an unusual reading relative to the weekly pattern, not a confirmed fault; term breaks and events are flagged too."
+   ]
+  },
+  {
+   "id": "review_baseload",
+   "category": "always-on load",
+   "priority": "medium",
+   "title": "Review what keeps the minimum demand high",
+   "explanation": "The lowest sustained demand is about 1,068 kW (the 5th percentile of hourly demand), which is 74% of all energy used in the last 89 days. Lighting, ventilation, pumps and standby equipment in shared areas are common contributors; the meter data cannot say which are present here.",
+   "evidence": {
+    "baseload_kw": 1067.921,
+    "baseload_share_pct": 74.22045070548899,
+    "average_rate_per_kwh": 0.1885261588712052
+   },
+   "scenario": {
+    "assumption": "each 10% reduction of the minimum demand",
+    "kwh_saved_per_30d": 76890.312,
+    "saving_per_30d": 14495.835175768536,
+    "currency": "EUR"
+   },
+   "caveats": [
+    "Figures are scenario estimates under the stated assumption, not forecasts of savings.",
+    "The tariff in use is the built-in DEMO tariff; replace it with your real rates before relying on any cost figure.",
+    "The base load is a statistical floor of the whole-society reading, not a measurement of individual devices."
+   ]
+  },
+  {
+   "id": "building_intensity_FOX-B10",
+   "category": "building comparison",
+   "priority": "medium",
+   "title": "FOX-B10 uses 6.2x the median energy per square metre",
+   "explanation": "In the last 89 days FOX-B10 used 127.4 kWh per m2 against a median of 20.5 kWh per m2 across the society's buildings. Differences in occupancy, equipment or building age can explain part of this; an energy audit of the building is the way to find out.",
+   "evidence": {
+    "building": "FOX-B10",
+    "kwh_per_sqm": 127.36629171481003,
+    "median_kwh_per_sqm": 20.479970987863258,
+    "ratio_to_median": 6.219066022617377,
+    "energy_above_median_intensity_kwh": 629047.3747422271,
+    "buildings_compared": 11
+   },
+   "scenario": {
+    "assumption": "arithmetic comparison only: the building at the median intensity",
+    "kwh_difference_in_window": 629047.3747422271,
+    "cost_difference_in_window": 118591.88530816766,
+    "currency": "EUR"
+   },
+   "caveats": [
+    "A comparison with peers, not a measured saving; occupancy and use are not in the data.",
+    "The tariff in use is the built-in DEMO tariff; replace it with your real rates before relying on any cost figure."
+   ]
+  },
+  {
+   "id": "building_intensity_FOX-B01",
+   "category": "building comparison",
+   "priority": "medium",
+   "title": "FOX-B01 uses 3.0x the median energy per square metre",
+   "explanation": "In the last 89 days FOX-B01 used 61.3 kWh per m2 against a median of 20.5 kWh per m2 across the society's buildings. Differences in occupancy, equipment or building age can explain part of this; an energy audit of the building is the way to find out.",
+   "evidence": {
+    "building": "FOX-B01",
+    "kwh_per_sqm": 61.329220835375175,
+    "median_kwh_per_sqm": 20.479970987863258,
+    "ratio_to_median": 2.9945951032704,
+    "energy_above_median_intensity_kwh": 283420.2652920071,
+    "buildings_compared": 11
+   },
+   "scenario": {
+    "assumption": "arithmetic comparison only: the building at the median intensity",
+    "kwh_difference_in_window": 283420.2652920071,
+    "cost_difference_in_window": 53432.13396176006,
+    "currency": "EUR"
+   },
+   "caveats": [
+    "A comparison with peers, not a measured saving; occupancy and use are not in the data.",
+    "The tariff in use is the built-in DEMO tariff; replace it with your real rates before relying on any cost figure."
+   ]
+  },
+  {
+   "id": "building_intensity_FOX-B11",
+   "category": "building comparison",
+   "priority": "medium",
+   "title": "FOX-B11 uses 1.4x the median energy per square metre",
+   "explanation": "In the last 89 days FOX-B11 used 29.1 kWh per m2 against a median of 20.5 kWh per m2 across the society's buildings. Differences in occupancy, equipment or building age can explain part of this; an energy audit of the building is the way to find out.",
+   "evidence": {
+    "building": "FOX-B11",
+    "kwh_per_sqm": 29.122962272938988,
+    "median_kwh_per_sqm": 20.479970987863258,
+    "ratio_to_median": 1.4220216566809445,
+    "energy_above_median_intensity_kwh": 48246.90595154974,
+    "buildings_compared": 11
+   },
+   "scenario": {
+    "assumption": "arithmetic comparison only: the building at the median intensity",
+    "kwh_difference_in_window": 48246.90595154974,
+    "cost_difference_in_window": 9095.803856465962,
+    "currency": "EUR"
+   },
+   "caveats": [
+    "A comparison with peers, not a measured saving; occupancy and use are not in the data.",
+    "The tariff in use is the built-in DEMO tariff; replace it with your real rates before relying on any cost figure."
+   ]
+  },
+  {
+   "id": "peak_hour_pattern",
+   "category": "peak demand",
+   "priority": "low",
+   "title": "Daily demand peaks most often around 18:00",
+   "explanation": "On 31% of days the highest hourly demand falls in the hour starting 18:00. The average daily peak is 1,638 kW against an average demand of 1,439 kW (peak-to-average 1.14). If the utility charges for peak demand, flattening this peak is where the value is; this tariff model has no demand charge.",
+   "evidence": {
+    "most_common_peak_hour": 18,
+    "share_of_days_pct": 31.46067415730337,
+    "mean_daily_peak_kw": 1638.0533333333335,
+    "mean_demand_kw": 1438.8500606626224,
+    "days_considered": 89
+   },
+   "scenario": null,
+   "caveats": [
+    "Hourly averages hide shorter peaks; an instantaneous peak can be higher."
+   ]
+  }
+ ],
+ "window": {
+  "start": "2017-10-03 00:00:00",
+  "end": "2017-12-31 23:00:00",
+  "valid_hours": 2143,
+  "days_covered": 89.29166666666667
+ },
+ "baseline_cost": {
+  "energy_kwh": 3083455.6799999997,
+  "energy_cost": 581312.0554,
+  "total_cost": 581312.0554,
+  "currency": "EUR",
+  "is_demo_tariff": true
+ },
+ "tariff": {
+  "name": "DEMO tariff (not a real utility price)",
+  "currency": "EUR",
+  "weekday_rates": [
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.3,
+   0.3,
+   0.3,
+   0.3,
+   0.2,
+   0.2,
+   0.12
+  ],
+  "weekend_rates": [
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.12,
+   0.12
+  ],
+  "daily_fixed_charge": 0.0,
+  "is_demo": true,
+  "note": "Illustrative numbers only. Replace with your own rates before using any cost figure."
+ }
+}

@@ -1,0 +1,118 @@
+# Runs the real Windows launchers (CHECK_ENVIRONMENT.bat, RUN_PROJECT.bat, STOP_PROJECT.bat) on a GitHub Windows
+# computer. It is started by hand (Actions tab, "windows-launcher", Run workflow) because the first start installs
+# every package and takes 10 to 20 minutes.
+#
+# STATUS: written but NEVER RUN. The computer this project was prepared on is Linux, so this workflow has not been
+# executed; treat the first run as the first test of the .bat files on Windows and read its log.
+name: windows-launcher
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  launcher:
+    name: RUN / STOP / CHECK on Windows
+    runs-on: windows-latest
+    timeout-minutes: 45
+    env:
+      ENERGIQ_NO_PAUSE: "1"   # the .bat files skip their final "Press any key" pause when this is set
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Line endings of the checked-out .bat files are CRLF
+        shell: pwsh
+        run: |
+          foreach ($f in "RUN_PROJECT.bat", "STOP_PROJECT.bat", "CHECK_ENVIRONMENT.bat") {
+            $bytes = [System.IO.File]::ReadAllBytes($f)
+            $lf = ($bytes | Where-Object { $_ -eq 10 }).Count
+            $crlf = 0
+            for ($i = 1; $i -lt $bytes.Length; $i++) { if ($bytes[$i] -eq 10 -and $bytes[$i - 1] -eq 13) { $crlf++ } }
+            "$f : $lf line ends, $crlf of them CRLF"
+            if ($lf -ne $crlf) { throw "$f has line ends that are not CRLF" }
+          }
+
+      - name: CHECK_ENVIRONMENT.bat (before anything is installed)
+        shell: cmd
+        run: CHECK_ENVIRONMENT.bat
+
+      - name: RUN_PROJECT.bat starts the application (first start installs the packages)
+        shell: pwsh
+        run: |
+          $p = Start-Process -FilePath "cmd.exe" -ArgumentList "/c", "RUN_PROJECT.bat", "--no-browser" `
+            -RedirectStandardOutput run1.out -RedirectStandardError run1.err -PassThru -WindowStyle Hidden
+          "RUN_PID=$($p.Id)" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          $deadline = (Get-Date).AddMinutes(30)
+          $ready = $false
+          while ((Get-Date) -lt $deadline) {
+            if ($p.HasExited) { break }
+            try {
+              $r = Invoke-RestMethod -Uri "http://127.0.0.1:5173/health/ready" -TimeoutSec 5
+              if ($r.status -eq "ok" -and $r.database -eq "up") { $ready = $true; break }
+            } catch { }
+            Start-Sleep -Seconds 5
+          }
+          if (Test-Path ".energiq-run/admin_login.txt") {   # keep the throw-away CI password out of the log
+            $pw = (Get-Content ".energiq-run/admin_login.txt" | Where-Object { $_ -like "password=*" }) -replace "^password=", ""
+            if ($pw) { Write-Output "::add-mask::$pw" }
+          }
+          Get-Content run1.out -ErrorAction SilentlyContinue
+          Get-Content run1.err -ErrorAction SilentlyContinue
+          if (-not $ready) { throw "The application did not become ready (or the launcher exited early)." }
+          $page = (Invoke-WebRequest -Uri "http://127.0.0.1:5173/" -UseBasicParsing).Content
+          if ($page -notmatch "EnergiQ") { throw "The web app did not serve the EnergiQ page." }
+          if ((Get-Content run1.out -Raw) -notmatch "EnergiQ AI is running") { throw "The launcher did not report that it is running." }
+
+      - name: A second RUN_PROJECT.bat starts nothing new
+        shell: pwsh
+        run: |
+          $before = @(Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match "uvicorn" }).Count
+          $out = cmd.exe /c "RUN_PROJECT.bat --no-browser" 2>&1 | Out-String
+          Write-Output $out
+          if ($LASTEXITCODE -ne 0) { throw "The second start returned $LASTEXITCODE" }
+          if ($out -notmatch "already running") { throw "The second start did not say that a copy is already running." }
+          $after = @(Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match "uvicorn" }).Count
+          if ($before -lt 1 -or $after -ne $before) { throw "uvicorn processes: $before before, $after after the second start" }
+
+      - name: The log never contains the password
+        shell: pwsh
+        run: |
+          $pw = (Get-Content ".energiq-run/admin_login.txt" | Where-Object { $_ -like "password=*" }) -replace "^password=", ""
+          if (-not $pw) { throw "no password file" }
+          foreach ($f in Get-ChildItem ".energiq-run" -Filter "*.log*") {
+            if ((Get-Content $f.FullName -Raw) -like "*$pw*") { throw "$($f.Name) contains the password" }
+          }
+
+      - name: STOP_PROJECT.bat ends it cleanly
+        shell: pwsh
+        run: |
+          cmd.exe /c "STOP_PROJECT.bat" 2>&1 | Out-String | Write-Output
+          if ($LASTEXITCODE -ne 0) { throw "STOP_PROJECT.bat returned $LASTEXITCODE" }
+          $p = Get-Process -Id $env:RUN_PID -ErrorAction SilentlyContinue
+          if ($p) { $p.WaitForExit(30000) | Out-Null }
+          Start-Sleep -Seconds 3
+          foreach ($port in 5173, 8000) {
+            if (Get-NetTCPConnection -LocalPort $port -State Listen -ErrorAction SilentlyContinue) { throw "port $port is still listening" }
+          }
+          if ((Get-Content run1.out -Raw) -notmatch "stopped with STOP_PROJECT.bat") { throw "the launcher window did not report a requested stop" }
+          if (Test-Path ".energiq-run/state.json") { throw "state.json was left behind" }
+
+      - name: Collect logs (never the password files)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-launcher-logs
+          path: |
+            .energiq-run/*.log
+            .energiq-run/*.log.1
+          if-no-files-found: ignore

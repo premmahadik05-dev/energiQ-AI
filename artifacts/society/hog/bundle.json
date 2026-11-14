@@ -1,0 +1,217 @@
+{
+  "society": "hog",
+  "trained_through": "2017-12-31 23:00:00",
+  "data_hash": "d073481089aab3b6",
+  "horizons": {
+    "1": {
+      "model_id": "xgboost_h1_20261109T122759158083",
+      "family": "xgboost",
+      "weather": false,
+      "selected_from_horizon": 1,
+      "residual_q10": -41.36793749999997,
+      "residual_q90": 50.97887148437495
+    },
+    "2": {
+      "model_id": "xgboost_h2_20261109T122800070673",
+      "family": "xgboost",
+      "weather": false,
+      "selected_from_horizon": 1,
+      "residual_q10": -51.25728874999996,
+      "residual_q90": 63.11497478515623
+    },
+    "3": {
+      "model_id": "xgboost_h3_20261109T122801986254",
+      "family": "xgboost",
+      "weather": false,
+      "selected_from_horizon": 1,
+      "residual_q10": -61.14663999999995,
+      "residual_q90": 75.25107808593751
+    },
+    "4": {
+      "model_id": "xgboost_h4_20261109T122805421823",
+      "family": "xgboost",
+      "weather": false,
+      "selected_from_horizon": 6,
+      "residual_q10": -71.03599124999994,
+      "residual_q90": 87.3871813867188
+    },
+    "5": {
+      "model_id": "xgboost_h5_20261109T122806481978",
+      "family": "xgboost",
+      "weather": false,
+      "selected_from_horizon": 6,
+      "residual_q10": -80.92534249999993,
+      "residual_q90": 99.52328468750008
+    },
+    "6": {
+      "model_id": "xgboost_h6_20261109T122807994947",
+      "family": "xgboost",
+      "weather": false,
+      "selected_from_horizon": 6,
+      "residual_q10": -90.81469374999992,
+      "residual_q90": 111.65938798828135
+    },
+    "7": {
+      "model_id": "xgboost_h7_20261109T122808918798",
+      "family": "xgboost",
+      "weather": false,
+      "selected_from_horizon": 6,
+      "residual_q10": -92.71643614914552,
+      "residual_q90": 112.25252577121861
+    },
+    "8": {
+      "model_id": "xgboost_h8_20261109T122811519340",
+      "family": "xgboost",
+      "weather": false,
+      "selected_from_horizon": 6,
+      "residual_q10": -94.61817854829113,
+      "residual_q90": 112.84566355415588
+    },
+    "9": {
+      "model_id": "xgboost_h9_20261109T122815888398",
+      "family": "xgboost",
+      "weather": false,
+      "selected_from_horizon": 6,
+      "residual_q10": -96.51992094743673,
+      "residual_q90": 113.43880133709314
+    },
+    "10": {
+      "model_id": "random_forest_h10_20261109T122818971062",
+      "family": "random_forest",
+      "weather": false,
+      "selected_from_horizon": 12,
+      "residual_q10": -98.42166334658232,
+      "residual_q90": 114.03193912003039
+    },
+    "11": {
+      "model_id": "random_forest_h11_20261109T122822636911",
+      "family": "random_forest",
+      "weather": false,
+      "selected_from_horizon": 12,
+      "residual_q10": -100.32340574572792,
+      "residual_q90": 114.62507690296765
+    },
+    "12": {
+      "model_id": "random_forest_h12_20261109T122826732914",
+      "family": "random_forest",
+      "weather": false,
+      "selected_from_horizon": 12,
+      "residual_q10": -102.22514814487353,
+      "residual_q90": 115.21821468590491
+    },
+    "13": {
+      "model_id": "random_forest_h13_20261109T122830768921",
+      "family": "random_forest",
+      "weather": false,
+      "selected_from_horizon": 12,
+      "residual_q10": -102.87836223977726,
+      "residual_q90": 115.37290233334222
+    },
+    "14": {
+      "model_id": "random_forest_h14_20261109T122833867579",
+      "family": "random_forest",
+      "weather": false,
+      "selected_from_horizon": 12,
+      "residual_q10": -103.53157633468098,
+      "residual_q90": 115.52758998077954
+    },
+    "15": {
+      "model_id": "random_forest_h15_20261109T122837109279",
+      "family": "random_forest",
+      "weather": false,
+      "selected_from_horizon": 12,
+      "residual_q10": -104.18479042958471,
+      "residual_q90": 115.68227762821684
+    },
+    "16": {
+      "model_id": "random_forest_h16_20261109T122840127378",
+      "family": "random_forest",
+      "weather": false,
+      "selected_from_horizon": 12,
+      "residual_q10": -104.83800452448843,
+      "residual_q90": 115.83696527565415
+    },
+    "17": {
+      "model_id": "random_forest_h17_20261109T122843435687",
+      "family": "random_forest",
+      "weather": false,
+      "selected_from_horizon": 12,
+      "residual_q10": -105.49121861939216,
+      "residual_q90": 115.99165292309146
+    },
+    "18": {
+      "model_id": "random_forest_h18_20261109T122847902933",
+      "family": "random_forest",
+      "weather": false,
+      "selected_from_horizon": 12,
+      "residual_q10": -106.14443271429587,
+      "residual_q90": 116.14634057052876
+    },
+    "19": {
+      "model_id": "random_forest_h19_20261109T122851140284",
+      "family": "random_forest",
+      "weather": false,
+      "selected_from_horizon": 24,
+      "residual_q10": -106.7976468091996,
+      "residual_q90": 116.30102821796608
+    },
+    "20": {
+      "model_id": "random_forest_h20_20261109T122855027772",
+      "family": "random_forest",
+      "weather": false,
+      "selected_from_horizon": 24,
+      "residual_q10": -107.45086090410334,
+      "residual_q90": 116.45571586540339
+    },
+    "21": {
+      "model_id": "random_forest_h21_20261109T122900325919",
+      "family": "random_forest",
+      "weather": false,
+      "selected_from_horizon": 24,
+      "residual_q10": -108.10407499900705,
+      "residual_q90": 116.6104035128407
+    },
+    "22": {
+      "model_id": "random_forest_h22_20261109T122903450127",
+      "family": "random_forest",
+      "weather": false,
+      "selected_from_horizon": 24,
+      "residual_q10": -108.75728909391079,
+      "residual_q90": 116.76509116027802
+    },
+    "23": {
+      "model_id": "random_forest_h23_20261109T122907626798",
+      "family": "random_forest",
+      "weather": false,
+      "selected_from_horizon": 24,
+      "residual_q10": -109.4105031888145,
+      "residual_q90": 116.91977880771532
+    },
+    "24": {
+      "model_id": "random_forest_h24_20261109T122912059759",
+      "family": "random_forest",
+      "weather": false,
+      "selected_from_horizon": 24,
+      "residual_q10": -110.06371728371823,
+      "residual_q90": 117.07446645515263
+    },
+    "168": {
+      "model_id": null,
+      "family": "baseline",
+      "baseline": "seasonal_naive_168",
+      "column": "seasonal_168",
+      "weather": false,
+      "selected_from_horizon": 168,
+      "residual_q10": -220.02539999999996,
+      "residual_q90": 189.01190000000005
+    }
+  },
+  "evaluated_horizons": [
+    1,
+    6,
+    12,
+    24,
+    168
+  ],
+  "note": "Accuracy was measured at the evaluated horizons only; other hours reuse the nearest evaluated configuration."
+}

@@ -1,0 +1,3 @@
+source_id,valid_share,reason,readings,missing_in_source,negative,zero_long_runs,zero_short,stuck_sensor,spike,valid_out
+Robin_lodging_Donna,0.8868559051527588,valid hours 88.7% below the 95% rule,17544,0,0,0,0,1985,0,15559
+Robin_lodging_Armand,0.90640674874601,valid hours 90.6% below the 95% rule,17544,0,0,0,0,1642,0,15902

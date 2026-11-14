@@ -1,0 +1,39 @@
+Complete backend suite (tests/unit and tests/integration) against PostgreSQL 16.15
+Recorded 2026-11-08. Output copied from the console; the list of per-test timings is cut after the slowest dozen.
+Environment: WORKING COPY (the author's folder, which also holds the 194 MB official BDG2 files, so no test is skipped). The clean-unzip run of the delivery ZIP, without those files, gave 258 passed and 1 skipped: see postgres_test_run_clean_unzip.txt.
+
+PostgreSQL: PostgreSQL 16.15 (Ubuntu 16.15-0ubuntu0.24.04.1) on x86_64, server process on the build machine (not a container)
+Command:    ENERGIQ_TEST_DATABASE_URL=postgresql+psycopg://<user>:<password>@127.0.0.1:54329/energiq_verify \
+            python -m pytest tests/unit tests/integration -q -p no:cacheprovider -rs --durations=0
+            (the schema is dropped and recreated before every integration test; Python 3.11, 2 CPU cores)
+
+........................................................................ [ 27%]
+........................................................................ [ 55%]
+........................................................................ [ 83%]
+...........................................                              [100%]
+
+259 passed, 4 warnings in 229.30s (0:03:49)
+Skipped tests listed by -rs: none
+
+First run of the same command, before the two PostgreSQL-only defects were fixed (docs/12_deployment.md section 1a), summary line copied from the console:
+2 failed, 227 passed, 4 warnings, 6 errors in 110.50s (0:01:50)
+  - 6 errors in the fixtures that import the seven bundled communities, and 1 failure in the admin import job test:
+    psycopg.errors.InvalidTextRepresentation: invalid input syntax for type json ... Token "NaN" is invalid (Eagle: no coordinates in BDG2)
+  - 1 failure in the administrator-upload test:
+    psycopg.errors.StringDataRightTruncation: value too long for type character varying(24)  (code 'GREEN-PARK-RESIDENCY-2-B01')
+(That first log was not kept; the lines above are what the console printed.)
+
+Slowest tests of the final run:
+============================== slowest durations ===============================
+36.39s setup    tests/integration/test_society_raw_vs_api.py::test_api_reproduces_the_independent_raw_computation_for_every_community
+36.19s call     tests/integration/test_api_society.py::test_admin_can_import_every_bundled_society_as_a_job
+34.79s setup    tests/integration/test_society_db_portability.py::test_every_bounded_text_column_holds_only_values_that_fit_it
+17.83s call     tests/integration/test_society_raw_vs_api.py::test_api_reproduces_the_independent_raw_computation_for_every_community
+6.21s setup    tests/integration/test_api_society.py::test_endpoints_require_login
+6.07s call     tests/integration/test_api_ml.py::test_retraining_on_identical_data_reproduces_metrics_and_forecasts
+5.25s call     tests/integration/test_society_raw_vs_api.py::test_a_wrong_energy_total_in_the_api_is_detected
+5.17s call     tests/unit/test_secret_scan.py::test_repository_has_no_obvious_secrets
+4.43s call     tests/unit/test_society_raw_verification.py::test_a_changed_raw_file_is_detected_by_its_hash
+2.84s call     tests/integration/test_society_raw_vs_api.py::test_a_missing_month_in_the_api_is_detected
+2.75s call     tests/integration/test_api_society.py::test_admin_can_deactivate_a_building_and_meters_list_is_admin_only
+2.71s setup    tests/integration/test_api_ml.py::test_sample_dataset_matches_known_values

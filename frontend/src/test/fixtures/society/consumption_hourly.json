@@ -1,0 +1,1522 @@
+{
+ "society_id": 1,
+ "resolution": "hourly",
+ "start": "2017-12-25 00:00:00",
+ "end": "2017-12-31 23:00:00",
+ "unit_energy": "kWh",
+ "unit_demand": "kW",
+ "points": [
+  {
+   "ts": "2017-12-25 00:00:00",
+   "energy_kwh": 1091.96,
+   "avg_kw": 1091.96,
+   "peak_kw": 1091.96,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 01:00:00",
+   "energy_kwh": 1090.9,
+   "avg_kw": 1090.9,
+   "peak_kw": 1090.9,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 02:00:00",
+   "energy_kwh": 1081.77,
+   "avg_kw": 1081.77,
+   "peak_kw": 1081.77,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 03:00:00",
+   "energy_kwh": 1083.98,
+   "avg_kw": 1083.98,
+   "peak_kw": 1083.98,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 04:00:00",
+   "energy_kwh": 1082.79,
+   "avg_kw": 1082.79,
+   "peak_kw": 1082.79,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 05:00:00",
+   "energy_kwh": 1089.59,
+   "avg_kw": 1089.59,
+   "peak_kw": 1089.59,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 06:00:00",
+   "energy_kwh": 1088.03,
+   "avg_kw": 1088.03,
+   "peak_kw": 1088.03,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 07:00:00",
+   "energy_kwh": 1091.68,
+   "avg_kw": 1091.68,
+   "peak_kw": 1091.68,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 08:00:00",
+   "energy_kwh": 1067.2,
+   "avg_kw": 1067.2,
+   "peak_kw": 1067.2,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 09:00:00",
+   "energy_kwh": 1030.84,
+   "avg_kw": 1030.84,
+   "peak_kw": 1030.84,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 10:00:00",
+   "energy_kwh": 1019.15,
+   "avg_kw": 1019.15,
+   "peak_kw": 1019.15,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 11:00:00",
+   "energy_kwh": 996.28,
+   "avg_kw": 996.28,
+   "peak_kw": 996.28,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 12:00:00",
+   "energy_kwh": 1030.76,
+   "avg_kw": 1030.76,
+   "peak_kw": 1030.76,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 13:00:00",
+   "energy_kwh": 1041.07,
+   "avg_kw": 1041.07,
+   "peak_kw": 1041.07,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 14:00:00",
+   "energy_kwh": 1049.9,
+   "avg_kw": 1049.9,
+   "peak_kw": 1049.9,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 15:00:00",
+   "energy_kwh": 1064.39,
+   "avg_kw": 1064.39,
+   "peak_kw": 1064.39,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 16:00:00",
+   "energy_kwh": 1076.39,
+   "avg_kw": 1076.39,
+   "peak_kw": 1076.39,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 17:00:00",
+   "energy_kwh": 1100.06,
+   "avg_kw": 1100.06,
+   "peak_kw": 1100.06,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 18:00:00",
+   "energy_kwh": 1128.84,
+   "avg_kw": 1128.84,
+   "peak_kw": 1128.84,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 19:00:00",
+   "energy_kwh": 1125.47,
+   "avg_kw": 1125.47,
+   "peak_kw": 1125.47,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 20:00:00",
+   "energy_kwh": 1126.06,
+   "avg_kw": 1126.06,
+   "peak_kw": 1126.06,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 21:00:00",
+   "energy_kwh": 1117.25,
+   "avg_kw": 1117.25,
+   "peak_kw": 1117.25,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 22:00:00",
+   "energy_kwh": 1106.44,
+   "avg_kw": 1106.44,
+   "peak_kw": 1106.44,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-25 23:00:00",
+   "energy_kwh": 1106.92,
+   "avg_kw": 1106.92,
+   "peak_kw": 1106.92,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 00:00:00",
+   "energy_kwh": 1105.83,
+   "avg_kw": 1105.83,
+   "peak_kw": 1105.83,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 01:00:00",
+   "energy_kwh": 1098.22,
+   "avg_kw": 1098.22,
+   "peak_kw": 1098.22,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 02:00:00",
+   "energy_kwh": 1090.43,
+   "avg_kw": 1090.43,
+   "peak_kw": 1090.43,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 03:00:00",
+   "energy_kwh": 1091.73,
+   "avg_kw": 1091.73,
+   "peak_kw": 1091.73,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 04:00:00",
+   "energy_kwh": 1090.73,
+   "avg_kw": 1090.73,
+   "peak_kw": 1090.73,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 05:00:00",
+   "energy_kwh": 1093.26,
+   "avg_kw": 1093.26,
+   "peak_kw": 1093.26,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 06:00:00",
+   "energy_kwh": 1096.24,
+   "avg_kw": 1096.24,
+   "peak_kw": 1096.24,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 07:00:00",
+   "energy_kwh": 1093.69,
+   "avg_kw": 1093.69,
+   "peak_kw": 1093.69,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 08:00:00",
+   "energy_kwh": 1064.4,
+   "avg_kw": 1064.4,
+   "peak_kw": 1064.4,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 09:00:00",
+   "energy_kwh": 1023.42,
+   "avg_kw": 1023.42,
+   "peak_kw": 1023.42,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 10:00:00",
+   "energy_kwh": 1005.66,
+   "avg_kw": 1005.66,
+   "peak_kw": 1005.66,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 11:00:00",
+   "energy_kwh": 994.51,
+   "avg_kw": 994.51,
+   "peak_kw": 994.51,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 12:00:00",
+   "energy_kwh": 995.29,
+   "avg_kw": 995.29,
+   "peak_kw": 995.29,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 13:00:00",
+   "energy_kwh": 1006.41,
+   "avg_kw": 1006.41,
+   "peak_kw": 1006.41,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 14:00:00",
+   "energy_kwh": 1018.61,
+   "avg_kw": 1018.61,
+   "peak_kw": 1018.61,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 15:00:00",
+   "energy_kwh": 1070.49,
+   "avg_kw": 1070.49,
+   "peak_kw": 1070.49,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 16:00:00",
+   "energy_kwh": 1087.52,
+   "avg_kw": 1087.52,
+   "peak_kw": 1087.52,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 17:00:00",
+   "energy_kwh": 1109.62,
+   "avg_kw": 1109.62,
+   "peak_kw": 1109.62,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 18:00:00",
+   "energy_kwh": 1122.91,
+   "avg_kw": 1122.91,
+   "peak_kw": 1122.91,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 19:00:00",
+   "energy_kwh": 1160.07,
+   "avg_kw": 1160.07,
+   "peak_kw": 1160.07,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 20:00:00",
+   "energy_kwh": 1172.73,
+   "avg_kw": 1172.73,
+   "peak_kw": 1172.73,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 21:00:00",
+   "energy_kwh": 1143.13,
+   "avg_kw": 1143.13,
+   "peak_kw": 1143.13,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 22:00:00",
+   "energy_kwh": 1129.85,
+   "avg_kw": 1129.85,
+   "peak_kw": 1129.85,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-26 23:00:00",
+   "energy_kwh": 1120.6,
+   "avg_kw": 1120.6,
+   "peak_kw": 1120.6,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 00:00:00",
+   "energy_kwh": 1117.31,
+   "avg_kw": 1117.31,
+   "peak_kw": 1117.31,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 01:00:00",
+   "energy_kwh": 1099.36,
+   "avg_kw": 1099.36,
+   "peak_kw": 1099.36,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 02:00:00",
+   "energy_kwh": 1081.42,
+   "avg_kw": 1081.42,
+   "peak_kw": 1081.42,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 03:00:00",
+   "energy_kwh": 1089.08,
+   "avg_kw": 1089.08,
+   "peak_kw": 1089.08,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 04:00:00",
+   "energy_kwh": 1093.49,
+   "avg_kw": 1093.49,
+   "peak_kw": 1093.49,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 05:00:00",
+   "energy_kwh": 1104.49,
+   "avg_kw": 1104.49,
+   "peak_kw": 1104.49,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 06:00:00",
+   "energy_kwh": 1109.87,
+   "avg_kw": 1109.87,
+   "peak_kw": 1109.87,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 07:00:00",
+   "energy_kwh": 1114.77,
+   "avg_kw": 1114.77,
+   "peak_kw": 1114.77,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 08:00:00",
+   "energy_kwh": 1096.11,
+   "avg_kw": 1096.11,
+   "peak_kw": 1096.11,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 09:00:00",
+   "energy_kwh": 1061.16,
+   "avg_kw": 1061.16,
+   "peak_kw": 1061.16,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 10:00:00",
+   "energy_kwh": 1048.53,
+   "avg_kw": 1048.53,
+   "peak_kw": 1048.53,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 11:00:00",
+   "energy_kwh": 1033.98,
+   "avg_kw": 1033.98,
+   "peak_kw": 1033.98,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 12:00:00",
+   "energy_kwh": 1031.59,
+   "avg_kw": 1031.59,
+   "peak_kw": 1031.59,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 13:00:00",
+   "energy_kwh": 1038.29,
+   "avg_kw": 1038.29,
+   "peak_kw": 1038.29,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 14:00:00",
+   "energy_kwh": 1044.89,
+   "avg_kw": 1044.89,
+   "peak_kw": 1044.89,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 15:00:00",
+   "energy_kwh": 1047.15,
+   "avg_kw": 1047.15,
+   "peak_kw": 1047.15,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 16:00:00",
+   "energy_kwh": 1092.83,
+   "avg_kw": 1092.83,
+   "peak_kw": 1092.83,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 17:00:00",
+   "energy_kwh": 1124.1,
+   "avg_kw": 1124.1,
+   "peak_kw": 1124.1,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 18:00:00",
+   "energy_kwh": 1147.61,
+   "avg_kw": 1147.61,
+   "peak_kw": 1147.61,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 19:00:00",
+   "energy_kwh": 1140.64,
+   "avg_kw": 1140.64,
+   "peak_kw": 1140.64,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 20:00:00",
+   "energy_kwh": 1132.93,
+   "avg_kw": 1132.93,
+   "peak_kw": 1132.93,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 21:00:00",
+   "energy_kwh": 1138.53,
+   "avg_kw": 1138.53,
+   "peak_kw": 1138.53,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 22:00:00",
+   "energy_kwh": 1119.37,
+   "avg_kw": 1119.37,
+   "peak_kw": 1119.37,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-27 23:00:00",
+   "energy_kwh": 1103.22,
+   "avg_kw": 1103.22,
+   "peak_kw": 1103.22,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-28 00:00:00",
+   "energy_kwh": 1111.53,
+   "avg_kw": 1111.53,
+   "peak_kw": 1111.53,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-28 01:00:00",
+   "energy_kwh": 1100.73,
+   "avg_kw": 1100.73,
+   "peak_kw": 1100.73,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-28 02:00:00",
+   "energy_kwh": 1087.57,
+   "avg_kw": 1087.57,
+   "peak_kw": 1087.57,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-28 03:00:00",
+   "energy_kwh": 1071.18,
+   "avg_kw": 1071.18,
+   "peak_kw": 1071.18,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-28 04:00:00",
+   "energy_kwh": 980.81,
+   "avg_kw": 980.81,
+   "peak_kw": 980.81,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-28 05:00:00",
+   "energy_kwh": null,
+   "avg_kw": null,
+   "peak_kw": null,
+   "valid_hours": 0,
+   "expected_hours": 1,
+   "complete": false
+  },
+  {
+   "ts": "2017-12-28 06:00:00",
+   "energy_kwh": null,
+   "avg_kw": null,
+   "peak_kw": null,
+   "valid_hours": 0,
+   "expected_hours": 1,
+   "complete": false
+  },
+  {
+   "ts": "2017-12-28 07:00:00",
+   "energy_kwh": null,
+   "avg_kw": null,
+   "peak_kw": null,
+   "valid_hours": 0,
+   "expected_hours": 1,
+   "complete": false
+  },
+  {
+   "ts": "2017-12-28 08:00:00",
+   "energy_kwh": 819.64,
+   "avg_kw": 819.64,
+   "peak_kw": 819.64,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-28 09:00:00",
+   "energy_kwh": 1055.29,
+   "avg_kw": 1055.29,
+   "peak_kw": 1055.29,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-28 10:00:00",
+   "energy_kwh": 1038.9,
+   "avg_kw": 1038.9,
+   "peak_kw": 1038.9,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-28 11:00:00",
+   "energy_kwh": 1025.57,
+   "avg_kw": 1025.57,
+   "peak_kw": 1025.57,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-28 12:00:00",
+   "energy_kwh": 1027.31,
+   "avg_kw": 1027.31,
+   "peak_kw": 1027.31,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-28 13:00:00",
+   "energy_kwh": 1051.15,
+   "avg_kw": 1051.15,
+   "peak_kw": 1051.15,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-28 14:00:00",
+   "energy_kwh": 1052.66,
+   "avg_kw": 1052.66,
+   "peak_kw": 1052.66,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-28 15:00:00",
+   "energy_kwh": 1067.69,
+   "avg_kw": 1067.69,
+   "peak_kw": 1067.69,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-28 16:00:00",
+   "energy_kwh": 1104.65,
+   "avg_kw": 1104.65,
+   "peak_kw": 1104.65,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-28 17:00:00",
+   "energy_kwh": 1123.9,
+   "avg_kw": 1123.9,
+   "peak_kw": 1123.9,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-28 18:00:00",
+   "energy_kwh": 1150.78,
+   "avg_kw": 1150.78,
+   "peak_kw": 1150.78,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-28 19:00:00",
+   "energy_kwh": 1159.13,
+   "avg_kw": 1159.13,
+   "peak_kw": 1159.13,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-28 20:00:00",
+   "energy_kwh": 1146.27,
+   "avg_kw": 1146.27,
+   "peak_kw": 1146.27,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-28 21:00:00",
+   "energy_kwh": 1141.48,
+   "avg_kw": 1141.48,
+   "peak_kw": 1141.48,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-28 22:00:00",
+   "energy_kwh": 1131.47,
+   "avg_kw": 1131.47,
+   "peak_kw": 1131.47,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-28 23:00:00",
+   "energy_kwh": 1116.35,
+   "avg_kw": 1116.35,
+   "peak_kw": 1116.35,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 00:00:00",
+   "energy_kwh": 1109.4,
+   "avg_kw": 1109.4,
+   "peak_kw": 1109.4,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 01:00:00",
+   "energy_kwh": 1100.02,
+   "avg_kw": 1100.02,
+   "peak_kw": 1100.02,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 02:00:00",
+   "energy_kwh": 1090.71,
+   "avg_kw": 1090.71,
+   "peak_kw": 1090.71,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 03:00:00",
+   "energy_kwh": 1095.55,
+   "avg_kw": 1095.55,
+   "peak_kw": 1095.55,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 04:00:00",
+   "energy_kwh": 1092.86,
+   "avg_kw": 1092.86,
+   "peak_kw": 1092.86,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 05:00:00",
+   "energy_kwh": 1098.54,
+   "avg_kw": 1098.54,
+   "peak_kw": 1098.54,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 06:00:00",
+   "energy_kwh": 1106.7,
+   "avg_kw": 1106.7,
+   "peak_kw": 1106.7,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 07:00:00",
+   "energy_kwh": 1107.26,
+   "avg_kw": 1107.26,
+   "peak_kw": 1107.26,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 08:00:00",
+   "energy_kwh": 1071.58,
+   "avg_kw": 1071.58,
+   "peak_kw": 1071.58,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 09:00:00",
+   "energy_kwh": 1040.32,
+   "avg_kw": 1040.32,
+   "peak_kw": 1040.32,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 10:00:00",
+   "energy_kwh": 1029.95,
+   "avg_kw": 1029.95,
+   "peak_kw": 1029.95,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 11:00:00",
+   "energy_kwh": 999.75,
+   "avg_kw": 999.75,
+   "peak_kw": 999.75,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 12:00:00",
+   "energy_kwh": 1007.18,
+   "avg_kw": 1007.18,
+   "peak_kw": 1007.18,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 13:00:00",
+   "energy_kwh": 1016.65,
+   "avg_kw": 1016.65,
+   "peak_kw": 1016.65,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 14:00:00",
+   "energy_kwh": 1034.13,
+   "avg_kw": 1034.13,
+   "peak_kw": 1034.13,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 15:00:00",
+   "energy_kwh": 1053.5,
+   "avg_kw": 1053.5,
+   "peak_kw": 1053.5,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 16:00:00",
+   "energy_kwh": 1099.01,
+   "avg_kw": 1099.01,
+   "peak_kw": 1099.01,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 17:00:00",
+   "energy_kwh": 1099.26,
+   "avg_kw": 1099.26,
+   "peak_kw": 1099.26,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 18:00:00",
+   "energy_kwh": 1129.36,
+   "avg_kw": 1129.36,
+   "peak_kw": 1129.36,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 19:00:00",
+   "energy_kwh": 1135.24,
+   "avg_kw": 1135.24,
+   "peak_kw": 1135.24,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 20:00:00",
+   "energy_kwh": 1116.18,
+   "avg_kw": 1116.18,
+   "peak_kw": 1116.18,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 21:00:00",
+   "energy_kwh": 1115.92,
+   "avg_kw": 1115.92,
+   "peak_kw": 1115.92,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 22:00:00",
+   "energy_kwh": 1107.05,
+   "avg_kw": 1107.05,
+   "peak_kw": 1107.05,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-29 23:00:00",
+   "energy_kwh": 1105.99,
+   "avg_kw": 1105.99,
+   "peak_kw": 1105.99,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 00:00:00",
+   "energy_kwh": 1085.13,
+   "avg_kw": 1085.13,
+   "peak_kw": 1085.13,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 01:00:00",
+   "energy_kwh": 1084.72,
+   "avg_kw": 1084.72,
+   "peak_kw": 1084.72,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 02:00:00",
+   "energy_kwh": 1074.0,
+   "avg_kw": 1074.0,
+   "peak_kw": 1074.0,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 03:00:00",
+   "energy_kwh": 1069.49,
+   "avg_kw": 1069.49,
+   "peak_kw": 1069.49,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 04:00:00",
+   "energy_kwh": 1068.79,
+   "avg_kw": 1068.79,
+   "peak_kw": 1068.79,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 05:00:00",
+   "energy_kwh": 1087.24,
+   "avg_kw": 1087.24,
+   "peak_kw": 1087.24,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 06:00:00",
+   "energy_kwh": 1091.49,
+   "avg_kw": 1091.49,
+   "peak_kw": 1091.49,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 07:00:00",
+   "energy_kwh": 1089.09,
+   "avg_kw": 1089.09,
+   "peak_kw": 1089.09,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 08:00:00",
+   "energy_kwh": 1052.95,
+   "avg_kw": 1052.95,
+   "peak_kw": 1052.95,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 09:00:00",
+   "energy_kwh": 1035.18,
+   "avg_kw": 1035.18,
+   "peak_kw": 1035.18,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 10:00:00",
+   "energy_kwh": 1009.75,
+   "avg_kw": 1009.75,
+   "peak_kw": 1009.75,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 11:00:00",
+   "energy_kwh": 988.83,
+   "avg_kw": 988.83,
+   "peak_kw": 988.83,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 12:00:00",
+   "energy_kwh": 995.66,
+   "avg_kw": 995.66,
+   "peak_kw": 995.66,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 13:00:00",
+   "energy_kwh": 999.02,
+   "avg_kw": 999.02,
+   "peak_kw": 999.02,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 14:00:00",
+   "energy_kwh": 1017.61,
+   "avg_kw": 1017.61,
+   "peak_kw": 1017.61,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 15:00:00",
+   "energy_kwh": 1031.74,
+   "avg_kw": 1031.74,
+   "peak_kw": 1031.74,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 16:00:00",
+   "energy_kwh": 1070.0,
+   "avg_kw": 1070.0,
+   "peak_kw": 1070.0,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 17:00:00",
+   "energy_kwh": 1096.93,
+   "avg_kw": 1096.93,
+   "peak_kw": 1096.93,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 18:00:00",
+   "energy_kwh": 1126.17,
+   "avg_kw": 1126.17,
+   "peak_kw": 1126.17,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 19:00:00",
+   "energy_kwh": 1119.05,
+   "avg_kw": 1119.05,
+   "peak_kw": 1119.05,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 20:00:00",
+   "energy_kwh": 1119.49,
+   "avg_kw": 1119.49,
+   "peak_kw": 1119.49,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 21:00:00",
+   "energy_kwh": 1124.75,
+   "avg_kw": 1124.75,
+   "peak_kw": 1124.75,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 22:00:00",
+   "energy_kwh": 1115.17,
+   "avg_kw": 1115.17,
+   "peak_kw": 1115.17,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-30 23:00:00",
+   "energy_kwh": 1097.33,
+   "avg_kw": 1097.33,
+   "peak_kw": 1097.33,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 00:00:00",
+   "energy_kwh": 1085.49,
+   "avg_kw": 1085.49,
+   "peak_kw": 1085.49,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 01:00:00",
+   "energy_kwh": 1078.94,
+   "avg_kw": 1078.94,
+   "peak_kw": 1078.94,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 02:00:00",
+   "energy_kwh": 1067.32,
+   "avg_kw": 1067.32,
+   "peak_kw": 1067.32,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 03:00:00",
+   "energy_kwh": 1067.6,
+   "avg_kw": 1067.6,
+   "peak_kw": 1067.6,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 04:00:00",
+   "energy_kwh": 1066.08,
+   "avg_kw": 1066.08,
+   "peak_kw": 1066.08,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 05:00:00",
+   "energy_kwh": 1069.11,
+   "avg_kw": 1069.11,
+   "peak_kw": 1069.11,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 06:00:00",
+   "energy_kwh": 1081.16,
+   "avg_kw": 1081.16,
+   "peak_kw": 1081.16,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 07:00:00",
+   "energy_kwh": 1089.86,
+   "avg_kw": 1089.86,
+   "peak_kw": 1089.86,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 08:00:00",
+   "energy_kwh": 1064.77,
+   "avg_kw": 1064.77,
+   "peak_kw": 1064.77,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 09:00:00",
+   "energy_kwh": 1033.6,
+   "avg_kw": 1033.6,
+   "peak_kw": 1033.6,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 10:00:00",
+   "energy_kwh": 1016.44,
+   "avg_kw": 1016.44,
+   "peak_kw": 1016.44,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 11:00:00",
+   "energy_kwh": 1005.1,
+   "avg_kw": 1005.1,
+   "peak_kw": 1005.1,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 12:00:00",
+   "energy_kwh": 1015.14,
+   "avg_kw": 1015.14,
+   "peak_kw": 1015.14,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 13:00:00",
+   "energy_kwh": 1024.15,
+   "avg_kw": 1024.15,
+   "peak_kw": 1024.15,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 14:00:00",
+   "energy_kwh": 1046.86,
+   "avg_kw": 1046.86,
+   "peak_kw": 1046.86,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 15:00:00",
+   "energy_kwh": 1060.44,
+   "avg_kw": 1060.44,
+   "peak_kw": 1060.44,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 16:00:00",
+   "energy_kwh": 1081.89,
+   "avg_kw": 1081.89,
+   "peak_kw": 1081.89,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 17:00:00",
+   "energy_kwh": 1085.54,
+   "avg_kw": 1085.54,
+   "peak_kw": 1085.54,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 18:00:00",
+   "energy_kwh": 1093.86,
+   "avg_kw": 1093.86,
+   "peak_kw": 1093.86,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 19:00:00",
+   "energy_kwh": 1111.93,
+   "avg_kw": 1111.93,
+   "peak_kw": 1111.93,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 20:00:00",
+   "energy_kwh": 1100.91,
+   "avg_kw": 1100.91,
+   "peak_kw": 1100.91,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 21:00:00",
+   "energy_kwh": 1112.37,
+   "avg_kw": 1112.37,
+   "peak_kw": 1112.37,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 22:00:00",
+   "energy_kwh": 1090.53,
+   "avg_kw": 1090.53,
+   "peak_kw": 1090.53,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  },
+  {
+   "ts": "2017-12-31 23:00:00",
+   "energy_kwh": 1076.56,
+   "avg_kw": 1076.56,
+   "peak_kw": 1076.56,
+   "valid_hours": 1,
+   "expected_hours": 1,
+   "complete": true
+  }
+ ]
+}

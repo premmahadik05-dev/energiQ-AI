@@ -1,0 +1,2 @@
+source_id,valid_share,reason,readings,missing_in_source,negative,zero_long_runs,zero_short,stuck_sensor,spike,valid_out
+Hog_lodging_Edgar,0.7327861377108983,valid hours 73.3% below the 95% rule,17544,0,0,2484,0,2204,0,12856

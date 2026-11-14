@@ -1,0 +1,173 @@
+{
+  "society": "fox",
+  "bdg2_site": "Fox",
+  "timezone": "US/Mountain",
+  "lat": 33.42442530000004,
+  "lng": -111.92814039999979,
+  "candidate_residential_buildings": 12,
+  "buildings_kept": 11,
+  "buildings_excluded": 1,
+  "timestamps": {
+    "rows_in": 17544,
+    "duplicate_timestamps": 0,
+    "missing_timestamps": 0,
+    "rows_out": 17544,
+    "first": "2016-01-01 00:00:00",
+    "last": "2017-12-31 23:00:00"
+  },
+  "society_valid_hours": 17486,
+  "hours": 17544,
+  "society_valid_share": 0.9967,
+  "society_kwh": {
+    "mean": 1513.46,
+    "max": 2283.16,
+    "min": 291.08
+  },
+  "rule": {
+    "primary_use": "Lodging/residential",
+    "exclude_sub_uses": [
+      "Hotel"
+    ],
+    "min_meter_valid_share": 0.95,
+    "min_buildings": 8,
+    "min_society_valid_share": 0.94
+  },
+  "cleaning": {
+    "zero_is_invalid": true,
+    "long_zero_hours": 24,
+    "stuck_min_hours": 48,
+    "spike_factor": 4.0,
+    "spike_quantile": 0.995
+  },
+  "cleaning_counts_per_building": {
+    "FOX-B04": {
+      "readings": 17544,
+      "missing_in_source": 1,
+      "negative": 0,
+      "zero_long_runs": 0,
+      "zero_short": 0,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17543,
+      "valid_share": 0.9999430004559964
+    },
+    "FOX-B09": {
+      "readings": 17544,
+      "missing_in_source": 1,
+      "negative": 0,
+      "zero_long_runs": 0,
+      "zero_short": 2,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17541,
+      "valid_share": 0.999829001367989
+    },
+    "FOX-B01": {
+      "readings": 17544,
+      "missing_in_source": 3,
+      "negative": 0,
+      "zero_long_runs": 0,
+      "zero_short": 1,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17540,
+      "valid_share": 0.9997720018239854
+    },
+    "FOX-B10": {
+      "readings": 17544,
+      "missing_in_source": 3,
+      "negative": 0,
+      "zero_long_runs": 0,
+      "zero_short": 1,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17540,
+      "valid_share": 0.9997720018239854
+    },
+    "FOX-B05": {
+      "readings": 17544,
+      "missing_in_source": 3,
+      "negative": 0,
+      "zero_long_runs": 0,
+      "zero_short": 1,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17540,
+      "valid_share": 0.9997720018239854
+    },
+    "FOX-B11": {
+      "readings": 17544,
+      "missing_in_source": 3,
+      "negative": 0,
+      "zero_long_runs": 0,
+      "zero_short": 1,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17540,
+      "valid_share": 0.9997720018239854
+    },
+    "FOX-B08": {
+      "readings": 17544,
+      "missing_in_source": 16,
+      "negative": 0,
+      "zero_long_runs": 0,
+      "zero_short": 4,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17524,
+      "valid_share": 0.998860009119927
+    },
+    "FOX-B02": {
+      "readings": 17544,
+      "missing_in_source": 2,
+      "negative": 0,
+      "zero_long_runs": 0,
+      "zero_short": 17,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17525,
+      "valid_share": 0.9989170086639307
+    },
+    "FOX-B06": {
+      "readings": 17544,
+      "missing_in_source": 2,
+      "negative": 0,
+      "zero_long_runs": 0,
+      "zero_short": 5,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17537,
+      "valid_share": 0.9996010031919744
+    },
+    "FOX-B03": {
+      "readings": 17544,
+      "missing_in_source": 2,
+      "negative": 0,
+      "zero_long_runs": 0,
+      "zero_short": 13,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17529,
+      "valid_share": 0.9991450068399452
+    },
+    "FOX-B07": {
+      "readings": 17544,
+      "missing_in_source": 1,
+      "negative": 0,
+      "zero_long_runs": 0,
+      "zero_short": 17,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17526,
+      "valid_share": 0.9989740082079344
+    }
+  },
+  "weather_missing_hours": {
+    "airTemperature": 2,
+    "dewTemperature": 2,
+    "windSpeed": 13,
+    "cloudCoverage": 4971,
+    "precipDepth1HR": 72,
+    "seaLvlPressure": 54
+  }
+}

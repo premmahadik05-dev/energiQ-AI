@@ -1,0 +1,236 @@
+[
+ [
+  "B1",
+  "report 'Monthly society report (PDF)' created and listed",
+  "PASS",
+  "rows in list=13"
+ ],
+ [
+  "B1",
+  "report 'Consumption (CSV)' created and listed",
+  "PASS",
+  "rows in list=14"
+ ],
+ [
+  "B1",
+  "report 'Forecast results (CSV)' created and listed",
+  "PASS",
+  "rows in list=15"
+ ],
+ [
+  "B1",
+  "report 'Alerts (CSV)' created and listed",
+  "PASS",
+  "rows in list=16"
+ ],
+ [
+  "B1",
+  "report 'Cost estimate (CSV)' created and listed",
+  "PASS",
+  "rows in list=17"
+ ],
+ [
+  "B1",
+  "report 'Building comparison (CSV)' created and listed",
+  "PASS",
+  "rows in list=18"
+ ],
+ [
+  "B1b",
+  "reports persist after reload",
+  "PASS",
+  "18 rows"
+ ],
+ [
+  "B2",
+  "download valid: Building comparison\tCSV\t2016-01-01 to 2017-12-31\t2026-11-09 12:40\t877 B\tDownload",
+  "PASS",
+  "fox_buildings_20160101_20171231.csv 877 bytes csv rows=12 cols=10 header=['building', 'use', 'floor_area_sqm', 'energy_kwh']"
+ ],
+ [
+  "B2",
+  "download valid: Cost estimate (not a bill)\tCSV\t2016-01-01 to 2017-12-31\t2026-11-09 12:40\t32.0 KB\tDownload",
+  "PASS",
+  "fox_cost_20160101_20171231.csv 32,762 bytes csv rows=732 cols=6 header=['date', 'energy_kwh', 'energy_cost_EUR', 'total_cost_EUR']"
+ ],
+ [
+  "B2",
+  "download valid: Anomaly alerts\tCSV\t2016-01-01 to 2017-12-31\t2026-11-09 12:40\t770.4 KB\tDownload",
+  "PASS",
+  "fox_anomalies_20160101_20171231.csv 788,897 bytes csv rows=2370 cols=11 header=['scope', 'building', 'severity', 'start']"
+ ],
+ [
+  "B2",
+  "download valid: Held-out forecasts (24 h ahead)\tCSV\t2016-01-01 to 2017-12-31\t2026-11-09 12:40\t351.0 KB\tDow",
+  "PASS",
+  "fox_forecast_20160101_20171231_h24.csv 359,433 bytes csv rows=4357 cols=8 header=['origin', 'target_time', 'horizon_h', 'actual_kw']"
+ ],
+ [
+  "B2",
+  "download valid: Consumption (daily)\tCSV\t2016-01-01 to 2017-12-31\t2026-11-09 12:40\t39.8 KB\tDownload",
+  "PASS",
+  "fox_consumption_20160101_20171231_daily.csv 40,797 bytes csv rows=732 cols=7 header=['period_start', 'energy_kwh', 'avg_kw', 'peak_kw']"
+ ],
+ [
+  "B2",
+  "download valid: Society report\tPDF\t2017-12-01 to 2017-12-31\t2026-11-09 12:40\t7.4 KB\tDownload",
+  "PASS",
+  "fox_monthly_20171201_20171231.pdf 7,602 bytes pdf-eof=True"
+ ],
+ [
+  "B2",
+  "download valid: Building comparison\tCSV\t2016-01-01 to 2017-12-31\t2026-11-09 12:38\t877 B\tDownload",
+  "PASS",
+  "fox_buildings_20160101_20171231.csv 877 bytes csv rows=12 cols=10 header=['building', 'use', 'floor_area_sqm', 'energy_kwh']"
+ ],
+ [
+  "B2",
+  "download valid: Cost estimate (not a bill)\tCSV\t2016-01-01 to 2017-12-31\t2026-11-09 12:38\t32.0 KB\tDownload",
+  "PASS",
+  "fox_cost_20160101_20171231.csv 32,762 bytes csv rows=732 cols=6 header=['date', 'energy_kwh', 'energy_cost_EUR', 'total_cost_EUR']"
+ ],
+ [
+  "B2",
+  "download valid: Anomaly alerts\tCSV\t2016-01-01 to 2017-12-31\t2026-11-09 12:38\t770.4 KB\tDownload",
+  "PASS",
+  "fox_anomalies_20160101_20171231.csv 788,897 bytes csv rows=2370 cols=11 header=['scope', 'building', 'severity', 'start']"
+ ],
+ [
+  "B2",
+  "download valid: Held-out forecasts (24 h ahead)\tCSV\t2016-01-01 to 2017-12-31\t2026-11-09 12:38\t351.0 KB\tDow",
+  "PASS",
+  "fox_forecast_20160101_20171231_h24.csv 359,433 bytes csv rows=4357 cols=8 header=['origin', 'target_time', 'horizon_h', 'actual_kw']"
+ ],
+ [
+  "B2",
+  "download: Consumption (daily)\tCSV\t2016-01-01 to 2017-12-31\t2026-11-09 12:38\t39.8 KB\tDownload",
+  "FAIL",
+  "Timeout 20000ms exceeded while waiting for event \"download\""
+ ],
+ [
+  "B2",
+  "download valid: Society report\tPDF\t2017-12-01 to 2017-12-31\t2026-11-09 12:38\t7.4 KB\tDownload",
+  "PASS",
+  "fox_monthly_20171201_20171231.pdf 7,602 bytes pdf-eof=True"
+ ],
+ [
+  "B2",
+  "download valid: Building comparison\tCSV\t2016-01-01 to 2017-12-31\t2026-11-09 12:37\t877 B\tDownload",
+  "PASS",
+  "fox_buildings_20160101_20171231.csv 877 bytes csv rows=12 cols=10 header=['building', 'use', 'floor_area_sqm', 'energy_kwh']"
+ ],
+ [
+  "B2",
+  "download valid: Cost estimate (not a bill)\tCSV\t2016-01-01 to 2017-12-31\t2026-11-09 12:37\t32.0 KB\tDownload",
+  "PASS",
+  "fox_cost_20160101_20171231.csv 32,762 bytes csv rows=732 cols=6 header=['date', 'energy_kwh', 'energy_cost_EUR', 'total_cost_EUR']"
+ ],
+ [
+  "B2",
+  "download valid: Anomaly alerts\tCSV\t2016-01-01 to 2017-12-31\t2026-11-09 12:37\t770.4 KB\tDownload",
+  "PASS",
+  "fox_anomalies_20160101_20171231.csv 788,897 bytes csv rows=2370 cols=11 header=['scope', 'building', 'severity', 'start']"
+ ],
+ [
+  "B2",
+  "download valid: Held-out forecasts (24 h ahead)\tCSV\t2016-01-01 to 2017-12-31\t2026-11-09 12:37\t351.0 KB\tDow",
+  "PASS",
+  "fox_forecast_20160101_20171231_h24.csv 359,433 bytes csv rows=4357 cols=8 header=['origin', 'target_time', 'horizon_h', 'actual_kw']"
+ ],
+ [
+  "B2",
+  "download valid: Consumption (daily)\tCSV\t2016-01-01 to 2017-12-31\t2026-11-09 12:37\t39.8 KB\tDownload",
+  "PASS",
+  "fox_consumption_20160101_20171231_daily.csv 40,797 bytes csv rows=732 cols=7 header=['period_start', 'energy_kwh', 'avg_kw', 'peak_kw']"
+ ],
+ [
+  "B2",
+  "download valid: Society report\tPDF\t2017-12-01 to 2017-12-31\t2026-11-09 12:37\t7.4 KB\tDownload",
+  "PASS",
+  "fox_monthly_20171201_20171231.pdf 7,602 bytes pdf-eof=True"
+ ],
+ [
+  "B3a",
+  "unauthenticated visit redirects to sign-in",
+  "PASS",
+  "http://127.0.0.1:5173/login"
+ ],
+ [
+  "B3b",
+  "wrong password shows a clear error",
+  "PASS",
+  "['Invalid e-mail or password']"
+ ],
+ [
+  "B3c",
+  "empty form is validated client-side",
+  "PASS",
+  "Invalid e-mail or password Email address  Enter your e-mail address.  Password Forgot password? Reme"
+ ],
+ [
+  "B3d",
+  "weak password rejected on register",
+  "PASS",
+  "http://127.0.0.1:5173/register"
+ ],
+ [
+  "B3e",
+  "valid registration signs in and opens the overview",
+  "PASS",
+  "http://127.0.0.1:5173/"
+ ],
+ [
+  "B3f",
+  "analyst cannot open /admin (role guard)",
+  "PASS",
+  "Access denied  This page needs the admin role. Your account has the analyst role"
+ ],
+ [
+  "B3g",
+  "analyst cannot open /society-admin",
+  "PASS",
+  "Access denied  This page needs the admin role. Your account has the analyst role"
+ ],
+ [
+  "B3h",
+  "analyst nav hides admin items",
+  "PASS",
+  "| Cost and peaks | Alerts | Recommendations | Reports | Data sources |  | System |  | Jobs"
+ ],
+ [
+  "B3i",
+  "sign out returns to /login and clears the session",
+  "PASS",
+  "http://127.0.0.1:5173/login"
+ ],
+ [
+  "B4",
+  "admin tab 'Users' loads data",
+  "PASS",
+  "lth. Visible to administrators only. |  | Users | Audit log | System | User accounts | E-mail\tRole\tStatus\tCrea"
+ ],
+ [
+  "B4",
+  "admin tab 'Audit log' loads data",
+  "PASS",
+  "lth. Visible to administrators only. |  | Users | Audit log | System | Action | All actions | login | login_fa"
+ ],
+ [
+  "B4",
+  "admin tab 'System' loads data",
+  "PASS",
+  "lth. Visible to administrators only. |  | Users | Audit log | System | Refresh | Records | Users | 3 | Dataset"
+ ],
+ [
+  "B4b",
+  "admin can see other users with role selectors",
+  "PASS",
+  "3 role selectors (own account should be protected)"
+ ],
+ [
+  "B5",
+  "jobs page lists the import job",
+  "PASS",
+  "Background jobs | Job\tKind\tStatus\tProgress\tCreated (server clock)\tFinished\tResult or error | #1\tSociety import\t | \u2713 | succeeded\t | Job 1 pro"
+ ]
+]

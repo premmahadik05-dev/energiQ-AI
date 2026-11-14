@@ -1,0 +1,205 @@
+{
+  "config": {
+    "baseline_weeks": 8,
+    "min_baseline_weeks": 4,
+    "scale_weeks": 26,
+    "min_scale_days": 56,
+    "alert_quantile": 0.995,
+    "min_abs_dev_kw": 0.5,
+    "scale_floor_kw": 0.05,
+    "flat_min_hours": 4,
+    "fit_frac": 0.6,
+    "if_quantile": 0.995,
+    "if_needs_z": 2.5,
+    "if_trees": 150,
+    "merge_gap_hours": 1,
+    "seed": 42
+  },
+  "summary": {
+    "hours_total": 34589,
+    "hours_valid": 34151,
+    "hours_flagged": 695,
+    "flagged_pct_of_valid": 2.0350794998682322,
+    "hours_with_baseline": 32572,
+    "hours_flagged_by": {
+      "deviation": 651,
+      "flat_run": 5,
+      "isolation_forest_only_with_z": 39,
+      "isolation_forest_any": 136
+    },
+    "events": 484,
+    "events_by_severity": {
+      "low": 376,
+      "medium": 89,
+      "high": 19
+    },
+    "events_by_type": {
+      "spike": 263,
+      "drop": 186,
+      "flat_run": 1,
+      "unusual_pattern": 36
+    },
+    "isolation_forest": {
+      "fit_end": "2009-04-21 10:00:00",
+      "fit_rows": 20490,
+      "score_threshold": 0.6623700450420286,
+      "note": "hours up to fit_end are in-sample for Isolation Forest"
+    }
+  },
+  "cross_check_known_phase1_findings": {
+    "flat_401min_0.360kW": {
+      "window": [
+        "2008-10-06 10:00",
+        "2008-10-06 17:00"
+      ],
+      "flagged_hours": 5,
+      "hours": 8,
+      "flat_flag_hours": 5,
+      "drop_flag_hours": 0
+    },
+    "low_use_block_aug_2008": {
+      "window": [
+        "2008-08-20",
+        "2008-08-29 23:00"
+      ],
+      "flagged_hours": 0,
+      "hours": 240,
+      "flat_flag_hours": 0,
+      "drop_flag_hours": 0
+    }
+  },
+  "top_events": [
+    {
+      "start": "2010-02-19 02:00:00",
+      "end": "2010-02-19 02:00:00",
+      "hours": 1,
+      "types": [
+        "drop"
+      ],
+      "severity": "high",
+      "peak_value_kw": 0.3091333344578743,
+      "expected_kw": 0.8104333331187565,
+      "peak_excess_ratio": 3.5905152475992206
+    },
+    {
+      "start": "2009-02-21 16:00:00",
+      "end": "2009-02-22 03:00:00",
+      "hours": 12,
+      "types": [
+        "drop"
+      ],
+      "severity": "high",
+      "peak_value_kw": 0.38980000068744025,
+      "expected_kw": 1.3736333380142849,
+      "peak_excess_ratio": 3.4156464456513955
+    },
+    {
+      "start": "2008-01-27 05:00:00",
+      "end": "2008-01-27 05:00:00",
+      "hours": 1,
+      "types": [
+        "drop"
+      ],
+      "severity": "high",
+      "peak_value_kw": 0.482500002036492,
+      "expected_kw": 1.0038333317885797,
+      "peak_excess_ratio": 3.1204436906426403
+    },
+    {
+      "start": "2010-10-31 05:00:00",
+      "end": "2010-10-31 06:00:00",
+      "hours": 2,
+      "types": [
+        "spike"
+      ],
+      "severity": "high",
+      "peak_value_kw": 2.910299986600876,
+      "expected_kw": 0.3623333324988683,
+      "peak_excess_ratio": 3.1145644840139015
+    },
+    {
+      "start": "2009-12-12 23:00:00",
+      "end": "2009-12-13 01:00:00",
+      "hours": 3,
+      "types": [
+        "drop"
+      ],
+      "severity": "high",
+      "peak_value_kw": 0.3624333341916402,
+      "expected_kw": 1.1194166708737612,
+      "peak_excess_ratio": 2.943162180548066
+    },
+    {
+      "start": "2010-11-04 08:00:00",
+      "end": "2010-11-04 10:00:00",
+      "hours": 3,
+      "types": [
+        "spike"
+      ],
+      "severity": "high",
+      "peak_value_kw": 4.418900014956792,
+      "expected_kw": 1.5286666651566823,
+      "peak_excess_ratio": 2.735237383628854
+    },
+    {
+      "start": "2008-10-18 23:00:00",
+      "end": "2008-10-19 01:00:00",
+      "hours": 3,
+      "types": [
+        "spike"
+      ],
+      "severity": "high",
+      "peak_value_kw": 5.75906664331754,
+      "expected_kw": 0.494233334561189,
+      "peak_excess_ratio": 2.6735997811491217
+    },
+    {
+      "start": "2007-08-19 15:00:00",
+      "end": "2007-08-19 16:00:00",
+      "hours": 2,
+      "types": [
+        "spike"
+      ],
+      "severity": "high",
+      "peak_value_kw": 3.696133333444595,
+      "expected_kw": 0.23666666733721892,
+      "peak_excess_ratio": 2.2418045077169366
+    },
+    {
+      "start": "2008-11-23 17:00:00",
+      "end": "2008-11-23 20:00:00",
+      "hours": 4,
+      "types": [
+        "spike"
+      ],
+      "severity": "high",
+      "peak_value_kw": 6.560533348719279,
+      "expected_kw": 0.5498833316067855,
+      "peak_excess_ratio": 2.017857606271161
+    },
+    {
+      "start": "2009-09-12 21:00:00",
+      "end": "2009-09-12 22:00:00",
+      "hours": 2,
+      "types": [
+        "spike"
+      ],
+      "severity": "high",
+      "peak_value_kw": 4.450400002797445,
+      "expected_kw": 0.520150002092123,
+      "peak_excess_ratio": 1.8171091665165389
+    }
+  ],
+  "labels": "no ground-truth anomaly labels exist in this dataset; injection check is synthetic",
+  "environment": {
+    "python": "3.11.15",
+    "platform": "Linux x86_64",
+    "numpy": "2.4.6",
+    "pandas": "3.1.0",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.2.0",
+    "torch": "2.15.0",
+    "joblib": "1.6.0"
+  }
+}

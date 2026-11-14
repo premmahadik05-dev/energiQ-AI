@@ -1,0 +1,8 @@
+flowchart LR
+  user([User])
+  admin([Administrator])
+  sys[["EnergiQ AI platform"]]
+  user -- "CSV upload, tariff, request" --> sys
+  sys -- "forecasts, anomalies, explanations, costs, recommendations, reports" --> user
+  admin -- "role changes, audit queries" --> sys
+  sys -- "user list, audit log, system health" --> admin

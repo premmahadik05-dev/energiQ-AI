@@ -1,0 +1,27 @@
+PASS [C] bull: API evaluation equals evaluation.json (h24 best model and its test MAE)  best=random_forest
+PASS [D] bull: live 24 h forecast is finite, non-negative, hourly, lower<=point<=upper  origin=2017-12-31 23:00:00 first=1347.1 kW, mean=1380.0 kW
+PASS [E] bull: anomaly events in API vs model-generated file  api=4142 file=4142
+PASS [C] eagle: API evaluation equals evaluation.json (h24 best model and its test MAE)  best=naive
+PASS [D] eagle: live 24 h forecast is finite, non-negative, hourly, lower<=point<=upper  origin=2017-12-31 23:00:00 first=629.4 kW, mean=603.9 kW
+PASS [E] eagle: anomaly events in API vs model-generated file  api=2049 file=2049
+PASS [C] fox: API evaluation equals evaluation.json (h24 best model and its test MAE)  best=random_forest
+PASS [D] fox: live 24 h forecast is finite, non-negative, hourly, lower<=point<=upper  origin=2017-12-31 23:00:00 first=1078.0 kW, mean=1063.5 kW
+PASS [E] fox: anomaly events in API vs model-generated file  api=2369 file=2369
+PASS [C] hog: API evaluation equals evaluation.json (h24 best model and its test MAE)  best=random_forest
+PASS [D] hog: live 24 h forecast is finite, non-negative, hourly, lower<=point<=upper  origin=2017-12-31 23:00:00 first=1443.1 kW, mean=1494.0 kW
+PASS [E] hog: anomaly events in API vs model-generated file  api=1932 file=1932
+PASS [C] peacock: API evaluation equals evaluation.json (h24 best model and its test MAE)  best=random_forest
+PASS [D] peacock: live 24 h forecast is finite, non-negative, hourly, lower<=point<=upper  origin=2017-12-31 23:00:00 first=656.5 kW, mean=668.4 kW
+PASS [E] peacock: anomaly events in API vs model-generated file  api=2956 file=2956
+PASS [C] rat: API evaluation equals evaluation.json (h24 best model and its test MAE)  best=naive
+PASS [D] rat: live 24 h forecast is finite, non-negative, hourly, lower<=point<=upper  origin=2017-12-31 23:00:00 first=439.2 kW, mean=473.6 kW
+PASS [E] rat: anomaly events in API vs model-generated file  api=1988 file=1988
+PASS [C] robin: API evaluation equals evaluation.json (h24 best model and its test MAE)  best=xgboost
+PASS [D] robin: live 24 h forecast is finite, non-negative, hourly, lower<=point<=upper  origin=2017-12-31 23:00:00 first=489.8 kW, mean=530.9 kW
+PASS [E] robin: anomaly events in API vs model-generated file  api=2081 file=2081
+PASS [F] forecast before the data start is rejected with a 4xx and a message  422 b'{"detail":"origin is outside the data range"}'
+PASS [F] backtest horizon=0 rejected (422)  422
+PASS [A] all 714 reported MAE/RMSE/R2 values recomputed from the saved predictions  max relative difference mae=6.26e-07 rmse=3.45e-07 r2=1.84e-07
+
+24/24 checks passed; 714 metric values recomputed
+exit=0

@@ -1,0 +1,49 @@
+desktop  /                  charts=1 tables=0 btn=9 h1=['Society overview'] reqfailed=4
+desktop  /consumption       charts=1 tables=0 btn=13 h1=['Consumption'] reqfailed=3
+desktop  /forecasting       charts=6 tables=2 btn=16 h1=['Forecasting'] reqfailed=7
+desktop  /compare           charts=4 tables=1 btn=11 h1=['Compare communities'] reqfailed=3
+desktop  /buildings         charts=3 tables=1 btn=23 h1=['Buildings'] reqfailed=4
+desktop  /facilities        charts=0 tables=0 btn=4 h1=['Facilities'] reqfailed=3
+desktop  /cost              charts=2 tables=2 btn=18 h1=['Cost and peak demand'] reqfailed=3
+desktop  /alerts            charts=1 tables=1 btn=41 h1=['Alerts'] reqfailed=6
+desktop  /recommendations   charts=0 tables=0 btn=4 h1=['Recommendations'] reqfailed=3
+desktop  /reports           charts=0 tables=1 btn=5 h1=['Reports'] reqfailed=3
+desktop  /data-sources      charts=0 tables=0 btn=4 h1=['Data sources'] reqfailed=3
+desktop  /notifications     charts=0 tables=0 btn=5 h1=['Notifications'] reqfailed=3
+desktop  /jobs              charts=0 tables=1 btn=4 h1=['Jobs'] reqfailed=3
+desktop  /society-admin     charts=0 tables=2 btn=36 h1=['Society administration'] reqfailed=2
+desktop  /admin             charts=0 tables=1 btn=7 h1=['Administration'] reqfailed=3
+desktop  /does-not-exist    charts=0 tables=0 btn=4 h1=['Page not found'] reqfailed=2
+tablet   /                  charts=1 tables=0 btn=9 h1=['Society overview'] reqfailed=4
+tablet   /consumption       charts=1 tables=0 btn=13 h1=['Consumption'] reqfailed=3
+tablet   /forecasting       charts=6 tables=2 btn=16 h1=['Forecasting'] reqfailed=7
+tablet   /compare           charts=4 tables=1 btn=11 h1=['Compare communities'] reqfailed=3
+tablet   /buildings         charts=3 tables=1 btn=23 h1=['Buildings'] reqfailed=4
+tablet   /facilities        charts=0 tables=0 btn=4 h1=['Facilities'] reqfailed=3
+tablet   /cost              charts=2 tables=2 btn=18 h1=['Cost and peak demand'] reqfailed=3
+tablet   /alerts            charts=1 tables=1 btn=41 h1=['Alerts'] reqfailed=6
+tablet   /recommendations   charts=0 tables=0 btn=4 h1=['Recommendations'] reqfailed=3
+tablet   /reports           charts=0 tables=1 btn=5 h1=['Reports'] reqfailed=3
+tablet   /data-sources      charts=0 tables=0 btn=4 h1=['Data sources'] reqfailed=3
+tablet   /notifications     charts=0 tables=0 btn=5 h1=['Notifications'] reqfailed=3
+tablet   /jobs              charts=0 tables=1 btn=4 h1=['Jobs'] reqfailed=3
+tablet   /society-admin     charts=0 tables=2 btn=36 h1=['Society administration'] reqfailed=2
+tablet   /admin             charts=0 tables=1 btn=7 h1=['Administration'] reqfailed=3
+tablet   /does-not-exist    charts=0 tables=0 btn=4 h1=['Page not found'] reqfailed=2
+mobile   /                  charts=1 tables=0 btn=9 h1=['Society overview'] reqfailed=4
+mobile   /consumption       charts=1 tables=0 btn=13 h1=['Consumption'] reqfailed=3
+mobile   /forecasting       charts=6 tables=2 btn=16 h1=['Forecasting'] reqfailed=7
+mobile   /compare           charts=4 tables=1 btn=11 h1=['Compare communities'] reqfailed=3
+mobile   /buildings         charts=3 tables=1 btn=23 h1=['Buildings'] reqfailed=4
+mobile   /facilities        charts=0 tables=0 btn=4 h1=['Facilities'] reqfailed=3
+mobile   /cost              charts=2 tables=2 btn=18 h1=['Cost and peak demand'] reqfailed=3
+mobile   /alerts            charts=1 tables=1 btn=41 h1=['Alerts'] reqfailed=6
+mobile   /recommendations   charts=0 tables=0 btn=4 h1=['Recommendations'] reqfailed=3
+mobile   /reports           charts=0 tables=1 btn=5 h1=['Reports'] reqfailed=3
+mobile   /data-sources      charts=0 tables=0 btn=4 h1=['Data sources'] reqfailed=3
+mobile   /notifications     charts=0 tables=0 btn=5 h1=['Notifications'] reqfailed=3
+mobile   /jobs              charts=0 tables=1 btn=4 h1=['Jobs'] reqfailed=3
+mobile   /society-admin     charts=0 tables=2 btn=36 h1=['Society administration'] reqfailed=2
+mobile   /admin             charts=0 tables=1 btn=7 h1=['Administration'] reqfailed=3
+mobile   /does-not-exist    charts=0 tables=0 btn=4 h1=['Page not found'] reqfailed=2
+exit=0

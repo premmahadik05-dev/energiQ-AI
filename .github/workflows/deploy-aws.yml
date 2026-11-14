@@ -1,0 +1,53 @@
+name: Deploy to AWS (manual)
+
+# CONFIGURATION ONLY. This workflow has never been run: no AWS account was used while building this project, so no
+# deployment is claimed anywhere in the documentation. It is triggered by hand only, never on push.
+# Before using it: create the ECR stack (infrastructure/aws/ecr.yaml), an IAM role trusted by GitHub's OIDC provider
+# with least-privilege rights for ECR push and CloudFormation, and set the repository variables/secrets below.
+#   Repository variables:  AWS_REGION, AWS_ROLE_ARN, ECR_API_URI, ECR_WEB_URI
+#   Repository secrets:    none (OIDC federation - no long-lived keys)
+
+on:
+  workflow_dispatch:
+    inputs:
+      certificate_arn:
+        description: ACM certificate ARN (leave empty for HTTP-only evaluation)
+        required: false
+        default: ""
+      allowed_ingress_cidr:
+        description: CIDR allowed to reach the load balancer
+        required: true
+        default: 203.0.113.0/24
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production        # configure required reviewers on this environment
+    steps:
+      - uses: actions/checkout@v4
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+      - uses: aws-actions/amazon-ecr-login@v2
+      - name: Build and push images (tag = commit SHA)
+        run: |
+          docker build -f docker/backend.Dockerfile -t "${{ vars.ECR_API_URI }}:${GITHUB_SHA}" .
+          docker build -f docker/frontend.Dockerfile -t "${{ vars.ECR_WEB_URI }}:${GITHUB_SHA}" .
+          docker push "${{ vars.ECR_API_URI }}:${GITHUB_SHA}"
+          docker push "${{ vars.ECR_WEB_URI }}:${GITHUB_SHA}"
+      - name: Deploy stack
+        run: |
+          aws cloudformation deploy \
+            --stack-name energiq \
+            --template-file infrastructure/aws/energiq-stack.yaml \
+            --capabilities CAPABILITY_IAM \
+            --parameter-overrides \
+              BackendImage="${{ vars.ECR_API_URI }}:${GITHUB_SHA}" \
+              WebImage="${{ vars.ECR_WEB_URI }}:${GITHUB_SHA}" \
+              CertificateArn="${{ inputs.certificate_arn }}" \
+              AllowedIngressCidr="${{ inputs.allowed_ingress_cidr }}"

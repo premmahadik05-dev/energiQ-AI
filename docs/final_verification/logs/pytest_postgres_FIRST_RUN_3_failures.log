@@ -1,0 +1,77 @@
+........................................................................ [ 24%]
+........................................................................ [ 49%]
+.......................................................s................ [ 73%]
+..........................................FFF........................... [ 98%]
+....                                                                     [100%]
+=================================== FAILURES ===================================
+_____ test_peak_analysis_load_duration_and_distribution_match_the_raw_data _____
+
+env = {'c': <starlette.testclient.TestClient object at 0x7f73b83c6250>, 'admin': {'Authorization': 'Bearer eyJhbGciOiJIUzI1N...5NDIzNTI1MiwianRpIjoiNDI0OWIzYTAwNDcyNGIwZWJjMDVjZjYwYzdhMzNlMGQifQ.Ya1yGhr93-hX0YocbgJisId4rnrwLDu_tabqZqb-Tnc'}, ...}
+raw = {'soc': timestamp
+2016-01-01 00:00:00    1155.04
+2016-01-01 01:00:00    1165.96
+2016-01-01 02:00:00    1166.75
+2016-01...nding-window CV folds, per horizon; the test period is scored once', 'mape_excludes_actuals_below_kw': 1.0, ...}, ...}}
+
+    def test_peak_analysis_load_duration_and_distribution_match_the_raw_data(env, raw):
+        soc = env["c"].get(f"{API}/societies/{env['sid']}", headers=env["analyst"]).json()
+>       p = get(env, "/peaks", start=soc["start"], end=soc["end"]).json()
+                                     ^^^^^^^^^^^^
+E       KeyError: 'start'
+
+tests/integration/test_api_society.py:500: KeyError
+________ test_error_analysis_is_recomputed_from_the_held_out_forecasts _________
+
+env = {'c': <starlette.testclient.TestClient object at 0x7f73b83c6250>, 'admin': {'Authorization': 'Bearer eyJhbGciOiJIUzI1N...5NDIzNTI1MiwianRpIjoiNDI0OWIzYTAwNDcyNGIwZWJjMDVjZjYwYzdhMzNlMGQifQ.Ya1yGhr93-hX0YocbgJisId4rnrwLDu_tabqZqb-Tnc'}, ...}
+raw = {'soc': timestamp
+2016-01-01 00:00:00    1155.04
+2016-01-01 01:00:00    1165.96
+2016-01-01 02:00:00    1166.75
+2016-01...nding-window CV folds, per horizon; the test period is scored once', 'mape_excludes_actuals_below_kw': 1.0, ...}, ...}}
+
+    def test_error_analysis_is_recomputed_from_the_held_out_forecasts(env, raw):
+        e = get(env, "/error-analysis", horizon=24).json()
+        bt = get(env, "/backtest", horizon=24, limit=6000).json()
+>       pts = pd.DataFrame(bt["points"]).dropna(subset=["actual_kw"])
+                           ^^^^^^^^^^^^
+E       KeyError: 'points'
+
+tests/integration/test_api_society.py:515: KeyError
+___ test_community_comparison_matches_the_raw_data_and_the_saved_evaluation ____
+
+env = {'c': <starlette.testclient.TestClient object at 0x7f73b83c6250>, 'admin': {'Authorization': 'Bearer eyJhbGciOiJIUzI1N...5NDIzNTI1MiwianRpIjoiNDI0OWIzYTAwNDcyNGIwZWJjMDVjZjYwYzdhMzNlMGQifQ.Ya1yGhr93-hX0YocbgJisId4rnrwLDu_tabqZqb-Tnc'}, ...}
+raw = {'soc': timestamp
+2016-01-01 00:00:00    1155.04
+2016-01-01 01:00:00    1165.96
+2016-01-01 02:00:00    1166.75
+2016-01...nding-window CV folds, per horizon; the test period is scored once', 'mape_excludes_actuals_below_kw': 1.0, ...}, ...}}
+
+    def test_community_comparison_matches_the_raw_data_and_the_saved_evaluation(env, raw):
+        r = env["c"].get(f"{API}/societies/compare", headers=env["analyst"])
+>       assert r.status_code == 200
+E       assert 401 == 200
+E        +  where 401 = <Response [401 Unauthorized]>.status_code
+
+tests/integration/test_api_society.py:535: AssertionError
+=============================== warnings summary ===============================
+../../../../tmp/venv311/lib/python3.11/site-packages/fastapi/testclient.py:1
+  /tmp/venv311/lib/python3.11/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+tests/unit/test_explain_optimize.py::test_shap_covers_every_family_and_narrative_is_numeric
+  /tmp/venv311/lib/python3.11/site-packages/shap/plots/colors/_colors.py:47: PendingDeprecationWarning: The set_bad function will be deprecated in a future version. Use cmap.with_extremes(bad=...) or Colormap(bad=...) instead.
+    red_blue.set_bad(gray_rgb.tolist(), 1.0)
+
+tests/unit/test_explain_optimize.py::test_shap_covers_every_family_and_narrative_is_numeric
+  /tmp/venv311/lib/python3.11/site-packages/shap/plots/colors/_colors.py:48: PendingDeprecationWarning: The set_over function will be deprecated in a future version. Use cmap.with_extremes(over=...) or Colormap(over=...) instead.
+    red_blue.set_over(gray_rgb.tolist(), 1.0)
+
+tests/unit/test_explain_optimize.py::test_shap_covers_every_family_and_narrative_is_numeric
+  /tmp/venv311/lib/python3.11/site-packages/shap/plots/colors/_colors.py:49: PendingDeprecationWarning: The set_under function will be deprecated in a future version. Use cmap.with_extremes(under=...) or Colormap(under=...) instead.
+    red_blue.set_under(gray_rgb.tolist(), 1.0)  # "under" is incorrectly used instead of "bad" in the scatter plot
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+SKIPPED [1] tests/unit/test_society_raw_verification.py:416: the full official BDG2 files are not present (about 194 MB; python scripts/verify_society_raw_data.py --download)
+3 failed, 288 passed, 1 skipped, 4 warnings in 241.08s (0:04:01)
+exit=1

@@ -1,0 +1,12 @@
+code,source_id,sub_use,floor_area_sqm,year_built,floors,valid_share
+FOX-B01,Fox_lodging_Alana,Dormitory,6938.2,2006.0,,0.9998
+FOX-B02,Fox_lodging_Angla,Dormitory,20115.9,1967.0,,0.9989
+FOX-B03,Fox_lodging_Frances,Dormitory,10340.5,1964.0,,0.9991
+FOX-B04,Fox_lodging_Helen,Dormitory,51394.9,2009.0,,0.9999
+FOX-B05,Fox_lodging_Isabell,Dormitory,2875.3,1951.0,,0.9998
+FOX-B06,Fox_lodging_Jina,Dormitory,9888.6,1963.0,,0.9996
+FOX-B07,Fox_lodging_Morris,Dormitory,3051.0,1935.0,,0.999
+FOX-B08,Fox_lodging_Stephan,Dormitory,3382.2,1940.0,,0.9989
+FOX-B09,Fox_lodging_Stephen,Dormitory,8019.7,1956.0,,0.9998
+FOX-B10,Fox_lodging_Wallace,Dormitory,5885.2,2007.0,,0.9998
+FOX-B11,Fox_lodging_Winifred,Dormitory,5582.2,2001.0,,0.9998

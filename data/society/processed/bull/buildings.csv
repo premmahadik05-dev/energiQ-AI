@@ -1,0 +1,17 @@
+code,source_id,sub_use,floor_area_sqm,year_built,floors,valid_share
+BUL-B01,Bull_lodging_Abby,Dormitory,1054.4,,,0.9811
+BUL-B02,Bull_lodging_Allen,Dormitory,748.0,,,0.9829
+BUL-B03,Bull_lodging_Caren,Dormitory,16509.6,,,0.9824
+BUL-B04,Bull_lodging_Carie,Dormitory,3683.5,,,0.9812
+BUL-B05,Bull_lodging_Charlotte,Dormitory,750.6,,,0.9828
+BUL-B06,Bull_lodging_Dave,Dormitory,21733.4,,,0.9814
+BUL-B07,Bull_lodging_Elena,Dormitory,1043.0,,,0.981
+BUL-B08,Bull_lodging_Graciela,Dormitory,961.2,,,0.9735
+BUL-B09,Bull_lodging_Hugo,Dormitory,8062.7,,,0.9814
+BUL-B10,Bull_lodging_Jeremiah,Dormitory,5326.5,,,0.9811
+BUL-B11,Bull_lodging_Leonard,Dormitory,3831.4,,,0.9812
+BUL-B12,Bull_lodging_Lettie,Dormitory,3683.4,,,0.9811
+BUL-B13,Bull_lodging_Melissa,Dormitory,27992.3,,,0.9814
+BUL-B14,Bull_lodging_Perry,Dormitory,6480.4,,,0.9829
+BUL-B15,Bull_lodging_Travis,Dormitory,69275.1,,,0.9702
+BUL-B16,Bull_lodging_Xavier,Dormitory,750.6,,,0.9829

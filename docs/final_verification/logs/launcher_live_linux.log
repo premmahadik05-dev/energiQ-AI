@@ -1,0 +1,53 @@
+$ python run_energiq.py --doctor
+================================================================
+  EnergiQ AI - local launcher
+================================================================
+
+[EnergiQ] Checking your computer and the installation ...
+  [OK     ] Python 3.11 - supported
+  [OK     ] Node.js 22.23 - supported
+  [OK     ] npm
+  [OK     ] Project files (requirements.txt, frontend/package-lock.json)
+  [NOTE   ] Python environment (.venv) - not created yet; RUN_PROJECT creates it
+  [NOTE   ] Frontend packages - will be installed on the next start
+  [OK     ] Bundled community data
+  [OK     ] Project folder is writable
+  [NOTE   ] Database - will be created on the first start
+  [OK     ] Free disk space 4.0 GB
+  [NOTE   ] Port 8000 (backend) - free
+  [NOTE   ] Port 5173 (web app) - free
+
+[EnergiQ] Everything needed is present.
+exit=0
+
+$ python run_energiq.py --status
+[EnergiQ] EnergiQ AI is not running.
+exit=1
+
+$ python run_energiq.py --stop
+[EnergiQ] No running instance is recorded. Nothing to stop.
+  (If a server window is still open, close that window or press Ctrl+C in it.)
+exit=0
+
+$ bash check_environment.sh
+================================================================
+  EnergiQ AI - local launcher
+================================================================
+
+[EnergiQ] Checking your computer and the installation ...
+  [OK     ] Python 3.11 - supported
+  [OK     ] Node.js 22.23 - supported
+  [OK     ] npm
+  [OK     ] Project files (requirements.txt, frontend/package-lock.json)
+  [NOTE   ] Python environment (.venv) - not created yet; RUN_PROJECT creates it
+  [NOTE   ] Frontend packages - will be installed on the next start
+  [OK     ] Bundled community data
+  [OK     ] Project folder is writable
+  [NOTE   ] Database - will be created on the first start
+  [OK     ] Free disk space 4.0 GB
+  [NOTE   ] Port 8000 (backend) - free
+  [NOTE   ] Port 5173 (web app) - free
+
+[EnergiQ] Everything needed is present.
+exit=0
+

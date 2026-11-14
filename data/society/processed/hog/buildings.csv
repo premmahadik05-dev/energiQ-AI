@@ -1,0 +1,11 @@
+code,source_id,sub_use,floor_area_sqm,year_built,floors,valid_share
+HOG-B01,Hog_lodging_Brian,Dormitory,12876.5,,,0.9999
+HOG-B02,Hog_lodging_Celeste,Dormitory,10874.7,,,0.9999
+HOG-B03,Hog_lodging_Francisco,Dormitory,14592.3,,,1.0
+HOG-B04,Hog_lodging_Hal,Dormitory,14241.9,,,1.0
+HOG-B05,Hog_lodging_Mauricio,Dormitory,16251.0,,,0.9999
+HOG-B06,Hog_lodging_Nikki,Dormitory,6929.1,,,1.0
+HOG-B07,Hog_lodging_Ora,Dormitory,21678.1,,,1.0
+HOG-B08,Hog_lodging_Retha,Dormitory,17389.0,,,0.9827
+HOG-B09,Hog_lodging_Shanti,Dormitory,24355.1,,,0.9894
+HOG-B10,Hog_lodging_Shonda,Dormitory,21437.1,,,0.9999

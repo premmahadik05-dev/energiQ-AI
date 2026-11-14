@@ -1,0 +1,98 @@
+[
+ [
+  "F01",
+  "society selector changes the society everywhere and persists across pages",
+  "PASS",
+  "header='BDG2 site Eagle residential community\\nHistorical data 2016 t' page='BDG2 site Eagle residential community' after reload='BDG2 site Eagle residential community'"
+ ],
+ [
+  "F02",
+  "overview tariff selector re-prices the cost card",
+  "PASS",
+  "tariff options=['DEMO tariff (not a real utility price)']; card=Estimated cost, last 30 days  \u20ac160,361  Demo tariff: an estimate with "
+ ],
+ [
+  "F03",
+  "overview chart/table toggle and zoom buttons",
+  "PASS",
+  "table rows view tables=1, zoom-out enabled after zoom-in=True"
+ ],
+ [
+  "F04",
+  "consumption: resolution/metric/range controls drive different API calls",
+  "FAIL",
+  "TimeoutError: Locator.click: Timeout 30000ms exceeded."
+ ],
+ [
+  "F05a",
+  "forecasting: horizon switch to 6h / 7 days changes evaluation card",
+  "PASS",
+  "24h: MAE  38.5 kW  Whole test period, Random  | 7d: MAE  85.3 kW  Whole test period, Seasona"
+ ],
+ [
+  "F05b",
+  "forecasting: 'Run forecast' with default origin returns a forecast",
+  "FAIL",
+  "None"
+ ],
+ [
+  "F05c",
+  "forecasting: retrospective origin (2017-12-01 12:00) is sent and accepted",
+  "PASS",
+  "Origin  2017-12-01 12:00  Data up to this hour were used | /api/v1/societies/3/forecast?origin=2017-12-01T12%3A00%3A00&horizons=1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C"
+ ],
+ [
+  "F05d",
+  "forecasting: origin outside the data range is rejected with a readable message",
+  "FAIL",
+  "alerts=[]"
+ ],
+ [
+  "F05e",
+  "forecasting: 'Explain the latest forecast' shows SHAP local explanation",
+  "PASS",
+  "('POST', '/api/v1/societies/3/explain/local')"
+ ],
+ [
+  "F06",
+  "buildings: metric radios, building select, per-building chart buttons",
+  "PASS",
+  "headings=['Building comparison', 'All buildings', 'FOX-B03: daily energy']; calls=1"
+ ],
+ [
+  "F08a",
+  "alerts: severity/scope/status filters change the match count",
+  "FAIL",
+  "Error: Locator.click: Error: strict mode violation: get_by_text(\"Buildings\", exact=True) resolved to 2 elements:"
+ ],
+ [
+  "F08b",
+  "alerts: acknowledging persists after reload (and updates the open count)",
+  "PASS",
+  ")  2,369 -> )  2,368"
+ ],
+ [
+  "F08c",
+  "alerts: pagination Next/Previous",
+  "PASS",
+  "1 to 15 of 42 -> 16 to 30 of 42"
+ ],
+ [
+  "F08d",
+  "alerts: clicking a row time opens the explanation",
+  "FAIL",
+  "dialogs=0; text=''"
+ ],
+ [
+  "F10",
+  "notifications: list loads; unread filter; mark all read",
+  "PASS",
+  "Notifications  Messages about finished background jobs.  Mark all as read Show All Unread  No notifications yet  Notifications appear when a background job fini"
+ ],
+ [
+  "F14",
+  "top bar: bell, clock and user menu are functional",
+  "PASS",
+  "header controls=['Open navigation', 'Background jobs', 'Notifications', 'Account menu for admin@example.com']"
+ ]
+]

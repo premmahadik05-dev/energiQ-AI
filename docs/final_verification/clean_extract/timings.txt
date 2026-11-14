@@ -1,0 +1,1 @@
+first start to 'running', wall clock, including creating .venv and installing all Python and web packages from the package caches of this machine (cold, uncached installs took 121 to 163 s in earlier runs): 51 s; warm start (second start after a stop): 4 s

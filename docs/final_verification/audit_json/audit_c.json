@@ -1,0 +1,68 @@
+[
+ [
+  "C1",
+  "a malformed file is refused with a readable reason",
+  "PASS",
+  "['Need a timestamp column, at least one meter column and at least 24 rows']"
+ ],
+ [
+  "C2",
+  "upload + processing job completes and the society is listed",
+  "PASS",
+  "ready after 3s; hours=11664 valid=11584 buildings=4"
+ ],
+ [
+  "C3",
+  "training job runs to completion",
+  "PASS",
+  "succeeded in 60s; msg=done; err=None"
+ ],
+ [
+  "C4",
+  "after training the society is forecast-ready with evaluation",
+  "PASS",
+  "has_model=True forecast_ready=True"
+ ],
+ [
+  "C5",
+  "forecasting page shows evaluation and a live forecast for the uploaded society",
+  "PASS",
+  "Forecasting |  | Total society demand 1, 6, 12 and 24 hours and 7 days ahead, with honest out-of-sample accuracy and a model comparison. |  | Societ"
+ ],
+ [
+  "C6",
+  "facilities page charts the mapped lift/pump/street-light meters",
+  "PASS",
+  "charts=3 text='Facilities\\n\\nLifts, water pumps, street lighting and the clubhouse: shown only where the data contain a separate meter.\\n\\n'"
+ ],
+ [
+  "C7",
+  "buildings page lists Block A-D with area",
+  "FAIL",
+  "Buildings |  | Compare the buildings of the society: energy, share of the total, intensity per floor are"
+ ],
+ [
+  "C8",
+  "alerts computed for the uploaded society (stuck 60 h stretch is a candidate)",
+  "PASS",
+  " site Eagle residential community | BDG2 site Fox residential community | BDG2 site Hog residential community | BDG2 site Peacock reside"
+ ],
+ [
+  "C9a",
+  "delete asks for confirmation",
+  "PASS",
+  "Delete this society? | QA Test Society (synthetic) and all of its readings, forecasts, alerts and reports are removed from"
+ ],
+ [
+  "C9b",
+  "cancel keeps the society",
+  "PASS",
+  ""
+ ],
+ [
+  "C9c",
+  "confirmed delete removes the society and its data",
+  "PASS",
+  ""
+ ]
+]

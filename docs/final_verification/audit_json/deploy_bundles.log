@@ -1,0 +1,27 @@
+[bull] fitting the deployment models on 16,862 valid hours ...
+[bull]   deployed h=1: xgboost (xgboost_h1_20261109T122626679896)
+[bull]   deployed h=24: random_forest (random_forest_h24_20261109T122721327407)
+[bull]   deployed h=168: baseline seasonal_naive_168
+[bull] done in 56 s; evaluation files unchanged
+[eagle] fitting the deployment models on 16,704 valid hours ...
+[eagle]   deployed h=1: xgboost_weather (xgboost_h1_20261109T122721679138)
+[eagle]   deployed h=24: baseline naive
+[eagle]   deployed h=168: baseline seasonal_naive_168
+[eagle] done in 37 s; evaluation files unchanged
+[fox] bundle already installed - skipped (use --force to rebuild)
+[hog] fitting the deployment models on 17,051 valid hours ...
+[hog]   deployed h=1: xgboost (xgboost_h1_20261109T122759158083)
+[hog]   deployed h=24: random_forest (random_forest_h24_20261109T122912059759)
+[hog]   deployed h=168: baseline seasonal_naive_168
+[hog] done in 74 s; evaluation files unchanged
+[peacock] fitting the deployment models on 17,393 valid hours ...
+[peacock]   deployed h=1: xgboost (xgboost_h1_20261109T122913167946)
+[peacock]   deployed h=24: random_forest (random_forest_h24_20261109T123001031762)
+[peacock]   deployed h=168: baseline seasonal_naive_168
+[peacock] done in 49 s; evaluation files unchanged
+[rat] bundle already installed - skipped (use --force to rebuild)
+[robin] fitting the deployment models on 17,334 valid hours ...
+[robin]   deployed h=1: xgboost (xgboost_h1_20261109T123002118078)
+[robin]   deployed h=24: xgboost (xgboost_h24_20261109T123022209950)
+[robin]   deployed h=168: random_forest (random_forest_h168_20261109T123025358960)
+[robin] done in 24 s; evaluation files unchanged

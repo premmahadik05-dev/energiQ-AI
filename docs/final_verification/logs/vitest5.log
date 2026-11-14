@@ -1,0 +1,55 @@
+
+ RUN  v5.1.0 /home/claude/pro/EnergiQ-AI/frontend
+
+Error: Uncaught [Error: chart data was malformed]
+    at reportException (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
+    at innerInvokeEventListeners (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:353:9)
+    at invokeEventListeners (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
+    at HTMLUnknownElementImpl._dispatch (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
+    at HTMLUnknownElementImpl.dispatchEvent (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:104:17)
+    at HTMLUnknownElement.dispatchEvent (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev (/home/claude/pro/EnergiQ-AI/frontend/node_modules/react-dom/cjs/react-dom.development.js:4213:16)
+    at invokeGuardedCallback (/home/claude/pro/EnergiQ-AI/frontend/node_modules/react-dom/cjs/react-dom.development.js:4277:31)
+    at beginWork$1 (/home/claude/pro/EnergiQ-AI/frontend/node_modules/react-dom/cjs/react-dom.development.js:27490:7)
+    at performUnitOfWork (/home/claude/pro/EnergiQ-AI/frontend/node_modules/react-dom/cjs/react-dom.development.js:26599:12) Error: chart data was malformed
+    at Boom (/home/claude/pro/EnergiQ-AI/frontend/src/components/components.test.tsx:64:13)
+    at renderWithHooks (/home/claude/pro/EnergiQ-AI/frontend/node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+    at mountIndeterminateComponent (/home/claude/pro/EnergiQ-AI/frontend/node_modules/react-dom/cjs/react-dom.development.js:20103:13)
+    at beginWork (/home/claude/pro/EnergiQ-AI/frontend/node_modules/react-dom/cjs/react-dom.development.js:21626:16)
+    at HTMLUnknownElement.callCallback (/home/claude/pro/EnergiQ-AI/frontend/node_modules/react-dom/cjs/react-dom.development.js:4164:14)
+    at HTMLUnknownElement.callTheUserObjectsOperation (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+    at innerInvokeEventListeners (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:350:25)
+    at invokeEventListeners (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
+    at HTMLUnknownElementImpl._dispatch (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
+    at HTMLUnknownElementImpl.dispatchEvent (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:104:17)
+Error: Uncaught [Error: chart data was malformed]
+    at reportException (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/helpers/runtime-script-errors.js:66:24)
+    at innerInvokeEventListeners (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:353:9)
+    at invokeEventListeners (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
+    at HTMLUnknownElementImpl._dispatch (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
+    at HTMLUnknownElementImpl.dispatchEvent (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:104:17)
+    at HTMLUnknownElement.dispatchEvent (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js:241:34)
+    at Object.invokeGuardedCallbackDev (/home/claude/pro/EnergiQ-AI/frontend/node_modules/react-dom/cjs/react-dom.development.js:4213:16)
+    at invokeGuardedCallback (/home/claude/pro/EnergiQ-AI/frontend/node_modules/react-dom/cjs/react-dom.development.js:4277:31)
+    at beginWork$1 (/home/claude/pro/EnergiQ-AI/frontend/node_modules/react-dom/cjs/react-dom.development.js:27490:7)
+    at performUnitOfWork (/home/claude/pro/EnergiQ-AI/frontend/node_modules/react-dom/cjs/react-dom.development.js:26599:12) Error: chart data was malformed
+    at Boom (/home/claude/pro/EnergiQ-AI/frontend/src/components/components.test.tsx:64:13)
+    at renderWithHooks (/home/claude/pro/EnergiQ-AI/frontend/node_modules/react-dom/cjs/react-dom.development.js:15486:18)
+    at mountIndeterminateComponent (/home/claude/pro/EnergiQ-AI/frontend/node_modules/react-dom/cjs/react-dom.development.js:20103:13)
+    at beginWork (/home/claude/pro/EnergiQ-AI/frontend/node_modules/react-dom/cjs/react-dom.development.js:21626:16)
+    at HTMLUnknownElement.callCallback (/home/claude/pro/EnergiQ-AI/frontend/node_modules/react-dom/cjs/react-dom.development.js:4164:14)
+    at HTMLUnknownElement.callTheUserObjectsOperation (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/generated/EventListener.js:26:30)
+    at innerInvokeEventListeners (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:350:25)
+    at invokeEventListeners (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:286:3)
+    at HTMLUnknownElementImpl._dispatch (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:233:9)
+    at HTMLUnknownElementImpl.dispatchEvent (/home/claude/pro/EnergiQ-AI/frontend/node_modules/jsdom/lib/jsdom/living/events/EventTarget-impl.js:104:17)
+
+ Test Files  12 passed (12)
+      Tests  151 passed (151)
+   Start at  19:04:43
+   Duration  15.48s (tests 62%, environment 22%, setup 7%, import 4%, transform 4%)
+
+    Isolate  12 workers spawned · ~351ms startup each (spawn + environment, per file)
+             at least ~3.86s faster with isolate: false — reuses workers across files instead of one per file
+
+exit=0

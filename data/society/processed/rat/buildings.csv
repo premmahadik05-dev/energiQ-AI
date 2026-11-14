@@ -1,0 +1,10 @@
+code,source_id,sub_use,floor_area_sqm,year_built,floors,valid_share
+RAT-B01,Rat_lodging_Ardell,Other - Lodging/Residential,1446.9,,,0.9957
+RAT-B02,Rat_lodging_Ben,Other - Lodging/Residential,32516.0,1949.0,,0.9885
+RAT-B03,Rat_lodging_Christine,Other - Lodging/Residential,2906.3,1935.0,,0.997
+RAT-B04,Rat_lodging_Dwight,Other - Lodging/Residential,1432.6,,,0.9981
+RAT-B05,Rat_lodging_Jeannette,Other - Lodging/Residential,464.5,2010.0,,0.9983
+RAT-B06,Rat_lodging_Lorenzo,Other - Lodging/Residential,239.9,,,0.99
+RAT-B07,Rat_lodging_Marguerite,Other - Lodging/Residential,1703.8,1900.0,,0.991
+RAT-B08,Rat_lodging_Marion,Other - Lodging/Residential,1105.5,,,0.9938
+RAT-B09,Rat_lodging_Ted,Other - Lodging/Residential,185.8,,,0.9763

@@ -1,0 +1,9 @@
+code,source_id,sub_use,floor_area_sqm,year_built,floors,valid_share
+ROB-B01,Robin_lodging_Celia,Dormitory,7721.0,1995.0,8.0,0.9932
+ROB-B02,Robin_lodging_Dorthy,Dormitory,5842.9,1960.0,16.0,0.9932
+ROB-B03,Robin_lodging_Elmer,Dormitory,9565.0,1968.0,7.0,0.9932
+ROB-B04,Robin_lodging_Janie,Dormitory,6193.0,1930.0,7.0,1.0
+ROB-B05,Robin_lodging_Oliva,Dormitory,6013.0,1960.0,8.0,0.9932
+ROB-B06,Robin_lodging_Phillip,Dormitory,6181.0,1967.0,10.0,0.9881
+ROB-B07,Robin_lodging_Pricilla,Dormitory,4607.0,1998.0,8.0,0.993
+ROB-B08,Robin_lodging_Renea,Dormitory,9548.0,1956.0,7.0,0.9932

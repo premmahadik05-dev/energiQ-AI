@@ -1,0 +1,13 @@
+flowchart LR
+  raw[1-minute CSV] --> val[Validate<br/>header, timestamps, numbers]
+  val --> hr[Hourly mean<br/>valid if at least 45 minutes]
+  hr --> q[Quality score<br/>gaps, flat runs, span]
+  hr --> feat[Features at origin t<br/>lags, same time yesterday/last week,<br/>rolling stats, calendar of target]
+  feat --> split[Chronological split<br/>expanding-window CV, final hold-out]
+  split --> fit[Fit per horizon<br/>XGBoost, RF; LSTM in benchmark]
+  fit --> ev[Evaluate on common rows<br/>MAE, RMSE, bootstrap CI]
+  fit --> reg[Model registry<br/>files and database rows]
+  reg --> fc[Forecast with 80 percent range]
+  reg --> sh[Exact TreeSHAP]
+  hr --> an[Anomaly detector<br/>causal baseline and band]
+  fc --> mon[Monitor<br/>PSI, KS, realised error]

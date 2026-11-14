@@ -1,0 +1,29 @@
+sequenceDiagram
+  actor U as Analyst
+  participant S as Web UI
+  participant A as FastAPI
+  participant J as Job runner
+  participant M as ml_engine
+  participant D as Database
+  U->>S: Upload CSV
+  S->>A: POST /datasets (multipart, JWT)
+  A->>A: validate type, size, content
+  A->>D: create dataset (status processing) and job
+  A-->>S: 202 dataset, job
+  A->>J: submit ingest job
+  J->>M: parse, aggregate hourly, quality score
+  J->>D: store readings, mark dataset ready
+  loop until terminal
+    S->>A: GET /jobs/id
+    A-->>S: status, progress
+  end
+  U->>S: Train
+  S->>A: POST /datasets/id/train
+  A->>J: submit train job
+  J->>M: fit 24 horizon models on past data, evaluate on hold-out
+  J->>D: save model version and metrics, activate
+  U->>S: Forecast
+  S->>A: POST /forecasts
+  A->>M: features at origin, predict 24 h, add residual band
+  A->>D: store forecast
+  A-->>S: points with range

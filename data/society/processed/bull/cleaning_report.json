@@ -1,0 +1,228 @@
+{
+  "society": "bull",
+  "bdg2_site": "Bull",
+  "timezone": "US/Central",
+  "lat": 30.26719999999989,
+  "lng": -97.74309999999979,
+  "candidate_residential_buildings": 19,
+  "buildings_kept": 16,
+  "buildings_excluded": 3,
+  "timestamps": {
+    "rows_in": 17544,
+    "duplicate_timestamps": 0,
+    "missing_timestamps": 0,
+    "rows_out": 17544,
+    "first": "2016-01-01 00:00:00",
+    "last": "2017-12-31 23:00:00"
+  },
+  "society_valid_hours": 16862,
+  "hours": 17544,
+  "society_valid_share": 0.9611,
+  "society_kwh": {
+    "mean": 1930.36,
+    "max": 4841.96,
+    "min": 414.38
+  },
+  "rule": {
+    "primary_use": "Lodging/residential",
+    "exclude_sub_uses": [
+      "Hotel"
+    ],
+    "min_meter_valid_share": 0.95,
+    "min_buildings": 8,
+    "min_society_valid_share": 0.94
+  },
+  "cleaning": {
+    "zero_is_invalid": true,
+    "long_zero_hours": 24,
+    "stuck_min_hours": 48,
+    "spike_factor": 4.0,
+    "spike_quantile": 0.995
+  },
+  "cleaning_counts_per_building": {
+    "BUL-B03": {
+      "readings": 17544,
+      "missing_in_source": 26,
+      "negative": 0,
+      "zero_long_runs": 0,
+      "zero_short": 282,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17236,
+      "valid_share": 0.9824441404468764
+    },
+    "BUL-B11": {
+      "readings": 17544,
+      "missing_in_source": 29,
+      "negative": 0,
+      "zero_long_runs": 25,
+      "zero_short": 275,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17215,
+      "valid_share": 0.9812471500227998
+    },
+    "BUL-B14": {
+      "readings": 17544,
+      "missing_in_source": 27,
+      "negative": 0,
+      "zero_long_runs": 0,
+      "zero_short": 273,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17244,
+      "valid_share": 0.9829001367989056
+    },
+    "BUL-B12": {
+      "readings": 17544,
+      "missing_in_source": 32,
+      "negative": 0,
+      "zero_long_runs": 25,
+      "zero_short": 274,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17213,
+      "valid_share": 0.9811331509347925
+    },
+    "BUL-B04": {
+      "readings": 17544,
+      "missing_in_source": 28,
+      "negative": 0,
+      "zero_long_runs": 25,
+      "zero_short": 276,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17215,
+      "valid_share": 0.9812471500227998
+    },
+    "BUL-B15": {
+      "readings": 17544,
+      "missing_in_source": 24,
+      "negative": 0,
+      "zero_long_runs": 25,
+      "zero_short": 457,
+      "stuck_sensor": 0,
+      "spike": 17,
+      "valid_out": 17021,
+      "valid_share": 0.9701892384860921
+    },
+    "BUL-B06": {
+      "readings": 17544,
+      "missing_in_source": 27,
+      "negative": 0,
+      "zero_long_runs": 25,
+      "zero_short": 274,
+      "stuck_sensor": 0,
+      "spike": 1,
+      "valid_out": 17217,
+      "valid_share": 0.9813611491108071
+    },
+    "BUL-B01": {
+      "readings": 17544,
+      "missing_in_source": 31,
+      "negative": 0,
+      "zero_long_runs": 25,
+      "zero_short": 275,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17213,
+      "valid_share": 0.9811331509347925
+    },
+    "BUL-B08": {
+      "readings": 17544,
+      "missing_in_source": 35,
+      "negative": 0,
+      "zero_long_runs": 121,
+      "zero_short": 309,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17079,
+      "valid_share": 0.9734952120383037
+    },
+    "BUL-B07": {
+      "readings": 17544,
+      "missing_in_source": 31,
+      "negative": 0,
+      "zero_long_runs": 25,
+      "zero_short": 277,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17211,
+      "valid_share": 0.9810191518467852
+    },
+    "BUL-B02": {
+      "readings": 17544,
+      "missing_in_source": 24,
+      "negative": 0,
+      "zero_long_runs": 0,
+      "zero_short": 276,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17244,
+      "valid_share": 0.9829001367989056
+    },
+    "BUL-B05": {
+      "readings": 17544,
+      "missing_in_source": 25,
+      "negative": 0,
+      "zero_long_runs": 0,
+      "zero_short": 277,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17242,
+      "valid_share": 0.9827861377108983
+    },
+    "BUL-B16": {
+      "readings": 17544,
+      "missing_in_source": 22,
+      "negative": 0,
+      "zero_long_runs": 0,
+      "zero_short": 278,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17244,
+      "valid_share": 0.9829001367989056
+    },
+    "BUL-B10": {
+      "readings": 17544,
+      "missing_in_source": 29,
+      "negative": 0,
+      "zero_long_runs": 25,
+      "zero_short": 277,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17213,
+      "valid_share": 0.9811331509347925
+    },
+    "BUL-B09": {
+      "readings": 17544,
+      "missing_in_source": 15,
+      "negative": 0,
+      "zero_long_runs": 25,
+      "zero_short": 275,
+      "stuck_sensor": 0,
+      "spike": 11,
+      "valid_out": 17218,
+      "valid_share": 0.9814181486548108
+    },
+    "BUL-B13": {
+      "readings": 17544,
+      "missing_in_source": 28,
+      "negative": 0,
+      "zero_long_runs": 25,
+      "zero_short": 273,
+      "stuck_sensor": 0,
+      "spike": 0,
+      "valid_out": 17218,
+      "valid_share": 0.9814181486548108
+    }
+  },
+  "weather_missing_hours": {
+    "airTemperature": 48,
+    "dewTemperature": 143,
+    "windSpeed": 248,
+    "cloudCoverage": 6940,
+    "precipDepth1HR": 35,
+    "seaLvlPressure": 523
+  }
+}

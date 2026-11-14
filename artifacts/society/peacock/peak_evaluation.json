@@ -1,0 +1,23 @@
+{
+  "days": 184,
+  "model": {
+    "peak_mae_kw": 34.51544565217391,
+    "peak_mape_pct": 3.953906315300363,
+    "peak_bias_kw": 7.356521739130436,
+    "peak_hour_exact_pct": 23.91304347826087,
+    "peak_hour_within_1h_pct": 56.52173913043478,
+    "peak_hour_within_2h_pct": 65.21739130434783
+  },
+  "baseline": {
+    "peak_mae_kw": 35.62147826086956,
+    "peak_mape_pct": 4.027281710183468,
+    "peak_bias_kw": 0.6557391304347824,
+    "peak_hour_exact_pct": 23.369565217391305,
+    "peak_hour_within_1h_pct": 51.08695652173913,
+    "peak_hour_within_2h_pct": 61.41304347826087
+  },
+  "horizon_h": 24,
+  "basis": "daily peak = highest hourly demand (kW) of the day; forecasts issued 24 h ahead; held-out test days only",
+  "mean_actual_peak_kw": 894.6714673913043,
+  "mae_improvement_vs_baseline_pct": 3.1049598800918767
+}

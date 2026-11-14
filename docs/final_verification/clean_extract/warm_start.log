@@ -1,0 +1,33 @@
+$ bash run_project.sh --no-browser      (warm start: packages installed, database exists)
+warm start to 'running': 4 s
+================================================================
+  EnergiQ AI - local launcher
+================================================================
+
+[EnergiQ] Checking your computer ...
+  Python 3.11: OK
+  Node.js 22.23: OK
+  Python packages: already installed.
+  Frontend packages: already installed.
+
+[EnergiQ] Preparing the database ...
+  Database: ready (data/energiq.db, 21 tables, 1 user account(s))
+
+[EnergiQ] Starting the backend ...
+  Backend: ready (answers, database up)
+
+[EnergiQ] Starting the web app ...
+  Web app: ready (serves the EnergiQ page and reaches the backend)
+
+[EnergiQ] Loading the bundled societies (first run only) ...
+  Import: nothing to do - 7 societies are already loaded
+
+================================================================
+  EnergiQ AI is running:  http://127.0.0.1:5173
+  Sign in with:           admin@example.com   /   <redacted>
+  (This password is unique to this installation and is saved in .energiq-run/admin_login.txt.)
+  API documentation:      http://127.0.0.1:8000/docs
+  Keep this window open while you use the app. To stop: press Ctrl+C here, or run STOP_PROJECT.bat.
+  Logs for troubleshooting: .energiq-run/launcher.log, backend.log, frontend.log
+================================================================
+same password as before: yes

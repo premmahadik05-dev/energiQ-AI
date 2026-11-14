@@ -1,0 +1,385 @@
+{
+ "/": {
+  "headings": [
+   "Society overview",
+   "Last 7 days and the next 24 hours",
+   "Measured demand and energy",
+   "Forecast, cost and alerts",
+   "Whole data period",
+   "Buildings and data",
+   "Forecast model"
+  ],
+  "buttons": [
+   "Zoom in",
+   "Zoom out [disabled]",
+   "Earlier [disabled]",
+   "Later [disabled]",
+   "Reset zoom [disabled]"
+  ],
+  "links": [
+   "Review alerts -> /alerts",
+   "Compare buildings -> /buildings",
+   "Facility meters -> /facilities",
+   "Accuracy and model comparison -> /forecasting"
+  ],
+  "fields": [
+   "select:select-one:Society",
+   "input:radio:Chart",
+   "input:radio:Table",
+   "select:select-one:Tariff"
+  ]
+ },
+ "/consumption": {
+  "headings": [
+   "Consumption",
+   "Total society consumption"
+  ],
+  "buttons": [
+   "Last 30 days",
+   "Last 90 days",
+   "Last year",
+   "All data",
+   "Zoom in",
+   "Zoom out [disabled]",
+   "Earlier [disabled]",
+   "Later [disabled]",
+   "Reset zoom [disabled]"
+  ],
+  "links": [],
+  "fields": [
+   "select:select-one:Society",
+   "input:radio:Hourly",
+   "input:radio:Daily",
+   "input:radio:Weekly",
+   "input:radio:Monthly",
+   "input:radio:Energy",
+   "input:radio:Average demand",
+   "input:radio:Peak hourly demand",
+   "input:radio:Chart",
+   "input:radio:Table"
+  ]
+ },
+ "/forecasting": {
+  "headings": [
+   "Forecasting",
+   "Forecast horizon",
+   "Actual and predicted, 24 hours ahead",
+   "Model comparison, 24 hours ahead",
+   "Forecast from a chosen hour",
+   "What drives the 24 hours-ahead forecast"
+  ],
+  "buttons": [
+   "Zoom in",
+   "Zoom out [disabled]",
+   "Earlier [disabled]",
+   "Later [disabled]",
+   "Reset zoom [disabled]",
+   "Run forecast",
+   "Zoom in",
+   "Zoom out [disabled]",
+   "Earlier [disabled]",
+   "Later [disabled]",
+   "Reset zoom [disabled]",
+   "Explain the latest forecast"
+  ],
+  "links": [],
+  "fields": [
+   "select:select-one:Society",
+   "input:radio:1 hour",
+   "input:radio:6 hours",
+   "input:radio:12 hours",
+   "input:radio:24 hours",
+   "input:radio:7 days",
+   "input:radio:Last 7 days",
+   "input:radio:Last 14 days",
+   "input:radio:Last 30 days",
+   "input:radio:Chart",
+   "input:radio:Table",
+   "input:datetime-local:Forecast origin",
+   "input:radio:Chart",
+   "input:radio:Table"
+  ]
+ },
+ "/buildings": {
+  "headings": [
+   "Buildings",
+   "Building comparison",
+   "All buildings",
+   "FOX-B01: daily energy"
+  ],
+  "buttons": [
+   "Last 90 days",
+   "Last year",
+   "All data",
+   "Show FOX-B01 daily demand",
+   "Show FOX-B02 daily demand",
+   "Show FOX-B03 daily demand",
+   "Show FOX-B04 daily demand",
+   "Show FOX-B05 daily demand",
+   "Show FOX-B06 daily demand",
+   "Show FOX-B07 daily demand",
+   "Show FOX-B08 daily demand",
+   "Show FOX-B09 daily demand",
+   "Show FOX-B10 daily demand",
+   "Show FOX-B11 daily demand",
+   "Zoom in",
+   "Zoom out [disabled]",
+   "Earlier [disabled]",
+   "Later [disabled]",
+   "Reset zoom [disabled]"
+  ],
+  "links": [],
+  "fields": [
+   "select:select-one:Society",
+   "input:radio:Energy",
+   "input:radio:Energy per m\u00b2",
+   "input:radio:Average demand",
+   "input:radio:Peak demand",
+   "select:select-one:Building",
+   "input:radio:Chart",
+   "input:radio:Table"
+  ]
+ },
+ "/facilities": {
+  "headings": [
+   "Facilities",
+   "Lifts",
+   "Water pumps",
+   "Street / compound lighting",
+   "Clubhouse and amenities"
+  ],
+  "buttons": [],
+  "links": [
+   "society admin page -> /society-admin"
+  ],
+  "fields": [
+   "select:select-one:Society"
+  ]
+ },
+ "/cost": {
+  "headings": [
+   "Cost and peak demand",
+   "Cost estimate"
+  ],
+  "buttons": [
+   "Cost",
+   "Peak demand",
+   "Last 30 days",
+   "Last 90 days",
+   "Last year",
+   "All data",
+   "Zoom in",
+   "Zoom out [disabled]",
+   "Earlier [disabled]",
+   "Later [disabled]",
+   "Reset zoom [disabled]"
+  ],
+  "links": [],
+  "fields": [
+   "select:select-one:Society",
+   "select:select-one:Tariff",
+   "input:radio:Chart",
+   "input:radio:Table"
+  ]
+ },
+ "/alerts": {
+  "headings": [
+   "Alerts",
+   "Alert timeline",
+   "Alerts"
+  ],
+  "buttons": [
+   "Zoom in",
+   "Zoom out [disabled]",
+   "Earlier [disabled]",
+   "Later [disabled]",
+   "Reset zoom [disabled]",
+   "2017-12-22 20:00",
+   "Acknowledge alert at 2017-12-22 20:00",
+   "2017-12-17 04:00",
+   "Acknowledge alert at 2017-12-17 04:00",
+   "2017-12-16 07:00",
+   "Acknowledge alert at 2017-12-16 07:00",
+   "2017-11-24 11:00",
+   "Acknowledge alert at 2017-11-24 11:00",
+   "2017-11-23 15:00",
+   "Acknowledge alert at 2017-11-23 15:00",
+   "2017-11-23 00:00",
+   "Acknowledge alert at 2017-11-23 00:00",
+   "2017-11-16 10:00",
+   "Acknowledge alert at 2017-11-16 10:00",
+   "2017-11-04 08:00",
+   "Acknowledge alert at 2017-11-04 08:00",
+   "2017-10-08 20:00",
+   "Acknowledge alert at 2017-10-08 20:00",
+   "2017-09-07 07:00",
+   "Acknowledge alert at 2017-09-07 07:00",
+   "2017-08-21 07:00",
+   "Acknowledge alert at 2017-08-21 07:00",
+   "2017-08-15 01:00",
+   "Acknowledge alert at 2017-08-15 01:00",
+   "2017-08-13 23:00",
+   "Acknowledge alert at 2017-08-13 23:00",
+   "2017-08-12 13:00",
+   "Acknowledge alert at 2017-08-12 13:00",
+   "2017-08-04 08:00",
+   "Acknowledge alert at 2017-08-04 08:00",
+   "Previous [disabled]",
+   "Next"
+  ],
+  "links": [],
+  "fields": [
+   "select:select-one:Society",
+   "input:radio:Chart",
+   "input:radio:Table",
+   "input:radio:Medium and high",
+   "input:radio:All severities",
+   "input:radio:Whole society",
+   "input:radio:Buildings",
+   "input:radio:Both",
+   "input:radio:Any",
+   "input:radio:Open",
+   "input:radio:Acknowledged",
+   "select:select-one:Building",
+   "select:select-one:Sort"
+  ]
+ },
+ "/recommendations": {
+  "headings": [
+   "Recommendations",
+   "Recommendations",
+   "Review recent high-severity anomalies",
+   "Review what keeps the minimum demand high",
+   "FOX-B10 uses 6.2x the median energy per square metre",
+   "FOX-B01 uses 3.0x the median energy per square metre",
+   "FOX-B11 uses 1.4x the median energy per square metre",
+   "Daily demand peaks most often around 18:00"
+  ],
+  "buttons": [],
+  "links": [],
+  "fields": [
+   "select:select-one:Society",
+   "select:select-one:Tariff"
+  ]
+ },
+ "/reports": {
+  "headings": [
+   "Reports",
+   "Create a report",
+   "Reports"
+  ],
+  "buttons": [
+   "Create report"
+  ],
+  "links": [],
+  "fields": [
+   "select:select-one:Society",
+   "select:select-one:Tariff",
+   "select:select-one:Report",
+   "input:date:From (optional)",
+   "input:date:To (optional)"
+  ]
+ },
+ "/data-sources": {
+  "headings": [
+   "Data sources",
+   "Data card",
+   "Preprocessing applied to every meter",
+   "What the rules removed (retained meters, all hours)"
+  ],
+  "buttons": [],
+  "links": [
+   "https://github.com/buds-lab/building-data-genome-p -> https://github.com/buds-lab/building-data-genome-project-2"
+  ],
+  "fields": [
+   "select:select-one:Society"
+  ]
+ },
+ "/notifications": {
+  "headings": [
+   "Notifications"
+  ],
+  "buttons": [
+   "Mark all as read [disabled]"
+  ],
+  "links": [],
+  "fields": [
+   "input:radio:All",
+   "input:radio:Unread"
+  ]
+ },
+ "/jobs": {
+  "headings": [
+   "Jobs"
+  ],
+  "buttons": [],
+  "links": [],
+  "fields": []
+ },
+ "/society-admin": {
+  "headings": [
+   "Society administration",
+   "Societies",
+   "Upload a society",
+   "Buildings and meters"
+  ],
+  "buttons": [
+   "Import bundled communities",
+   "Train models for BDG2 site Bull residential commun",
+   "Delete BDG2 site Bull residential community",
+   "Train models for BDG2 site Eagle residential commu",
+   "Delete BDG2 site Eagle residential community",
+   "Train models for BDG2 site Fox residential communi",
+   "Delete BDG2 site Fox residential community",
+   "Train models for BDG2 site Hog residential communi",
+   "Delete BDG2 site Hog residential community",
+   "Train models for BDG2 site Peacock residential com",
+   "Delete BDG2 site Peacock residential community",
+   "Train models for BDG2 site Rat residential communi",
+   "Delete BDG2 site Rat residential community",
+   "Train models for BDG2 site Robin residential commu",
+   "Delete BDG2 site Robin residential community",
+   "Upload and process",
+   "Hide BUL-B01",
+   "Hide BUL-B02",
+   "Hide BUL-B03",
+   "Hide BUL-B04",
+   "Hide BUL-B05",
+   "Hide BUL-B06",
+   "Hide BUL-B07",
+   "Hide BUL-B08",
+   "Hide BUL-B09",
+   "Hide BUL-B10",
+   "Hide BUL-B11",
+   "Hide BUL-B12",
+   "Hide BUL-B13",
+   "Hide BUL-B14",
+   "Hide BUL-B15",
+   "Hide BUL-B16"
+  ],
+  "links": [],
+  "fields": [
+   "select:select-one:Society",
+   "input:text:Society name",
+   "select:select-one:Values in the file are",
+   "input:file:Meter readings CSV",
+   "input:file:Meter mapping CSV (optional)",
+   "input:text:Description (optional)",
+   "select:select-one:Society"
+  ]
+ },
+ "/admin": {
+  "headings": [
+   "Administration"
+  ],
+  "buttons": [
+   "Users",
+   "Audit log",
+   "System"
+  ],
+  "links": [],
+  "fields": [
+   "select:select-one:Role for admin@example.com"
+  ]
+ }
+}

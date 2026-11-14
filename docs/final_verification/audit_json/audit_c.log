@@ -1,0 +1,15 @@
+PASS C1 a malformed file is refused with a readable reason | ['Need a timestamp column, at least one meter column and at least 24 rows']
+PASS C2 upload + processing job completes and the society is listed | ready after 3s; hours=11664 valid=11584 buildings=4
+   data_card keys: ['source', 'uploaded_by', 'upload', 'mapping_supplied', 'rule', 'cleaning', 'excluded_meters', 'cleaning_report']
+   facilities: {"available": true, "categories": [{"category": "lift", "label": "Lifts", "measured": true, "meters": ["QA-TEST-SOCIETY-SYNT-F01"], "status": "measured", "series": [{"ts": "2023-01-01 00:00:00", "ener
+PASS C3 training job runs to completion | succeeded in 60s; msg=done; err=None
+PASS C4 after training the society is forecast-ready with evaluation | has_model=True forecast_ready=True
+PASS C5 forecasting page shows evaluation and a live forecast for the uploaded society | Forecasting |  | Total society demand 1, 6, 12 and 24 hours and 7 days ahead, with honest out-of-sample accuracy and a model comparison. |  | Societ
+PASS C6 facilities page charts the mapped lift/pump/street-light meters | charts=3 text='Facilities\n\nLifts, water pumps, street lighting and the clubhouse: shown only where the data contain a separate meter.\n\n'
+FAIL C7 buildings page lists Block A-D with area | Buildings |  | Compare the buildings of the society: energy, share of the total, intensity per floor are
+PASS C8 alerts computed for the uploaded society (stuck 60 h stretch is a candidate) |  site Eagle residential community | BDG2 site Fox residential community | BDG2 site Hog residential community | BDG2 site Peacock reside
+PASS C9a delete asks for confirmation | Delete this society? | QA Test Society (synthetic) and all of its readings, forecasts, alerts and reports are removed from
+PASS C9b cancel keeps the society | 
+PASS C9c confirmed delete removes the society and its data | 
+page errors: 1 ['Failed to load resource: the server responded with a status of 422 (Unprocessable Entity)']
+SUMMARY 10 pass 1 fail

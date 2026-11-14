@@ -1,0 +1,169 @@
+[main]	INFO	profile include tests: None
+[main]	INFO	profile exclude tests: None
+[main]	INFO	cli include tests: None
+[main]	INFO	cli exclude tests: None
+[main]	INFO	running on Python 3.11.15
+[manager]	WARNING	Test in comment: legacy is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: local is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: only is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: installs is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: see is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: admin_credentials is not a test name or id, ignoring
+Working... ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
+Run started:2026-11-09 14:58:59.405002+00:00
+
+Test results:
+>> Issue: [B404:blacklist] Consider possible security implications associated with the subprocess module.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess
+   Location: ./run_energiq.py:38:0
+37	import socket
+38	import subprocess
+39	import sys
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: ./run_energiq.py:147:14
+146	    try:
+147	        out = subprocess.run([node, "--version"], capture_output=True, text=True, timeout=20).stdout.strip()
+148	        major, minor, *_ = out.lstrip("v").split(".")
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: ./run_energiq.py:228:13
+227	    with log.open("wb") as fh:
+228	        rc = subprocess.run(cmd, cwd=cwd, stdout=fh, stderr=subprocess.STDOUT).returncode
+229	    if rc != 0:
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: ./run_energiq.py:242:14
+241	    if py.exists():
+242	        got = subprocess.run([str(py), "-c", "import sys;print('%d.%d'%sys.version_info[:2])"],
+243	                             capture_output=True, text=True).stdout.strip()
+244	        want = f"{sys.version_info.major}.{sys.version_info.minor}"
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: ./run_energiq.py:321:13
+320	    with log.open("wb") as fh:
+321	        rc = subprocess.run([str(py), "-c", DB_SNIPPET], cwd=ROOT, env=env, stdout=fh, stderr=subprocess.STDOUT).returncode
+322	    out = tail(log, 60)
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: ./run_energiq.py:348:20
+347	            kw["start_new_session"] = True
+348	        self.proc = subprocess.Popen(cmd, cwd=cwd, env=env, stdout=self._fh, stderr=subprocess.STDOUT, **kw)
+349	
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
+   Location: ./run_energiq.py:357:20
+356	                if IS_WIN:  # kill the whole tree (npm.cmd -> node -> vite)
+357	                    subprocess.run(["taskkill", "/PID", str(self.proc.pid), "/T", "/F"],
+358	                                   capture_output=True, timeout=20)
+359	                else:
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: ./run_energiq.py:357:20
+356	                if IS_WIN:  # kill the whole tree (npm.cmd -> node -> vite)
+357	                    subprocess.run(["taskkill", "/PID", str(self.proc.pid), "/T", "/F"],
+358	                                   capture_output=True, timeout=20)
+359	                else:
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
+   Location: ./run_energiq.py:541:18
+540	        try:
+541	            out = subprocess.run(["tasklist", "/FI", f"PID eq {pid}", "/FO", "CSV", "/NH"],
+542	                                 capture_output=True, text=True, timeout=20).stdout
+543	        except (OSError, subprocess.SubprocessError):
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: ./run_energiq.py:541:18
+540	        try:
+541	            out = subprocess.run(["tasklist", "/FI", f"PID eq {pid}", "/FO", "CSV", "/NH"],
+542	                                 capture_output=True, text=True, timeout=20).stdout
+543	        except (OSError, subprocess.SubprocessError):
+
+--------------------------------------------------
+>> Issue: [B607:start_process_with_partial_path] Starting a process with a partial executable path
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b607_start_process_with_partial_path.html
+   Location: ./run_energiq.py:631:8
+630	    if IS_WIN:
+631	        subprocess.run(["taskkill", "/PID", str(pid), "/T", "/F"], capture_output=True, timeout=30)
+632	        return
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b603_subprocess_without_shell_equals_true.html
+   Location: ./run_energiq.py:631:8
+630	    if IS_WIN:
+631	        subprocess.run(["taskkill", "/PID", str(pid), "/T", "/F"], capture_output=True, timeout=30)
+632	        return
+
+--------------------------------------------------
+>> Issue: [B105:hardcoded_password_string] Possible hardcoded password: 'dev-only-insecure-secret-change-me-0123456789abcdef'
+   Severity: Low   Confidence: Medium
+   CWE: CWE-259 (https://cwe.mitre.org/data/definitions/259.html)
+   More Info: https://bandit.readthedocs.io/en/1.9.4/plugins/b105_hardcoded_password_string.html
+   Location: backend/app/config.py:13:13
+12	
+13	DEV_SECRET = "dev-only-insecure-secret-change-me-0123456789abcdef"
+14	
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 7540
+	Total lines skipped (#nosec): 0
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 2
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 13
+		Medium: 0
+		High: 0
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 0
+		Medium: 1
+		High: 12
+Files skipped (0):
+exit=1

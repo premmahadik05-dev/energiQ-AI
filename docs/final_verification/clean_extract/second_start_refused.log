@@ -1,0 +1,15 @@
+$ bash run_project.sh --status
+[EnergiQ] EnergiQ AI is running:  http://127.0.0.1:5173
+  Backend / API documentation:    http://127.0.0.1:8000/docs
+exit=0
+
+backend (uvicorn) processes before the second start: 1
+$ bash run_project.sh --no-browser      (a second start while the first is running)
+================================================================
+  EnergiQ AI - local launcher
+================================================================
+
+[EnergiQ] EnergiQ AI is already running:  http://127.0.0.1:5173
+  No second copy was started. To restart it, run STOP_PROJECT first.
+exit=0
+backend (uvicorn) processes after the second start:  1

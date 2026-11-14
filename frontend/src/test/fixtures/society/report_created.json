@@ -1,0 +1,12 @@
+{
+ "id": 1,
+ "society_id": 1,
+ "kind": "consumption",
+ "format": "csv",
+ "title": "Consumption (daily)",
+ "period_start": "2017-12-01 00:00:00",
+ "period_end": "2017-12-31 23:00:00",
+ "created_at": "2026-11-09 12:57:26.211514",
+ "filename": "fox_consumption_20171201_20171231_daily.csv",
+ "size_bytes": 1808
+}

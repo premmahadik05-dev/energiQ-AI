@@ -1,0 +1,288 @@
+erDiagram
+    anomalies {
+        INTEGER id PK
+        INTEGER run_id FK
+        INTEGER owner_id FK
+        INTEGER dataset_id FK
+        DATETIME start_ts
+        DATETIME end_ts
+        INTEGER hours
+        JSON types
+        VARCHAR severity
+        INTEGER severity_level
+        DATETIME peak_ts
+        FLOAT peak_value_kw
+        FLOAT expected_kw
+        FLOAT peak_excess_ratio
+        TEXT explanation
+        BOOLEAN acknowledged
+        DATETIME acknowledged_at
+    }
+    anomaly_events {
+        INTEGER id PK
+        INTEGER society_id FK
+        INTEGER building_id FK
+        VARCHAR scope
+        DATETIME start_ts
+        DATETIME end_ts
+        INTEGER hours
+        JSON types
+        VARCHAR severity
+        INTEGER severity_level
+        DATETIME peak_ts
+        FLOAT peak_kw
+        FLOAT expected_kw
+        FLOAT excess_ratio
+        TEXT explanation
+        JSON top_contributors
+        JSON context
+        BOOLEAN acknowledged
+        DATETIME acknowledged_at
+        INTEGER acknowledged_by
+    }
+    anomaly_runs {
+        INTEGER id PK
+        INTEGER owner_id FK
+        INTEGER dataset_id FK
+        VARCHAR sensitivity
+        JSON config
+        JSON summary
+        DATETIME created_at
+    }
+    audit_events {
+        INTEGER id PK
+        INTEGER user_id
+        VARCHAR action
+        VARCHAR resource_type
+        VARCHAR resource_id
+        VARCHAR ip
+        JSON detail
+        DATETIME ts
+    }
+    buildings {
+        INTEGER id PK
+        INTEGER society_id FK
+        VARCHAR code
+        VARCHAR source_id
+        VARCHAR sub_use
+        FLOAT floor_area_sqm
+        INTEGER year_built
+        INTEGER floors
+        FLOAT valid_share
+        BOOLEAN is_active
+    }
+    consumption_records {
+        INTEGER meter_id PK,FK
+        DATETIME ts PK
+        FLOAT kwh
+    }
+    datasets {
+        INTEGER id PK
+        INTEGER owner_id FK
+        VARCHAR name
+        VARCHAR original_filename
+        VARCHAR sha256
+        VARCHAR status
+        TEXT error
+        JSON config
+        JSON report
+        FLOAT quality_score
+        INTEGER hours
+        INTEGER valid_hours
+        DATETIME start_ts
+        DATETIME end_ts
+        DATETIME created_at
+        DATETIME updated_at
+    }
+    forecast_results {
+        INTEGER id PK
+        INTEGER society_id FK
+        VARCHAR model_id FK
+        INTEGER horizon_h
+        DATETIME origin
+        DATETIME target_ts
+        FLOAT actual_kw
+        FLOAT predicted_kw
+        FLOAT lower_kw
+        FLOAT upper_kw
+        FLOAT baseline_kw
+    }
+    forecasts {
+        INTEGER id PK
+        INTEGER owner_id FK
+        INTEGER dataset_id FK
+        VARCHAR model_id FK
+        DATETIME origin
+        JSON points
+        BOOLEAN origin_value_missing
+        DATETIME created_at
+    }
+    jobs {
+        INTEGER id PK
+        INTEGER owner_id FK
+        INTEGER dataset_id FK
+        VARCHAR kind
+        VARCHAR status
+        FLOAT progress
+        VARCHAR message
+        JSON params
+        JSON result
+        TEXT error
+        DATETIME created_at
+        DATETIME started_at
+        DATETIME finished_at
+    }
+    meters {
+        INTEGER id PK
+        INTEGER society_id FK
+        INTEGER building_id FK
+        VARCHAR code
+        VARCHAR kind
+        VARCHAR facility_category
+        VARCHAR meter_type
+        VARCHAR unit
+        INTEGER interval_minutes
+        FLOAT valid_share
+        BOOLEAN is_active
+    }
+    model_versions {
+        VARCHAR id PK
+        INTEGER owner_id FK
+        INTEGER dataset_id FK
+        VARCHAR family
+        BOOLEAN is_active
+        JSON horizon_model_ids
+        INTEGER train_rows
+        DATETIME train_end
+        VARCHAR data_hash
+        JSON evaluation
+        JSON explanation
+        DATETIME created_at
+    }
+    notifications {
+        INTEGER id PK
+        INTEGER owner_id FK
+        VARCHAR kind
+        VARCHAR message
+        VARCHAR link
+        BOOLEAN is_read
+        DATETIME created_at
+    }
+    readings {
+        INTEGER dataset_id PK,FK
+        DATETIME ts PK
+        FLOAT value_kw
+        FLOAT valid_fraction
+    }
+    recommendation_snapshots {
+        INTEGER id PK
+        INTEGER owner_id FK
+        INTEGER dataset_id FK
+        VARCHAR tariff_name
+        JSON payload
+        DATETIME created_at
+    }
+    societies {
+        INTEGER id PK
+        VARCHAR key UK
+        VARCHAR name
+        TEXT description
+        VARCHAR source_name
+        VARCHAR source_url
+        VARCHAR license
+        VARCHAR timezone
+        FLOAT lat
+        FLOAT lng
+        DATETIME start_ts
+        DATETIME end_ts
+        INTEGER hours
+        INTEGER valid_hours
+        VARCHAR status
+        JSON meta
+        DATETIME created_at
+    }
+    society_hourly {
+        INTEGER society_id PK,FK
+        DATETIME ts PK
+        FLOAT kwh
+        INTEGER n_valid_meters
+        FLOAT air_temp_c
+        FLOAT dew_temp_c
+        FLOAT wind_ms
+    }
+    society_models {
+        VARCHAR id PK
+        INTEGER society_id FK
+        BOOLEAN is_active
+        VARCHAR artifact_key
+        JSON bundle
+        JSON evaluation
+        JSON explanation
+        JSON peaks
+        DATETIME trained_through
+        DATETIME created_at
+    }
+    society_reports {
+        INTEGER id PK
+        INTEGER society_id FK
+        VARCHAR kind
+        VARCHAR format
+        VARCHAR title
+        DATETIME period_start
+        DATETIME period_end
+        JSON params
+        INTEGER created_by
+        DATETIME created_at
+        VARCHAR filename
+        INTEGER size_bytes
+        BLOB content
+    }
+    tariffs {
+        INTEGER id PK
+        INTEGER owner_id FK
+        VARCHAR name
+        VARCHAR currency
+        JSON weekday_rates
+        JSON weekend_rates
+        FLOAT daily_fixed_charge
+        DATETIME created_at
+    }
+    users {
+        INTEGER id PK
+        VARCHAR email UK
+        VARCHAR full_name
+        VARCHAR password_hash
+        VARCHAR role
+        BOOLEAN is_active
+        DATETIME created_at
+        DATETIME last_login_at
+    }
+    anomaly_runs ||--o{ anomalies : "run_id"
+    users ||--o{ anomalies : "owner_id"
+    datasets ||--o{ anomalies : "dataset_id"
+    societies ||--o{ anomaly_events : "society_id"
+    buildings ||--o{ anomaly_events : "building_id"
+    users ||--o{ anomaly_runs : "owner_id"
+    datasets ||--o{ anomaly_runs : "dataset_id"
+    societies ||--o{ buildings : "society_id"
+    meters ||--o{ consumption_records : "meter_id"
+    users ||--o{ datasets : "owner_id"
+    societies ||--o{ forecast_results : "society_id"
+    society_models ||--o{ forecast_results : "model_id"
+    users ||--o{ forecasts : "owner_id"
+    datasets ||--o{ forecasts : "dataset_id"
+    model_versions ||--o{ forecasts : "model_id"
+    users ||--o{ jobs : "owner_id"
+    datasets ||--o{ jobs : "dataset_id"
+    societies ||--o{ meters : "society_id"
+    buildings ||--o{ meters : "building_id"
+    users ||--o{ model_versions : "owner_id"
+    datasets ||--o{ model_versions : "dataset_id"
+    users ||--o{ notifications : "owner_id"
+    datasets ||--o{ readings : "dataset_id"
+    users ||--o{ recommendation_snapshots : "owner_id"
+    datasets ||--o{ recommendation_snapshots : "dataset_id"
+    societies ||--o{ society_hourly : "society_id"
+    societies ||--o{ society_models : "society_id"
+    societies ||--o{ society_reports : "society_id"
+    users ||--o{ tariffs : "owner_id"

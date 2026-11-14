@@ -1,0 +1,13 @@
+PASS signed-out visit to /cost redirects to /login http://127.0.0.1:5173/login
+PASS after sign-in the original page (/cost) is reopened http://127.0.0.1:5173/cost
+PASS page title follows the route Cost and peaks · EnergiQ AI
+PASS browser Back returns to /compare 
+PASS browser Forward returns to /forecasting 
+PASS reload keeps the session and the page 
+PASS unknown URL shows the 404 page inside the app Page not found · EnergiQ AI
+PASS 404 page links back to the app 
+PASS sign-out lands on /login 
+PASS after sign-out protected pages are closed again 
+PASS no unexpected console errors (401 from the signed-out probe excluded) 
+11 / 11
+exit=0

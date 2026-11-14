@@ -1,0 +1,31 @@
+{
+  "synthetic": true,
+  "n_injected_per_kind": 60,
+  "clean_flag_rate_pct": 2.009309317991269,
+  "kinds": {
+    "spike_x3": {
+      "injected": 60,
+      "recall_on_injected": 0.6166666666666667,
+      "recall_when_expected_ge_1kw": 0.75,
+      "flag_rate_untouched_pct": 1.8187610414434243
+    },
+    "spike_x1.6": {
+      "injected": 60,
+      "recall_on_injected": 0.31666666666666665,
+      "recall_when_expected_ge_1kw": 0.35,
+      "flag_rate_untouched_pct": 1.9027484143763214
+    },
+    "drop_to_5pct": {
+      "injected": 60,
+      "recall_on_injected": 0.1,
+      "recall_when_expected_ge_1kw": 0.3,
+      "flag_rate_untouched_pct": 1.9809435546931566
+    },
+    "flat_8h": {
+      "injected": 60,
+      "recall_on_injected": 1.0,
+      "recall_when_expected_ge_1kw": 1.0,
+      "flag_rate_untouched_pct": 1.8646105133542468
+    }
+  }
+}

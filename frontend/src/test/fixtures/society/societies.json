@@ -1,0 +1,20 @@
+[
+ {
+  "id": 1,
+  "key": "fox",
+  "name": "BDG2 site Fox residential community",
+  "description": "11 real residential-use buildings of Building Data Genome Project 2 (BDG2) site 'Fox', summed per hour. A research-based representative community, not a registered housing society.",
+  "timezone": "US/Mountain",
+  "start": "2016-01-01 00:00:00",
+  "end": "2017-12-31 23:00:00",
+  "hours": 17544,
+  "valid_hours": 17486,
+  "buildings": 11,
+  "floor_area_sqm": 127473.7,
+  "has_model": true,
+  "forecast_ready": true,
+  "source_name": "Building Data Genome Project 2 (BDG2)",
+  "license": "Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0), as stated in the LICENSE file of the repository",
+  "status": "ready"
+ }
+]

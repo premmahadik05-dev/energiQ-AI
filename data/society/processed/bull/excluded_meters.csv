@@ -1,0 +1,4 @@
+source_id,valid_share,reason,readings,missing_in_source,negative,zero_long_runs,zero_short,stuck_sensor,spike,valid_out
+Bull_lodging_Terence,0.9139306885544916,valid hours 91.4% below the 95% rule,17544,46,0,1058,390,0,16,16034
+Bull_lodging_Anibal,0.8909598723210215,valid hours 89.1% below the 95% rule,17544,55,0,1585,273,0,0,15631
+Bull_lodging_Danielle,0.9064637482900136,valid hours 90.6% below the 95% rule,17544,34,0,1061,518,0,28,15903

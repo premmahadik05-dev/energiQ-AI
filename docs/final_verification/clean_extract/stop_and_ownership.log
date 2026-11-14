@@ -1,0 +1,25 @@
+--- a recorded process that is NOT EnergiQ (a reused process number) must be left alone ---
+$ bash stop_project.sh   (real instance running)
+[EnergiQ] Stopping EnergiQ AI ...
+  Asking the EnergiQ window to shut down ...
+  The EnergiQ window shut the servers down and closed.
+[EnergiQ] Stopped. Your data is kept in data/energiq.db.
+exit=0
+servers left after stop: 0
+launcher window ended cleanly (see first_start.log for its last lines)
+
+stale record written: backend_pid=23682 (an unrelated 'sleep'), ports where nothing answers
+$ bash stop_project.sh
+[EnergiQ] Stopping EnergiQ AI ...
+  Left process 23682 alone: it is recorded as the backend but nothing from EnergiQ answers any more, so it may be an unrelated program that reused the number.
+[EnergiQ] Stopped. Your data is kept in data/energiq.db.
+exit=0
+RESULT: the unrelated process 23682 is still running -> PASS
+state.json after stop: removed
+$ bash stop_project.sh   (nothing recorded)
+[EnergiQ] No running instance is recorded. Nothing to stop.
+  (If a server window is still open, close that window or press Ctrl+C in it.)
+exit=0
+$ bash run_project.sh --status
+[EnergiQ] EnergiQ AI is not running.
+exit=1

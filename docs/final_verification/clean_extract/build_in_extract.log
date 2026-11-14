@@ -1,0 +1,8 @@
+$ npm run build   (in the extracted folder, so that the browser end-to-end test can run)
+dist/assets/AuthPages-By9-HHbD.js                           19.13 kB │ gzip:   7.14 kB
+dist/assets/PeaksCostPage-Bd4Ml5kR.js                       19.27 kB │ gzip:   6.68 kB
+dist/assets/index-sUdldqlk.js                               46.21 kB │ gzip:  16.19 kB
+dist/assets/vendor-react-DRharoPH.js                       181.87 kB │ gzip:  59.79 kB
+dist/assets/vendor-recharts-CzYXIncK.js                    417.19 kB │ gzip: 112.63 kB
+✓ built in 3.60s
+exit=0

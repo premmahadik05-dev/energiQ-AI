@@ -1,0 +1,109 @@
+Recorded test run for the independent raw-data verification (verbatim command output; nothing edited by hand).
+Recorded: 2026-11-08 13:18:28 UTC   Host: Linux 6.18.44-fc-v310   Python 3.11.15   pandas 3.1.0   numpy 2.4.6
+Working copy: the project folder before packaging. The same commands are re-run in the unzipped delivery (see docs/society/07_testing_and_verification.md, section 5).
+
+================================================================================
+$ python -m pytest tests/unit/test_society_raw_verification.py tests/integration/test_society_raw_vs_api.py -v -p no:cacheprovider
+============================= test session starts ==============================
+platform linux -- Python 3.11.15, pytest-9.2.0, pluggy-1.7.0 -- /home/claude/.venv-energiq/bin/python
+rootdir: /home/claude/EnergiQ-AI
+configfile: pytest.ini
+plugins: anyio-4.16.0, cov-7.1.0
+collecting ... collected 37 items
+
+tests/unit/test_society_raw_verification.py::test_negative_and_zero_readings_are_removed_and_zero_runs_are_labelled PASSED [  2%]
+tests/unit/test_society_raw_verification.py::test_stuck_rule_needs_48_identical_positive_readings_and_a_gap_ends_the_run PASSED [  5%]
+tests/unit/test_society_raw_verification.py::test_spike_rule_is_four_times_the_995_quantile_of_positive_readings PASSED [  8%]
+tests/unit/test_society_raw_verification.py::test_cleaning_only_removes_and_never_changes_a_reading PASSED [ 10%]
+tests/unit/test_society_raw_verification.py::test_a_reading_hit_by_several_rules_is_counted_once_as_stuck_then_spike PASSED [ 13%]
+tests/unit/test_society_raw_verification.py::test_selection_ignores_other_uses_hotels_and_buildings_without_a_meter PASSED [ 16%]
+tests/unit/test_society_raw_verification.py::test_site_qualifies_only_with_eight_good_meters_and_94_percent_community_hours PASSED [ 18%]
+tests/unit/test_society_raw_verification.py::test_community_total_is_the_sum_of_cleaned_meters_and_missing_when_any_meter_is_missing PASSED [ 21%]
+tests/unit/test_society_raw_verification.py::test_sha256_and_download_refuse_a_file_that_does_not_match PASSED [ 24%]
+tests/unit/test_society_raw_verification.py::test_the_verifier_only_opens_http_and_https_urls PASSED [ 27%]
+tests/unit/test_society_raw_verification.py::test_the_verifier_imports_nothing_from_the_application PASSED [ 29%]
+tests/unit/test_society_raw_verification.py::test_spec_equals_the_defaults_of_the_application PASSED [ 32%]
+tests/unit/test_society_raw_verification.py::test_a_changed_meter_value_is_detected PASSED [ 35%]
+tests/unit/test_society_raw_verification.py::test_a_reading_that_should_have_been_removed_is_detected PASSED [ 37%]
+tests/unit/test_society_raw_verification.py::test_a_partial_community_sum_is_detected PASSED [ 40%]
+tests/unit/test_society_raw_verification.py::test_a_changed_community_total_is_detected PASSED [ 43%]
+tests/unit/test_society_raw_verification.py::test_a_missing_building_is_detected PASSED [ 45%]
+tests/unit/test_society_raw_verification.py::test_a_meter_that_the_application_forgot_to_exclude_is_detected PASSED [ 48%]
+tests/unit/test_society_raw_verification.py::test_a_wrong_cleaning_count_in_the_application_report_is_detected PASSED [ 51%]
+tests/unit/test_society_raw_verification.py::test_a_changed_threshold_in_the_application_report_is_detected PASSED [ 54%]
+tests/unit/test_society_raw_verification.py::test_a_changed_raw_file_is_detected_by_its_hash PASSED [ 56%]
+tests/unit/test_society_raw_verification.py::test_independent_pipeline_reproduces_every_processed_community PASSED [ 59%]
+tests/unit/test_society_raw_verification.py::test_sites_that_were_left_out_are_left_out_for_the_documented_reasons PASSED [ 62%]
+tests/unit/test_society_raw_verification.py::test_the_four_layers_are_consistent_with_each_other PASSED [ 64%]
+tests/unit/test_society_raw_verification.py::test_full_official_files_pass_all_checks_and_contain_the_subset PASSED [ 67%]
+tests/unit/test_society_raw_verification.py::test_subset_manifest_is_complete_and_unchanged PASSED [ 70%]
+tests/unit/test_society_raw_verification.py::test_committed_report_belongs_to_this_script_and_passed PASSED [ 72%]
+tests/unit/test_society_raw_verification.py::test_documented_thresholds_equal_the_scripts_spec PASSED [ 75%]
+tests/unit/test_society_raw_verification.py::test_documentation_lists_every_rejected_site_and_no_accepted_one PASSED [ 78%]
+tests/unit/test_society_raw_verification.py::test_dataset_disclosures_are_in_the_readme_the_method_document_and_the_report PASSED [ 81%]
+tests/unit/test_society_raw_verification.py::test_no_document_describes_the_data_as_family_flats_or_a_real_housing_society PASSED [ 83%]
+tests/integration/test_society_raw_vs_api.py::test_api_reproduces_the_independent_raw_computation_for_every_community PASSED [ 86%]
+tests/integration/test_society_raw_vs_api.py::test_a_wrong_energy_total_in_the_api_is_detected PASSED [ 89%]
+tests/integration/test_society_raw_vs_api.py::test_a_missing_month_in_the_api_is_detected PASSED [ 91%]
+tests/integration/test_society_raw_vs_api.py::test_a_wrong_building_figure_in_the_api_is_detected PASSED [ 94%]
+tests/integration/test_society_raw_vs_api.py::test_without_an_admin_account_the_building_comparison_cannot_run_and_says_so PASSED [ 97%]
+tests/integration/test_society_raw_vs_api.py::test_a_society_that_was_not_imported_is_reported PASSED [100%]
+
+=============================== warnings summary ===============================
+../.venv-energiq/lib/python3.11/site-packages/fastapi/testclient.py:1
+  /home/claude/.venv-energiq/lib/python3.11/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=================== 37 passed, 1 warning in 67.52s (0:01:07) ===================
+exit code: 0
+
+================================================================================
+$ python scripts/verify_society_raw_data.py --use-subset --no-report
+mode=subset  checks passed 102/102  api=not run (no --api-url given)
+exit code: 0
+
+================================================================================
+$ python -m pytest tests/unit tests/integration -q -rs -p no:cacheprovider
+........................................................................ [ 27%]
+........................................................................ [ 55%]
+........................................................................ [ 83%]
+...............s..s........................                              [100%]
+=============================== warnings summary ===============================
+../.venv-energiq/lib/python3.11/site-packages/fastapi/testclient.py:1
+  /home/claude/.venv-energiq/lib/python3.11/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+tests/unit/test_explain_optimize.py::test_shap_covers_every_family_and_narrative_is_numeric
+  /home/claude/.venv-energiq/lib/python3.11/site-packages/shap/plots/colors/_colors.py:47: PendingDeprecationWarning: The set_bad function will be deprecated in a future version. Use cmap.with_extremes(bad=...) or Colormap(bad=...) instead.
+    red_blue.set_bad(gray_rgb.tolist(), 1.0)
+
+tests/unit/test_explain_optimize.py::test_shap_covers_every_family_and_narrative_is_numeric
+  /home/claude/.venv-energiq/lib/python3.11/site-packages/shap/plots/colors/_colors.py:48: PendingDeprecationWarning: The set_over function will be deprecated in a future version. Use cmap.with_extremes(over=...) or Colormap(over=...) instead.
+    red_blue.set_over(gray_rgb.tolist(), 1.0)
+
+tests/unit/test_explain_optimize.py::test_shap_covers_every_family_and_narrative_is_numeric
+  /home/claude/.venv-energiq/lib/python3.11/site-packages/shap/plots/colors/_colors.py:49: PendingDeprecationWarning: The set_under function will be deprecated in a future version. Use cmap.with_extremes(under=...) or Colormap(under=...) instead.
+    red_blue.set_under(gray_rgb.tolist(), 1.0)  # "under" is incorrectly used instead of "bad" in the scatter plot
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+SKIPPED [1] tests/integration/test_backup_restore.py:84: needs PostgreSQL URL and pg_dump
+SKIPPED [1] tests/integration/test_migrations.py:65: ENERGIQ_TEST_DATABASE_URL is not a PostgreSQL URL
+257 passed, 2 skipped, 4 warnings in 181.70s (0:03:01)
+exit code: 0
+
+================================================================================
+$ python -m pytest tests/e2e -q -rs -p no:cacheprovider
+....                                                                     [100%]
+4 passed in 50.83s
+exit code: 0
+
+================================================================================
+$ ruff check .
+All checks passed!
+exit code: 0
+
+================================================================================
+$ bandit -q -r backend ml_engine scripts -ll
+exit code: 0

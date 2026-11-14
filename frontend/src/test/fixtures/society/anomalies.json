@@ -1,0 +1,335 @@
+{
+ "total": 579,
+ "summary": {
+  "society": {
+   "low": 127,
+   "medium": 23,
+   "high": 19
+  },
+  "building": {
+   "low": 1663,
+   "medium": 335,
+   "high": 202
+  },
+  "open": 2369,
+  "total": 2369
+ },
+ "events": [
+  {
+   "id": 1123,
+   "scope": "building",
+   "building": "FOX-B05",
+   "start_ts": "2017-12-29 06:00:00",
+   "end_ts": "2017-12-31 12:00:00",
+   "hours": 55,
+   "types": [
+    "drop"
+   ],
+   "severity": "high",
+   "severity_level": 3,
+   "peak_ts": "2017-12-29 14:00:00",
+   "peak_kw": 14.06,
+   "expected_kw": 25.675,
+   "excess_ratio": 4.045219998605398,
+   "explanation": "unusually low use around Fri 2017-12-29 14:00: 14.06 kW vs typical 25.68 kW for this hour of the week, 4.0x the edge of the usual range for this hour (the 99.5th-percentile deviation of the last 26 weeks). Event spans 55 h.",
+   "top_contributors": [],
+   "context": {},
+   "acknowledged": false
+  },
+  {
+   "id": 1809,
+   "scope": "building",
+   "building": "FOX-B08",
+   "start_ts": "2017-12-28 08:00:00",
+   "end_ts": "2017-12-28 08:00:00",
+   "hours": 1,
+   "types": [
+    "drop"
+   ],
+   "severity": "medium",
+   "severity_level": 2,
+   "peak_ts": "2017-12-28 08:00:00",
+   "peak_kw": 11.16,
+   "expected_kw": 23.494999999999997,
+   "excess_ratio": 1.5578257382936445,
+   "explanation": "unusually low use around Thu 2017-12-28 08:00: 11.16 kW vs typical 23.49 kW for this hour of the week, 1.6x the edge of the usual range for this hour (the 99.5th-percentile deviation of the last 26 weeks). Event spans 1 h.",
+   "top_contributors": [],
+   "context": {},
+   "acknowledged": false
+  },
+  {
+   "id": 602,
+   "scope": "building",
+   "building": "FOX-B02",
+   "start_ts": "2017-12-28 06:00:00",
+   "end_ts": "2017-12-28 07:00:00",
+   "hours": 2,
+   "types": [
+    "drop"
+   ],
+   "severity": "high",
+   "severity_level": 3,
+   "peak_ts": "2017-12-28 07:00:00",
+   "peak_kw": 17.14,
+   "expected_kw": 88.94,
+   "excess_ratio": 2.163203775904382,
+   "explanation": "unusually low use around Thu 2017-12-28 07:00: 17.14 kW vs typical 88.94 kW for this hour of the week, 2.2x the edge of the usual range for this hour (the 99.5th-percentile deviation of the last 26 weeks). Event spans 2 h.",
+   "top_contributors": [],
+   "context": {},
+   "acknowledged": false
+  },
+  {
+   "id": 903,
+   "scope": "building",
+   "building": "FOX-B04",
+   "start_ts": "2017-12-28 05:00:00",
+   "end_ts": "2017-12-28 07:00:00",
+   "hours": 3,
+   "types": [
+    "drop"
+   ],
+   "severity": "high",
+   "severity_level": 3,
+   "peak_ts": "2017-12-28 06:00:00",
+   "peak_kw": 56.88,
+   "expected_kw": 254.87,
+   "excess_ratio": 4.707503932603374,
+   "explanation": "unusually low use around Thu 2017-12-28 06:00: 56.88 kW vs typical 254.87 kW for this hour of the week, 4.7x the edge of the usual range for this hour (the 99.5th-percentile deviation of the last 26 weeks). Event spans 3 h.",
+   "top_contributors": [],
+   "context": {},
+   "acknowledged": false
+  },
+  {
+   "id": 743,
+   "scope": "building",
+   "building": "FOX-B03",
+   "start_ts": "2017-12-28 05:00:00",
+   "end_ts": "2017-12-28 06:00:00",
+   "hours": 2,
+   "types": [
+    "drop"
+   ],
+   "severity": "high",
+   "severity_level": 3,
+   "peak_ts": "2017-12-28 05:00:00",
+   "peak_kw": 22.55,
+   "expected_kw": 91.005,
+   "excess_ratio": 3.035853658260305,
+   "explanation": "unusually low use around Thu 2017-12-28 05:00: 22.55 kW vs typical 91.00 kW for this hour of the week, 3.0x the edge of the usual range for this hour (the 99.5th-percentile deviation of the last 26 weeks). Event spans 2 h.",
+   "top_contributors": [],
+   "context": {},
+   "acknowledged": false
+  },
+  {
+   "id": 378,
+   "scope": "building",
+   "building": "FOX-B01",
+   "start_ts": "2017-12-28 05:00:00",
+   "end_ts": "2017-12-28 07:00:00",
+   "hours": 3,
+   "types": [
+    "drop"
+   ],
+   "severity": "high",
+   "severity_level": 3,
+   "peak_ts": "2017-12-28 07:00:00",
+   "peak_kw": 74.85,
+   "expected_kw": 158.20499999999998,
+   "excess_ratio": 1.977648771910885,
+   "explanation": "unusually low use around Thu 2017-12-28 07:00: 74.85 kW vs typical 158.20 kW for this hour of the week, 2.0x the edge of the usual range for this hour (the 99.5th-percentile deviation of the last 26 weeks). Event spans 3 h.",
+   "top_contributors": [],
+   "context": {},
+   "acknowledged": false
+  },
+  {
+   "id": 2364,
+   "scope": "building",
+   "building": "FOX-B11",
+   "start_ts": "2017-12-28 04:00:00",
+   "end_ts": "2017-12-28 08:00:00",
+   "hours": 5,
+   "types": [
+    "drop"
+   ],
+   "severity": "high",
+   "severity_level": 3,
+   "peak_ts": "2017-12-28 06:00:00",
+   "peak_kw": 31.72,
+   "expected_kw": 69.33,
+   "excess_ratio": 3.2209002604132118,
+   "explanation": "unusually low use around Thu 2017-12-28 06:00: 31.72 kW vs typical 69.33 kW for this hour of the week, 3.2x the edge of the usual range for this hour (the 99.5th-percentile deviation of the last 26 weeks). Event spans 5 h.",
+   "top_contributors": [],
+   "context": {},
+   "acknowledged": false
+  },
+  {
+   "id": 2200,
+   "scope": "building",
+   "building": "FOX-B10",
+   "start_ts": "2017-12-28 04:00:00",
+   "end_ts": "2017-12-28 08:00:00",
+   "hours": 5,
+   "types": [
+    "drop"
+   ],
+   "severity": "high",
+   "severity_level": 3,
+   "peak_ts": "2017-12-28 05:00:00",
+   "peak_kw": 130.16,
+   "expected_kw": 291.53,
+   "excess_ratio": 2.661014509639962,
+   "explanation": "unusually low use around Thu 2017-12-28 05:00: 130.16 kW vs typical 291.53 kW for this hour of the week, 2.7x the edge of the usual range for this hour (the 99.5th-percentile deviation of the last 26 weeks). Event spans 5 h.",
+   "top_contributors": [],
+   "context": {},
+   "acknowledged": false
+  },
+  {
+   "id": 2018,
+   "scope": "building",
+   "building": "FOX-B09",
+   "start_ts": "2017-12-28 04:00:00",
+   "end_ts": "2017-12-28 06:00:00",
+   "hours": 3,
+   "types": [
+    "drop"
+   ],
+   "severity": "medium",
+   "severity_level": 2,
+   "peak_ts": "2017-12-28 06:00:00",
+   "peak_kw": 41.67,
+   "expected_kw": 69.58500000000001,
+   "excess_ratio": 2.343257202455674,
+   "explanation": "unusually low use around Thu 2017-12-28 06:00: 41.67 kW vs typical 69.59 kW for this hour of the week, 2.3x the edge of the usual range for this hour (the 99.5th-percentile deviation of the last 26 weeks). Event spans 3 h.",
+   "top_contributors": [],
+   "context": {},
+   "acknowledged": false
+  },
+  {
+   "id": 1579,
+   "scope": "building",
+   "building": "FOX-B07",
+   "start_ts": "2017-12-28 04:00:00",
+   "end_ts": "2017-12-28 08:00:00",
+   "hours": 5,
+   "types": [
+    "drop"
+   ],
+   "severity": "high",
+   "severity_level": 3,
+   "peak_ts": "2017-12-28 06:00:00",
+   "peak_kw": 14.3,
+   "expected_kw": 27.155,
+   "excess_ratio": 2.770409036453878,
+   "explanation": "unusually low use around Thu 2017-12-28 06:00: 14.30 kW vs typical 27.16 kW for this hour of the week, 2.8x the edge of the usual range for this hour (the 99.5th-percentile deviation of the last 26 weeks). Event spans 5 h.",
+   "top_contributors": [],
+   "context": {},
+   "acknowledged": false
+  },
+  {
+   "id": 2359,
+   "scope": "building",
+   "building": "FOX-B11",
+   "start_ts": "2017-12-22 20:00:00",
+   "end_ts": "2017-12-22 20:00:00",
+   "hours": 1,
+   "types": [
+    "drop"
+   ],
+   "severity": "high",
+   "severity_level": 3,
+   "peak_ts": "2017-12-22 20:00:00",
+   "peak_kw": 17.64,
+   "expected_kw": 76.54499999999999,
+   "excess_ratio": 2.9659821657115693,
+   "explanation": "unusually low use around Fri 2017-12-22 20:00: 17.64 kW vs typical 76.54 kW for this hour of the week, 3.0x the edge of the usual range for this hour (the 99.5th-percentile deviation of the last 26 weeks). Event spans 1 h.",
+   "top_contributors": [],
+   "context": {},
+   "acknowledged": false
+  },
+  {
+   "id": 2199,
+   "scope": "building",
+   "building": "FOX-B10",
+   "start_ts": "2017-12-22 20:00:00",
+   "end_ts": "2017-12-22 20:00:00",
+   "hours": 1,
+   "types": [
+    "drop"
+   ],
+   "severity": "high",
+   "severity_level": 3,
+   "peak_ts": "2017-12-22 20:00:00",
+   "peak_kw": 68.67,
+   "expected_kw": 328.565,
+   "excess_ratio": 1.6139506664269763,
+   "explanation": "unusually low use around Fri 2017-12-22 20:00: 68.67 kW vs typical 328.56 kW for this hour of the week, 1.6x the edge of the usual range for this hour (the 99.5th-percentile deviation of the last 26 weeks). Event spans 1 h.",
+   "top_contributors": [],
+   "context": {},
+   "acknowledged": false
+  },
+  {
+   "id": 2017,
+   "scope": "building",
+   "building": "FOX-B09",
+   "start_ts": "2017-12-22 20:00:00",
+   "end_ts": "2017-12-22 20:00:00",
+   "hours": 1,
+   "types": [
+    "drop"
+   ],
+   "severity": "high",
+   "severity_level": 3,
+   "peak_ts": "2017-12-22 20:00:00",
+   "peak_kw": 17.12,
+   "expected_kw": 85.36,
+   "excess_ratio": 1.9624049011567453,
+   "explanation": "unusually low use around Fri 2017-12-22 20:00: 17.12 kW vs typical 85.36 kW for this hour of the week, 2.0x the edge of the usual range for this hour (the 99.5th-percentile deviation of the last 26 weeks). Event spans 1 h.",
+   "top_contributors": [],
+   "context": {},
+   "acknowledged": false
+  },
+  {
+   "id": 1806,
+   "scope": "building",
+   "building": "FOX-B08",
+   "start_ts": "2017-12-22 20:00:00",
+   "end_ts": "2017-12-22 20:00:00",
+   "hours": 1,
+   "types": [
+    "drop"
+   ],
+   "severity": "high",
+   "severity_level": 3,
+   "peak_ts": "2017-12-22 20:00:00",
+   "peak_kw": 5.92,
+   "expected_kw": 26.445,
+   "excess_ratio": 1.548215641609719,
+   "explanation": "unusually low use around Fri 2017-12-22 20:00: 5.92 kW vs typical 26.45 kW for this hour of the week, 1.5x the edge of the usual range for this hour (the 99.5th-percentile deviation of the last 26 weeks). Event spans 1 h.",
+   "top_contributors": [],
+   "context": {},
+   "acknowledged": false
+  },
+  {
+   "id": 1578,
+   "scope": "building",
+   "building": "FOX-B07",
+   "start_ts": "2017-12-22 20:00:00",
+   "end_ts": "2017-12-22 20:00:00",
+   "hours": 1,
+   "types": [
+    "drop"
+   ],
+   "severity": "high",
+   "severity_level": 3,
+   "peak_ts": "2017-12-22 20:00:00",
+   "peak_kw": 6.51,
+   "expected_kw": 25.54,
+   "excess_ratio": 3.954573529946069,
+   "explanation": "unusually low use around Fri 2017-12-22 20:00: 6.51 kW vs typical 25.54 kW for this hour of the week, 4.0x the edge of the usual range for this hour (the 99.5th-percentile deviation of the last 26 weeks). Event spans 1 h.",
+   "top_contributors": [],
+   "context": {},
+   "acknowledged": false
+  }
+ ],
+ "note": "Alerts mark readings that are unusual for that hour of the week. There are no ground-truth fault labels, so no detection accuracy is claimed."
+}

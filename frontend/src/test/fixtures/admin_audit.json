@@ -1,0 +1,56 @@
+[
+ {
+  "id": 9,
+  "user_id": 1,
+  "action": "login",
+  "resource_type": "user",
+  "resource_id": "1",
+  "ip": "127.0.0.1",
+  "detail": {},
+  "ts": "2026-11-03T00:19:56.193401"
+ },
+ {
+  "id": 8,
+  "user_id": 2,
+  "action": "anomaly_ack",
+  "resource_type": "anomaly",
+  "resource_id": "87",
+  "ip": "127.0.0.1",
+  "detail": {
+   "acknowledged": true
+  },
+  "ts": "2026-11-03T00:19:45.388506"
+ },
+ {
+  "id": 7,
+  "user_id": 2,
+  "action": "anomaly_run",
+  "resource_type": "dataset",
+  "resource_id": "1",
+  "ip": "127.0.0.1",
+  "detail": {
+   "sensitivity": "medium"
+  },
+  "ts": "2026-11-03T00:19:44.324593"
+ },
+ {
+  "id": 6,
+  "user_id": 2,
+  "action": "forecast_create",
+  "resource_type": "forecast",
+  "resource_id": "2",
+  "ip": "127.0.0.1",
+  "detail": {},
+  "ts": "2026-11-03T00:19:44.104165"
+ },
+ {
+  "id": 5,
+  "user_id": 2,
+  "action": "forecast_create",
+  "resource_type": "forecast",
+  "resource_id": "1",
+  "ip": "127.0.0.1",
+  "detail": {},
+  "ts": "2026-11-03T00:19:43.912323"
+ }
+]

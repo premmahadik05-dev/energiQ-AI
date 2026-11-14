@@ -1,0 +1,288 @@
+{
+ "origin": "2017-12-31 23:00:00",
+ "origin_value_missing": false,
+ "points": [
+  {
+   "horizon": 1,
+   "ts": "2018-01-01 00:00:00",
+   "kw": 1077.9927883381993,
+   "lower_kw": 1042.1186571075757,
+   "upper_kw": 1117.4827325481244,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 2,
+   "ts": "2018-01-01 01:00:00",
+   "kw": 1077.5278796916596,
+   "lower_kw": 1034.7016009278768,
+   "upper_kw": 1122.741324086912,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 3,
+   "ts": "2018-01-01 02:00:00",
+   "kw": 1068.69924018543,
+   "lower_kw": 1018.9208138884883,
+   "upper_kw": 1119.6361847660096,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 4,
+   "ts": "2018-01-01 03:00:00",
+   "kw": 1065.4341638855947,
+   "lower_kw": 1008.7035900554939,
+   "upper_kw": 1122.0946086515014,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 5,
+   "ts": "2018-01-01 04:00:00",
+   "kw": 1068.3597942473161,
+   "lower_kw": 1004.6770728840563,
+   "upper_kw": 1130.74373919855,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 6,
+   "ts": "2018-01-01 05:00:00",
+   "kw": 1069.5392282113764,
+   "lower_kw": 998.9043593149576,
+   "upper_kw": 1137.6466733479376,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 7,
+   "ts": "2018-01-01 06:00:00",
+   "kw": 1078.8703847630975,
+   "lower_kw": 1008.1353619465622,
+   "upper_kw": 1146.627959393324,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 8,
+   "ts": "2018-01-01 07:00:00",
+   "kw": 1081.2752363525665,
+   "lower_kw": 1010.4400596159148,
+   "upper_kw": 1148.6829404764583,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 9,
+   "ts": "2018-01-01 08:00:00",
+   "kw": 1052.2231466096343,
+   "lower_kw": 981.2878159528664,
+   "upper_kw": 1119.2809802271915,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 10,
+   "ts": "2018-01-01 09:00:00",
+   "kw": 1014.6153094729934,
+   "lower_kw": 943.5798248961091,
+   "upper_kw": 1081.323272584216,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 11,
+   "ts": "2018-01-01 10:00:00",
+   "kw": 1010.0161773726599,
+   "lower_kw": 938.8805388756592,
+   "upper_kw": 1076.374269977548,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 12,
+   "ts": "2018-01-01 11:00:00",
+   "kw": 1009.6957222726933,
+   "lower_kw": 938.4599298555763,
+   "upper_kw": 1075.7039443712467,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 13,
+   "ts": "2018-01-01 12:00:00",
+   "kw": 1010.2112639616663,
+   "lower_kw": 938.614525613777,
+   "upper_kw": 1076.1115728626266,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 14,
+   "ts": "2018-01-01 13:00:00",
+   "kw": 1010.0425165316251,
+   "lower_kw": 938.0848322529635,
+   "upper_kw": 1075.8349122349923,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 15,
+   "ts": "2018-01-01 14:00:00",
+   "kw": 1016.073943094271,
+   "lower_kw": 943.755312884837,
+   "upper_kw": 1081.7584256000453,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 16,
+   "ts": "2018-01-01 15:00:00",
+   "kw": 1030.8697578765202,
+   "lower_kw": 958.1901817363139,
+   "upper_kw": 1096.4463271847014,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 17,
+   "ts": "2018-01-01 16:00:00",
+   "kw": 1081.0358319694158,
+   "lower_kw": 1007.9953098984372,
+   "upper_kw": 1146.504488080004,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 18,
+   "ts": "2018-01-01 17:00:00",
+   "kw": 1087.429746557248,
+   "lower_kw": 1014.0282785554971,
+   "upper_kw": 1152.790489470243,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 19,
+   "ts": "2018-01-01 18:00:00",
+   "kw": 1099.1846009694393,
+   "lower_kw": 1025.422187036916,
+   "upper_kw": 1164.4374306848413,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 20,
+   "ts": "2018-01-01 19:00:00",
+   "kw": 1109.1409298510332,
+   "lower_kw": 1035.0175699877375,
+   "upper_kw": 1174.2858463688422,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 21,
+   "ts": "2018-01-01 20:00:00",
+   "kw": 1108.6417441225215,
+   "lower_kw": 1034.1574383284535,
+   "upper_kw": 1173.6787474427372,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 22,
+   "ts": "2018-01-01 21:00:00",
+   "kw": 1117.5538712581824,
+   "lower_kw": 1042.708619533342,
+   "upper_kw": 1182.4829613808051,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 23,
+   "ts": "2018-01-01 22:00:00",
+   "kw": 1094.673765478121,
+   "lower_kw": 1019.4675678225083,
+   "upper_kw": 1159.4949424031506,
+   "family": "random_forest",
+   "actual_kw": null
+  },
+  {
+   "horizon": 24,
+   "ts": "2018-01-01 23:00:00",
+   "kw": 1084.5538640619568,
+   "lower_kw": 1008.9867204755718,
+   "upper_kw": 1149.2671277893933,
+   "family": "random_forest",
+   "actual_kw": null
+  }
+ ],
+ "trained_through": "2017-12-31 23:00:00",
+ "summary": {
+  "next_24h_energy_kwh": 25523.66090713522,
+  "next_24h_energy_range_kwh": [
+   23895.23816944749,
+   27031.4319011314
+  ],
+  "peak_kw": 1117.5538712581824,
+  "peak_range_kw": [
+   1042.708619533342,
+   1182.4829613808051
+  ],
+  "peak_time": "2018-01-01 21:00:00",
+  "range_note": "Per-hour empirical 80% ranges; the summed range adds the hourly ranges, so it is wider than a range for the total would be.",
+  "next_24h_energy_cost": 4944.203326887346,
+  "currency": "EUR"
+ },
+ "model_id": "society_fox_2017123123",
+ "accuracy": {
+  "1": {
+   "model": "random_forest",
+   "mae_kw": 21.3655694790816,
+   "rmse_kw": 41.26736087831194,
+   "mape_pct": 1.5834039716921526,
+   "r2": 0.9718780271885977,
+   "baseline": "naive",
+   "baseline_mae_kw": 37.61343369340381
+  },
+  "6": {
+   "model": "random_forest",
+   "mae_kw": 36.859056622644296,
+   "rmse_kw": 60.94776265203638,
+   "mape_pct": 2.621852549490453,
+   "r2": 0.9387183821483625,
+   "baseline": "seasonal_naive_24",
+   "baseline_mae_kw": 48.553042376784894
+  },
+  "12": {
+   "model": "random_forest",
+   "mae_kw": 37.41467560946892,
+   "rmse_kw": 63.14498977274836,
+   "mape_pct": 2.6556033705216744,
+   "r2": 0.9343484865370473,
+   "baseline": "seasonal_naive_24",
+   "baseline_mae_kw": 48.56892552455614
+  },
+  "24": {
+   "model": "random_forest",
+   "mae_kw": 38.47450378275333,
+   "rmse_kw": 64.81866623410741,
+   "mape_pct": 2.7410936855685915,
+   "r2": 0.9306743768806908,
+   "baseline": "naive",
+   "baseline_mae_kw": 48.50778925619834
+  },
+  "168": {
+   "model": "seasonal_naive_168",
+   "mae_kw": 85.2507409956412,
+   "rmse_kw": 136.25521434364964,
+   "mape_pct": 6.062836825467673,
+   "r2": 0.6944045742256714,
+   "baseline": "seasonal_naive_168",
+   "baseline_mae_kw": 85.2507409956412
+  }
+ },
+ "note": "Each point is a direct forecast from the origin hour using data up to the origin only. Ranges are empirical 80% bands from out-of-fold residuals."
+}

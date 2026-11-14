@@ -1,0 +1,322 @@
+{
+ "total": {
+  "valid_hours": 741,
+  "energy_kwh": 899309.73,
+  "energy_cost": 167557.14620000002,
+  "fixed_cost": 0.0,
+  "total_cost": 167557.14620000002,
+  "currency": "EUR",
+  "is_demo_tariff": true,
+  "avg_cost_per_kwh": 0.18631750620556503
+ },
+ "daily": [
+  {
+   "ts": "2017-12-01 00:00:00",
+   "energy_kwh": 36465.79,
+   "energy_cost": 7196.35,
+   "valid_hours": 24.0,
+   "total_cost": 7196.35
+  },
+  {
+   "ts": "2017-12-02 00:00:00",
+   "energy_kwh": 35526.59,
+   "energy_cost": 5996.07,
+   "valid_hours": 24.0,
+   "total_cost": 5996.07
+  },
+  {
+   "ts": "2017-12-03 00:00:00",
+   "energy_kwh": 35868.96,
+   "energy_cost": 6055.67,
+   "valid_hours": 24.0,
+   "total_cost": 6055.67
+  },
+  {
+   "ts": "2017-12-04 00:00:00",
+   "energy_kwh": 36804.48,
+   "energy_cost": 7279.53,
+   "valid_hours": 24.0,
+   "total_cost": 7279.53
+  },
+  {
+   "ts": "2017-12-05 00:00:00",
+   "energy_kwh": 36380.23,
+   "energy_cost": 7193.59,
+   "valid_hours": 24.0,
+   "total_cost": 7193.59
+  },
+  {
+   "ts": "2017-12-06 00:00:00",
+   "energy_kwh": 36206.01,
+   "energy_cost": 7162.94,
+   "valid_hours": 24.0,
+   "total_cost": 7162.94
+  },
+  {
+   "ts": "2017-12-07 00:00:00",
+   "energy_kwh": 35527.34,
+   "energy_cost": 7020.25,
+   "valid_hours": 24.0,
+   "total_cost": 7020.25
+  },
+  {
+   "ts": "2017-12-08 00:00:00",
+   "energy_kwh": 34159.66,
+   "energy_cost": 6706.35,
+   "valid_hours": 24.0,
+   "total_cost": 6706.35
+  },
+  {
+   "ts": "2017-12-09 00:00:00",
+   "energy_kwh": 30468.92,
+   "energy_cost": 5102.62,
+   "valid_hours": 24.0,
+   "total_cost": 5102.62
+  },
+  {
+   "ts": "2017-12-10 00:00:00",
+   "energy_kwh": 28504.28,
+   "energy_cost": 4758.14,
+   "valid_hours": 24.0,
+   "total_cost": 4758.14
+  },
+  {
+   "ts": "2017-12-11 00:00:00",
+   "energy_kwh": 28359.96,
+   "energy_cost": 5508.44,
+   "valid_hours": 24.0,
+   "total_cost": 5508.44
+  },
+  {
+   "ts": "2017-12-12 00:00:00",
+   "energy_kwh": 27970.01,
+   "energy_cost": 5444.45,
+   "valid_hours": 24.0,
+   "total_cost": 5444.45
+  },
+  {
+   "ts": "2017-12-13 00:00:00",
+   "energy_kwh": 27188.69,
+   "energy_cost": 5292.63,
+   "valid_hours": 24.0,
+   "total_cost": 5292.63
+  },
+  {
+   "ts": "2017-12-14 00:00:00",
+   "energy_kwh": 27078.42,
+   "energy_cost": 5258.08,
+   "valid_hours": 24.0,
+   "total_cost": 5258.08
+  },
+  {
+   "ts": "2017-12-15 00:00:00",
+   "energy_kwh": 27104.53,
+   "energy_cost": 5264.08,
+   "valid_hours": 24.0,
+   "total_cost": 5264.08
+  },
+  {
+   "ts": "2017-12-16 00:00:00",
+   "energy_kwh": 26581.07,
+   "energy_cost": 4439.74,
+   "valid_hours": 24.0,
+   "total_cost": 4439.74
+  },
+  {
+   "ts": "2017-12-17 00:00:00",
+   "energy_kwh": 26481.03,
+   "energy_cost": 4420.47,
+   "valid_hours": 24.0,
+   "total_cost": 4420.47
+  },
+  {
+   "ts": "2017-12-18 00:00:00",
+   "energy_kwh": 26789.22,
+   "energy_cost": 5200.45,
+   "valid_hours": 24.0,
+   "total_cost": 5200.45
+  },
+  {
+   "ts": "2017-12-19 00:00:00",
+   "energy_kwh": 26686.17,
+   "energy_cost": 5183.01,
+   "valid_hours": 24.0,
+   "total_cost": 5183.01
+  },
+  {
+   "ts": "2017-12-20 00:00:00",
+   "energy_kwh": 26760.18,
+   "energy_cost": 5198.74,
+   "valid_hours": 24.0,
+   "total_cost": 5198.74
+  },
+  {
+   "ts": "2017-12-21 00:00:00",
+   "energy_kwh": 26745.61,
+   "energy_cost": 5193.79,
+   "valid_hours": 24.0,
+   "total_cost": 5193.79
+  },
+  {
+   "ts": "2017-12-22 00:00:00",
+   "energy_kwh": 25663.15,
+   "energy_cost": 4891.58,
+   "valid_hours": 24.0,
+   "total_cost": 4891.58
+  },
+  {
+   "ts": "2017-12-23 00:00:00",
+   "energy_kwh": 26281.31,
+   "energy_cost": 4369.06,
+   "valid_hours": 24.0,
+   "total_cost": 4369.06
+  },
+  {
+   "ts": "2017-12-24 00:00:00",
+   "energy_kwh": 25822.93,
+   "energy_cost": 4283.25,
+   "valid_hours": 24.0,
+   "total_cost": 4283.25
+  },
+  {
+   "ts": "2017-12-25 00:00:00",
+   "energy_kwh": 25887.72,
+   "energy_cost": 5015.35,
+   "valid_hours": 24.0,
+   "total_cost": 5015.35
+  },
+  {
+   "ts": "2017-12-26 00:00:00",
+   "energy_kwh": 25985.35,
+   "energy_cost": 5038.34,
+   "valid_hours": 24.0,
+   "total_cost": 5038.34
+  },
+  {
+   "ts": "2017-12-27 00:00:00",
+   "energy_kwh": 26210.72,
+   "energy_cost": 5081.6,
+   "valid_hours": 24.0,
+   "total_cost": 5081.6
+  },
+  {
+   "ts": "2017-12-28 00:00:00",
+   "energy_kwh": 22564.06,
+   "energy_cost": 4453.37,
+   "valid_hours": 21.0,
+   "total_cost": 4453.37
+  },
+  {
+   "ts": "2017-12-29 00:00:00",
+   "energy_kwh": 25962.11,
+   "energy_cost": 5024.98,
+   "valid_hours": 24.0,
+   "total_cost": 5024.98
+  },
+  {
+   "ts": "2017-12-30 00:00:00",
+   "energy_kwh": 25649.58,
+   "energy_cost": 4260.92,
+   "valid_hours": 24.0,
+   "total_cost": 4260.92
+  },
+  {
+   "ts": "2017-12-31 00:00:00",
+   "energy_kwh": 25625.65,
+   "energy_cost": 4263.32,
+   "valid_hours": 24.0,
+   "total_cost": 4263.32
+  }
+ ],
+ "monthly": [
+  {
+   "ts": "2017-12-01 00:00:00",
+   "energy_kwh": 899309.73,
+   "energy_cost": 167557.15,
+   "valid_hours": 741.0,
+   "total_cost": 167557.15
+  }
+ ],
+ "peak_split": {
+  "dearest_rate_per_kwh": 0.3,
+  "dearest_hours": [
+   17,
+   18,
+   19,
+   20
+  ],
+  "energy_share_pct": 12.234891531752915,
+  "cost_share_pct": 19.700067558204807,
+  "time_share_pct": 11.336032388663968
+ },
+ "projected": {
+  "basis_days": 30,
+  "avg_daily_cost": 5345.359833333334,
+  "projected_30_day_cost": 160360.795,
+  "assumption": "the average of the last valid days repeats for the next 30 days; weather, occupancy and tariff changes are not modelled"
+ },
+ "tariff": {
+  "name": "DEMO tariff (not a real utility price)",
+  "currency": "EUR",
+  "weekday_rates": [
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.3,
+   0.3,
+   0.3,
+   0.3,
+   0.2,
+   0.2,
+   0.12
+  ],
+  "weekend_rates": [
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.12,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.2,
+   0.12,
+   0.12
+  ],
+  "daily_fixed_charge": 0.0,
+  "is_demo": true,
+  "note": "Illustrative numbers only. Replace with your own rates before using any cost figure."
+ },
+ "range": [
+  "2017-12-01 00:00:00",
+  "2017-12-31 23:00:00"
+ ],
+ "disclaimer": "Estimate from measured kWh and the tariff you entered. It is not a utility bill: taxes, demand charges, tiers and fees are not modelled."
+}
