@@ -1,7 +1,7 @@
 # EnergiQ AI
 
 Cloud-Native Intelligent Energy Forecasting, Anomaly Detection & Optimization Platform
-(M.Tech CSE major project)
+
 
 **Now extended to the society level: Residential Society Electricity Consumption Prediction and Smart Energy Management.**
 The platform forecasts the **total hourly electricity demand of a residential community** (several buildings, summed per hour
